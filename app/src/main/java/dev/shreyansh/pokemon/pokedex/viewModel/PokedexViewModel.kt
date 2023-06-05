@@ -1,12 +1,18 @@
 package dev.shreyansh.pokemon.pokedex.viewModel
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import dev.shreyansh.pokemon.pokedex.network.PokedexNewsAPI
+import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
+import kotlinx.coroutines.launch
 
 class PokedexViewModel(application: Application) : ViewModel(){
 
+    enum class PokeNewsAPIStatus { LOADING, ERROR, DONE }
 
     //login
     private val _loginComplete = MutableLiveData<Boolean>()
@@ -14,10 +20,35 @@ class PokedexViewModel(application: Application) : ViewModel(){
         get() = _loginComplete
 
 
+    // poke-news
+    private val _pokeNewsStatus = MutableLiveData<PokeNewsAPIStatus>()
+    val pokeNewsStatus: LiveData<PokeNewsAPIStatus>
+        get() = _pokeNewsStatus
+
+    private val _pokeNewsResponse = MutableLiveData<List<PokeNewsRequest>>()
+    val pokeNewsResponse: LiveData<List<PokeNewsRequest>>
+        get() = _pokeNewsResponse
+
     init {
         _loginComplete.value = false
     }
 
+
+    fun getPokeNews(){
+        viewModelScope.launch {
+            _pokeNewsStatus.value = PokeNewsAPIStatus.LOADING
+            try{
+                val res = PokedexNewsAPI.pokedexNewsService.getPokeNews(100)
+                Log.i("PokedexNewsAPI:RES","$res")
+                _pokeNewsResponse.value = res
+                _pokeNewsStatus.value = PokeNewsAPIStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("PokedexNewsAPI:ERROR","${e.message}")
+                _pokeNewsStatus.value = PokeNewsAPIStatus.ERROR
+            }
+        }
+    }
 
 
 
@@ -31,4 +62,9 @@ class PokedexViewModel(application: Application) : ViewModel(){
     fun onLoginCancel() {
         _loginComplete.value = false
     }
+
+
+
+
+
 }

@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="news"
+            type="dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest" />
+
+    </data>
+
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -17,16 +25,16 @@
                 android:id="@+id/thumbnailCV"
                 android:layout_width="66dp"
                 android:layout_height="66dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="12dp"
                 app:cardBackgroundColor="#EAEAEA"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="0dp"
-                app:layout_constraintBottom_toBottomOf="@+id/trending_title"
+                app:layout_constraintBottom_toBottomOf="@+id/title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/source_list">
 
                 <ImageView
-                    android:id="@+id/trending_thumbnail"
+                    android:id="@+id/thumbnailIV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
@@ -38,15 +46,15 @@
                 android:id="@+id/source_list"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toStartOf="@+id/trending_timestamp"
+                app:layout_constraintEnd_toStartOf="@+id/timestamp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/trending_source"
+                    android:id="@+id/source"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/open_sans"
@@ -55,27 +63,16 @@
                     android:textSize="12sp"
                     tools:text="Bloomberg • " />
 
-                <TextView
-                    android:id="@+id/trending_author"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-                    android:fontFamily="@font/open_sans"
-                    android:maxLines="1"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    tools:text="Arthur" />
 
             </LinearLayout>
 
             <TextView
-                android:id="@+id/trending_timestamp"
+                android:id="@+id/timestamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="12dp"
                 android:alpha="0.6"
                 android:fontFamily="@font/open_sans"
-                android:maxLength="10"
                 android:maxLines="1"
                 android:textColor="@color/black"
                 android:textSize="12sp"
@@ -85,12 +82,12 @@
                 tools:text="6d" />
 
             <TextView
-                android:id="@+id/trending_title"
+                android:id="@+id/title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="12dp"
                 android:fontFamily="@font/open_sans_semibold"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@+id/thumbnailCV"
@@ -99,13 +96,13 @@
                 tools:text="Drake list his final US property for $88m as he quites America" />
 
             <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/trendingDiv"
+                android:id="@+id/newsDiv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/trending_title" />
+                app:layout_constraintTop_toBottomOf="@+id/title" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

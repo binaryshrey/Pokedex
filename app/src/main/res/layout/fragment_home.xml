@@ -85,21 +85,6 @@
                         app:layout_constraintStart_toEndOf="@+id/userProfilePic"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <!--                    app:countProgressVisibility="@{viewModel.countLevelQueryStatus}"-->
-
-                    <ProgressBar
-                        android:id="@+id/statusProgress"
-                        style="?android:attr/progressBarStyle"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginStart="8dp"
-                        android:elevation="4dp"
-                        android:indeterminateTint="@color/yellow_700"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/menu"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-
                     <com.google.android.material.card.MaterialCardView
                         android:id="@+id/search"
                         android:layout_width="36dp"
@@ -131,7 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="0dp"
@@ -567,17 +552,14 @@
                             android:textColor="@color/black" />
 
                     </LinearLayout>
-
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/pokemonNewsRV"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="4dp"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-
                 </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pokemonNewsRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
 
             </LinearLayout>
 

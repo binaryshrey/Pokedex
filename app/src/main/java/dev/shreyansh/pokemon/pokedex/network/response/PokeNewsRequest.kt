@@ -13,4 +13,6 @@ data class PokeNewsRequest(
     val shortDescription: String,
     val image: String,
     val date: String,
+    val tags : String,
+    val url : String
 ) : Parcelable

@@ -26,7 +26,7 @@ private val retrofitPokeNews = Retrofit.Builder()
 interface PokedexNewsService {
 
     @GET("/us/api/news/")
-    suspend fun getUserInfo(@Query("count") count: String): PokeNewsRequest
+    suspend fun getPokeNews(@Query("count") count: Int): List<PokeNewsRequest>
 
 }
 
