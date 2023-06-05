@@ -15,4 +15,5 @@
 .cxx
 local.properties
 /.idea/vcs.xml
+/.idea/deploymentTargetDropDown.xml
 /app/google-services.json
