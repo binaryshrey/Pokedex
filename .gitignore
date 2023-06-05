@@ -7,6 +7,7 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/jarRepositories.xml
 .DS_Store
 /build
 /captures
@@ -14,3 +15,4 @@
 .cxx
 local.properties
 /.idea/vcs.xml
+/app/google-services.json
