@@ -1,10 +1,11 @@
 package dev.shreyansh.pokemon.pokedex.viewModel
 
+import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class PokedexViewModel: ViewModel(){
+class PokedexViewModel(application: Application) : ViewModel(){
 
 
     //login
