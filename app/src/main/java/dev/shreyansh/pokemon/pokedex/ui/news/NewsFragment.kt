@@ -1,7 +1,6 @@
-package dev.shreyansh.pokemon.pokedex.ui.home
+package dev.shreyansh.pokemon.pokedex.ui.news
 
 import android.content.Intent
-import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,79 +12,54 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.bumptech.glide.Glide
-import com.google.firebase.auth.FirebaseAuth
 import dev.shreyansh.pokemon.pokedex.R
-import dev.shreyansh.pokemon.pokedex.databinding.FragmentHomeBinding
+import dev.shreyansh.pokemon.pokedex.databinding.FragmentNewsBinding
 import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
 import dev.shreyansh.pokemon.pokedex.utils.PokeNewsRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
 
-class HomeFragment : Fragment() {
+class NewsFragment : Fragment() {
 
-    private var firstName : String = ""
-    private lateinit var binding : FragmentHomeBinding
+
+    private lateinit var binding : FragmentNewsBinding
     private lateinit var pokeNewsRecyclerAdapter : PokeNewsRecyclerAdapter
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
-
         requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
-        binding.viewModel = pokedexViewModel
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_news, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
 
-        initUser()
-        getPokemonNews()
         setupPokeNewsRecyclerView()
         setupObservers()
         setupOnClickListeners()
-
         return binding.root
     }
 
     private fun setupOnClickListeners() {
-        binding.moreNewsTV.setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNewsFragment())
-        }
+        binding.moreToolbar.setNavigationOnClickListener { findNavController().popBackStack() }
     }
-
-
-    private fun getPokemonNews() {
-        pokedexViewModel.getPokeNews()
-    }
-
 
     private fun setupPokeNewsRecyclerView() {
         pokeNewsRecyclerAdapter = PokeNewsRecyclerAdapter(PokeNewsRecyclerAdapter.OnClickListener{
             navigateToNewsItem(it)
         }, requireActivity())
-        binding.pokemonNewsRV.adapter = pokeNewsRecyclerAdapter
+        binding.pokeNewsRV.adapter = pokeNewsRecyclerAdapter
     }
 
 
     private fun setupObservers() {
         pokedexViewModel.pokeNewsResponse.observe(viewLifecycleOwner, Observer {
             it?.let {
-                pokeNewsRecyclerAdapter.submitList(it.take(25).toMutableList())
+                pokeNewsRecyclerAdapter.submitList(it.toMutableList())
             }
         })
-    }
-
-    private fun initUser() {
-        firstName = FirebaseAuth.getInstance().currentUser?.displayName?.split("\\s".toRegex())?.toTypedArray()?.get(0).toString()
-        binding.userName.text = "Hey, ${firstName}! 👋"
-        Glide.with(requireContext())
-            .load(FirebaseAuth.getInstance().currentUser?.photoUrl)
-            .placeholder(R.drawable.profile)
-            .error(R.drawable.profile)
-            .into(binding.userProfilePic);
     }
 
     private fun navigateToNewsItem(news: PokeNewsRequest) {
@@ -93,7 +67,4 @@ class HomeFragment : Fragment() {
         navigateIntent.data = Uri.parse("https://api.pokemon.com${news.url}")
         startActivity(navigateIntent)
     }
-
-
-
 }

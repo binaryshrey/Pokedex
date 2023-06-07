@@ -21,5 +21,17 @@
         android:id="@+id/homeFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/newsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.news.NewsFragment"
+        android:label="NewsFragment" />
 </navigation>
