@@ -54,6 +54,9 @@ class HomeFragment : Fragment() {
         binding.moreNewsTV.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNewsFragment())
         }
+        binding.pokemonCV.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPokemonDirectoryContainerFragment())
+        }
     }
 
 
