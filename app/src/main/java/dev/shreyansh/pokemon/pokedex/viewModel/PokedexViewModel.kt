@@ -7,6 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.shreyansh.pokemon.pokedex.network.PokedexNewsAPI
+import dev.shreyansh.pokemon.pokedex.network.PokedexPokemonService
+import dev.shreyansh.pokemon.pokedex.network.PokedexPokemonServiceAPI
 import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
 import kotlinx.coroutines.launch
 
@@ -49,6 +51,22 @@ class PokedexViewModel(application: Application) : ViewModel(){
             }
         }
     }
+
+//    fun getAllPokemon(){
+//        viewModelScope.launch {
+//            //_pokeNewsStatus.value = PokeNewsAPIStatus.LOADING
+//            try{
+//                val res = PokedexPokemonServiceAPI.pokedexPokemonService.getAllPokemon()
+//                Log.i("PokemonAPI:RES","$res")
+//                //_pokeNewsResponse.value = res
+//                //_pokeNewsStatus.value = PokeNewsAPIStatus.DONE
+//            }
+//            catch (e: Exception){
+//                Log.e("PokemonAPI:ERROR","${e.message}")
+//                //_pokeNewsStatus.value = PokeNewsAPIStatus.ERROR
+//            }
+//        }
+//    }
 
 
 
