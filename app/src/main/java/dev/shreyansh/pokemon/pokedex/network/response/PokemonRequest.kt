@@ -31,6 +31,4 @@ data class PokemonRequest(
     @Json(name = "typeofpokemon") val type: List<String>,
     @Json(name = "special_attack") val specialAttack: Int,
     @Json(name = "special_defense") val specialDefense: Int,
-    @Json(name = "male_percentage") val malePercentage: String,
-    @Json(name = "female_percentage") val femalePercentage: String,
 ) : Parcelable

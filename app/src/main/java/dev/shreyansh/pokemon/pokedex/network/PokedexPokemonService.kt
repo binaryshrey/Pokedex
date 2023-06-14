@@ -11,22 +11,22 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
-private const val POKEMON_BASE_URL = "https://api.pokemon.com"
+private const val POKEMON_BASE_URL = "https://raw.githubusercontent.com/binaryshrey/Pokedex/feat/app-pokemon/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()
 
 private val retrofitPokemon = Retrofit.Builder()
+    .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
+    .addCallAdapterFactory(CoroutineCallAdapterFactory())
     .baseUrl(POKEMON_BASE_URL)
-    .addConverterFactory(MoshiConverterFactory.create(moshi))
     .build()
-
 
 interface PokedexPokemonService {
 
     @GET("pokemons.json")
-    suspend fun getAllPokemon(): List<PokemonRequest>
+    suspend fun getAllPokeMons(): List<PokemonRequest>
 
 }
 
