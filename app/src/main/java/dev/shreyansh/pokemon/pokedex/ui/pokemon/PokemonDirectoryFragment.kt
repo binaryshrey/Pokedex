@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import dev.shreyansh.pokemon.pokedex.R
@@ -53,7 +54,9 @@ class PokemonDirectoryFragment : Fragment() {
     private fun setupPokeMonsRecyclerView() {
         val staggeredGridLayoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         binding.pokemonsRV.layoutManager = staggeredGridLayoutManager
-        pokemonRecyclerAdapter = PokemonRecyclerAdapter(PokemonRecyclerAdapter.OnClickListener {}, requireActivity())
+        pokemonRecyclerAdapter = PokemonRecyclerAdapter(PokemonRecyclerAdapter.OnClickListener {
+            findNavController().navigate(PokemonDirectoryContainerFragmentDirections.actionPokemonDirectoryContainerFragmentToPokemonDetailFragment(it))
+        }, requireActivity())
         binding.pokemonsRV.adapter = pokemonRecyclerAdapter
     }
 

@@ -1,6 +1,7 @@
 package dev.shreyansh.pokemon.pokedex.ui.login
 
 import android.app.Activity
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -60,9 +61,8 @@ class LoginFragment : Fragment() {
 
     // onCreateView
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-
+        setStatusBarColor()
         setupFireBaseAuth()
-        setStatusBarToTransparent()
 
 
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login, container, false)
@@ -77,6 +77,9 @@ class LoginFragment : Fragment() {
     }
 
 
+    private fun setStatusBarColor() {
+        requireActivity().window.statusBarColor = Color.parseColor("#000000")
+    }
 
 
     private fun setupFireBaseAuth(){
@@ -87,13 +90,6 @@ class LoginFragment : Fragment() {
             .build()
         googleSignInClient = GoogleSignIn.getClient(requireActivity().applicationContext, gso)
     }
-
-
-
-    private fun setStatusBarToTransparent(){
-        requireActivity().window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
-    }
-
 
 
 

@@ -62,6 +62,14 @@ fun setPokemonTypeTV(textView: TextView, type:List<String>?){
 }
 
 
+@BindingAdapter("pokemonTypeName")
+fun setPokemonTypeName(textView: TextView, name:String?){
+    name?.let {
+        textView.text = "$name Pokemon"
+    }
+}
+
+
 
 @BindingAdapter("pokemonType")
 fun setPokeMonType(imageView: ImageView, type:List<String>?){
@@ -95,26 +103,84 @@ fun setPokeMonType(imageView: ImageView, type:List<String>?){
 fun setPokeMonTypeBg(materialCardView: MaterialCardView, type:List<String>?){
     type?.let {
         when(type[0]){
-            "Normal" -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
-            "Fighting" -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
-            "Flying" -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
-            "Poison" -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
-            "Ground" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C48B84"))
-            "Rock" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C48B84"))
-            "Bug" -> materialCardView.setCardBackgroundColor(Color.parseColor("#58DCC0"))
-            "Ghost" -> materialCardView.setCardBackgroundColor(Color.parseColor("#9569A4"))
-            "Steel" -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
-            "Fire" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FB7B6A"))
-            "Water" -> materialCardView.setCardBackgroundColor(Color.parseColor("#56AAF2"))
-            "Grass" -> materialCardView.setCardBackgroundColor(Color.parseColor("#58DCC0"))
-            "Electric" -> materialCardView.setCardBackgroundColor(Color.parseColor("#F9D557"))
-            "Ice" -> materialCardView.setCardBackgroundColor(Color.parseColor("#56AAF2"))
-            "Dragon" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FB7B6A"))
-            "Psychic" -> materialCardView.setCardBackgroundColor(Color.parseColor("#9569A4"))
-            "Dark" -> materialCardView.setCardBackgroundColor(Color.parseColor("#9569A4"))
-            "Fairy" -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
-            "Unknown" -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
-            else -> materialCardView.setCardBackgroundColor(Color.parseColor("#BEBEBE"))
+            "Normal" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+            "Fighting" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+            "Flying" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+            "Poison" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+            "Ground" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C78C85"))
+            "Rock" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C78C85"))
+            "Bug" -> materialCardView.setCardBackgroundColor(Color.parseColor("#5DDFC6"))
+            "Ghost" -> materialCardView.setCardBackgroundColor(Color.parseColor("#AF6FB6"))
+            "Steel" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+            "Fire" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FD8585"))
+            "Water" -> materialCardView.setCardBackgroundColor(Color.parseColor("#76C4FB"))
+            "Grass" -> materialCardView.setCardBackgroundColor(Color.parseColor("#5DDFC6"))
+            "Electric" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FFDE5D"))
+            "Ice" -> materialCardView.setCardBackgroundColor(Color.parseColor("#76C4FB"))
+            "Dragon" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FD8585"))
+            "Psychic" -> materialCardView.setCardBackgroundColor(Color.parseColor("#AF6FB6"))
+            "Dark" -> materialCardView.setCardBackgroundColor(Color.parseColor("#AF6FB6"))
+            "Fairy" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+            "Unknown" -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+            else -> materialCardView.setCardBackgroundColor(Color.parseColor("#C7C7C7"))
+        }
+    }
+}
+
+
+@BindingAdapter("pokemonTypeDetailBg")
+fun setPokeMonTypeDetailBg(imageView: ImageView, type:List<String>?){
+    type?.let {
+        when(type[0]){
+            "Normal" -> imageView.setImageResource(R.drawable.normal_detail)
+            "Fighting" -> imageView.setImageResource(R.drawable.normal_detail)
+            "Flying" -> imageView.setImageResource(R.drawable.normal_detail)
+            "Poison" -> imageView.setImageResource(R.drawable.normal_detail)
+            "Ground" -> imageView.setImageResource(R.drawable.ground_detail)
+            "Rock" -> imageView.setImageResource(R.drawable.ground_detail)
+            "Bug" -> imageView.setImageResource(R.drawable.grass_detail)
+            "Ghost" -> imageView.setImageResource(R.drawable.psychic_detail)
+            "Steel" -> imageView.setImageResource(R.drawable.normal_detail)
+            "Fire" -> imageView.setImageResource(R.drawable.fire_detail)
+            "Water" -> imageView.setImageResource(R.drawable.water_detail)
+            "Grass" -> imageView.setImageResource(R.drawable.grass_detail)
+            "Electric" -> imageView.setImageResource(R.drawable.electric_detail)
+            "Ice" -> imageView.setImageResource(R.drawable.water_detail)
+            "Dragon" -> imageView.setImageResource(R.drawable.fire_detail)
+            "Psychic" -> imageView.setImageResource(R.drawable.psychic_detail)
+            "Dark" -> imageView.setImageResource(R.drawable.psychic_detail)
+            "Fairy" -> imageView.setImageResource(R.drawable.normal_detail)
+            "Unknown" -> imageView.setImageResource(R.drawable.normal_detail)
+            else -> imageView.setImageResource(R.drawable.normal_detail)
+        }
+    }
+}
+
+
+@BindingAdapter("detailPokemonFavBg")
+fun setDetailPokemonFavBg(materialCardView: MaterialCardView, type:List<String>?){
+    type?.let {
+        when(type[0]){
+            "Normal" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
+            "Fighting" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
+            "Flying" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
+            "Poison" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
+            "Ground" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1736C"))
+            "Rock" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1736C"))
+            "Bug" -> materialCardView.setCardBackgroundColor(Color.parseColor("#48D0B0"))
+            "Ghost" -> materialCardView.setCardBackgroundColor(Color.parseColor("#92589E"))
+            "Steel" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
+            "Fire" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FB6C6C"))
+            "Water" -> materialCardView.setCardBackgroundColor(Color.parseColor("#5EAEF9"))
+            "Grass" -> materialCardView.setCardBackgroundColor(Color.parseColor("#48D0B0"))
+            "Electric" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FFCE48"))
+            "Ice" -> materialCardView.setCardBackgroundColor(Color.parseColor("#5EAEF9"))
+            "Dragon" -> materialCardView.setCardBackgroundColor(Color.parseColor("#FB6C6C"))
+            "Psychic" -> materialCardView.setCardBackgroundColor(Color.parseColor("#92589E"))
+            "Dark" -> materialCardView.setCardBackgroundColor(Color.parseColor("#92589E"))
+            "Fairy" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
+            "Unknown" -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
+            else -> materialCardView.setCardBackgroundColor(Color.parseColor("#B1B1B1"))
         }
     }
 }
