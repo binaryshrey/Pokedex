@@ -10,25 +10,42 @@ import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.google.android.material.tabs.TabLayoutMediator
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokemonDetailBinding
 import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.utils.PokemonDetailsPagerAdapter
+import dev.shreyansh.pokemon.pokedex.utils.PokemonDirectoryContainerPagerAdapter
+import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
+import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
 
 class PokemonDetailFragment : Fragment() {
 
+    companion object {
+        private val TABS = listOf<String>("About", "Base Stats","Evolution")
+    }
     private lateinit var selectedPokemon : PokemonRequest
     private lateinit var binding : FragmentPokemonDetailBinding
+    private val pokedexViewModel: PokedexViewModel by activityViewModels {
+        PokedexViewModelFactory(requireNotNull(this.activity).application)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
+
         selectedPokemon = PokemonDetailFragmentArgs.fromBundle(requireArguments()).pokemon
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_pokemon_detail, container, false)
         setTitleBarColorAndPokeCircle()
         binding.lifecycleOwner = viewLifecycleOwner
         binding.pokemon = selectedPokemon
+
+        binding.detailsViewPager.adapter = PokemonDetailsPagerAdapter(requireActivity())
+        TabLayoutMediator(binding.pokemonDetailsTabLayout, binding.detailsViewPager) { tab, position ->
+            tab.text = TABS[position]
+        }.attach()
 
         setSelectedPokemonImage()
         setupOnClickListeners()

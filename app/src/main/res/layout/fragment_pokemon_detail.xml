@@ -75,7 +75,6 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-
         <ImageView
             android:id="@+id/pokeCircleIV"
             android:layout_width="wrap_content"
@@ -87,10 +86,10 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
-            android:scaleType="centerCrop"
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
             android:src="@drawable/detail_drop"
             app:layout_constraintBottom_toBottomOf="@+id/detailIV"
             app:layout_constraintEnd_toEndOf="parent"
@@ -174,6 +173,43 @@
             app:layout_constraintTop_toTopOf="@+id/typeCV"
             app:pokemonTypeName="@{pokemon.category}"
             tools:text="Mouse Pokemon" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/detailsViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailIV" />
+
+
+        <LinearLayout
+            android:id="@+id/detailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailIV">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/pokemonDetailsTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fillViewport="true"
+                app:tabIndicatorColor="@color/black"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextAppearance="@style/TabLayoutStyleLight"
+                app:tabTextColor="@color/indicatorColor_light" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pokemonDetailsViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

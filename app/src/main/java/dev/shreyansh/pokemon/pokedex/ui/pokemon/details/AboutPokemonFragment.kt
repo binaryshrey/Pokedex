@@ -1,4 +1,4 @@
-package dev.shreyansh.pokemon.pokedex.ui.pokemon
+package dev.shreyansh.pokemon.pokedex.ui.pokemon.details
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,12 +8,11 @@ import android.view.ViewGroup
 import dev.shreyansh.pokemon.pokedex.R
 
 
-class FavPokemonFragment : Fragment() {
+class AboutPokemonFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-
-        return inflater.inflate(R.layout.fragment_fav_pokemon, container, false)
+        return inflater.inflate(R.layout.fragment_about_pokemon, container, false)
     }
 
 

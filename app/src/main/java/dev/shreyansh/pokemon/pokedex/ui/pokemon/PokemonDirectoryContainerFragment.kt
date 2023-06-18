@@ -29,7 +29,7 @@ class PokemonDirectoryContainerFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
+
         setStatusBarColor()
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_pokemon_directory_container, container, false)
 
