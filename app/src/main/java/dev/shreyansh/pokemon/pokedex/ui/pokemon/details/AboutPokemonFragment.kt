@@ -1,10 +1,12 @@
 package dev.shreyansh.pokemon.pokedex.ui.pokemon.details
 
+import android.animation.ValueAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentAboutPokemonBinding

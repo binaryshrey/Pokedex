@@ -1,5 +1,6 @@
 package dev.shreyansh.pokemon.pokedex.utils
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.util.Log
 import android.view.View
@@ -107,6 +108,44 @@ fun setPokemonTypeName(textView: TextView, name:String?){
     }
 }
 
+@BindingAdapter("progressValue")
+fun setProgressValue(textView: TextView, progress:Int?){
+    progress?.let {
+        textView.text = "$progress"
+    }
+}
+
+@BindingAdapter("weakness")
+fun setWeakness(textView: TextView, weakness: List<String>?){
+    weakness?.let {
+        textView.text = "${weakness.joinToString(", ")} - Type Pokemons"
+    }
+}
+
+@BindingAdapter("statsProgress")
+fun setStatsProgress(progressBar: ProgressBar, stats:Int?){
+    stats?.let {
+        progressBar.progress = stats
+        if(stats >= 40){
+            progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#8fce00")))
+        }else{
+            progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#f44336")))
+        }
+    }
+}
+
+
+@BindingAdapter("totalStatsProgress")
+fun setTotalStatsProgress(progressBar: ProgressBar, stats:Int?){
+    stats?.let {
+        progressBar.progress = stats
+        if(stats >= 240){
+            progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#8fce00")))
+        }else{
+            progressBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#f44336")))
+        }
+    }
+}
 
 
 @BindingAdapter("pokemonType")
