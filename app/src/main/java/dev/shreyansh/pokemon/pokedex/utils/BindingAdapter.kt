@@ -46,10 +46,48 @@ fun setPokeMonName(textView: TextView, name:String?){
     }
 }
 
+
+@BindingAdapter("pokemonDesc")
+fun setPokemonDesc(textView: TextView, description:String?){
+    description?.let {
+        textView.text = description.toString()
+    }
+}
+
 @BindingAdapter("pokemonId")
 fun setPokeMonId(textView: TextView, id:String?){
     id?.let {
         textView.text = id.toString()
+    }
+}
+
+
+@BindingAdapter("pokemonHeight")
+fun setPokemonHeight(textView: TextView, height:String?){
+    height?.let {
+        textView.text = "$height (${convertHeightToCm(height)} cm)"
+    }
+}
+
+
+@BindingAdapter("male")
+fun setMalePercentage(textView: TextView, male:String?){
+    male?.let {
+        textView.text = "⚦ $male"
+    }
+}
+
+@BindingAdapter("female")
+fun setFemalePercentage(textView: TextView, female:String?){
+    female?.let {
+        textView.text = "⚧ $female"
+    }
+}
+
+@BindingAdapter("pokemonWeight")
+fun setPokemonWeight(textView: TextView, weight:String?){
+    weight?.let {
+        textView.text = "$weight (${convertToKilograms(weight)} kg)"
     }
 }
 

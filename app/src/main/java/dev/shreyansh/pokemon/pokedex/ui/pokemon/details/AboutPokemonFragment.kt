@@ -5,14 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import dev.shreyansh.pokemon.pokedex.R
+import dev.shreyansh.pokemon.pokedex.databinding.FragmentAboutPokemonBinding
+import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
 
 
 class AboutPokemonFragment : Fragment() {
 
+    private lateinit var selectedPokemon : PokemonRequest
+    private lateinit var binding : FragmentAboutPokemonBinding
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_about_pokemon, container, false)
+        selectedPokemon = requireArguments().getParcelable("selectedPokemon")!!
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_about_pokemon, container, false)
+        binding.pokemon = selectedPokemon
+        binding.lifecycleOwner = viewLifecycleOwner
+        return binding.root
     }
 
 

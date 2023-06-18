@@ -2344,7 +2344,9 @@
     "egg_groups": "Mineral ",
     "evolvedfrom": "",
     "reason": "",
-    "base_exp": "65"
+    "base_exp": "65",
+    "male_percentage": "50%",
+    "female_percentage": "50%"
   },
   {
     "name": "Magneton",
@@ -2371,7 +2373,9 @@
     "egg_groups": "Mineral ",
     "evolvedfrom": "#081",
     "reason": "(Level 30)",
-    "base_exp": "163"
+    "base_exp": "163",
+    "male_percentage": "50%",
+    "female_percentage": "50%"
   },
   {
     "name": "Farfetch'd",

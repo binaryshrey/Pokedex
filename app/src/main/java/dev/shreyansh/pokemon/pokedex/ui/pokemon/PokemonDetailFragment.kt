@@ -42,8 +42,8 @@ class PokemonDetailFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
         binding.pokemon = selectedPokemon
 
-        binding.detailsViewPager.adapter = PokemonDetailsPagerAdapter(requireActivity())
-        TabLayoutMediator(binding.pokemonDetailsTabLayout, binding.detailsViewPager) { tab, position ->
+        binding.pokemonDetailsViewPager.adapter = PokemonDetailsPagerAdapter(requireActivity(), selectedPokemon)
+        TabLayoutMediator(binding.pokemonDetailsTabLayout, binding.pokemonDetailsViewPager) { tab, position ->
             tab.text = TABS[position]
         }.attach()
 
