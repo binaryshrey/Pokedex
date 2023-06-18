@@ -1,5 +1,7 @@
 package dev.shreyansh.pokemon.pokedex.ui.pokemon
 
+import android.content.res.Configuration
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,6 +30,7 @@ class PokemonDirectoryContainerFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+        setStatusBarColor()
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_pokemon_directory_container, container, false)
 
         binding.pokemonViewPager.adapter = PokemonDirectoryContainerPagerAdapter(requireActivity())
@@ -35,12 +38,25 @@ class PokemonDirectoryContainerFragment : Fragment() {
             tab.text = TABS[position]
         }.attach()
 
-        binding.pokedexContainerToolbar.setNavigationOnClickListener {
-            findNavController().popBackStack()
-        }
+        setupOnClickListeners()
+
 
 
         return binding.root
+    }
+
+    private fun setStatusBarColor() {
+        when(requireContext().resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK)){
+            Configuration.UI_MODE_NIGHT_YES -> requireActivity().window.statusBarColor = Color.parseColor("#000000")
+            Configuration.UI_MODE_NIGHT_NO -> requireActivity().window.statusBarColor = Color.parseColor("#ffffff")
+            else -> requireActivity().window.statusBarColor = Color.parseColor("#000000")
+        }
+    }
+
+    private fun setupOnClickListeners() {
+        binding.pokedexContainerToolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 

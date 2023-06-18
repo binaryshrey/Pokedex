@@ -42,6 +42,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
+                android:id="@+id/favIV"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="center"
@@ -74,22 +75,26 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:layout_marginTop="-32dp"
-            android:background="@drawable/custom_corners"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailIV">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/custom_corners" />
-        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/pokeCircleIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/electric_circle"
+            app:layout_constraintBottom_toBottomOf="@+id/detailIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/detail_drop"
+            app:layout_constraintBottom_toBottomOf="@+id/detailIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/pokemonDetailIV"
