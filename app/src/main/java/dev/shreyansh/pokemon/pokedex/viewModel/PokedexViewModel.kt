@@ -6,9 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.shreyansh.pokemon.pokedex.network.PokedexNewsAPI
-import dev.shreyansh.pokemon.pokedex.network.PokedexPokemonService
-import dev.shreyansh.pokemon.pokedex.network.PokedexPokemonServiceAPI
+import dev.shreyansh.pokemon.pokedex.network.*
+import dev.shreyansh.pokemon.pokedex.network.response.MovesResponse
 import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
 import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
 import kotlinx.coroutines.launch
@@ -17,6 +16,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
     enum class PokeNewsAPIStatus { LOADING, ERROR, DONE }
     enum class PokeMonAPIStatus { LOADING, ERROR, DONE }
+    enum class MovesStatus { LOADING, ERROR, DONE }
 
 
     //login
@@ -43,6 +43,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _pokeMonsResponse = MutableLiveData<List<PokemonRequest>>()
     val pokeMonsResponse: LiveData<List<PokemonRequest>>
         get() = _pokeMonsResponse
+
+
+    // moves
+    private val _movesAPIStatus = MutableLiveData<MovesStatus>()
+    val movesAPIStatus: LiveData<MovesStatus>
+        get() = _movesAPIStatus
+
+    private val _movesResponse = MutableLiveData<List<MovesResponse>>()
+    val movesResponse: LiveData<List<MovesResponse>>
+        get() = _movesResponse
 
     init {
         _loginComplete.value = false
@@ -82,6 +92,23 @@ class PokedexViewModel(application: Application) : ViewModel(){
     }
 
 
+    fun getAllMoves(){
+        viewModelScope.launch {
+            _movesAPIStatus.value = MovesStatus.LOADING
+            try{
+                val res = MovesServiceAPI.movesService.getPokeMoves()
+                Log.i("MovesServiceAPI:RES","$res")
+                _movesResponse.value = res
+                _movesAPIStatus.value = MovesStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("MovesServiceAPI:ERROR","${e.message}")
+                _movesAPIStatus.value = MovesStatus.ERROR
+            }
+        }
+    }
+
+
 
     //login-checked
     fun updateLogin() {
@@ -93,7 +120,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     fun onLoginCancel() {
         _loginComplete.value = false
     }
-
 
 
 

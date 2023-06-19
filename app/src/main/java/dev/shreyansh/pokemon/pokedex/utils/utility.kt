@@ -1,7 +1,6 @@
 package dev.shreyansh.pokemon.pokedex.utils
 
 import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
-import org.checkerframework.checker.units.qual.s
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
@@ -34,7 +33,7 @@ fun convertToKilograms(weight: String): Double {
 }
 
 
-fun searchPokemonById(persons: List<PokemonRequest>, idToSearch: String): PokemonRequest? {
-    return persons.find { it.id == idToSearch }
+fun searchPokemonById(pokemons: List<PokemonRequest>, idToSearch: String): PokemonRequest? {
+    return pokemons.find { it.id == idToSearch }
 }
 
