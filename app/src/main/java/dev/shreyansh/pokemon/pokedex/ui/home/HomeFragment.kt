@@ -71,6 +71,9 @@ class HomeFragment : Fragment() {
         binding.movesCV.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToMovesFragment())
         }
+        binding.abilityCV.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToAbilitiesFragment())
+        }
     }
 
 

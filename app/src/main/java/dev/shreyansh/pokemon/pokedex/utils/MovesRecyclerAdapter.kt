@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.MovesListItemBinding
 import dev.shreyansh.pokemon.pokedex.network.response.MovesResponse
 
@@ -38,9 +39,23 @@ class MovesRecyclerAdapter(val activity: Activity) : ListAdapter<MovesResponse, 
         val item = getItem(position)
 
         if(!item.learnedByPokemon.isNullOrEmpty()){
-            Glide.with(activity.applicationContext).load(item.learnedByPokemon[0].url).into(holder.binding.poke1IV)
-            Glide.with(activity.applicationContext).load(item.learnedByPokemon[1].url).into(holder.binding.poke2IV)
-            Glide.with(activity.applicationContext).load(item.learnedByPokemon[2].url).into(holder.binding.poke3IV)
+            Glide.with(activity.applicationContext)
+                .load(item.learnedByPokemon[0].url)
+                .placeholder(R.drawable.def_poke)
+                .error(R.drawable.def_poke)
+                .into(holder.binding.poke1IV)
+
+            Glide.with(activity.applicationContext)
+                .load(item.learnedByPokemon[1].url)
+                .placeholder(R.drawable.def_poke)
+                .error(R.drawable.def_poke)
+                .into(holder.binding.poke2IV)
+
+            Glide.with(activity.applicationContext)
+                .load(item.learnedByPokemon[2].url)
+                .placeholder(R.drawable.def_poke)
+                .error(R.drawable.def_poke)
+                .into(holder.binding.poke3IV)
         }
         holder.bind(item)
     }

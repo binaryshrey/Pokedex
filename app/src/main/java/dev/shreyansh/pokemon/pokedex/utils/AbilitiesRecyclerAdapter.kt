@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.AbilitiesListItemBinding
 import dev.shreyansh.pokemon.pokedex.network.response.AbilitiesResponse
 
@@ -38,7 +39,12 @@ class AbilitiesRecyclerAdapter(val activity: Activity) : ListAdapter<AbilitiesRe
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-        Glide.with(activity.applicationContext).load(item.pokemonURL).into(holder.binding.pokemonIV)
+        Glide.with(activity.applicationContext)
+            .load(item.pokemonURL)
+            .placeholder(R.drawable.def_poke)
+            .error(R.drawable.def_poke)
+            .into(holder.binding.pokemonIV)
+
         holder.bind(item)
     }
 
