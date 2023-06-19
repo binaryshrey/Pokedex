@@ -7,10 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.shreyansh.pokemon.pokedex.network.*
-import dev.shreyansh.pokemon.pokedex.network.response.AbilitiesResponse
-import dev.shreyansh.pokemon.pokedex.network.response.MovesResponse
-import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
-import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.network.response.*
 import kotlinx.coroutines.launch
 
 class PokedexViewModel(application: Application) : ViewModel(){
@@ -19,6 +16,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class PokeMonAPIStatus { LOADING, ERROR, DONE }
     enum class MovesStatus { LOADING, ERROR, DONE }
     enum class AbilitiesStatus { LOADING, ERROR, DONE }
+    enum class ItemsStatus { LOADING, ERROR, DONE }
 
 
     //login
@@ -65,6 +63,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _abilitiesResponse = MutableLiveData<List<AbilitiesResponse>>()
     val abilitiesResponse: LiveData<List<AbilitiesResponse>>
         get() = _abilitiesResponse
+
+
+    // items
+    private val _itemsAPIStatus = MutableLiveData<ItemsStatus>()
+    val itemsAPIStatus: LiveData<ItemsStatus>
+        get() = _itemsAPIStatus
+
+    private val _itemsResponse = MutableLiveData<List<ItemsResponse>>()
+    val itemsResponse: LiveData<List<ItemsResponse>>
+        get() = _itemsResponse
 
     init {
         _loginComplete.value = false
@@ -133,6 +141,23 @@ class PokedexViewModel(application: Application) : ViewModel(){
             catch (e: Exception){
                 Log.e("AbilitiesServiceAPI:ERROR","${e.message}")
                 _abilitiesAPIStatus.value = AbilitiesStatus.ERROR
+            }
+        }
+    }
+
+
+    fun getAllItems(){
+        viewModelScope.launch {
+            _itemsAPIStatus.value = ItemsStatus.LOADING
+            try{
+                val res = ItemsServiceAPI.itemsService.getPokeItems()
+                Log.i("ItemsServiceAPI:RES","$res")
+                _itemsResponse.value = res
+                _itemsAPIStatus.value = ItemsStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("ItemsServiceAPI:ERROR","${e.message}")
+                _itemsAPIStatus.value = ItemsStatus.ERROR
             }
         }
     }
