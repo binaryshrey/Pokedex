@@ -50,6 +50,13 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/abilitiesFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/itemsFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
@@ -83,4 +90,8 @@
         android:id="@+id/abilitiesFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.abilities.AbilitiesFragment"
         android:label="AbilitiesFragment" />
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.items.ItemsFragment"
+        android:label="ItemsFragment" />
 </navigation>
