@@ -124,5 +124,4 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
 
 
-
 }

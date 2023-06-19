@@ -10,6 +10,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.progressindicator.CircularProgressIndicator
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 
@@ -59,6 +60,43 @@ fun setPokemonDesc(textView: TextView, description:String?){
 fun setPokeMonId(textView: TextView, id:String?){
     id?.let {
         textView.text = id.toString()
+    }
+}
+
+
+@BindingAdapter("intText")
+fun setIntText(textView: TextView, text:Int?){
+    text?.let {
+        textView.text = "${text}"
+    }
+}
+
+
+@BindingAdapter("text")
+fun setText(textView: TextView, text:String?){
+    text?.let {
+        textView.text = text.capitalize().toString()
+    }
+}
+
+
+@BindingAdapter("powerPercentage")
+fun setPowerPercentage(circularProgressIndicator: CircularProgressIndicator, power: Int?) {
+    power?.let {
+        circularProgressIndicator.progress = power
+    }
+}
+
+
+@BindingAdapter("movesProgress")
+fun setMovesProgress(progressBar: ProgressBar, status: PokedexViewModel.MovesStatus?) {
+    progressBar.visibility = View.GONE
+    status?.let {
+        when (status) {
+            PokedexViewModel.MovesStatus.LOADING -> progressBar.visibility = View.VISIBLE
+            PokedexViewModel.MovesStatus.ERROR -> progressBar.visibility = View.GONE
+            PokedexViewModel.MovesStatus.DONE -> progressBar.visibility = View.GONE
+        }
     }
 }
 

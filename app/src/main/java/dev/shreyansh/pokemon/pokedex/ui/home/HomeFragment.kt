@@ -68,6 +68,9 @@ class HomeFragment : Fragment() {
         binding.pokemonCV.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPokemonDirectoryContainerFragment())
         }
+        binding.movesCV.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToMovesFragment())
+        }
     }
 
 

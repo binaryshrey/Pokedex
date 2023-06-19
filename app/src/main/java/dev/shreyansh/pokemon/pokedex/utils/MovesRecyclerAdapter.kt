@@ -6,11 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import dev.shreyansh.pokemon.pokedex.databinding.MovesListItemBinding
 import dev.shreyansh.pokemon.pokedex.network.response.MovesResponse
 
 
-class MovesRecyclerAdapter( val onClickListener: OnClickListener, val activity: Activity) : ListAdapter<MovesResponse, MovesRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackMoves()) {
+class MovesRecyclerAdapter(val activity: Activity) : ListAdapter<MovesResponse, MovesRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackMoves()) {
 
 
     class ViewHolder private constructor(val binding : MovesListItemBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -35,16 +36,13 @@ class MovesRecyclerAdapter( val onClickListener: OnClickListener, val activity: 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-        holder.itemView.setOnClickListener {
-            onClickListener.onClick(item)
+
+        if(!item.learnedByPokemon.isNullOrEmpty()){
+            Glide.with(activity.applicationContext).load(item.learnedByPokemon[0].url).into(holder.binding.poke1IV)
+            Glide.with(activity.applicationContext).load(item.learnedByPokemon[1].url).into(holder.binding.poke2IV)
+            Glide.with(activity.applicationContext).load(item.learnedByPokemon[2].url).into(holder.binding.poke3IV)
         }
-
-//        Glide.with(activity.applicationContext).load(item.imageUrl).into(holder.binding.pokemonIV)
         holder.bind(item)
-    }
-
-    class OnClickListener(val clickListener: (moves: MovesResponse) -> Unit) {
-        fun onClick(moves: MovesResponse) = clickListener(moves)
     }
 
 }

@@ -10,8 +10,8 @@ import kotlinx.parcelize.Parcelize
 data class MovesResponse(
     val id: Int,
     val name: String,
-    val power: Int,
-    val accuracy: Int,
+    val power: Int?,
+    val accuracy: Int?,
     val effect: String,
     val learnedByPokemon : List<LearnedByPokemon>,
 ) : Parcelable

@@ -28,7 +28,7 @@ private val retrofitMoves = Retrofit.Builder()
 
 interface MovesService {
 
-    @GET("/moves.json")
+    @GET("moves.json")
     suspend fun getPokeMoves(): List<MovesResponse>
 
 }
