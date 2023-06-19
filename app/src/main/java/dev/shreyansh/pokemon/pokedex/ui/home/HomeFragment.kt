@@ -1,6 +1,7 @@
 package dev.shreyansh.pokemon.pokedex.ui.home
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
@@ -35,7 +36,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
 
-        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        setStatusBarColor()
 
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home, container, false)
         binding.viewModel = pokedexViewModel
@@ -50,9 +51,22 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+
+    private fun setStatusBarColor() {
+        when(requireContext().resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK)){
+            Configuration.UI_MODE_NIGHT_YES -> requireActivity().window.statusBarColor = Color.parseColor("#000000")
+            Configuration.UI_MODE_NIGHT_NO -> requireActivity().window.statusBarColor = Color.parseColor("#ffffff")
+            else -> requireActivity().window.statusBarColor = Color.parseColor("#000000")
+        }
+    }
+
+
     private fun setupOnClickListeners() {
         binding.moreNewsTV.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNewsFragment())
+        }
+        binding.pokemonCV.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPokemonDirectoryContainerFragment())
         }
     }
 
