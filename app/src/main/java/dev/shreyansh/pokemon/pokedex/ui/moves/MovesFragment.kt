@@ -3,6 +3,7 @@ package dev.shreyansh.pokemon.pokedex.ui.moves
 import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentMovesBinding
 import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
@@ -38,7 +40,13 @@ class MovesFragment : Fragment() {
         getPokeMoves()
         setupMovesRecyclerView()
         setupObservers()
+        setupOnClickListeners()
+
         return binding.root
+    }
+
+    private fun setupOnClickListeners() {
+        binding.movesToolbar.setNavigationOnClickListener { findNavController().popBackStack() }
     }
 
 

@@ -50,8 +50,8 @@
 
             <ImageView
                 android:id="@+id/poke1IV"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_marginStart="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/moveNameTV"
                 app:layout_constraintStart_toEndOf="@+id/moveNameTV"
@@ -60,9 +60,8 @@
 
             <ImageView
                 android:id="@+id/poke2IV"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginStart="-4dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 app:layout_constraintBottom_toBottomOf="@+id/poke1IV"
                 app:layout_constraintStart_toEndOf="@+id/poke1IV"
                 app:layout_constraintTop_toTopOf="@+id/poke1IV"
@@ -70,9 +69,8 @@
 
             <ImageView
                 android:id="@+id/poke3IV"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginStart="-8dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 app:layout_constraintBottom_toBottomOf="@+id/poke2IV"
                 app:layout_constraintStart_toEndOf="@+id/poke2IV"
                 app:layout_constraintTop_toTopOf="@+id/poke2IV"
