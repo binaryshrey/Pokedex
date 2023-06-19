@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+
+    <variable
+        name="viewModel"
+        type="dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel" />
+</data>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/itemsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.items.ItemsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/itemsAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/itemsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?android:attr/actionBarSize"
+            android:theme="?android:actionBarTheme"
+            app:navigationIcon="@drawable/goback">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ITEMS"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemsRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <ProgressBar
+        android:id="@+id/itemsProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:elevation="4dp"
+        android:indeterminateTint="@color/yellow_700"
+        app:itemsProgress="@{viewModel.itemsAPIStatus}" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
