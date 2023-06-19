@@ -101,6 +101,19 @@ fun setMovesProgress(progressBar: ProgressBar, status: PokedexViewModel.MovesSta
 }
 
 
+@BindingAdapter("abilitiesProgress")
+fun setAbilitiesProgress(progressBar: ProgressBar, status: PokedexViewModel.AbilitiesStatus?) {
+    progressBar.visibility = View.GONE
+    status?.let {
+        when (status) {
+            PokedexViewModel.AbilitiesStatus.LOADING -> progressBar.visibility = View.VISIBLE
+            PokedexViewModel.AbilitiesStatus.ERROR -> progressBar.visibility = View.GONE
+            PokedexViewModel.AbilitiesStatus.DONE -> progressBar.visibility = View.GONE
+        }
+    }
+}
+
+
 @BindingAdapter("pokemonHeight")
 fun setPokemonHeight(textView: TextView, height:String?){
     height?.let {

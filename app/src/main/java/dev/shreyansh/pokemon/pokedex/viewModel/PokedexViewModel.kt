@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.shreyansh.pokemon.pokedex.network.*
+import dev.shreyansh.pokemon.pokedex.network.response.AbilitiesResponse
 import dev.shreyansh.pokemon.pokedex.network.response.MovesResponse
 import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
 import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
@@ -17,6 +18,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class PokeNewsAPIStatus { LOADING, ERROR, DONE }
     enum class PokeMonAPIStatus { LOADING, ERROR, DONE }
     enum class MovesStatus { LOADING, ERROR, DONE }
+    enum class AbilitiesStatus { LOADING, ERROR, DONE }
 
 
     //login
@@ -53,6 +55,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _movesResponse = MutableLiveData<List<MovesResponse>>()
     val movesResponse: LiveData<List<MovesResponse>>
         get() = _movesResponse
+
+
+    // abilities
+    private val _abilitiesAPIStatus = MutableLiveData<AbilitiesStatus>()
+    val abilitiesAPIStatus: LiveData<AbilitiesStatus>
+        get() = _abilitiesAPIStatus
+
+    private val _abilitiesResponse = MutableLiveData<List<AbilitiesResponse>>()
+    val abilitiesResponse: LiveData<List<AbilitiesResponse>>
+        get() = _abilitiesResponse
 
     init {
         _loginComplete.value = false
@@ -104,6 +116,23 @@ class PokedexViewModel(application: Application) : ViewModel(){
             catch (e: Exception){
                 Log.e("MovesServiceAPI:ERROR","${e.message}")
                 _movesAPIStatus.value = MovesStatus.ERROR
+            }
+        }
+    }
+
+
+    fun getAllAbilities(){
+        viewModelScope.launch {
+            _abilitiesAPIStatus.value = AbilitiesStatus.LOADING
+            try{
+                val res = AbilitiesServiceAPI.abilitiesService.getPokeAbilities()
+                Log.i("AbilitiesServiceAPI:RES","$res")
+                _abilitiesResponse.value = res
+                _abilitiesAPIStatus.value = AbilitiesStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("AbilitiesServiceAPI:ERROR","${e.message}")
+                _abilitiesAPIStatus.value = AbilitiesStatus.ERROR
             }
         }
     }
