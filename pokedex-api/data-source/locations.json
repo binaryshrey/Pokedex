@@ -1,0 +1,1346 @@
+[
+  {
+    "id": 1,
+    "name": "Canalave city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 2,
+    "name": "Eterna city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 3,
+    "name": "Pastoria city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 4,
+    "name": "Sunyshore city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/5.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 5,
+    "name": "Sinnoh pokemon league area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/6.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacruel",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png"
+  },
+  {
+    "id": 6,
+    "name": "Oreburgh mine 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/7.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 7,
+    "name": "Valley windworks area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 8,
+    "name": "Eterna forest area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 9,
+    "name": "Fuego ironworks area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 10,
+    "name": "Mt coronet 1f route 207",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Clefairy",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png"
+  },
+  {
+    "id": 11,
+    "name": "Great marsh area 1",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Arbok",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+  },
+  {
+    "id": 12,
+    "name": "Solaceon ruins 2f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Unown",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/201.png"
+  },
+  {
+    "id": 13,
+    "name": "Sinnoh victory road 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Golbat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png"
+  },
+  {
+    "id": 14,
+    "name": "Ravaged path area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 15,
+    "name": "Oreburgh gate 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 16,
+    "name": "Stark mountain area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Fearow",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png"
+  },
+  {
+    "id": 18,
+    "name": "Turnback cave pillar 1",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Golbat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png"
+  },
+  {
+    "id": 19,
+    "name": "Snowpoint temple 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Golbat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png"
+  },
+  {
+    "id": 20,
+    "name": "Wayward cave 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Sandshrew",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
+  },
+  {
+    "id": 22,
+    "name": "Ruin maniac cave 0 9 different unown caught",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Geodude",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "id": 23,
+    "name": "Trophy garden area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Pikachu",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+  },
+  {
+    "id": 24,
+    "name": "Iron island area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/5.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 25,
+    "name": "Old chateau entrance",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/6.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Gastly",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png"
+  },
+  {
+    "id": 26,
+    "name": "Lake verity before galactic intervention",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/7.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 27,
+    "name": "Lake valor area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 28,
+    "name": "Lake acuity area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 29,
+    "name": "Valor lakefront area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Nidorina",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png"
+  },
+  {
+    "id": 30,
+    "name": "Acuity lakefront area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 31,
+    "name": "Sinnoh route 201 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Nidoran-f",
+    "pokemonImgURL": ""
+  },
+  {
+    "id": 32,
+    "name": "Sinnoh route 202 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Growlithe",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png"
+  },
+  {
+    "id": 33,
+    "name": "Sinnoh route 203 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 34,
+    "name": "Sinnoh route 204 south towards jubilife city",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 35,
+    "name": "Sinnoh route 205 south towards floaroma town",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 36,
+    "name": "Sinnoh route 206 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 37,
+    "name": "Sinnoh route 207 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 38,
+    "name": "Sinnoh route 208 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 39,
+    "name": "Sinnoh route 209 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Vulpix",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png"
+  },
+  {
+    "id": 40,
+    "name": "Lost tower 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 41,
+    "name": "Sinnoh route 210 south towards solaceon town",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Geodude",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "id": 42,
+    "name": "Sinnoh route 211 west towards eterna city",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 43,
+    "name": "Sinnoh route 212 north towards hearthome city",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 44,
+    "name": "Sinnoh route 213 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/5.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 45,
+    "name": "Sinnoh route 214 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/6.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Vulpix",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png"
+  },
+  {
+    "id": 46,
+    "name": "Sinnoh route 215 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/7.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Abra",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png"
+  },
+  {
+    "id": 47,
+    "name": "Sinnoh route 216 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 48,
+    "name": "Sinnoh route 217 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 49,
+    "name": "Sinnoh route 218 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 50,
+    "name": "Sinnoh route 219 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 51,
+    "name": "Sinnoh route 221 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Nidorina",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png"
+  },
+  {
+    "id": 52,
+    "name": "Sinnoh route 222 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 53,
+    "name": "Sinnoh route 224 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Oddish",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png"
+  },
+  {
+    "id": 54,
+    "name": "Sinnoh route 225 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 55,
+    "name": "Sinnoh route 227 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Fearow",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png"
+  },
+  {
+    "id": 56,
+    "name": "Sinnoh route 228 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Sandslash",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png"
+  },
+  {
+    "id": 57,
+    "name": "Sinnoh route 229 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 58,
+    "name": "Twinleaf town area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 59,
+    "name": "Celestic town area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 60,
+    "name": "Resort area area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 61,
+    "name": "Sinnoh sea route 220 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 62,
+    "name": "Sinnoh sea route 223 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Tentacruel",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png"
+  },
+  {
+    "id": 63,
+    "name": "Sinnoh sea route 226 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 64,
+    "name": "Sinnoh sea route 230 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/5.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Oddish",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png"
+  },
+  {
+    "id": 65,
+    "name": "Blackthorn city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/6.jpg",
+    "region": "Johto",
+    "pokemonName": "Poliwag",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 66,
+    "name": "Burned tower 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/7.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 67,
+    "name": "Celadon city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Kanto",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 68,
+    "name": "Cerulean city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Kanto",
+    "pokemonName": "Bulbasaur",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "id": 69,
+    "name": "Cherrygrove city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Johto",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 70,
+    "name": "Cianwood city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Johto",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 71,
+    "name": "Cinnabar island area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Kanto",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 72,
+    "name": "Dark cave violet city entrance",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Johto",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 73,
+    "name": "Digletts cave area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Kanto",
+    "pokemonName": "Diglett",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png"
+  },
+  {
+    "id": 74,
+    "name": "Dragons den area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Johto",
+    "pokemonName": "Magikarp",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png"
+  },
+  {
+    "id": 75,
+    "name": "Ecruteak city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Johto",
+    "pokemonName": "Poliwag",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 76,
+    "name": "Fuchsia city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Kanto",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 77,
+    "name": "Ice path 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Johto",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 78,
+    "name": "Ilex forest area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 79,
+    "name": "Lake of rage area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 80,
+    "name": "Mt moon mt moon square",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Kanto",
+    "pokemonName": "Poliwag",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 81,
+    "name": "Mt mortar 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 82,
+    "name": "Mt silver 2f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Johto",
+    "pokemonName": "Golbat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png"
+  },
+  {
+    "id": 83,
+    "name": "National park area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 84,
+    "name": "New bark town area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/5.jpg",
+    "region": "Johto",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 85,
+    "name": "Olivine city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/6.jpg",
+    "region": "Johto",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 86,
+    "name": "Pallet town area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/7.jpg",
+    "region": "Kanto",
+    "pokemonName": "Bulbasaur",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "id": 87,
+    "name": "Rock tunnel 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Kanto",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 88,
+    "name": "Kanto route 1 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 89,
+    "name": "Kanto route 10 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 90,
+    "name": "Kanto route 11 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 91,
+    "name": "Kanto route 12 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 92,
+    "name": "Kanto route 13 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 93,
+    "name": "Kanto route 14 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 94,
+    "name": "Kanto route 15 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 95,
+    "name": "Kanto route 16 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 96,
+    "name": "Kanto route 17 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 97,
+    "name": "Kanto route 18 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 98,
+    "name": "Kanto sea route 19 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Kanto",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 99,
+    "name": "Kanto route 2 south towards viridian city",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Kanto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 100,
+    "name": "Kanto sea route 20 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Kanto",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 101,
+    "name": "Kanto sea route 21 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 102,
+    "name": "Kanto route 22 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 103,
+    "name": "Kanto route 24 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Kanto",
+    "pokemonName": "Charmander",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+  },
+  {
+    "id": 104,
+    "name": "Kanto route 25 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/5.jpg",
+    "region": "Kanto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 105,
+    "name": "Kanto route 26 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/6.jpg",
+    "region": "Kanto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 106,
+    "name": "Kanto route 27 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/7.jpg",
+    "region": "Kanto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 107,
+    "name": "Kanto route 28 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Kanto",
+    "pokemonName": "Arbok",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+  },
+  {
+    "id": 108,
+    "name": "Johto route 29 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Johto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 109,
+    "name": "Kanto route 3 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 110,
+    "name": "Johto route 30 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 111,
+    "name": "Johto route 31 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 112,
+    "name": "Johto route 32 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Johto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 113,
+    "name": "Johto route 33 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 114,
+    "name": "Johto route 34 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 115,
+    "name": "Johto route 35 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 116,
+    "name": "Johto route 36 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 117,
+    "name": "Johto route 37 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 118,
+    "name": "Johto route 38 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 119,
+    "name": "Johto route 39 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 120,
+    "name": "Kanto route 4 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 121,
+    "name": "Johto sea route 40 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Johto",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 122,
+    "name": "Johto sea route 41 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Johto",
+    "pokemonName": "Tentacool",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 123,
+    "name": "Johto route 42 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 124,
+    "name": "Johto route 43 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/5.jpg",
+    "region": "Johto",
+    "pokemonName": "Pidgeotto",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png"
+  },
+  {
+    "id": 125,
+    "name": "Johto route 44 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/6.jpg",
+    "region": "Johto",
+    "pokemonName": "Spearow",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
+  },
+  {
+    "id": 126,
+    "name": "Johto route 45 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/7.jpg",
+    "region": "Johto",
+    "pokemonName": "Spearow",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
+  },
+  {
+    "id": 127,
+    "name": "Johto route 46 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 128,
+    "name": "Johto route 47 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Johto",
+    "pokemonName": "Raticate",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+  },
+  {
+    "id": 129,
+    "name": "Johto route 48 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Johto",
+    "pokemonName": "Fearow",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png"
+  },
+  {
+    "id": 130,
+    "name": "Kanto route 5 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 131,
+    "name": "Kanto route 6 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 132,
+    "name": "Kanto route 7 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 133,
+    "name": "Kanto route 8 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 134,
+    "name": "Kanto route 9 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 135,
+    "name": "Ruins of alph outside",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Johto",
+    "pokemonName": "Poliwag",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 136,
+    "name": "Seafoam islands 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Kanto",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 137,
+    "name": "Slowpoke well 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Johto",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 138,
+    "name": "Sprout tower 2f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 139,
+    "name": "Bell tower 2f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 140,
+    "name": "Tohjo falls area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 141,
+    "name": "Union cave 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 147,
+    "name": "Cerulean cave 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/8.jpg",
+    "region": "Kanto",
+    "pokemonName": "Arbok",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+  },
+  {
+    "id": 148,
+    "name": "Unknown all poliwag area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Johto",
+    "pokemonName": "Poliwag",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 149,
+    "name": "Unknown all rattata area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Johto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 150,
+    "name": "Unknown all bugs area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 151,
+    "name": "Vermilion city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/12.jpg",
+    "region": "Kanto",
+    "pokemonName": "Squirtle",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+  },
+  {
+    "id": 152,
+    "name": "Kanto victory road 1 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Kanto",
+    "pokemonName": "Sandslash",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png"
+  },
+  {
+    "id": 153,
+    "name": "Violet city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
+    "region": "Johto",
+    "pokemonName": "Poliwag",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 154,
+    "name": "Viridian city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Kanto",
+    "pokemonName": "Psyduck",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 155,
+    "name": "Viridian forest area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/16.jpg",
+    "region": "Kanto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 156,
+    "name": "Whirl islands 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/17.jpg",
+    "region": "Johto",
+    "pokemonName": "Zubat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 157,
+    "name": "Kanto route 23 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Kanto",
+    "pokemonName": "Spearow",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
+  },
+  {
+    "id": 158,
+    "name": "Power plant area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Kanto",
+    "pokemonName": "Pikachu",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+  },
+  {
+    "id": 159,
+    "name": "Kanto victory road 2 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Kanto",
+    "pokemonName": "Arbok",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+  },
+  {
+    "id": 160,
+    "name": "Pokemon tower 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Kanto",
+    "pokemonName": "",
+    "pokemonImgURL": ""
+  },
+  {
+    "id": 161,
+    "name": "Pokemon mansion 1f",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "region": "Kanto",
+    "pokemonName": "Rattata",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 162,
+    "name": "Kanto safari zone middle",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/3.jpg",
+    "region": "Kanto",
+    "pokemonName": "Nidoran-f",
+    "pokemonImgURL": ""
+  },
+  {
+    "id": 169,
+    "name": "Hearthome city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Eevee",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+  },
+  {
+    "id": 170,
+    "name": "Veilstone city area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Porygon",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png"
+  },
+  {
+    "id": 172,
+    "name": "Spear pillar area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/13.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Dialga",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/483.png"
+  },
+  {
+    "id": 178,
+    "name": "Sendoff spring area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/19.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Golbat",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png"
+  },
+  {
+    "id": 179,
+    "name": "Flower paradise area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/20.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Shaymin-land",
+    "pokemonImgURL": ""
+  },
+  {
+    "id": 180,
+    "name": "Maniac tunnel 26 plus different unown caught",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/1.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Geodude",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "id": 183,
+    "name": "Newmoon island area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/4.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Darkrai",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/491.png"
+  },
+  {
+    "id": 188,
+    "name": "Sinnoh hall of origin 1 area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Sinnoh",
+    "pokemonName": "Arceus",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/493.png"
+  },
+  {
+    "id": 228,
+    "name": "Azalea town area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/9.jpg",
+    "region": "Johto",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 229,
+    "name": "Goldenrod city north gate",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/10.jpg",
+    "region": "Johto",
+    "pokemonName": "Spearow",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png"
+  },
+  {
+    "id": 230,
+    "name": "Mahogany town area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/11.jpg",
+    "region": "Johto",
+    "pokemonName": "",
+    "pokemonImgURL": ""
+  },
+  {
+    "id": 234,
+    "name": "Saffron city fighting dojo",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/15.jpg",
+    "region": "Kanto",
+    "pokemonName": "Hitmonlee",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png"
+  },
+  {
+    "id": 237,
+    "name": "Team rocket hq area",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/18.jpg",
+    "region": "Johto",
+    "pokemonName": "Geodude",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  }
+]
