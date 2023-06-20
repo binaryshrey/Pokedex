@@ -1,0 +1,3002 @@
+[
+  {
+    "id": 1,
+    "name": "Master-ball",
+    "effect": "Catches a wild Pok\u00e9mon every time.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png"
+  },
+  {
+    "id": 2,
+    "name": "Ultra-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Success rate is 2\u00d7.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+  },
+  {
+    "id": 3,
+    "name": "Great-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Success rate is 1.5\u00d7.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
+  },
+  {
+    "id": 4,
+    "name": "Poke-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+  },
+  {
+    "id": 5,
+    "name": "Safari-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon in the Great Marsh or Safari Zone.  Success rate is 1.5\u00d7.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png"
+  },
+  {
+    "id": 6,
+    "name": "Net-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Success rate is 3\u00d7 for water and bug Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/net-ball.png"
+  },
+  {
+    "id": 7,
+    "name": "Dive-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon. Success rate is 3.5\u00d7 when underwater, fishing, or surfing.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png"
+  },
+  {
+    "id": 8,
+    "name": "Nest-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Success rate is 3.9\u00d7 for level 1 Pok\u00e9mon, and drops steadily to 1\u00d7 at level 30.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png"
+  },
+  {
+    "id": 9,
+    "name": "Repeat-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Success rate is 3\u00d7 for previously-caught Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repeat-ball.png"
+  },
+  {
+    "id": 10,
+    "name": "Timer-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon. Success rate increases by 0.1\u00d7 (Gen V: 0.3\u00d7) every turn, to a max of 4\u00d7.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/timer-ball.png"
+  },
+  {
+    "id": 11,
+    "name": "Luxury-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Caught Pok\u00e9mon start with 200 happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luxury-ball.png"
+  },
+  {
+    "id": 12,
+    "name": "Premier-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/premier-ball.png"
+  },
+  {
+    "id": 13,
+    "name": "Dusk-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Success rate is 3.5\u00d7 at night and in caves.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-ball.png"
+  },
+  {
+    "id": 14,
+    "name": "Heal-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.  Caught Pok\u00e9mon are immediately healed.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-ball.png"
+  },
+  {
+    "id": 15,
+    "name": "Quick-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon. Success rate is 4\u00d7 (Gen V: 5\u00d7), but only on the first turn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-ball.png"
+  },
+  {
+    "id": 16,
+    "name": "Cherish-ball",
+    "effect": "Tries to catch a wild Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cherish-ball.png"
+  },
+  {
+    "id": 17,
+    "name": "Potion",
+    "effect": "Restores 20 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"
+  },
+  {
+    "id": 18,
+    "name": "Antidote",
+    "effect": "Cures poison.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"
+  },
+  {
+    "id": 19,
+    "name": "Burn-heal",
+    "effect": "Cures a burn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"
+  },
+  {
+    "id": 20,
+    "name": "Ice-heal",
+    "effect": "Cures freezing.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png"
+  },
+  {
+    "id": 21,
+    "name": "Awakening",
+    "effect": "Cures sleep.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png"
+  },
+  {
+    "id": 22,
+    "name": "Paralyze-heal",
+    "effect": "Cures paralysis.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png"
+  },
+  {
+    "id": 23,
+    "name": "Full-restore",
+    "effect": "Restores HP to full and cures any status ailment and confusion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png"
+  },
+  {
+    "id": 24,
+    "name": "Max-potion",
+    "effect": "Restores HP to full.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png"
+  },
+  {
+    "id": 25,
+    "name": "Hyper-potion",
+    "effect": "Restores 200 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png"
+  },
+  {
+    "id": 26,
+    "name": "Super-potion",
+    "effect": "Restores 50 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png"
+  },
+  {
+    "id": 27,
+    "name": "Full-heal",
+    "effect": "Cures any status ailment and confusion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png"
+  },
+  {
+    "id": 28,
+    "name": "Revive",
+    "effect": "Revives with half HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"
+  },
+  {
+    "id": 29,
+    "name": "Max-revive",
+    "effect": "Revives with full HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png"
+  },
+  {
+    "id": 30,
+    "name": "Fresh-water",
+    "effect": "Restores 50 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png"
+  },
+  {
+    "id": 31,
+    "name": "Soda-pop",
+    "effect": "Restores 60 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png"
+  },
+  {
+    "id": 32,
+    "name": "Lemonade",
+    "effect": "Restores 80 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png"
+  },
+  {
+    "id": 33,
+    "name": "Moomoo-milk",
+    "effect": "Restores 100 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moomoo-milk.png"
+  },
+  {
+    "id": 34,
+    "name": "Energy-powder",
+    "effect": "Restores 50 HP, but lowers happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-powder.png"
+  },
+  {
+    "id": 35,
+    "name": "Energy-root",
+    "effect": "Restores 200 HP, but lowers happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png"
+  },
+  {
+    "id": 36,
+    "name": "Heal-powder",
+    "effect": "Cures any status ailment, but lowers happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-powder.png"
+  },
+  {
+    "id": 37,
+    "name": "Revival-herb",
+    "effect": "Revives with full HP, but lowers happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png"
+  },
+  {
+    "id": 38,
+    "name": "Ether",
+    "effect": "Restores 10 PP for one move.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ether.png"
+  },
+  {
+    "id": 39,
+    "name": "Max-ether",
+    "effect": "Restores PP to full for one move.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-ether.png"
+  },
+  {
+    "id": 40,
+    "name": "Elixir",
+    "effect": "Restores 10 PP for each move.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/elixir.png"
+  },
+  {
+    "id": 41,
+    "name": "Max-elixir",
+    "effect": "Restores PP to full for each move.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-elixir.png"
+  },
+  {
+    "id": 42,
+    "name": "Lava-cookie",
+    "effect": "Cures any status ailment and confusion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lava-cookie.png"
+  },
+  {
+    "id": 43,
+    "name": "Berry-juice",
+    "effect": "Restores 20 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png"
+  },
+  {
+    "id": 44,
+    "name": "Sacred-ash",
+    "effect": "Revives all fainted Pok\u00e9mon with full HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sacred-ash.png"
+  },
+  {
+    "id": 45,
+    "name": "Hp-up",
+    "effect": "Raises HP effort and happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png"
+  },
+  {
+    "id": 46,
+    "name": "Protein",
+    "effect": "Raises Attack effort and happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png"
+  },
+  {
+    "id": 47,
+    "name": "Iron",
+    "effect": "Raises Defense effort and happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png"
+  },
+  {
+    "id": 48,
+    "name": "Carbos",
+    "effect": "Raises Speed effort and happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png"
+  },
+  {
+    "id": 49,
+    "name": "Calcium",
+    "effect": "Raises Special Attack effort and happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png"
+  },
+  {
+    "id": 50,
+    "name": "Rare-candy",
+    "effect": "Causes a level-up and raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-candy.png"
+  },
+  {
+    "id": 51,
+    "name": "Pp-up",
+    "effect": "Raises a move's max PP by 20%.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-up.png"
+  },
+  {
+    "id": 52,
+    "name": "Zinc",
+    "effect": "Raises Special Defense and happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png"
+  },
+  {
+    "id": 53,
+    "name": "Pp-max",
+    "effect": "Raises a move's max PP by 60%.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-max.png"
+  },
+  {
+    "id": 54,
+    "name": "Old-gateau",
+    "effect": "Cures any status ailment and confusion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-gateau.png"
+  },
+  {
+    "id": 55,
+    "name": "Guard-spec",
+    "effect": "Prevents stat changes in battle for five turns in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/guard-spec.png"
+  },
+  {
+    "id": 56,
+    "name": "Dire-hit",
+    "effect": "Increases the chance of a critical hit in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dire-hit.png"
+  },
+  {
+    "id": 57,
+    "name": "X-attack",
+    "effect": "Raises Attack by one stage in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-attack.png"
+  },
+  {
+    "id": 58,
+    "name": "X-defense",
+    "effect": "Raises Defense by one stage in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-defense.png"
+  },
+  {
+    "id": 59,
+    "name": "X-speed",
+    "effect": "Raises Speed by one stage in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-speed.png"
+  },
+  {
+    "id": 60,
+    "name": "X-accuracy",
+    "effect": "Raises accuracy by one stage in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-accuracy.png"
+  },
+  {
+    "id": 61,
+    "name": "X-sp-atk",
+    "effect": "Raises Special Attack by one stage in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-atk.png"
+  },
+  {
+    "id": 62,
+    "name": "X-sp-def",
+    "effect": "Raises Special Defense by one stage in battle.  Raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-def.png"
+  },
+  {
+    "id": 63,
+    "name": "Poke-doll",
+    "effect": "Ends a wild battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-doll.png"
+  },
+  {
+    "id": 64,
+    "name": "Fluffy-tail",
+    "effect": "Ends a wild battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fluffy-tail.png"
+  },
+  {
+    "id": 65,
+    "name": "Blue-flute",
+    "effect": "Cures sleep.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blue-flute.png"
+  },
+  {
+    "id": 66,
+    "name": "Yellow-flute",
+    "effect": "Cures confusion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-flute.png"
+  },
+  {
+    "id": 67,
+    "name": "Red-flute",
+    "effect": "Cures attraction.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-flute.png"
+  },
+  {
+    "id": 68,
+    "name": "Black-flute",
+    "effect": "Halves the wild Pok\u00e9mon encounter rate.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-flute.png"
+  },
+  {
+    "id": 69,
+    "name": "White-flute",
+    "effect": "Doubles the wild Pok\u00e9mon encounter rate.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-flute.png"
+  },
+  {
+    "id": 70,
+    "name": "Shoal-salt",
+    "effect": "No effect. Gen III: Trade four and four Shoal Shells for a Shell Bell.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shoal-salt.png"
+  },
+  {
+    "id": 71,
+    "name": "Shoal-shell",
+    "effect": "No effect. Gen III: Trade four and four Shoal Salts for a Shell Bell.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shoal-shell.png"
+  },
+  {
+    "id": 72,
+    "name": "Red-shard",
+    "effect": "No effect. Can be traded for items or moves.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-shard.png"
+  },
+  {
+    "id": 73,
+    "name": "Blue-shard",
+    "effect": "No effect. Can be traded for items or moves.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blue-shard.png"
+  },
+  {
+    "id": 74,
+    "name": "Yellow-shard",
+    "effect": "No effect. Can be traded for items or moves.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-shard.png"
+  },
+  {
+    "id": 75,
+    "name": "Green-shard",
+    "effect": "No effect. Can be traded for items or moves.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/green-shard.png"
+  },
+  {
+    "id": 76,
+    "name": "Super-repel",
+    "effect": "For 200 steps, prevents wild encounters of level lower than your party's lead Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-repel.png"
+  },
+  {
+    "id": 77,
+    "name": "Max-repel",
+    "effect": "For 250 steps, prevents wild encounters of level lower than your party's lead Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-repel.png"
+  },
+  {
+    "id": 78,
+    "name": "Escape-rope",
+    "effect": "Transports user to the outside entrance of a cave.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/escape-rope.png"
+  },
+  {
+    "id": 79,
+    "name": "Repel",
+    "effect": "For 100 steps, prevents wild encounters of level lower than your party's lead Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repel.png"
+  },
+  {
+    "id": 80,
+    "name": "Sun-stone",
+    "effect": "Evolves a Cottonee into Whimsicott, a Gloom into Bellossom, a Petilil into Lilligant, or a Sunkern into Sunflora.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sun-stone.png"
+  },
+  {
+    "id": 81,
+    "name": "Moon-stone",
+    "effect": "Evolves a Clefairy into Clefable, a Jigglypuff into Wigglytuff, a Munna into Musharna, a Nidorina into Nidoqueen, a Nidorino into Nidoking, or a Skitty into Delcatty.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-stone.png"
+  },
+  {
+    "id": 82,
+    "name": "Fire-stone",
+    "effect": "Evolves an Eevee into Flareon, a Growlithe into Arcanine, a Pansear into Simisear, or a Vulpix into Ninetales.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-stone.png"
+  },
+  {
+    "id": 83,
+    "name": "Thunder-stone",
+    "effect": "Evolves an Eelektrik into Eelektross, an Eevee into Jolteon, or a Pikachu into Raichu.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png"
+  },
+  {
+    "id": 84,
+    "name": "Water-stone",
+    "effect": "Evolves an Eevee into Vaporeon, a Lombre into Ludicolo, a Panpour into Simipour, a Poliwhirl into Poliwrath, a Shellder into Cloyster, or a Staryu into Starmie.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-stone.png"
+  },
+  {
+    "id": 85,
+    "name": "Leaf-stone",
+    "effect": "Evolves an Exeggcute into Exeggutor, a Gloom into Vileplume, a Nuzleaf into Shiftry, a Pansage into Simisage, or a Weepinbell into Victreebel.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leaf-stone.png"
+  },
+  {
+    "id": 86,
+    "name": "Tiny-mushroom",
+    "effect": "Fire Red and Leaf Green: Trade two for prior Level-up moves. Sell for 250 Pok\u00e9dollars, or to Hungry Maid for 500 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tiny-mushroom.png"
+  },
+  {
+    "id": 87,
+    "name": "Big-mushroom",
+    "effect": "Fire Red and Leaf Green: Trade for prior Level-up moves. Sell for 2500 Pok\u00e9dollars, or to Hungry Maid for 5000 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-mushroom.png"
+  },
+  {
+    "id": 88,
+    "name": "Pearl",
+    "effect": "Sell for 700 Pok\u00e9dollars, or to Ore Collector for 1400 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pearl.png"
+  },
+  {
+    "id": 89,
+    "name": "Big-pearl",
+    "effect": "Sell for 3750 Pok\u00e9dollars, or to Ore Collector for 7500 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-pearl.png"
+  },
+  {
+    "id": 90,
+    "name": "Stardust",
+    "effect": "Sell for 1000 Pok\u00e9dollars, or to Ore Collector for 2000 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stardust.png"
+  },
+  {
+    "id": 91,
+    "name": "Star-piece",
+    "effect": "Platinum: Trade for one of each color Shard. Black and White: Trade for PP Up. Sell for 4900 Pok\u00e9dollars, or to Ore Collector for 9800 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/star-piece.png"
+  },
+  {
+    "id": 92,
+    "name": "Nugget",
+    "effect": "Sell for 5000 Pok\u00e9dollars, or to Ore Collector for 10000 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nugget.png"
+  },
+  {
+    "id": 93,
+    "name": "Heart-scale",
+    "effect": "No effect. Can be traded for prior Level-up moves.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heart-scale.png"
+  },
+  {
+    "id": 94,
+    "name": "Honey",
+    "effect": "",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/honey.png"
+  },
+  {
+    "id": 95,
+    "name": "Growth-mulch",
+    "effect": "Growing time of berries is reduced, but the soil dries out faster.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/growth-mulch.png"
+  },
+  {
+    "id": 96,
+    "name": "Damp-mulch",
+    "effect": "Growing time of berries is increased, but the soil dries out slower.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-mulch.png"
+  },
+  {
+    "id": 97,
+    "name": "Stable-mulch",
+    "effect": "Berries stay on the plant for longer than their usual time.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stable-mulch.png"
+  },
+  {
+    "id": 98,
+    "name": "Gooey-mulch",
+    "effect": "Berries regrow from dead plants an increased number of times.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gooey-mulch.png"
+  },
+  {
+    "id": 99,
+    "name": "Root-fossil",
+    "effect": "Can be revived into a Lileep.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/root-fossil.png"
+  },
+  {
+    "id": 100,
+    "name": "Claw-fossil",
+    "effect": "Can be revived into an Anorith.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/claw-fossil.png"
+  },
+  {
+    "id": 101,
+    "name": "Helix-fossil",
+    "effect": "Can be revived into an Omanyte.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/helix-fossil.png"
+  },
+  {
+    "id": 102,
+    "name": "Dome-fossil",
+    "effect": "Can be revived into a Kabuto.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dome-fossil.png"
+  },
+  {
+    "id": 103,
+    "name": "Old-amber",
+    "effect": "Can be revived into an Aerodactyl.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-amber.png"
+  },
+  {
+    "id": 104,
+    "name": "Armor-fossil",
+    "effect": "Can be revived into a Shieldon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/armor-fossil.png"
+  },
+  {
+    "id": 105,
+    "name": "Skull-fossil",
+    "effect": "Can be revived into a Cranidos.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/skull-fossil.png"
+  },
+  {
+    "id": 106,
+    "name": "Rare-bone",
+    "effect": "Sell for 5000 Pok\u00e9dollars, or to Bone Man for 10000 Pok\u00e9dollars.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-bone.png"
+  },
+  {
+    "id": 107,
+    "name": "Shiny-stone",
+    "effect": "Evolves a Minccino into Cinccino, a Roselia into Roserade, or a Togetic into Togekiss.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shiny-stone.png"
+  },
+  {
+    "id": 108,
+    "name": "Dusk-stone",
+    "effect": "Evolves a Lampent into Chandelure, a Misdreavus into Mismagius, or a Murkrow into Honchkrow.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-stone.png"
+  },
+  {
+    "id": 109,
+    "name": "Dawn-stone",
+    "effect": "Evolves a male Kirlia into Gallade or a female Snorunt into Froslass.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dawn-stone.png"
+  },
+  {
+    "id": 110,
+    "name": "Oval-stone",
+    "effect": "Level-up during Day on a Happiny: Holder evolves into Chansey.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oval-stone.png"
+  },
+  {
+    "id": 111,
+    "name": "Odd-keystone",
+    "effect": "Use on the tower on Route 209 to encounter Spiritomb if you have at least 32 Underground greetings.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/odd-keystone.png"
+  },
+  {
+    "id": 112,
+    "name": "Adamant-orb",
+    "effect": "Boosts the damage from Dialga's Dragon-type and Steel-type moves by 20%.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/adamant-orb.png"
+  },
+  {
+    "id": 113,
+    "name": "Lustrous-orb",
+    "effect": "Boosts the damage from Palkia's Dragon-type and Water-type moves by 20%.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lustrous-orb.png"
+  },
+  {
+    "id": 114,
+    "name": "Grass-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grass-mail.png"
+  },
+  {
+    "id": 115,
+    "name": "Flame-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-mail.png"
+  },
+  {
+    "id": 116,
+    "name": "Bubble-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bubble-mail.png"
+  },
+  {
+    "id": 117,
+    "name": "Bloom-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bloom-mail.png"
+  },
+  {
+    "id": 118,
+    "name": "Tunnel-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tunnel-mail.png"
+  },
+  {
+    "id": 119,
+    "name": "Steel-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steel-mail.png"
+  },
+  {
+    "id": 120,
+    "name": "Heart-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heart-mail.png"
+  },
+  {
+    "id": 121,
+    "name": "Snow-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/snow-mail.png"
+  },
+  {
+    "id": 122,
+    "name": "Space-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/space-mail.png"
+  },
+  {
+    "id": 123,
+    "name": "Air-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/air-mail.png"
+  },
+  {
+    "id": 124,
+    "name": "Mosaic-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mosaic-mail.png"
+  },
+  {
+    "id": 125,
+    "name": "Brick-mail",
+    "effect": "Lets a Trainer write a message and send it via Pok\u00e9mon trade.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/brick-mail.png"
+  },
+  {
+    "id": 126,
+    "name": "Cheri-berry",
+    "effect": "Held: Consumed when paralyzed to cure paralysis.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png"
+  },
+  {
+    "id": 127,
+    "name": "Chesto-berry",
+    "effect": "Held: Consumed when asleep to cure sleep.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png"
+  },
+  {
+    "id": 128,
+    "name": "Pecha-berry",
+    "effect": "Held: Consumed when poisoned to cure poison.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png"
+  },
+  {
+    "id": 129,
+    "name": "Rawst-berry",
+    "effect": "Held: Consumed when burned to cure a burn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png"
+  },
+  {
+    "id": 130,
+    "name": "Aspear-berry",
+    "effect": "Held: Consumed when frozen to cure frozen.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aspear-berry.png"
+  },
+  {
+    "id": 131,
+    "name": "Leppa-berry",
+    "effect": "Held: Consumed when a move runs out of PP to restore its PP by 10.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leppa-berry.png"
+  },
+  {
+    "id": 132,
+    "name": "Oran-berry",
+    "effect": "Held: Consumed at 1/2 max HP to recover 10 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png"
+  },
+  {
+    "id": 133,
+    "name": "Persim-berry",
+    "effect": "Held: Consumed when confused to cure confusion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png"
+  },
+  {
+    "id": 134,
+    "name": "Lum-berry",
+    "effect": "Held: Consumed to cure any status condition or confusion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png"
+  },
+  {
+    "id": 135,
+    "name": "Sitrus-berry",
+    "effect": "Held: Consumed at 1/2 max HP to recover 1/4 max HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png"
+  },
+  {
+    "id": 136,
+    "name": "Figy-berry",
+    "effect": "Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pok\u00e9mon that dislike spicy flavor.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/figy-berry.png"
+  },
+  {
+    "id": 137,
+    "name": "Wiki-berry",
+    "effect": "Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pok\u00e9mon that dislike dry flavor.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wiki-berry.png"
+  },
+  {
+    "id": 138,
+    "name": "Mago-berry",
+    "effect": "Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pok\u00e9mon that dislike sweet flavor.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mago-berry.png"
+  },
+  {
+    "id": 139,
+    "name": "Aguav-berry",
+    "effect": "Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pok\u00e9mon that dislike bitter flavor.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aguav-berry.png"
+  },
+  {
+    "id": 140,
+    "name": "Iapapa-berry",
+    "effect": "Held: Consumed at 1/2 max HP to restore 1/8 max HP. Confuses Pok\u00e9mon that dislike sour flavor.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iapapa-berry.png"
+  },
+  {
+    "id": 141,
+    "name": "Razz-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razz-berry.png"
+  },
+  {
+    "id": 142,
+    "name": "Bluk-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bluk-berry.png"
+  },
+  {
+    "id": 143,
+    "name": "Nanab-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nanab-berry.png"
+  },
+  {
+    "id": 144,
+    "name": "Wepear-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wepear-berry.png"
+  },
+  {
+    "id": 145,
+    "name": "Pinap-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pinap-berry.png"
+  },
+  {
+    "id": 146,
+    "name": "Pomeg-berry",
+    "effect": "Drops HP Effort Values by 10 and raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pomeg-berry.png"
+  },
+  {
+    "id": 147,
+    "name": "Kelpsy-berry",
+    "effect": "Drops Attack Effort Values by 10 and raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kelpsy-berry.png"
+  },
+  {
+    "id": 148,
+    "name": "Qualot-berry",
+    "effect": "Drops Defense Effort Values by 10 and raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/qualot-berry.png"
+  },
+  {
+    "id": 149,
+    "name": "Hondew-berry",
+    "effect": "Drops Special Attack Effort Values by 10 and raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hondew-berry.png"
+  },
+  {
+    "id": 150,
+    "name": "Grepa-berry",
+    "effect": "Drops Special Defense Effort Values by 10 and raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grepa-berry.png"
+  },
+  {
+    "id": 151,
+    "name": "Tamato-berry",
+    "effect": "Drops Speed Effort Values by 10 and raises happiness.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tamato-berry.png"
+  },
+  {
+    "id": 152,
+    "name": "Cornn-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cornn-berry.png"
+  },
+  {
+    "id": 153,
+    "name": "Magost-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magost-berry.png"
+  },
+  {
+    "id": 154,
+    "name": "Rabuta-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rabuta-berry.png"
+  },
+  {
+    "id": 155,
+    "name": "Nomel-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nomel-berry.png"
+  },
+  {
+    "id": 156,
+    "name": "Spelon-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spelon-berry.png"
+  },
+  {
+    "id": 157,
+    "name": "Pamtre-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pamtre-berry.png"
+  },
+  {
+    "id": 158,
+    "name": "Watmel-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/watmel-berry.png"
+  },
+  {
+    "id": 159,
+    "name": "Durin-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/durin-berry.png"
+  },
+  {
+    "id": 160,
+    "name": "Belue-berry",
+    "effect": "Used for creating Pok\u00e9Blocks and Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/belue-berry.png"
+  },
+  {
+    "id": 161,
+    "name": "Occa-berry",
+    "effect": "Held: Consumed when struck by a super-effective Fire-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png"
+  },
+  {
+    "id": 162,
+    "name": "Passho-berry",
+    "effect": "Held: Consumed when struck by a super-effective Water-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png"
+  },
+  {
+    "id": 163,
+    "name": "Wacan-berry",
+    "effect": "Held: Consumed when struck by a super-effective Electric-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png"
+  },
+  {
+    "id": 164,
+    "name": "Rindo-berry",
+    "effect": "Held: Consumed when struck by a super-effective Grass-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png"
+  },
+  {
+    "id": 165,
+    "name": "Yache-berry",
+    "effect": "Held: Consumed when struck by a super-effective Ice-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png"
+  },
+  {
+    "id": 166,
+    "name": "Chople-berry",
+    "effect": "Held: Consumed when struck by a super-effective Fighting-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png"
+  },
+  {
+    "id": 167,
+    "name": "Kebia-berry",
+    "effect": "Held: Consumed when struck by a super-effective Poison-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kebia-berry.png"
+  },
+  {
+    "id": 168,
+    "name": "Shuca-berry",
+    "effect": "Held: Consumed when struck by a super-effective Ground-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png"
+  },
+  {
+    "id": 169,
+    "name": "Coba-berry",
+    "effect": "Held: Consumed when struck by a super-effective Flying-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png"
+  },
+  {
+    "id": 170,
+    "name": "Payapa-berry",
+    "effect": "Held: Consumed when struck by a super-effective Psychic-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png"
+  },
+  {
+    "id": 171,
+    "name": "Tanga-berry",
+    "effect": "Held: Consumed when struck by a super-effective Bug-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tanga-berry.png"
+  },
+  {
+    "id": 172,
+    "name": "Charti-berry",
+    "effect": "Held: Consumed when struck by a super-effective Rock-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png"
+  },
+  {
+    "id": 173,
+    "name": "Kasib-berry",
+    "effect": "Held: Consumed when struck by a super-effective Ghost-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png"
+  },
+  {
+    "id": 174,
+    "name": "Haban-berry",
+    "effect": "Held: Consumed when struck by a super-effective Dragon-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/haban-berry.png"
+  },
+  {
+    "id": 175,
+    "name": "Colbur-berry",
+    "effect": "Held: Consumed when struck by a super-effective Dark-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png"
+  },
+  {
+    "id": 176,
+    "name": "Babiri-berry",
+    "effect": "Held: Consumed when struck by a super-effective Steel-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png"
+  },
+  {
+    "id": 177,
+    "name": "Chilan-berry",
+    "effect": "Held: Consumed when struck by a Normal-type attack to halve the damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chilan-berry.png"
+  },
+  {
+    "id": 178,
+    "name": "Liechi-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost Attack.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/liechi-berry.png"
+  },
+  {
+    "id": 179,
+    "name": "Ganlon-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost Defense.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ganlon-berry.png"
+  },
+  {
+    "id": 180,
+    "name": "Salac-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost Speed.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/salac-berry.png"
+  },
+  {
+    "id": 181,
+    "name": "Petaya-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost Special Attack.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/petaya-berry.png"
+  },
+  {
+    "id": 182,
+    "name": "Apicot-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost Special Defense.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/apicot-berry.png"
+  },
+  {
+    "id": 183,
+    "name": "Lansat-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost critical hit ratio by two stages.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lansat-berry.png"
+  },
+  {
+    "id": 184,
+    "name": "Starf-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost a random stat by two stages.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/starf-berry.png"
+  },
+  {
+    "id": 185,
+    "name": "Enigma-berry",
+    "effect": "Held: Consumed when struck by a super-effective attack to restore 1/4 max HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/enigma-berry.png"
+  },
+  {
+    "id": 186,
+    "name": "Micle-berry",
+    "effect": "Held: Consumed at 1/4 max HP to boost accuracy of next move by 20%. (Gen IV: Perfect accuracy)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/micle-berry.png"
+  },
+  {
+    "id": 187,
+    "name": "Custap-berry",
+    "effect": "Held: Consumed at 1/4 max HP when using a move to go first.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/custap-berry.png"
+  },
+  {
+    "id": 188,
+    "name": "Jaboca-berry",
+    "effect": "Held: Consumed to deal 1/8 attacker's max HP when holder is struck by a physical attack.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/jaboca-berry.png"
+  },
+  {
+    "id": 189,
+    "name": "Rowap-berry",
+    "effect": "Held: Consumed to deal 1/8 attacker's max HP when holder is struck by a special attack.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rowap-berry.png"
+  },
+  {
+    "id": 190,
+    "name": "Bright-powder",
+    "effect": "Held: Increases the holder's evasion by 1/9 (11 1/9%).",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bright-powder.png"
+  },
+  {
+    "id": 191,
+    "name": "White-herb",
+    "effect": "Held: Resets all lowered stats to normal at end of turn. Consumed after use.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png"
+  },
+  {
+    "id": 192,
+    "name": "Macho-brace",
+    "effect": "Held: Holder gains double effort values from battles, but has halved Speed in battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/macho-brace.png"
+  },
+  {
+    "id": 193,
+    "name": "Exp-share",
+    "effect": "Held: Half the experience from a battle is split between Pok\u00e9mon holding this item.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/exp-share.png"
+  },
+  {
+    "id": 194,
+    "name": "Quick-claw",
+    "effect": "Held: Holder has a 3/16 (18.75%) chance to move first.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png"
+  },
+  {
+    "id": 195,
+    "name": "Soothe-bell",
+    "effect": "Held: Doubles the happiness earned by the holder.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soothe-bell.png"
+  },
+  {
+    "id": 196,
+    "name": "Mental-herb",
+    "effect": "Held: Consumed to cure infatuation. Gen V: Also removes Taunt, Encore, Torment, Disable, and Cursed Body.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mental-herb.png"
+  },
+  {
+    "id": 197,
+    "name": "Choice-band",
+    "effect": "Held: Increases Attack by 50%, but restricts the holder to only one move.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png"
+  },
+  {
+    "id": 198,
+    "name": "Kings-rock",
+    "effect": "Held: Damaging moves gain a 10% chance to make their target flinch. Traded on a Poliwhirl: Holder evolves into Politoed. Traded on a Slowpoke: Holder evolves into Slowking.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png"
+  },
+  {
+    "id": 199,
+    "name": "Silver-powder",
+    "effect": "Held: Bug-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png"
+  },
+  {
+    "id": 200,
+    "name": "Amulet-coin",
+    "effect": "Held: Doubles the money earned from a battle. Does not stack with Luck Incense.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png"
+  },
+  {
+    "id": 201,
+    "name": "Cleanse-tag",
+    "effect": "Prevents wild encounters of level lower than your party's lead Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cleanse-tag.png"
+  },
+  {
+    "id": 202,
+    "name": "Soul-dew",
+    "effect": "Raises Latias and Latios's Special Attack and Special Defense by 50%.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soul-dew.png"
+  },
+  {
+    "id": 203,
+    "name": "Deep-sea-tooth",
+    "effect": "Doubles Clamperl's Special Attack. Traded on a Clamperl: Holder evolves into Huntail.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/deep-sea-tooth.png"
+  },
+  {
+    "id": 204,
+    "name": "Deep-sea-scale",
+    "effect": "Doubles Clamperl's Special Defense. Traded on a Clamperl: Holder evolves into Gorebyss.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/deep-sea-scale.png"
+  },
+  {
+    "id": 205,
+    "name": "Smoke-ball",
+    "effect": "Held: Allows the Holder to escape from any wild battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smoke-ball.png"
+  },
+  {
+    "id": 206,
+    "name": "Everstone",
+    "effect": "Held: Prevents level-based evolution from occuring.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/everstone.png"
+  },
+  {
+    "id": 207,
+    "name": "Focus-band",
+    "effect": "Held: Holder has 10% chance to survive attacks or self-inflicted damage at 1 HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png"
+  },
+  {
+    "id": 208,
+    "name": "Lucky-egg",
+    "effect": "Held: Increases EXP earned in battle by 50%.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lucky-egg.png"
+  },
+  {
+    "id": 209,
+    "name": "Scope-lens",
+    "effect": "Held: Raises the holder's critical hit ratio by one stage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png"
+  },
+  {
+    "id": 210,
+    "name": "Metal-coat",
+    "effect": "Held: Steel-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png"
+  },
+  {
+    "id": 211,
+    "name": "Leftovers",
+    "effect": "Held: Restores 1/16 (6.25%) holder's max HP at the end of each turn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png"
+  },
+  {
+    "id": 212,
+    "name": "Dragon-scale",
+    "effect": "Traded on a Seadra: Holder evolves into Kingdra.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-scale.png"
+  },
+  {
+    "id": 213,
+    "name": "Light-ball",
+    "effect": "Doubles Pikachu's Attack and Special Attack. Breed on Pikachu or Raichu: Pichu Egg will have Volt Tackle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-ball.png"
+  },
+  {
+    "id": 214,
+    "name": "Soft-sand",
+    "effect": "Held: Ground-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soft-sand.png"
+  },
+  {
+    "id": 215,
+    "name": "Hard-stone",
+    "effect": "Held: Rock-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png"
+  },
+  {
+    "id": 216,
+    "name": "Miracle-seed",
+    "effect": "Held: Grass-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png"
+  },
+  {
+    "id": 217,
+    "name": "Black-glasses",
+    "effect": "Held: Dark-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-glasses.png"
+  },
+  {
+    "id": 218,
+    "name": "Black-belt",
+    "effect": "Held: Fighting-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png"
+  },
+  {
+    "id": 219,
+    "name": "Magnet",
+    "effect": "Held: Electric-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png"
+  },
+  {
+    "id": 220,
+    "name": "Mystic-water",
+    "effect": "Held: Water-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png"
+  },
+  {
+    "id": 221,
+    "name": "Sharp-beak",
+    "effect": "Held: Flying-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png"
+  },
+  {
+    "id": 222,
+    "name": "Poison-barb",
+    "effect": "Held: Poison-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-barb.png"
+  },
+  {
+    "id": 223,
+    "name": "Never-melt-ice",
+    "effect": "Held: Ice-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png"
+  },
+  {
+    "id": 224,
+    "name": "Spell-tag",
+    "effect": "Held: Ghost-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png"
+  },
+  {
+    "id": 225,
+    "name": "Twisted-spoon",
+    "effect": "Held: Psychic-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png"
+  },
+  {
+    "id": 226,
+    "name": "Charcoal",
+    "effect": "Held: Fire-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png"
+  },
+  {
+    "id": 227,
+    "name": "Dragon-fang",
+    "effect": "Held: Dragon-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-fang.png"
+  },
+  {
+    "id": 228,
+    "name": "Silk-scarf",
+    "effect": "Held: Normal-Type moves from holder do 20% more damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png"
+  },
+  {
+    "id": 229,
+    "name": "Up-grade",
+    "effect": "Traded on a Porygon: Holder evolves into Porygon2.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/up-grade.png"
+  },
+  {
+    "id": 230,
+    "name": "Shell-bell",
+    "effect": "Held: Holder receives 1/8 of the damage it deals when attacking.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png"
+  },
+  {
+    "id": 231,
+    "name": "Sea-incense",
+    "effect": "Held: Water-Type moves from holder do 20% more damage. Breeding: Marill or Azumarill beget an Azurill Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sea-incense.png"
+  },
+  {
+    "id": 232,
+    "name": "Lax-incense",
+    "effect": "Held: Holder's evasion is increased by 5%. Breeding: Wobbuffet begets a Wynaut Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png"
+  },
+  {
+    "id": 233,
+    "name": "Lucky-punch",
+    "effect": "Raises Chansey's critical hit ratio by two stages.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lucky-punch.png"
+  },
+  {
+    "id": 234,
+    "name": "Metal-powder",
+    "effect": "Raises Ditto's Defense and Special Defense by 50%. The boost is lost after transforming.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-powder.png"
+  },
+  {
+    "id": 235,
+    "name": "Thick-club",
+    "effect": "Doubles Cubone or Marowak's Attack.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thick-club.png"
+  },
+  {
+    "id": 236,
+    "name": "Stick",
+    "effect": "Raises Farfetch'd's critical hit ratio by two stages.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stick.png"
+  },
+  {
+    "id": 237,
+    "name": "Red-scarf",
+    "effect": "Raises the holder's Coolness while in a contest.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-scarf.png"
+  },
+  {
+    "id": 238,
+    "name": "Blue-scarf",
+    "effect": "Raises the holder's Beauty while in a contest.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blue-scarf.png"
+  },
+  {
+    "id": 239,
+    "name": "Pink-scarf",
+    "effect": "Raises the holder's Cuteness while in a contest.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pink-scarf.png"
+  },
+  {
+    "id": 240,
+    "name": "Green-scarf",
+    "effect": "Raises the holder's Smartness while in a contest.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/green-scarf.png"
+  },
+  {
+    "id": 241,
+    "name": "Yellow-scarf",
+    "effect": "Raises the holder's Toughness while in a contest.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-scarf.png"
+  },
+  {
+    "id": 242,
+    "name": "Wide-lens",
+    "effect": "Held: Provides a 1/10 (10%) boost in accuracy to the holder.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wide-lens.png"
+  },
+  {
+    "id": 243,
+    "name": "Muscle-band",
+    "effect": "Held: Boosts the damage of physical moves used by the holder by 10%.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png"
+  },
+  {
+    "id": 244,
+    "name": "Wise-glasses",
+    "effect": "Held: Boosts the damage of special moves used by the holder by 1/10 (10%).",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png"
+  },
+  {
+    "id": 245,
+    "name": "Expert-belt",
+    "effect": "Held: Holder's Super Effective moves do 20% extra damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png"
+  },
+  {
+    "id": 246,
+    "name": "Light-clay",
+    "effect": "Held: Light Screen and Reflect used by the holder last 8 rounds instead of 5.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-clay.png"
+  },
+  {
+    "id": 247,
+    "name": "Life-orb",
+    "effect": "Held: Holder's moves inflict 30% extra damage, but cost 10% max HP.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png"
+  },
+  {
+    "id": 248,
+    "name": "Power-herb",
+    "effect": "Held: Both turns of a two-turn charge move happen at once. Consumed upon use.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png"
+  },
+  {
+    "id": 249,
+    "name": "Toxic-orb",
+    "effect": "Held: Inflicts Toxic on the holder at the end of the turn. Activates after Poison damage would occur.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png"
+  },
+  {
+    "id": 250,
+    "name": "Flame-orb",
+    "effect": "Held: Inflicts Burn on the holder at the end of the turn. Activates after Burn damage would occur.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png"
+  },
+  {
+    "id": 251,
+    "name": "Quick-powder",
+    "effect": "Doubles Ditto's Speed when held. The boost is lost after transforming.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-powder.png"
+  },
+  {
+    "id": 252,
+    "name": "Focus-sash",
+    "effect": "Held: Holder survives any single-hit attack at 1 HP if at max HP, then the item is consumed.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png"
+  },
+  {
+    "id": 253,
+    "name": "Zoom-lens",
+    "effect": "Held: Provides a 1/5 (20%) boost in accuracy if the holder moves after the target.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png"
+  },
+  {
+    "id": 254,
+    "name": "Metronome",
+    "effect": "Held: Consectutive uses of the same attack have a cumulative damage boost of 10%. Maximum 100% boost.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metronome.png"
+  },
+  {
+    "id": 255,
+    "name": "Iron-ball",
+    "effect": "Held: Holder's Speed is halved. Negates all Ground-type immunities, and makes Flying-types take neutral damage from Ground-type moves. Arena Trap. Spikes, and Toxic Spikes affect the holder.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-ball.png"
+  },
+  {
+    "id": 256,
+    "name": "Lagging-tail",
+    "effect": "Held: Holder moves last in its priority bracket.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lagging-tail.png"
+  },
+  {
+    "id": 257,
+    "name": "Destiny-knot",
+    "effect": "Held: Infatuates opposing Pok\u00e9mon when holder is inflicted with infatuation.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/destiny-knot.png"
+  },
+  {
+    "id": 258,
+    "name": "Black-sludge",
+    "effect": "Held: Poison-type holder recovers 1/16 (6.25%) max HP each turn. Non-Poison-Types take 1/8 (12.5%) max HP damage.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png"
+  },
+  {
+    "id": 259,
+    "name": "Icy-rock",
+    "effect": "Held: Hail by the holder lasts 8 rounds instead of 5.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icy-rock.png"
+  },
+  {
+    "id": 260,
+    "name": "Smooth-rock",
+    "effect": "Held: Sandstorm by the holder lasts 8 rounds instead of 5.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png"
+  },
+  {
+    "id": 261,
+    "name": "Heat-rock",
+    "effect": "Held: Sunny Day by the holder lasts 8 rounds instead of 5.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png"
+  },
+  {
+    "id": 262,
+    "name": "Damp-rock",
+    "effect": "Held: Rain Dance by the holder lasts 8 rounds instead of 5.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png"
+  },
+  {
+    "id": 263,
+    "name": "Grip-claw",
+    "effect": "Held: Holder's multi-turn trapping moves last 5 turns.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grip-claw.png"
+  },
+  {
+    "id": 264,
+    "name": "Choice-scarf",
+    "effect": "Held: Increases Speed by 50%, but restricts the holder to only one move.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png"
+  },
+  {
+    "id": 265,
+    "name": "Sticky-barb",
+    "effect": "Held: Holder takes 1/8 (12.5%) its max HP at the end of each turn. When the holder is hit by a contact move, the attacking Pok\u00e9mon takes 1/8 its max HP in damage and receive the item if not holding one.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sticky-barb.png"
+  },
+  {
+    "id": 266,
+    "name": "Power-bracer",
+    "effect": "Held: Holder gains 4 Attack effort values, but has halved Speed in battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-bracer.png"
+  },
+  {
+    "id": 267,
+    "name": "Power-belt",
+    "effect": "Held: Holder gains 4 Defense effort values, but has halved Speed in battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-belt.png"
+  },
+  {
+    "id": 268,
+    "name": "Power-lens",
+    "effect": "Held: Holder gains 4 Special Attack effort values, but has halved Speed in battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-lens.png"
+  },
+  {
+    "id": 269,
+    "name": "Power-band",
+    "effect": "Held: Holder gains 4 Special Defense effort values, but has halved Speed in battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-band.png"
+  },
+  {
+    "id": 270,
+    "name": "Power-anklet",
+    "effect": "Held: Holder gains 4 Speed effort values, but has halved Speed in battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-anklet.png"
+  },
+  {
+    "id": 271,
+    "name": "Power-weight",
+    "effect": "Held: Holder gains 4 HP effort values, but has halved Speed in battle.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-weight.png"
+  },
+  {
+    "id": 272,
+    "name": "Shed-shell",
+    "effect": "Held: Holder can bypass all trapping effects and switch out. Multi-turn moves still cannot be switched out of.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shed-shell.png"
+  },
+  {
+    "id": 273,
+    "name": "Big-root",
+    "effect": "Held: Increases HP recovered from draining moves, Ingrain, and Aqua Ring by 3/10 (30%).",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png"
+  },
+  {
+    "id": 274,
+    "name": "Choice-specs",
+    "effect": "Held: Increases Special Attack by 50%, but restricts the holder to only one move.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-specs.png"
+  },
+  {
+    "id": 275,
+    "name": "Flame-plate",
+    "effect": "Held: Fire-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Fire.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-plate.png"
+  },
+  {
+    "id": 276,
+    "name": "Splash-plate",
+    "effect": "Held: Water-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Water.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/splash-plate.png"
+  },
+  {
+    "id": 277,
+    "name": "Zap-plate",
+    "effect": "Held: Electric-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Electric.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zap-plate.png"
+  },
+  {
+    "id": 278,
+    "name": "Meadow-plate",
+    "effect": "Held: Grass-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Grass.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/meadow-plate.png"
+  },
+  {
+    "id": 279,
+    "name": "Icicle-plate",
+    "effect": "Held: Ice-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Ice.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icicle-plate.png"
+  },
+  {
+    "id": 280,
+    "name": "Fist-plate",
+    "effect": "Held: Fighting-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Fighting.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fist-plate.png"
+  },
+  {
+    "id": 281,
+    "name": "Toxic-plate",
+    "effect": "Held: Posion-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Posion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-plate.png"
+  },
+  {
+    "id": 282,
+    "name": "Earth-plate",
+    "effect": "Held: Ground-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Ground.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/earth-plate.png"
+  },
+  {
+    "id": 283,
+    "name": "Sky-plate",
+    "effect": "Held: Flying-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Flying.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sky-plate.png"
+  },
+  {
+    "id": 284,
+    "name": "Mind-plate",
+    "effect": "Held: Psychic-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Psychic.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mind-plate.png"
+  },
+  {
+    "id": 285,
+    "name": "Insect-plate",
+    "effect": "Held: Bug-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Bug.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/insect-plate.png"
+  },
+  {
+    "id": 286,
+    "name": "Stone-plate",
+    "effect": "Held: Rock-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Rock.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stone-plate.png"
+  },
+  {
+    "id": 287,
+    "name": "Spooky-plate",
+    "effect": "Held: Ghost-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Ghost.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spooky-plate.png"
+  },
+  {
+    "id": 288,
+    "name": "Draco-plate",
+    "effect": "Held: Dragon-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Dragon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/draco-plate.png"
+  },
+  {
+    "id": 289,
+    "name": "Dread-plate",
+    "effect": "Held: Dark-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Dark.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dread-plate.png"
+  },
+  {
+    "id": 290,
+    "name": "Iron-plate",
+    "effect": "Held: Steel-Type moves from holder do 20% more damage. Changes Arceus's and Judgment's type to Steel.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-plate.png"
+  },
+  {
+    "id": 291,
+    "name": "Odd-incense",
+    "effect": "Held: Psychic-Type moves from holder do 20% more damage. Breeding: Mr. Mime begets a Mime Jr. Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/odd-incense.png"
+  },
+  {
+    "id": 292,
+    "name": "Rock-incense",
+    "effect": "Held: Rock-Type moves from holder do 20% more damage. Breeding: Sudowoodo begets a Bonsly Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-incense.png"
+  },
+  {
+    "id": 293,
+    "name": "Full-incense",
+    "effect": "Held: Holder moves last in its priority bracket. Breeding: Snorlax begets a Munchlax Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-incense.png"
+  },
+  {
+    "id": 294,
+    "name": "Wave-incense",
+    "effect": "Held: Water-Type moves from holder do 20% more damage. Breeding: Mantine begets a Mantyke Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wave-incense.png"
+  },
+  {
+    "id": 295,
+    "name": "Rose-incense",
+    "effect": "Held: Grass-Type moves from holder do 20% more damage. Breeding: Roselia or Roserade beget a Budew Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rose-incense.png"
+  },
+  {
+    "id": 296,
+    "name": "Luck-incense",
+    "effect": "Held: Doubles the money earned from a battle. Does not stack with Amulet Coin. Breeding: Chansey and Blissey beget a Happiny Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luck-incense.png"
+  },
+  {
+    "id": 297,
+    "name": "Pure-incense",
+    "effect": "Prevents wild encounters of level lower than your party's lead Pok\u00e9mon. Breeding: Chimecho begets a Chingling Egg.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pure-incense.png"
+  },
+  {
+    "id": 298,
+    "name": "Protector",
+    "effect": "Traded on a Rhydon: Holder evolves into Rhyperior.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protector.png"
+  },
+  {
+    "id": 299,
+    "name": "Electirizer",
+    "effect": "Traded on an Electabuzz: Holder evolves into Electivire.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electirizer.png"
+  },
+  {
+    "id": 300,
+    "name": "Magmarizer",
+    "effect": "Traded on a Magmar: Holder evolves into Magmortar.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magmarizer.png"
+  },
+  {
+    "id": 301,
+    "name": "Dubious-disc",
+    "effect": "Traded on a Porygon2: Holder evolves into Porygon-Z.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dubious-disc.png"
+  },
+  {
+    "id": 302,
+    "name": "Reaper-cloth",
+    "effect": "Traded on a Dusclops: Holder evolves into Dusknoir.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reaper-cloth.png"
+  },
+  {
+    "id": 303,
+    "name": "Razor-claw",
+    "effect": "Held: Raises the holder's critical hit ratio by one stage. Held by a Sneasel while levelling up at night: Holder evolves into Weavile.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-claw.png"
+  },
+  {
+    "id": 304,
+    "name": "Razor-fang",
+    "effect": "Held: Damaging moves gain a 10% chance to make their target flinch. Held by a Gligar while levelling up: Holder evolves into Gliscor.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png"
+  },
+  {
+    "id": 305,
+    "name": "Tm01",
+    "effect": "Teaches Hone Claws to a compatible Pok\u00e9mon. (Gen IV & III: Focus Punch Gen II: DynamicPunch Gen I: Mega Punch)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 306,
+    "name": "Tm02",
+    "effect": "Teaches Dragon Claw to a compatible Pok\u00e9mon. (Gen II: Headbutt Gen I: Razor Wind)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 307,
+    "name": "Tm03",
+    "effect": "Teaches Psyshock to a compatible Pok\u00e9mon. (Gen IV & III: Water Pulse Gen II: Curse Gen I: Swords Dance)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 308,
+    "name": "Tm04",
+    "effect": "Teaches Calm Mind to a compatible Pok\u00e9mon. (Gen II: Rollout Gen I: Whirlwind)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 309,
+    "name": "Tm05",
+    "effect": "Teaches Roar to a compatible Pok\u00e9mon. (Gen I: Mega Kick)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 310,
+    "name": "Tm06",
+    "effect": "Teaches Toxic to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 311,
+    "name": "Tm07",
+    "effect": "Teaches Hail to a compatible Pok\u00e9mon. (Gen II: Zap Cannon Gen I: Horn Drill)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 312,
+    "name": "Tm08",
+    "effect": "Teaches Bulk Up to a compatible Pok\u00e9mon. (Gen II: Rock Smash Gen I: Body Slam)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 313,
+    "name": "Tm09",
+    "effect": "Teaches Venoshock to a compatible Pok\u00e9mon. (Gen IV & III: Bullet Seed Gen II: Psych Up Gen I: Take Down)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 314,
+    "name": "Tm10",
+    "effect": "Teaches Hidden Power to a compatible Pok\u00e9mon. (Gen I: Double-Edge)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 315,
+    "name": "Tm11",
+    "effect": "Teaches Sunny Day to a compatible Pok\u00e9mon. (Gen I: BubbleBeam)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 316,
+    "name": "Tm12",
+    "effect": "Teaches Taunt to a compatible Pok\u00e9mon. (Gen II: Sweet Scent Gen I: Water Gun)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 317,
+    "name": "Tm13",
+    "effect": "Teaches Ice Beam to a compatible Pok\u00e9mon. (Gen II: Snore)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 318,
+    "name": "Tm14",
+    "effect": "Teaches Blizzard to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 319,
+    "name": "Tm15",
+    "effect": "Teaches Hyper Beam to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 320,
+    "name": "Tm16",
+    "effect": "Teaches Light Screen to a compatible Pok\u00e9mon. (Gen II: Icy Wind Gen I: Pay Day)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 321,
+    "name": "Tm17",
+    "effect": "Teaches Protect to a compatible Pok\u00e9mon. (Gen I: Submission)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 322,
+    "name": "Tm18",
+    "effect": "Teaches Rain Dance to a compatible Pok\u00e9mon. (Gen I: Counter)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 323,
+    "name": "Tm19",
+    "effect": "Teaches Telekinesis to a compatible Pok\u00e9mon. (Gen IV & III & II: Giga Drain Gen I: Seismic Toss)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 324,
+    "name": "Tm20",
+    "effect": "Teaches Safeguard to a compatible Pok\u00e9mon. (Gen II: Endure Gen I: Rage)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 325,
+    "name": "Tm21",
+    "effect": "Teaches Frustration to a compatible Pok\u00e9mon. (Gen I: Mega Drain)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 326,
+    "name": "Tm22",
+    "effect": "Teaches SolarBeam to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 327,
+    "name": "Tm23",
+    "effect": "Teaches Smack Down to a compatible Pok\u00e9mon. (Gen IV & III & II: Iron Tail Gen I: Dragon Rage)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 328,
+    "name": "Tm24",
+    "effect": "Teaches Thunderbolt to a compatible Pok\u00e9mon. (Gen II: DragonBreath)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 329,
+    "name": "Tm25",
+    "effect": "Teaches Thunder to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 330,
+    "name": "Tm26",
+    "effect": "Teaches Earthquake to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 331,
+    "name": "Tm27",
+    "effect": "Teaches Return to a compatible Pok\u00e9mon. (Gen I: Fissure)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 332,
+    "name": "Tm28",
+    "effect": "Teaches Dig to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 333,
+    "name": "Tm29",
+    "effect": "Teaches Psychic to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 334,
+    "name": "Tm30",
+    "effect": "Teaches Shadow Ball to a compatible Pok\u00e9mon. (Gen I: Teleport)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 335,
+    "name": "Tm31",
+    "effect": "Teaches Brick Break to a compatible Pok\u00e9mon. (Gen II: Mud-Slap Gen I: Mimic)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 336,
+    "name": "Tm32",
+    "effect": "Teaches Double Team to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 337,
+    "name": "Tm33",
+    "effect": "Teaches Reflect to a compatible Pok\u00e9mon. (Gen II: Ice Punch)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 338,
+    "name": "Tm34",
+    "effect": "Teaches Sludge Wave to a compatible Pok\u00e9mon. (Gen IV & III: Shock Wave Gen II: Swagger Gen I: Bide)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 339,
+    "name": "Tm35",
+    "effect": "Teaches Flamethrower to a compatible Pok\u00e9mon. (Gen II: Sleep Talk Gen I: Metronome)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 340,
+    "name": "Tm36",
+    "effect": "Teaches Sludge Bomb to a compatible Pok\u00e9mon. (Gen I: Selfdestruct)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 341,
+    "name": "Tm37",
+    "effect": "Teaches Sandstorm to a compatible Pok\u00e9mon. (Gen I: Egg Bomb)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 342,
+    "name": "Tm38",
+    "effect": "Teaches Fire Blast to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 343,
+    "name": "Tm39",
+    "effect": "Teaches Rock Tomb to a compatible Pok\u00e9mon. (Gen II & I: Swift)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 344,
+    "name": "Tm40",
+    "effect": "Teaches Aerial Ace to a compatible Pok\u00e9mon. (Gen II: Defense Curl Gen I: Skull Bash)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 345,
+    "name": "Tm41",
+    "effect": "Teaches Torment to a compatible Pok\u00e9mon. (Gen II: ThunderPunch Gen I: Softboiled)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 346,
+    "name": "Tm42",
+    "effect": "Teaches Facade to a compatible Pok\u00e9mon. (Gen II & I: Dream Eater)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 347,
+    "name": "Tm43",
+    "effect": "Teaches Flame Charge to a compatible Pok\u00e9mon. (Gen IV & III: Secret Power Gen II: Detect Gen I: Sky Attack)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 348,
+    "name": "Tm44",
+    "effect": "Teaches Rest to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 349,
+    "name": "Tm45",
+    "effect": "Teaches Attract to a compatible Pok\u00e9mon. (Gen I: Thunder Wave)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 350,
+    "name": "Tm46",
+    "effect": "Teaches Thief to a compatible Pok\u00e9mon. (Gen I: Psywave)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 351,
+    "name": "Tm47",
+    "effect": "Teaches Low Sweep to a compatible Pok\u00e9mon. (Gen IV & III & II: Steel Wing Gen I: Explosion)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 352,
+    "name": "Tm48",
+    "effect": "Teaches Round to a compatible Pok\u00e9mon. (Gen IV & III: Skill Swap Gen II: Fire Punch Gen I: Rock Slide)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 353,
+    "name": "Tm49",
+    "effect": "Teaches Echoed Voice to a compatible Pok\u00e9mon. (Gen IV & III: Snatch Gen II: Fury Cutter Gen I: Tri Attack)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 354,
+    "name": "Tm50",
+    "effect": "Teaches Overheat to a compatible Pok\u00e9mon. (Gen II: Nightmare Gen I: Substitute)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 355,
+    "name": "Tm51",
+    "effect": "Teaches Ally Switch to a compatible Pok\u00e9mon. (Gen IV: Roost)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 356,
+    "name": "Tm52",
+    "effect": "Teaches Focus Blast to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 357,
+    "name": "Tm53",
+    "effect": "Teaches Energy Ball to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 358,
+    "name": "Tm54",
+    "effect": "Teaches False Swipe to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 359,
+    "name": "Tm55",
+    "effect": "Teaches Scald to a compatible Pok\u00e9mon. (Gen IV: Brine)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 360,
+    "name": "Tm56",
+    "effect": "Teaches Fling to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 361,
+    "name": "Tm57",
+    "effect": "Teaches Charge Beam to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 362,
+    "name": "Tm58",
+    "effect": "Teaches Sky Drop to a compatible Pok\u00e9mon. (Gen IV: Endure)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 363,
+    "name": "Tm59",
+    "effect": "Teaches Incinerate to a compatible Pok\u00e9mon. (Gen IV: Dragon Pulse)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 364,
+    "name": "Tm60",
+    "effect": "Teaches Quash to a compatible Pok\u00e9mon. (Gen IV: Drain Punch)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 365,
+    "name": "Tm61",
+    "effect": "Teaches Will-O-Wisp to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 366,
+    "name": "Tm62",
+    "effect": "Teaches Acrobatics to a compatible Pok\u00e9mon. (Gen IV: Silver Wind)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 367,
+    "name": "Tm63",
+    "effect": "Teaches Embargo to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 368,
+    "name": "Tm64",
+    "effect": "Teaches Explosion to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 369,
+    "name": "Tm65",
+    "effect": "Teaches Shadow Claw to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 370,
+    "name": "Tm66",
+    "effect": "Teaches Payback to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 371,
+    "name": "Tm67",
+    "effect": "Teaches Retaliate to a compatible Pok\u00e9mon. (Gen IV: Recycle)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 372,
+    "name": "Tm68",
+    "effect": "Teaches Giga Impact to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 373,
+    "name": "Tm69",
+    "effect": "Teaches Rock Polish to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 374,
+    "name": "Tm70",
+    "effect": "Teaches Flash to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 375,
+    "name": "Tm71",
+    "effect": "Teaches Stone Edge to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 376,
+    "name": "Tm72",
+    "effect": "Teaches Volt Switch to a compatible Pok\u00e9mon. (Gen IV: Avalanche)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 377,
+    "name": "Tm73",
+    "effect": "Teaches Thunder Wave to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 378,
+    "name": "Tm74",
+    "effect": "Teaches Gyro Ball to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 379,
+    "name": "Tm75",
+    "effect": "Teaches Swords Dance to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 380,
+    "name": "Tm76",
+    "effect": "Teaches Struggle Bug to a compatible Pok\u00e9mon. (Gen IV: Stealth Rock)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 381,
+    "name": "Tm77",
+    "effect": "Teaches Psych Up to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 382,
+    "name": "Tm78",
+    "effect": "Teaches Bulldoze to a compatible Pok\u00e9mon. (Gen IV: Captivate)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 383,
+    "name": "Tm79",
+    "effect": "Teaches Frost Breath to a compatible Pok\u00e9mon. (Gen IV: Dark Pulse)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 384,
+    "name": "Tm80",
+    "effect": "Teaches Rock Slide to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 385,
+    "name": "Tm81",
+    "effect": "Teaches X-Scissor to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 386,
+    "name": "Tm82",
+    "effect": "Teaches Dragon Tail to a compatible Pok\u00e9mon. (Gen IV: Sleep Talk)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 387,
+    "name": "Tm83",
+    "effect": "Teaches Work Up to a compatible Pok\u00e9mon. (Gen IV: Natural Gift)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 388,
+    "name": "Tm84",
+    "effect": "Teaches Poison Jab to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 389,
+    "name": "Tm85",
+    "effect": "Teaches Dream Eater to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 390,
+    "name": "Tm86",
+    "effect": "Teaches Grass Knot to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 391,
+    "name": "Tm87",
+    "effect": "Teaches Swagger to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 392,
+    "name": "Tm88",
+    "effect": "Teaches Pluck to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 393,
+    "name": "Tm89",
+    "effect": "Teaches U-turn to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 394,
+    "name": "Tm90",
+    "effect": "Teaches Substitute to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 395,
+    "name": "Tm91",
+    "effect": "Teaches Flash Cannon to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 396,
+    "name": "Tm92",
+    "effect": "Teaches Trick Room to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tm-normal.png"
+  },
+  {
+    "id": 397,
+    "name": "Hm01",
+    "effect": "Teaches Cut to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 398,
+    "name": "Hm02",
+    "effect": "Teaches Fly to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 399,
+    "name": "Hm03",
+    "effect": "Teaches Surf to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 400,
+    "name": "Hm04",
+    "effect": "Teaches Strength to a compatible Pok\u00e9mon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 401,
+    "name": "Hm05",
+    "effect": "Teaches Waterfall to a compatible Pok\u00e9mon. (HS: Whirlpool DPP: Defog Gen III & II & I: Flash)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 402,
+    "name": "Hm06",
+    "effect": "Teaches Dive to a compatible Pok\u00e9mon. (Gen IV & III: Rock Smash Gen II: Whirlpool)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 403,
+    "name": "Hm07",
+    "effect": "Teaches a move to a compatible Pok\u00e9mon. (Gen IV & III & II: Waterfall)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 404,
+    "name": "Hm08",
+    "effect": "Teaches a move to a compatible Pok\u00e9mon. (Gen IV: Rock Climb Gen III: Dive)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hm-normal.png"
+  },
+  {
+    "id": 405,
+    "name": "Explorer-kit",
+    "effect": "Allows visiting the Underground.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/explorer-kit.png"
+  },
+  {
+    "id": 406,
+    "name": "Loot-sack",
+    "effect": "Carries coal mine loot.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/loot-sack.png"
+  },
+  {
+    "id": 407,
+    "name": "Rule-book",
+    "effect": "List of battle types and their rules.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rule-book.png"
+  },
+  {
+    "id": 408,
+    "name": "Poke-radar",
+    "effect": "Use to track down rare or shiny Pok\u00e9mon. 50 steps to recharge.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-radar.png"
+  },
+  {
+    "id": 409,
+    "name": "Point-card",
+    "effect": "Keeps count of Battle Points earned.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/point-card.png"
+  },
+  {
+    "id": 410,
+    "name": "Journal",
+    "effect": "Records prior significant activities the player took.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/journal.png"
+  },
+  {
+    "id": 411,
+    "name": "Seal-case",
+    "effect": "Stores Seals that can be applied to Pok\u00e9 Ball capsules.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/seal-case.png"
+  },
+  {
+    "id": 412,
+    "name": "Fashion-case",
+    "effect": "Holds Pok\u00e9mon Accessories for use in Contests.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fashion-case.png"
+  },
+  {
+    "id": 413,
+    "name": "Seal-bag",
+    "effect": "Holds ten Seals for Pok\u00e9 Balls.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/seal-bag.png"
+  },
+  {
+    "id": 414,
+    "name": "Pal-pad",
+    "effect": "Use to record Friend Codes and check your own.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pal-pad.png"
+  },
+  {
+    "id": 415,
+    "name": "Works-key",
+    "effect": "Grants access to Valley Windworks.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/works-key.png"
+  },
+  {
+    "id": 416,
+    "name": "Old-charm",
+    "effect": "Trade to Cynthia's grandmother in Celestic Town for HM04 (Surf).",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-charm.png"
+  },
+  {
+    "id": 417,
+    "name": "Galactic-key",
+    "effect": "Grants access to Galactic HQ in Veilstone City.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/galactic-key.png"
+  },
+  {
+    "id": 418,
+    "name": "Red-chain",
+    "effect": "Used to bind Palkia and Dialga.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-chain.png"
+  },
+  {
+    "id": 419,
+    "name": "Town-map",
+    "effect": "Use to see the overworld map.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/town-map.png"
+  },
+  {
+    "id": 420,
+    "name": "Vs-seeker",
+    "effect": "Allows rebattling of on-screen trainers. 100 steps to recharge.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/vs-seeker.png"
+  },
+  {
+    "id": 421,
+    "name": "Coin-case",
+    "effect": "Holds coins for the Game Corner.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coin-case.png"
+  },
+  {
+    "id": 422,
+    "name": "Old-rod",
+    "effect": "Used to catch Pok\u00e9mon in bodies of water.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-rod.png"
+  },
+  {
+    "id": 423,
+    "name": "Good-rod",
+    "effect": "Used to catch Pok\u00e9mon in bodies of water.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/good-rod.png"
+  },
+  {
+    "id": 424,
+    "name": "Super-rod",
+    "effect": "Used to catch Pok\u00e9mon in bodies of water.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-rod.png"
+  },
+  {
+    "id": 425,
+    "name": "Sprayduck",
+    "effect": "Used to water berries.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sprayduck.png"
+  },
+  {
+    "id": 426,
+    "name": "Poffin-case",
+    "effect": "Holds Poffins.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poffin-case.png"
+  },
+  {
+    "id": 427,
+    "name": "Bicycle",
+    "effect": "Use for fast transit.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bicycle.png"
+  },
+  {
+    "id": 428,
+    "name": "Suite-key",
+    "effect": "Opens a locked building in the Lakeside Resort.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/suite-key.png"
+  },
+  {
+    "id": 429,
+    "name": "Oaks-letter",
+    "effect": "Allows access to Seabreak path, Flower Paradise, and Shaymin.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oaks-letter.png"
+  },
+  {
+    "id": 430,
+    "name": "Lunar-wing",
+    "effect": "Cures sailor's son of nightmares in Canalave City.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lunar-wing.png"
+  },
+  {
+    "id": 431,
+    "name": "Member-card",
+    "effect": "Allows access to Newmoon Island and Darkrai.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/member-card.png"
+  },
+  {
+    "id": 432,
+    "name": "Azure-flute",
+    "effect": "Allows entry into the Hall of Origin. Unreleased.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/azure-flute.png"
+  },
+  {
+    "id": 433,
+    "name": "Ss-ticket",
+    "effect": "Ticket for a ship. (RSE: S.S. Tidal LF: S.S. Anne HG: S.S. Aqua)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ss-ticket.png"
+  },
+  {
+    "id": 434,
+    "name": "Contest-pass",
+    "effect": "Allows participation in Pok\u00e9mon Contests.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/contest-pass.png"
+  },
+  {
+    "id": 435,
+    "name": "Magma-stone",
+    "effect": "Magma is sealed inside.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magma-stone.png"
+  },
+  {
+    "id": 436,
+    "name": "Parcel",
+    "effect": "Given to the trainer's rival in Jubilife City. Contains Town Maps.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/parcel.png"
+  },
+  {
+    "id": 437,
+    "name": "Coupon-1",
+    "effect": "The first of three tickets used to obtain a Pok\u00e9tch.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coupon-1.png"
+  },
+  {
+    "id": 438,
+    "name": "Coupon-2",
+    "effect": "The second of three tickets used to obtain a Pok\u00e9tch.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coupon-2.png"
+  },
+  {
+    "id": 439,
+    "name": "Coupon-3",
+    "effect": "The last of three tickets used to obtain a Pok\u00e9tch.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coupon-3.png"
+  },
+  {
+    "id": 440,
+    "name": "Storage-key",
+    "effect": "Grants access to the Team Galactic warehouse in Veilstone City.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/storage-key.png"
+  },
+  {
+    "id": 441,
+    "name": "Secret-potion",
+    "effect": "Used to heal the Ampharos at the top of Olivine Lighthouse.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/secret-potion.png"
+  },
+  {
+    "id": 442,
+    "name": "Griseous-orb",
+    "effect": "Boosts the damage from Giratina's Dragon-type and Ghost-type moves by 20%, and transforms it into Origin Forme.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/griseous-orb.png"
+  },
+  {
+    "id": 443,
+    "name": "Vs-recorder",
+    "effect": "Records wireless, Wi-Fi, or Battle Frontier battles, and stores points.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/vs-recorder.png"
+  },
+  {
+    "id": 444,
+    "name": "Gracidea",
+    "effect": "Changes an unfrozen Shaymin to Sky Forme in the day.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gracidea.png"
+  },
+  {
+    "id": 445,
+    "name": "Secret-key",
+    "effect": "Gen IV: The key to Rotom's appliance room. Gen III: The key to Cinnabar Gym.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/secret-key.png"
+  },
+  {
+    "id": 446,
+    "name": "Apricorn-box",
+    "effect": "Holds Apricorns.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/apricorn-box.png"
+  },
+  {
+    "id": 447,
+    "name": "Berry-pots",
+    "effect": "Allows portable berry growing.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-pots.png"
+  },
+  {
+    "id": 448,
+    "name": "Squirt-bottle",
+    "effect": "Use on Sudowoodo blocking the path on Route 36. Also waters berries.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/squirt-bottle.png"
+  },
+  {
+    "id": 449,
+    "name": "Lure-ball",
+    "effect": "3\u00d7 effectiveness while fishing. Made from Blu Apricorn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lure-ball.png"
+  },
+  {
+    "id": 450,
+    "name": "Level-ball",
+    "effect": "Success rate based off of fraction target Pok\u00e9mon is of user's Pok\u00e9mon. Made from Red Apricorn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/level-ball.png"
+  },
+  {
+    "id": 451,
+    "name": "Moon-ball",
+    "effect": "4\u00d7 effectiveness on familes of Pok\u00e9mon with a Moon Stone evolution. Made from Ylw Apricorn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-ball.png"
+  },
+  {
+    "id": 452,
+    "name": "Heavy-ball",
+    "effect": "Has flat bonus or penalty to catch rate depending on weight class of target. Made from Blk Apricorn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heavy-ball.png"
+  },
+  {
+    "id": 453,
+    "name": "Fast-ball",
+    "effect": "4\u00d7 effectiveness on Pok\u00e9mon with 100 or greater base speed. (Gen II: Roaming or Fleeing Pok\u00e9mon). Made from Wht Apricorn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fast-ball.png"
+  },
+  {
+    "id": 454,
+    "name": "Friend-ball",
+    "effect": "Caught Pok\u00e9mon start with 200 happiness. Made from Grn Apricorn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/friend-ball.png"
+  },
+  {
+    "id": 455,
+    "name": "Love-ball",
+    "effect": "8\u00d7 effectiveness on opposite sex, same species targets of the Active Pok\u00e9mon. Made from Pnk Apricorn.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/love-ball.png"
+  },
+  {
+    "id": 456,
+    "name": "Park-ball",
+    "effect": "Catches Pok\u00e9mon in the Pal Park every time.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/park-ball.png"
+  },
+  {
+    "id": 457,
+    "name": "Sport-ball",
+    "effect": "Tries to catch a Pok\u00e9mon in the Bug-Catching contest in National Park. (Gen II: Park Ball)",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sport-ball.png"
+  },
+  {
+    "id": 458,
+    "name": "Red-apricorn",
+    "effect": "Used to make a Level Ball.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-apricorn.png"
+  },
+  {
+    "id": 459,
+    "name": "Blue-apricorn",
+    "effect": "Used to make a Lure Ball.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blue-apricorn.png"
+  },
+  {
+    "id": 460,
+    "name": "Yellow-apricorn",
+    "effect": "Used to make a Moon Ball.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-apricorn.png"
+  },
+  {
+    "id": 461,
+    "name": "Green-apricorn",
+    "effect": "Used to make a Friend Ball.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/green-apricorn.png"
+  },
+  {
+    "id": 462,
+    "name": "Pink-apricorn",
+    "effect": "Used to make a Love Ball.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pink-apricorn.png"
+  },
+  {
+    "id": 463,
+    "name": "White-apricorn",
+    "effect": "Used to make a Fast Ball.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-apricorn.png"
+  },
+  {
+    "id": 464,
+    "name": "Black-apricorn",
+    "effect": "Used to make a Heavy Ball.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-apricorn.png"
+  },
+  {
+    "id": 465,
+    "name": "Dowsing-machine",
+    "effect": "Use to find hidden items on the field. AKA Itemfinder.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dowsing-machine.png"
+  },
+  {
+    "id": 466,
+    "name": "Rage-candy-bar",
+    "effect": "HS: Traded for TM64. Gen II & Gen V: Acts as a Potion.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rage-candy-bar.png"
+  },
+  {
+    "id": 467,
+    "name": "Red-orb",
+    "effect": "Summons Groudon to the Embedded Tower.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-orb.png"
+  },
+  {
+    "id": 468,
+    "name": "Blue-orb",
+    "effect": "Summons Kyogre to the Embedded Tower.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blue-orb.png"
+  },
+  {
+    "id": 469,
+    "name": "Jade-orb",
+    "effect": "Summons Rayquaza to the Embedded Tower.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/jade-orb.png"
+  },
+  {
+    "id": 470,
+    "name": "Enigma-stone",
+    "effect": "S: Summons Latias H: Summons Latios.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/enigma-stone.png"
+  },
+  {
+    "id": 471,
+    "name": "Unown-report",
+    "effect": "Keeps track of Unown types caught.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/unown-report.png"
+  },
+  {
+    "id": 472,
+    "name": "Blue-card",
+    "effect": "Keeps track of points from Buena's show.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/blue-card.png"
+  },
+  {
+    "id": 473,
+    "name": "Slowpoke-tail",
+    "effect": "A tasty tail that sells for a high price.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/slowpoke-tail.png"
+  },
+  {
+    "id": 474,
+    "name": "Clear-bell",
+    "effect": "HS: Allows Kimono-girls to summon Ho-oh. C: Summons Suicune to the Tin Tower.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clear-bell.png"
+  },
+  {
+    "id": 475,
+    "name": "Card-key",
+    "effect": "HS: Opens doors in the Radio Tower. Gen III: Unlocks Silph Co Doors.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/card-key.png"
+  },
+  {
+    "id": 476,
+    "name": "Basement-key",
+    "effect": "HS: Key to the tunnel under Goldenrod City. Gen III: Key to New Mauville.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/basement-key.png"
+  },
+  {
+    "id": 477,
+    "name": "Red-scale",
+    "effect": "Trade to Mr. Pok\u00e9mon for an Exp. Share.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-scale.png"
+  },
+  {
+    "id": 478,
+    "name": "Lost-item",
+    "effect": "A Pok\u00e9 Doll lost by the Copycat who lives in Saffron City. Trade for a Pass.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lost-item.png"
+  },
+  {
+    "id": 479,
+    "name": "Pass",
+    "effect": "Grants access to ride the Magnet Train between Goldenrod City and Saffron City.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pass.png"
+  },
+  {
+    "id": 480,
+    "name": "Machine-part",
+    "effect": "Must be replaced in the Power Plant to power the Magnet Train.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/machine-part.png"
+  },
+  {
+    "id": 481,
+    "name": "Silver-wing",
+    "effect": "Summons Lugia to the Whirl Islands.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-wing.png"
+  },
+  {
+    "id": 482,
+    "name": "Rainbow-wing",
+    "effect": "Summons Ho-Oh at the top of the Bell Tower.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rainbow-wing.png"
+  },
+  {
+    "id": 483,
+    "name": "Mystery-egg",
+    "effect": "Deliver to Professor Elm.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystery-egg.png"
+  },
+  {
+    "id": 484,
+    "name": "Gb-sounds",
+    "effect": "Use to listen to GameBoy era audio.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gb-sounds.png"
+  },
+  {
+    "id": 485,
+    "name": "Tidal-bell",
+    "effect": "Allows Kimono-girls to summon Lugia.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tidal-bell.png"
+  },
+  {
+    "id": 486,
+    "name": "Data-card-01",
+    "effect": "Records the number of times the trainer has come in first place overall in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 487,
+    "name": "Data-card-02",
+    "effect": "Records the number of times the trainer has come in last place overall in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 488,
+    "name": "Data-card-03",
+    "effect": "Records the number of times the trainer's Pok\u00e9mon have dashed in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 489,
+    "name": "Data-card-04",
+    "effect": "Records the number of times the trainer's Pok\u00e9mon have jumped in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 490,
+    "name": "Data-card-05",
+    "effect": "Records the number of times the trainer has come in first in the Pok\u00e9athlon Hurdle Dash.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 491,
+    "name": "Data-card-06",
+    "effect": "Records the number of times the trainer has come in first in the Pok\u00e9athlon Relay Run.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 492,
+    "name": "Data-card-07",
+    "effect": "Records the number of times the trainer has come in first in the Pok\u00e9athlon Pennant Capture.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 493,
+    "name": "Data-card-08",
+    "effect": "Records the number of times the trainer has come in first in the Pok\u00e9athlon Block Smash.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 494,
+    "name": "Data-card-09",
+    "effect": "Records the number of times the trainer has come in first in the Pok\u00e9athlon Disc Catch.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 495,
+    "name": "Data-card-10",
+    "effect": "Records the number of times the trainer has come in first in the Pok\u00e9athlon Snow Throw.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 496,
+    "name": "Data-card-11",
+    "effect": "Records the number of points the trainer has earned in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 497,
+    "name": "Data-card-12",
+    "effect": "Records the number of times the trainer's Pok\u00e9mon have messed up in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 498,
+    "name": "Data-card-13",
+    "effect": "Records the number of times the trainer's Pok\u00e9mon have defeated themselves in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 499,
+    "name": "Data-card-14",
+    "effect": "Records the number of times the trainer's Pok\u00e9mon have tackled in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  },
+  {
+    "id": 500,
+    "name": "Data-card-15",
+    "effect": "Records the number of times the trainer's Pok\u00e9mon have fallen in the Pok\u00e9athlon.",
+    "imgURL": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/data-card.png"
+  }
+]
