@@ -18,7 +18,6 @@ import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokemonDetailBinding
 import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
 import dev.shreyansh.pokemon.pokedex.utils.PokemonDetailsPagerAdapter
-import dev.shreyansh.pokemon.pokedex.utils.PokemonDirectoryContainerPagerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 

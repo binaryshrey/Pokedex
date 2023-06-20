@@ -8,11 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import dev.shreyansh.pokemon.pokedex.R
-import dev.shreyansh.pokemon.pokedex.databinding.FragmentAboutPokemonBinding
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentEvolutionBinding
 import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
 import dev.shreyansh.pokemon.pokedex.utils.searchPokemonById

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.LocationsHighlightListItemBinding
 import dev.shreyansh.pokemon.pokedex.databinding.LocationsListItemBinding
 import dev.shreyansh.pokemon.pokedex.network.response.LocationResponse
@@ -86,12 +86,14 @@ class LocationsRecyclerAdapter(val onClickListener: OnClickListener, private val
         when(holder){
             is LocationsHighlightViewHolder ->  {
                 Glide.with(activity.applicationContext).load(item.locationURL).into(holder.binding.locationIV)
-                Glide.with(activity.applicationContext).load(item.pokemonImgURL).into(holder.binding.pokeIV)
+                Glide.with(activity.applicationContext).load(item.pokemonImgURL).placeholder(R.drawable.def_poke)
+                    .error(R.drawable.def_poke).into(holder.binding.pokeIV)
                 holder.bind(item)
             }
             is LocationsViewHolder ->  {
                 Glide.with(activity.applicationContext).load(item.locationURL).into(holder.binding.locationIV)
-                Glide.with(activity.applicationContext).load(item.pokemonImgURL).into(holder.binding.pokeIV)
+                Glide.with(activity.applicationContext).load(item.pokemonImgURL).placeholder(R.drawable.def_poke)
+                    .error(R.drawable.def_poke).into(holder.binding.pokeIV)
                 holder.bind(item)
             }
         }

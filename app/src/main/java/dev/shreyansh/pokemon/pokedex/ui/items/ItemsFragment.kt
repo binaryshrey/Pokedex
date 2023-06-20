@@ -13,7 +13,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentItemsBinding
-import dev.shreyansh.pokemon.pokedex.utils.AbilitiesRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.utils.ItemsRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
