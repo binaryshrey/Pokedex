@@ -27,8 +27,30 @@ class LocationsRecyclerAdapter(val onClickListener: OnClickListener, private val
     }
 
     override fun getItemViewType(position: Int): Int {
-        return when(position/5){
+        return when(position){
             0 -> 1
+            5 -> 1
+            10 -> 1
+            15 -> 1
+            26 -> 1
+            30 -> 1
+            35 -> 1
+            40 -> 1
+            45 -> 1
+            60 -> 1
+            70 -> 1
+            80 -> 1
+            90 -> 1
+            100 -> 1
+            105 -> 1
+            110 -> 1
+            115 -> 1
+            126 -> 1
+            130 -> 1
+            135 -> 1
+            140 -> 1
+            145 -> 1
+            160 -> 1
             else -> 2
         }
     }
@@ -63,13 +85,13 @@ class LocationsRecyclerAdapter(val onClickListener: OnClickListener, private val
         }
         when(holder){
             is LocationsHighlightViewHolder ->  {
-                Glide.with(activity.applicationContext).load(item.locationURL).apply(RequestOptions().fitCenter()).into(holder.binding.locationIV)
-                Glide.with(activity.applicationContext).load(item.pokemonImgURL).apply(RequestOptions().fitCenter()).into(holder.binding.pokeIV)
+                Glide.with(activity.applicationContext).load(item.locationURL).into(holder.binding.locationIV)
+                Glide.with(activity.applicationContext).load(item.pokemonImgURL).into(holder.binding.pokeIV)
                 holder.bind(item)
             }
             is LocationsViewHolder ->  {
-                Glide.with(activity.applicationContext).load(item.locationURL).apply(RequestOptions().fitCenter()).into(holder.binding.locationIV)
-                Glide.with(activity.applicationContext).load(item.pokemonImgURL).apply(RequestOptions().fitCenter()).into(holder.binding.pokeIV)
+                Glide.with(activity.applicationContext).load(item.locationURL).into(holder.binding.locationIV)
+                Glide.with(activity.applicationContext).load(item.pokemonImgURL).into(holder.binding.pokeIV)
                 holder.bind(item)
             }
         }

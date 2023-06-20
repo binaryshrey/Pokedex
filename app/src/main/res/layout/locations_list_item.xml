@@ -23,8 +23,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/locationCV"
-                android:layout_width="66dp"
-                android:layout_height="66dp"
+                android:layout_width="140dp"
+                android:layout_height="64dp"
                 android:layout_marginEnd="12dp"
                 app:cardBackgroundColor="#EAEAEA"
                 app:cardCornerRadius="8dp"
@@ -42,6 +42,17 @@
 
             </androidx.cardview.widget.CardView>
 
+            <ImageView
+                android:background="@drawable/rounded_imageview"
+                android:id="@+id/pokeIV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/locationCV"
+                app:layout_constraintTop_toTopOf="@+id/locationCV"
+                tools:srcCompat="@drawable/electric_circle" />
+
             <LinearLayout
                 android:id="@+id/locationNameLayout"
                 android:layout_width="0dp"
@@ -57,19 +68,12 @@
                     android:id="@+id/locationNameTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans"
+                    android:fontFamily="@font/open_sans_semibold"
                     android:maxLines="1"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
+                    android:textSize="16sp"
+                    app:text="@{location.name}"
                     tools:text="Johto sea route 40 area" />
-
-                <ImageView
-                    android:id="@+id/pokeIV"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="24dp"
-                    tools:srcCompat="@drawable/electric_circle" />
-
 
             </LinearLayout>
 
@@ -81,11 +85,12 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
-                android:fontFamily="@font/open_sans_semibold"
+                android:fontFamily="@font/open_sans"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@+id/locationCV"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/locationNameLayout"
+                app:textArea="@{location.region}"
                 tools:text="Johto Region" />
 
             <com.google.android.material.divider.MaterialDivider

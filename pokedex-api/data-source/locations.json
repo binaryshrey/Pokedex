@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Canalave city area",
-    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/2.jpg",
+    "locationURL": "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/mock-locations/14.jpg",
     "region": "Sinnoh",
     "pokemonName": "Tentacool",
     "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"

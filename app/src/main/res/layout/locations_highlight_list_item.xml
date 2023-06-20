@@ -43,6 +43,17 @@
 
             </androidx.cardview.widget.CardView>
 
+            <ImageView
+                android:id="@+id/pokeIV"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rounded_imageview"
+                app:layout_constraintEnd_toEndOf="@+id/locationCV"
+                app:layout_constraintTop_toTopOf="@+id/locationCV"
+                tools:srcCompat="@drawable/electric_circle" />
+
             <LinearLayout
                 android:id="@+id/locationNameLayout"
                 android:layout_width="0dp"
@@ -55,23 +66,15 @@
                 app:layout_constraintTop_toBottomOf="@+id/locationCV">
 
                 <TextView
+                    android:textSize="16sp"
                     android:id="@+id/locationNameTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans"
+                    android:fontFamily="@font/open_sans_semibold"
                     android:maxLines="1"
                     android:textColor="@color/black"
-                    android:textSize="12sp"
+                    app:text="@{location.name}"
                     tools:text="Johto sea route 40 area" />
-
-
-                <ImageView
-                    android:id="@+id/pokeIV"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="24dp"
-                    tools:srcCompat="@drawable/electric_circle" />
-
 
             </LinearLayout>
 
@@ -81,11 +84,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
-                android:fontFamily="@font/open_sans_semibold"
+                android:fontFamily="@font/open_sans"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/locationNameLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/locationNameLayout"
+                app:textArea="@{location.region}"
                 tools:text="Johto Region" />
 
             <com.google.android.material.divider.MaterialDivider
