@@ -1,4 +1,4 @@
-package dev.shreyansh.pokemon.pokedex.ui.moves
+package dev.shreyansh.pokemon.pokedex.ui.locations
 
 import android.content.res.Configuration
 import android.graphics.Color
@@ -12,15 +12,16 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import dev.shreyansh.pokemon.pokedex.R
-import dev.shreyansh.pokemon.pokedex.databinding.FragmentMovesBinding
-import dev.shreyansh.pokemon.pokedex.utils.MovesRecyclerAdapter
+import dev.shreyansh.pokemon.pokedex.databinding.FragmentLocationsBinding
+import dev.shreyansh.pokemon.pokedex.utils.LocationsRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
-class MovesFragment : Fragment() {
 
-    private lateinit var binding : FragmentMovesBinding
-    private lateinit var movesRecyclerAdapter: MovesRecyclerAdapter
+class LocationsFragment : Fragment() {
+
+    private lateinit var binding : FragmentLocationsBinding
+    private lateinit var locationsRecyclerAdapter: LocationsRecyclerAdapter
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)
     }
@@ -30,12 +31,12 @@ class MovesFragment : Fragment() {
 
         setStatusBarColor()
 
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_moves, container, false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_locations, container, false)
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getPokeMoves()
-        setupMovesRecyclerView()
+        getPokeLocations()
+        setupLocationsRecyclerView()
         setupObservers()
         setupOnClickListeners()
 
@@ -43,26 +44,25 @@ class MovesFragment : Fragment() {
     }
 
     private fun setupOnClickListeners() {
-        binding.movesToolbar.setNavigationOnClickListener { findNavController().popBackStack() }
+        binding.locationsToolbar.setNavigationOnClickListener { findNavController().popBackStack() }
     }
 
 
-    private fun getPokeMoves() {
-        pokedexViewModel.getAllMoves()
+    private fun getPokeLocations() {
+        pokedexViewModel.getAllLocations()
     }
 
 
-    private fun setupMovesRecyclerView() {
-        movesRecyclerAdapter = MovesRecyclerAdapter(requireActivity())
-        binding.movesRV.adapter = movesRecyclerAdapter
+    private fun setupLocationsRecyclerView() {
+        locationsRecyclerAdapter = LocationsRecyclerAdapter(LocationsRecyclerAdapter.OnClickListener{},requireActivity())
+        binding.locationsRV.adapter = locationsRecyclerAdapter
 
     }
-
 
     private fun setupObservers() {
-        pokedexViewModel.movesResponse.observe(viewLifecycleOwner, Observer {allMoves ->
-            allMoves?.let {
-                movesRecyclerAdapter.submitList(allMoves.toMutableList())
+        pokedexViewModel.locationsResponse.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                locationsRecyclerAdapter.submitList(it.toMutableList())
             }
         })
     }
@@ -75,5 +75,4 @@ class MovesFragment : Fragment() {
             else -> requireActivity().window.statusBarColor = Color.parseColor("#000000")
         }
     }
-
 }

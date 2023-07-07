@@ -17,6 +17,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class MovesStatus { LOADING, ERROR, DONE }
     enum class AbilitiesStatus { LOADING, ERROR, DONE }
     enum class ItemsStatus { LOADING, ERROR, DONE }
+    enum class LocationsStatus { LOADING, ERROR, DONE }
 
 
     //login
@@ -63,6 +64,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _abilitiesResponse = MutableLiveData<List<AbilitiesResponse>>()
     val abilitiesResponse: LiveData<List<AbilitiesResponse>>
         get() = _abilitiesResponse
+
+
+    // locations
+    private val _locationsAPIStatus = MutableLiveData<LocationsStatus>()
+    val locationsAPIStatus: LiveData<LocationsStatus>
+        get() = _locationsAPIStatus
+
+    private val _locationsResponse = MutableLiveData<List<LocationResponse>>()
+    val locationsResponse: LiveData<List<LocationResponse>>
+        get() = _locationsResponse
 
 
     // items
@@ -158,6 +169,23 @@ class PokedexViewModel(application: Application) : ViewModel(){
             catch (e: Exception){
                 Log.e("ItemsServiceAPI:ERROR","${e.message}")
                 _itemsAPIStatus.value = ItemsStatus.ERROR
+            }
+        }
+    }
+
+
+    fun getAllLocations(){
+        viewModelScope.launch {
+            _locationsAPIStatus.value = LocationsStatus.LOADING
+            try{
+                val res = LocationsServiceAPI.locationService.getPokeLocations()
+                Log.i("LocationsServiceAPI:RES","$res")
+                _locationsResponse.value = res
+                _locationsAPIStatus.value = LocationsStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("LocationsServiceAPI:ERROR","${e.message}")
+                _locationsAPIStatus.value = LocationsStatus.ERROR
             }
         }
     }

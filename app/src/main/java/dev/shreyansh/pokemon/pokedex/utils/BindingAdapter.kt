@@ -2,7 +2,6 @@ package dev.shreyansh.pokemon.pokedex.utils
 
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -79,6 +78,13 @@ fun setText(textView: TextView, text:String?){
     }
 }
 
+@BindingAdapter("textArea")
+fun setTextArea(textView: TextView, text:String?){
+    text?.let {
+        textView.text = "${text.capitalize()} Region"
+    }
+}
+
 
 @BindingAdapter("powerPercentage")
 fun setPowerPercentage(circularProgressIndicator: CircularProgressIndicator, power: Int?) {
@@ -121,6 +127,18 @@ fun setItemsProgress(progressBar: ProgressBar, status: PokedexViewModel.ItemsSta
             PokedexViewModel.ItemsStatus.LOADING -> progressBar.visibility = View.VISIBLE
             PokedexViewModel.ItemsStatus.ERROR -> progressBar.visibility = View.GONE
             PokedexViewModel.ItemsStatus.DONE -> progressBar.visibility = View.GONE
+        }
+    }
+}
+
+@BindingAdapter("locationsProgress")
+fun setLocationsProgress(progressBar: ProgressBar, status: PokedexViewModel.LocationsStatus?) {
+    progressBar.visibility = View.GONE
+    status?.let {
+        when (status) {
+            PokedexViewModel.LocationsStatus.LOADING -> progressBar.visibility = View.VISIBLE
+            PokedexViewModel.LocationsStatus.ERROR -> progressBar.visibility = View.GONE
+            PokedexViewModel.LocationsStatus.DONE -> progressBar.visibility = View.GONE
         }
     }
 }
