@@ -48,6 +48,10 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val pokeMonsResponse: LiveData<List<PokemonRequest>>
         get() = _pokeMonsResponse
 
+    private val _allPokemons = MutableLiveData<List<PokemonRequest>>()
+    val allPokemons: LiveData<List<PokemonRequest>>
+        get() = _allPokemons
+
 
     // moves
     private val _movesAPIStatus = MutableLiveData<MovesStatus>()
@@ -128,6 +132,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 val res = PokedexPokemonServiceAPI.pokedexPokemonService.getAllPokeMons()
                 Log.i("PokemonAPI:RES","$res")
                 _pokeMonsResponse.value = res
+                _allPokemons.value = res
                 _pokemonAPIStatus.value = PokeMonAPIStatus.DONE
             }
             catch (e: Exception){
@@ -221,6 +226,21 @@ class PokedexViewModel(application: Application) : ViewModel(){
         }
     }
 
+
+    fun filterPokemons(gen : String){
+        when(gen){
+            "all"-> _pokeMonsResponse.value = _allPokemons.value
+            "one" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(0,150)
+            "two" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(150,250)
+            "three" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(250,386)
+            "four" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(386,493)
+            "five" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(493,649)
+            "six" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(649,721)
+            "seven" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(721,807)
+            "eight" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(807,809)
+
+        }
+    }
 
 
     //login-checked

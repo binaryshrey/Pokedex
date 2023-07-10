@@ -34,9 +34,52 @@ class PokemonFiltersFragment : BottomSheetDialogFragment() {
         binding = DataBindingUtil.inflate(layoutInflater,R.layout.fragment_pokemon_filters, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
 
+        setupOnClickListeners()
 
 
         return binding.root
+    }
+
+    private fun setupOnClickListeners() {
+        binding.genAllCV.setOnClickListener {
+            pokedexViewModel.filterPokemons("all")
+            dismiss()
+        }
+        binding.gen1CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("one")
+            dismiss()
+        }
+        binding.gen2CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("two")
+            dismiss()
+        }
+        binding.gen3CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("three")
+            dismiss()
+        }
+        binding.gen4CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("four")
+            dismiss()
+        }
+        binding.gen5CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("five")
+            dismiss()
+        }
+        binding.gen6CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("six")
+            dismiss()
+        }
+        binding.gen7CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("seven")
+            dismiss()
+        }
+        binding.gen8CV.setOnClickListener {
+            pokedexViewModel.filterPokemons("eight")
+            dismiss()
+        }
+
+
+
     }
 
 
