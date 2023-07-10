@@ -131,6 +131,18 @@ fun setItemsProgress(progressBar: ProgressBar, status: PokedexViewModel.ItemsSta
     }
 }
 
+@BindingAdapter("typesProgress")
+fun setTypesProgress(progressBar: ProgressBar, status: PokedexViewModel.TypesStatus?) {
+    progressBar.visibility = View.GONE
+    status?.let {
+        when (status) {
+            PokedexViewModel.TypesStatus.LOADING -> progressBar.visibility = View.VISIBLE
+            PokedexViewModel.TypesStatus.ERROR -> progressBar.visibility = View.GONE
+            PokedexViewModel.TypesStatus.DONE -> progressBar.visibility = View.GONE
+        }
+    }
+}
+
 @BindingAdapter("locationsProgress")
 fun setLocationsProgress(progressBar: ProgressBar, status: PokedexViewModel.LocationsStatus?) {
     progressBar.visibility = View.GONE

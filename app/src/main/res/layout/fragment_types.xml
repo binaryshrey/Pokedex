@@ -59,7 +59,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:layout_gravity="center"
         android:elevation="4dp"
         android:indeterminateTint="@color/yellow_700"
-        app:itemsProgress="@{viewModel.typesAPIStatus}" />
+        app:typesProgress="@{viewModel.typesAPIStatus}" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

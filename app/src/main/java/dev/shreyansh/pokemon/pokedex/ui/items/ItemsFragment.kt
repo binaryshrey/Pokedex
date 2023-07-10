@@ -36,7 +36,7 @@ class ItemsFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         getPokeItems()
-        setupAbilitiesRecyclerView()
+        setupItemsRecyclerView()
         setupObservers()
         setupOnClickListeners()
 
@@ -53,7 +53,7 @@ class ItemsFragment : Fragment() {
     }
 
 
-    private fun setupAbilitiesRecyclerView() {
+    private fun setupItemsRecyclerView() {
         itemsRecyclerAdapter = ItemsRecyclerAdapter(requireActivity())
         binding.itemsRV.adapter = itemsRecyclerAdapter
 
