@@ -9,7 +9,12 @@ fun convertHeightToCm(height: String): Double {
     val feet = parts[0].trim().toDouble()
     val inches = parts[1].replace("\"", "").trim().toDouble()
     val totalInches = feet * 12 + inches
-    return totalInches * 2.54
+
+    val decimalFormat = DecimalFormat("#.##")
+    decimalFormat.roundingMode = RoundingMode.HALF_UP
+    return decimalFormat.format(totalInches * 2.54).toDouble()
+
+
 }
 
 fun convertToKilograms(weight: String): Double {
