@@ -19,6 +19,9 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class ItemsStatus { LOADING, ERROR, DONE }
     enum class LocationsStatus { LOADING, ERROR, DONE }
 
+    enum class TypesStatus { LOADING, ERROR, DONE }
+
+
 
     //login
     private val _loginComplete = MutableLiveData<Boolean>()
@@ -84,6 +87,18 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _itemsResponse = MutableLiveData<List<ItemsResponse>>()
     val itemsResponse: LiveData<List<ItemsResponse>>
         get() = _itemsResponse
+
+
+
+    // types
+    private val _typesAPIStatus = MutableLiveData<TypesStatus>()
+    val typesAPIStatus: LiveData<TypesStatus>
+        get() = _typesAPIStatus
+
+    private val _typesResponse = MutableLiveData<List<TypesResponse>>()
+    val typesResponse: LiveData<List<TypesResponse>>
+        get() = _typesResponse
+
 
     init {
         _loginComplete.value = false
@@ -186,6 +201,22 @@ class PokedexViewModel(application: Application) : ViewModel(){
             catch (e: Exception){
                 Log.e("LocationsServiceAPI:ERROR","${e.message}")
                 _locationsAPIStatus.value = LocationsStatus.ERROR
+            }
+        }
+    }
+
+    fun getAllTypes(){
+        viewModelScope.launch {
+            _typesAPIStatus.value = TypesStatus.LOADING
+            try{
+                val res = TypesServiceAPI.typesService.getPokeTypes()
+                Log.i("TypesServiceAPI:RES","$res")
+                _typesResponse.value = res
+                _typesAPIStatus.value = TypesStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("TypesServiceAPI:ERROR","${e.message}")
+                _typesAPIStatus.value = TypesStatus.ERROR
             }
         }
     }
