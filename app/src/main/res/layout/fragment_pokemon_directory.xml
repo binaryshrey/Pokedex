@@ -43,6 +43,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:pokemonProgress="@{viewModel.pokemonAPIStatus}" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:visibility="gone"
+            android:id="@+id/pokeFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="filter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/filter"
+            app:tint="@color/white" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

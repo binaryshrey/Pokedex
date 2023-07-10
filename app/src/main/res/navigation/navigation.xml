@@ -87,6 +87,13 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/pokemonDetailFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pokemonDirectoryContainerFragment_to_pokemonFiltersFragment"
+            app:destination="@id/pokemonFiltersFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonFiltersFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/pokemonDetailFragment"
@@ -116,4 +123,8 @@
         android:id="@+id/typesFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.types.TypesFragment"
         android:label="TypesFragment" />
+    <dialog
+        android:id="@+id/pokemonFiltersFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.pokemon.PokemonFiltersFragment"
+        android:label="PokemonFiltersFragment" />
 </navigation>

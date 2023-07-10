@@ -65,6 +65,7 @@ class HomeFragment : Fragment() {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNewsFragment())
         }
         binding.pokemonCV.setOnClickListener {
+            pokedexViewModel.filterPokemons("all")
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToPokemonDirectoryContainerFragment())
         }
         binding.movesCV.setOnClickListener {
