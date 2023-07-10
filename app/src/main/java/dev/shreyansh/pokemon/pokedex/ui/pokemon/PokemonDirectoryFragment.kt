@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokemonDirectoryBinding
@@ -19,8 +20,10 @@ import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
 class PokemonDirectoryFragment : Fragment() {
 
+    private var lastVisibleItemPositions: IntArray = IntArray(2)
     private lateinit var binding : FragmentPokemonDirectoryBinding
     private lateinit var pokemonRecyclerAdapter : PokemonRecyclerAdapter
+    private lateinit var staggeredGridLayoutManager : StaggeredGridLayoutManager
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)
     }
@@ -33,9 +36,16 @@ class PokemonDirectoryFragment : Fragment() {
         getAllPokeMons()
         setupPokeMonsRecyclerView()
         setupObservers()
+        setupOnClickListeners()
 
 
         return binding.root
+    }
+
+    private fun setupOnClickListeners() {
+        binding.pokeFilter.setOnClickListener {
+            findNavController().navigate(PokemonDirectoryContainerFragmentDirections.actionPokemonDirectoryContainerFragmentToPokemonFiltersFragment())
+        }
     }
 
     private fun setupObservers() {
@@ -44,13 +54,27 @@ class PokemonDirectoryFragment : Fragment() {
                 pokemonRecyclerAdapter.submitList(it)
             }
         })
+
+        binding.pokemonsRV.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                staggeredGridLayoutManager.findLastVisibleItemPositions(lastVisibleItemPositions)
+
+                if (dy < 0 && binding.pokeFilter.isShown) {
+                    binding.pokeFilter.hide()
+                } else if (dy > 0 && !binding.pokeFilter.isShown) {
+                    binding.pokeFilter.show()
+                }
+            }
+        })
     }
 
     private fun getAllPokeMons(){
         pokedexViewModel.getAllPokemon()
     }
     private fun setupPokeMonsRecyclerView() {
-        val staggeredGridLayoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+        staggeredGridLayoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         binding.pokemonsRV.layoutManager = staggeredGridLayoutManager
         pokemonRecyclerAdapter = PokemonRecyclerAdapter(PokemonRecyclerAdapter.OnClickListener {
             findNavController().navigate(PokemonDirectoryContainerFragmentDirections.actionPokemonDirectoryContainerFragmentToPokemonDetailFragment(it))
