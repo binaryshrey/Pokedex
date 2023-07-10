@@ -19,6 +19,9 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class ItemsStatus { LOADING, ERROR, DONE }
     enum class LocationsStatus { LOADING, ERROR, DONE }
 
+    enum class TypesStatus { LOADING, ERROR, DONE }
+
+
 
     //login
     private val _loginComplete = MutableLiveData<Boolean>()
@@ -37,9 +40,9 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
 
     // poke-mons
-    private val _pokeMonsStatus = MutableLiveData<PokeMonAPIStatus>()
-    val pokeMonsStatus: LiveData<PokeMonAPIStatus>
-        get() = _pokeMonsStatus
+    private val _pokemonAPIStatus = MutableLiveData<PokeMonAPIStatus>()
+    val pokemonAPIStatus: LiveData<PokeMonAPIStatus>
+        get() = _pokemonAPIStatus
 
     private val _pokeMonsResponse = MutableLiveData<List<PokemonRequest>>()
     val pokeMonsResponse: LiveData<List<PokemonRequest>>
@@ -85,6 +88,18 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val itemsResponse: LiveData<List<ItemsResponse>>
         get() = _itemsResponse
 
+
+
+    // types
+    private val _typesAPIStatus = MutableLiveData<TypesStatus>()
+    val typesAPIStatus: LiveData<TypesStatus>
+        get() = _typesAPIStatus
+
+    private val _typesResponse = MutableLiveData<List<TypesResponse>>()
+    val typesResponse: LiveData<List<TypesResponse>>
+        get() = _typesResponse
+
+
     init {
         _loginComplete.value = false
     }
@@ -108,16 +123,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
     fun getAllPokemon(){
         viewModelScope.launch {
-            _pokeMonsStatus.value = PokeMonAPIStatus.LOADING
+            _pokemonAPIStatus.value = PokeMonAPIStatus.LOADING
             try{
                 val res = PokedexPokemonServiceAPI.pokedexPokemonService.getAllPokeMons()
                 Log.i("PokemonAPI:RES","$res")
                 _pokeMonsResponse.value = res
-                _pokeMonsStatus.value = PokeMonAPIStatus.DONE
+                _pokemonAPIStatus.value = PokeMonAPIStatus.DONE
             }
             catch (e: Exception){
                 Log.e("PokemonAPI:ERROR","${e.message}")
-                _pokeMonsStatus.value = PokeMonAPIStatus.ERROR
+                _pokemonAPIStatus.value = PokeMonAPIStatus.ERROR
             }
         }
     }
@@ -186,6 +201,22 @@ class PokedexViewModel(application: Application) : ViewModel(){
             catch (e: Exception){
                 Log.e("LocationsServiceAPI:ERROR","${e.message}")
                 _locationsAPIStatus.value = LocationsStatus.ERROR
+            }
+        }
+    }
+
+    fun getAllTypes(){
+        viewModelScope.launch {
+            _typesAPIStatus.value = TypesStatus.LOADING
+            try{
+                val res = TypesServiceAPI.typesService.getPokeTypes()
+                Log.i("TypesServiceAPI:RES","$res")
+                _typesResponse.value = res
+                _typesAPIStatus.value = TypesStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("TypesServiceAPI:ERROR","${e.message}")
+                _typesAPIStatus.value = TypesStatus.ERROR
             }
         }
     }

@@ -1,4 +1,4 @@
-package dev.shreyansh.pokemon.pokedex.ui.items
+package dev.shreyansh.pokemon.pokedex.ui.types
 
 import android.content.res.Configuration
 import android.graphics.Color
@@ -12,31 +12,29 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import dev.shreyansh.pokemon.pokedex.R
-import dev.shreyansh.pokemon.pokedex.databinding.FragmentItemsBinding
-import dev.shreyansh.pokemon.pokedex.utils.ItemsRecyclerAdapter
+import dev.shreyansh.pokemon.pokedex.databinding.FragmentTypesBinding
+import dev.shreyansh.pokemon.pokedex.utils.TypesRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
 
-class ItemsFragment : Fragment() {
+class TypesFragment : Fragment() {
 
-    private lateinit var binding : FragmentItemsBinding
-    private lateinit var itemsRecyclerAdapter: ItemsRecyclerAdapter
+    private lateinit var binding : FragmentTypesBinding
+    private lateinit var typesRecyclerAdapter: TypesRecyclerAdapter
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)
     }
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         setStatusBarColor()
 
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_items, container, false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_types, container, false)
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getPokeItems()
-        setupItemsRecyclerView()
+        getPokeTypes()
+        setupTypesRecyclerView()
         setupObservers()
         setupOnClickListeners()
 
@@ -44,26 +42,26 @@ class ItemsFragment : Fragment() {
     }
 
     private fun setupOnClickListeners() {
-        binding.itemsToolbar.setNavigationOnClickListener { findNavController().popBackStack() }
+        binding.typesToolbar.setNavigationOnClickListener { findNavController().popBackStack() }
     }
 
 
-    private fun getPokeItems() {
-        pokedexViewModel.getAllItems()
+    private fun getPokeTypes() {
+        pokedexViewModel.getAllTypes()
     }
 
 
-    private fun setupItemsRecyclerView() {
-        itemsRecyclerAdapter = ItemsRecyclerAdapter(requireActivity())
-        binding.itemsRV.adapter = itemsRecyclerAdapter
+    private fun setupTypesRecyclerView() {
+        typesRecyclerAdapter = TypesRecyclerAdapter(requireActivity())
+        binding.typesRV.adapter = typesRecyclerAdapter
 
     }
 
 
     private fun setupObservers() {
-        pokedexViewModel.itemsResponse.observe(viewLifecycleOwner, Observer {
+        pokedexViewModel.typesResponse.observe(viewLifecycleOwner, Observer {
             it?.let {
-                itemsRecyclerAdapter.submitList(it.toMutableList())
+                typesRecyclerAdapter.submitList(it.toMutableList())
             }
         })
     }

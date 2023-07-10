@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Normal",
+    "moves": "Moves: pound, double-slap, comet-punch, mega-punch, pay-day",
+    "pokemonName": "Pidgey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 2,
+    "name": "Fighting",
+    "moves": "Moves: karate-chop, double-kick, jump-kick, rolling-kick, submission",
+    "pokemonName": "Mankey",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png"
+  },
+  {
+    "id": 3,
+    "name": "Flying",
+    "moves": "Moves: gust, wing-attack, fly, peck, drill-peck",
+    "pokemonName": "Charizard",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+  },
+  {
+    "id": 4,
+    "name": "Poison",
+    "moves": "Moves: poison-sting, acid, poison-powder, toxic, smog",
+    "pokemonName": "Bulbasaur",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "id": 5,
+    "name": "Ground",
+    "moves": "Moves: sand-attack, earthquake, fissure, dig, bone-club",
+    "pokemonName": "Sandshrew",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
+  },
+  {
+    "id": 6,
+    "name": "Rock",
+    "moves": "Moves: rock-throw, rock-slide, sandstorm, rollout, ancient-power",
+    "pokemonName": "Geodude",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "id": 7,
+    "name": "Bug",
+    "moves": "Moves: twineedle, pin-missile, string-shot, leech-life, spider-web",
+    "pokemonName": "Caterpie",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 8,
+    "name": "Ghost",
+    "moves": "Moves: night-shade, confuse-ray, lick, nightmare, curse",
+    "pokemonName": "Gastly",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png"
+  },
+  {
+    "id": 9,
+    "name": "Steel",
+    "moves": "Moves: steel-wing, iron-tail, metal-claw, meteor-mash, metal-sound",
+    "pokemonName": "Magnemite",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
+  },
+  {
+    "id": 10,
+    "name": "Fire",
+    "moves": "Moves: fire-punch, ember, flamethrower, fire-spin, fire-blast",
+    "pokemonName": "Charmander",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+  },
+  {
+    "id": 11,
+    "name": "Water",
+    "moves": "Moves: water-gun, hydro-pump, surf, bubble-beam, withdraw",
+    "pokemonName": "Squirtle",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+  },
+  {
+    "id": 12,
+    "name": "Grass",
+    "moves": "Moves: vine-whip, absorb, mega-drain, leech-seed, razor-leaf",
+    "pokemonName": "Bulbasaur",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "id": 13,
+    "name": "Electric",
+    "moves": "Moves: thunder-punch, thunder-shock, thunderbolt, thunder-wave, thunder",
+    "pokemonName": "Pikachu",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+  },
+  {
+    "id": 14,
+    "name": "Psychic",
+    "moves": "Moves: psybeam, confusion, psychic, hypnosis, meditate",
+    "pokemonName": "Abra",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png"
+  },
+  {
+    "id": 15,
+    "name": "Ice",
+    "moves": "Moves: ice-punch, mist, ice-beam, blizzard, aurora-beam",
+    "pokemonName": "Dewgong",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/087.png"
+  },
+  {
+    "id": 16,
+    "name": "Dragon",
+    "moves": "Moves: dragon-rage, outrage, dragon-breath, twister, dragon-claw",
+    "pokemonName": "Dratini",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png"
+  },
+  {
+    "id": 17,
+    "name": "Dark",
+    "moves": "Moves: bite, thief, feint-attack, pursuit, crunch",
+    "pokemonName": "Umbreon",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/197.png"
+  },
+  {
+    "id": 18,
+    "name": "Fairy",
+    "moves": "Moves: sweet-kiss, charm, moonlight, disarming-voice, draining-kiss",
+    "pokemonName": "Clefairy",
+    "pokemonImgURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png"
+  }
+]
