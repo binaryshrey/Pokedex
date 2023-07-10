@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+
+    <variable
+        name="viewModel"
+        type="dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel" />
+</data>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/typesLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.types.TypesFragment">
+    tools:context=".ui.items.TypesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/typesAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/typesToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?android:attr/actionBarSize"
+            android:theme="?android:actionBarTheme"
+            app:navigationIcon="@drawable/goback">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TYPES"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/typesRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-</FrameLayout>
+    <ProgressBar
+        android:id="@+id/typesProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:elevation="4dp"
+        android:indeterminateTint="@color/yellow_700"
+        app:itemsProgress="@{viewModel.typesAPIStatus}" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
