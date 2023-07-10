@@ -40,9 +40,9 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
 
     // poke-mons
-    private val _pokeMonsStatus = MutableLiveData<PokeMonAPIStatus>()
-    val pokeMonsStatus: LiveData<PokeMonAPIStatus>
-        get() = _pokeMonsStatus
+    private val _pokemonAPIStatus = MutableLiveData<PokeMonAPIStatus>()
+    val pokemonAPIStatus: LiveData<PokeMonAPIStatus>
+        get() = _pokemonAPIStatus
 
     private val _pokeMonsResponse = MutableLiveData<List<PokemonRequest>>()
     val pokeMonsResponse: LiveData<List<PokemonRequest>>
@@ -123,16 +123,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
     fun getAllPokemon(){
         viewModelScope.launch {
-            _pokeMonsStatus.value = PokeMonAPIStatus.LOADING
+            _pokemonAPIStatus.value = PokeMonAPIStatus.LOADING
             try{
                 val res = PokedexPokemonServiceAPI.pokedexPokemonService.getAllPokeMons()
                 Log.i("PokemonAPI:RES","$res")
                 _pokeMonsResponse.value = res
-                _pokeMonsStatus.value = PokeMonAPIStatus.DONE
+                _pokemonAPIStatus.value = PokeMonAPIStatus.DONE
             }
             catch (e: Exception){
                 Log.e("PokemonAPI:ERROR","${e.message}")
-                _pokeMonsStatus.value = PokeMonAPIStatus.ERROR
+                _pokemonAPIStatus.value = PokeMonAPIStatus.ERROR
             }
         }
     }
