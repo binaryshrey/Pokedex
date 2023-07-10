@@ -7,7 +7,7 @@
 
         <variable
             name="type"
-            type="dev.shreyansh.pokemon.pokedex.network.response.ItemsResponse" />
+            type="dev.shreyansh.pokemon.pokedex.network.response.TypesResponse" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -20,7 +20,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/itemNameTV"
+                android:id="@+id/typeNameTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -30,11 +30,11 @@
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:text="@{item.name}"
-                tools:text="Master-ball" />
+                app:text="@{type.name}"
+                tools:text="Normal" />
 
             <TextView
-                android:id="@+id/descTV"
+                android:id="@+id/movesTV"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -44,9 +44,9 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayout"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/itemNameTV"
-                app:text="@{item.effect}"
-                tools:text="Catches a wild Pokémon every time." />
+                app:layout_constraintTop_toBottomOf="@+id/typeNameTV"
+                app:text="@{type.moves}"
+                tools:text="Moves: pound, double-slap, comet-punch, mega-punch, pay-day" />
 
 
             <LinearLayout
@@ -56,9 +56,9 @@
                 android:layout_marginEnd="16dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/descTV"
+                app:layout_constraintBottom_toBottomOf="@+id/movesTV"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/itemNameTV">
+                app:layout_constraintTop_toTopOf="@+id/typeNameTV">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/descTV" />
+                app:layout_constraintTop_toBottomOf="@+id/movesTV" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 </layout>
