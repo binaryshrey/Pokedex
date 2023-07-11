@@ -10,6 +10,7 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
 import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
@@ -35,15 +36,17 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokemonNewsDataBase = PokemonNewsDataBase.getInstance(application)
     private val pokemonAbilityDataBase = PokemonAbilityDataBase.getInstance(application)
     private val pokemonItemDataBase = PokemonItemDataBase.getInstance(application)
+    private val pokemonLocationDatabase = PokemonLocationDatabase.getInstance(application)
 
+    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase,pokemonAbilityDataBase,pokemonItemDataBase,pokemonLocationDatabase)
 
-    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase,pokemonAbilityDataBase,pokemonItemDataBase)
 
     val allPokemons = repository.allPokemons
     val allFavPokemons = repository.allFavPokemons
     val allFavPokemonsCount = repository.getFavPokemonCount()
     val allPokemonAbilities = repository.allPokemonAbilities
     val allPokemonItems = repository.allPokemonItems
+    val allPokemonLocations = repository.allPokemonLocations
     val pokeNewsResponse = repository.allPokemonNews
 
 
@@ -89,10 +92,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _locationsAPIStatus = MutableLiveData<LocationsStatus>()
     val locationsAPIStatus: LiveData<LocationsStatus>
         get() = _locationsAPIStatus
-
-    private val _locationsResponse = MutableLiveData<List<LocationResponse>>()
-    val locationsResponse: LiveData<List<LocationResponse>>
-        get() = _locationsResponse
 
 
     // items
@@ -197,9 +196,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _locationsAPIStatus.value = LocationsStatus.LOADING
             try{
-                val res = LocationsServiceAPI.locationService.getPokeLocations()
-                Log.i("LocationsServiceAPI:RES","$res")
-                _locationsResponse.value = res
+                repository.refreshPokemonLocationsAPIResponse()
                 _locationsAPIStatus.value = LocationsStatus.DONE
             }
             catch (e: Exception){

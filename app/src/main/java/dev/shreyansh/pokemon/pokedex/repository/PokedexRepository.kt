@@ -10,22 +10,15 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.asDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_item.asItemDomainModel
+import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_location.asLocationDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.asDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.asDomainModel
-import dev.shreyansh.pokemon.pokedex.domain.Ability
-import dev.shreyansh.pokemon.pokedex.domain.Item
-import dev.shreyansh.pokemon.pokedex.domain.Pokemon
-import dev.shreyansh.pokemon.pokedex.domain.PokemonNews
-import dev.shreyansh.pokemon.pokedex.network.AbilitiesServiceAPI
-import dev.shreyansh.pokemon.pokedex.network.ItemsServiceAPI
-import dev.shreyansh.pokemon.pokedex.network.PokedexNewsAPI
-import dev.shreyansh.pokemon.pokedex.network.PokedexPokemonServiceAPI
-import dev.shreyansh.pokemon.pokedex.network.response.asAbilityDatabaseModel
-import dev.shreyansh.pokemon.pokedex.network.response.asDatabaseModel
-import dev.shreyansh.pokemon.pokedex.network.response.asItemDatabaseModel
-import dev.shreyansh.pokemon.pokedex.network.response.asPokenewsDatabaseModel
+import dev.shreyansh.pokemon.pokedex.domain.*
+import dev.shreyansh.pokemon.pokedex.network.*
+import dev.shreyansh.pokemon.pokedex.network.response.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -34,7 +27,9 @@ class PokedexRepository(
     private val pokemonFavDataBase: PokemonFavDataBase,
     private val pokemonNewsDataBase: PokemonNewsDataBase,
     private val pokemonAbilityDataBase: PokemonAbilityDataBase,
-    private val pokemonItemDataBase: PokemonItemDataBase
+    private val pokemonItemDataBase: PokemonItemDataBase,
+    private val pokemonLocationDatabase: PokemonLocationDatabase
+
 ) {
 
     val allPokemons: LiveData<List<Pokemon>> =
@@ -60,6 +55,11 @@ class PokedexRepository(
     val allPokemonItems: LiveData<List<Item>> =
         Transformations.map(pokemonItemDataBase.pokemonItemDao.getAllPokemonItems()) {
             it.asItemDomainModel()
+        }
+
+    val allPokemonLocations: LiveData<List<Location>> =
+        Transformations.map(pokemonLocationDatabase.pokemonLocationDao.getAllPokemonLocations()) {
+            it.asLocationDomainModel()
         }
 
 
@@ -114,6 +114,20 @@ class PokedexRepository(
             }
             catch (e: Exception) {
                 Log.e("Error:Items-API","${e.toString()}")
+            }
+        }
+    }
+
+
+    suspend fun refreshPokemonLocationsAPIResponse() {
+        withContext(Dispatchers.IO) {
+            Log.i("Repository:Locations-API", "query-locations")
+            try{
+                val res = LocationsServiceAPI.locationService.getPokeLocations()
+                pokemonLocationDatabase.pokemonLocationDao.insertAll(*res.asLocationDatabaseModel().toTypedArray())
+            }
+            catch (e: Exception) {
+                Log.e("Error:Locations-API","${e.toString()}")
             }
         }
     }

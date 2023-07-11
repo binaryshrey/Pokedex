@@ -60,7 +60,7 @@ class LocationsFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        pokedexViewModel.locationsResponse.observe(viewLifecycleOwner, Observer {
+        pokedexViewModel.allPokemonLocations.observe(viewLifecycleOwner, Observer {
             it?.let {
                 locationsRecyclerAdapter.submitList(it.toMutableList())
             }
