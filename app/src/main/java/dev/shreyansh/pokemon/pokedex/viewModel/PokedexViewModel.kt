@@ -9,6 +9,7 @@ import androidx.lifecycle.viewModelScope
 import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
+import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
@@ -33,13 +34,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokemonFavDataBase = PokemonFavDataBase.getInstance(application)
     private val pokemonNewsDataBase = PokemonNewsDataBase.getInstance(application)
     private val pokemonAbilityDataBase = PokemonAbilityDataBase.getInstance(application)
+    private val pokemonItemDataBase = PokemonItemDataBase.getInstance(application)
 
-    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase,pokemonAbilityDataBase)
+
+    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase,pokemonAbilityDataBase,pokemonItemDataBase)
 
     val allPokemons = repository.allPokemons
     val allFavPokemons = repository.allFavPokemons
     val allFavPokemonsCount = repository.getFavPokemonCount()
     val allPokemonAbilities = repository.allPokemonAbilities
+    val allPokemonItems = repository.allPokemonItems
     val pokeNewsResponse = repository.allPokemonNews
 
 
@@ -95,11 +99,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _itemsAPIStatus = MutableLiveData<ItemsStatus>()
     val itemsAPIStatus: LiveData<ItemsStatus>
         get() = _itemsAPIStatus
-
-    private val _itemsResponse = MutableLiveData<List<ItemsResponse>>()
-    val itemsResponse: LiveData<List<ItemsResponse>>
-        get() = _itemsResponse
-
 
 
     // types
@@ -183,9 +182,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _itemsAPIStatus.value = ItemsStatus.LOADING
             try{
-                val res = ItemsServiceAPI.itemsService.getPokeItems()
-                Log.i("ItemsServiceAPI:RES","$res")
-                _itemsResponse.value = res
+                repository.refreshPokemonItemsAPIResponse()
                 _itemsAPIStatus.value = ItemsStatus.DONE
             }
             catch (e: Exception){

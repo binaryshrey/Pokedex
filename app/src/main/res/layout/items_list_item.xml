@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="dev.shreyansh.pokemon.pokedex.network.response.ItemsResponse" />
+            type="dev.shreyansh.pokemon.pokedex.domain.Item" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

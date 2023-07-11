@@ -8,18 +8,23 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.asAbilityDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.asDomainModel
+import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_item.asItemDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.asDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.asDomainModel
 import dev.shreyansh.pokemon.pokedex.domain.Ability
+import dev.shreyansh.pokemon.pokedex.domain.Item
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.domain.PokemonNews
 import dev.shreyansh.pokemon.pokedex.network.AbilitiesServiceAPI
+import dev.shreyansh.pokemon.pokedex.network.ItemsServiceAPI
 import dev.shreyansh.pokemon.pokedex.network.PokedexNewsAPI
 import dev.shreyansh.pokemon.pokedex.network.PokedexPokemonServiceAPI
 import dev.shreyansh.pokemon.pokedex.network.response.asAbilityDatabaseModel
 import dev.shreyansh.pokemon.pokedex.network.response.asDatabaseModel
+import dev.shreyansh.pokemon.pokedex.network.response.asItemDatabaseModel
 import dev.shreyansh.pokemon.pokedex.network.response.asPokenewsDatabaseModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -28,8 +33,8 @@ class PokedexRepository(
     private val pokemonResponseDataBase: PokemonResponseDataBase,
     private val pokemonFavDataBase: PokemonFavDataBase,
     private val pokemonNewsDataBase: PokemonNewsDataBase,
-    private val pokemonAbilityDataBase: PokemonAbilityDataBase
-
+    private val pokemonAbilityDataBase: PokemonAbilityDataBase,
+    private val pokemonItemDataBase: PokemonItemDataBase
 ) {
 
     val allPokemons: LiveData<List<Pokemon>> =
@@ -52,6 +57,11 @@ class PokedexRepository(
             it.asAbilityDomainModel()
         }
 
+    val allPokemonItems: LiveData<List<Item>> =
+        Transformations.map(pokemonItemDataBase.pokemonItemDao.getAllPokemonItems()) {
+            it.asItemDomainModel()
+        }
+
 
     suspend fun refreshPokemonAPIResponse() {
         withContext(Dispatchers.IO) {
@@ -61,7 +71,7 @@ class PokedexRepository(
                 pokemonResponseDataBase.pokemonResponseDao.insertAll(*res.asDatabaseModel().toTypedArray())
             }
             catch (e: Exception) {
-                Log.e("Error::POKEMON-API","${e.toString()}")
+                Log.e("Error:POKEMON-API","${e.toString()}")
             }
 
         }
@@ -76,7 +86,7 @@ class PokedexRepository(
                 pokemonNewsDataBase.pokemonNewsDao.insertAll(*res.asPokenewsDatabaseModel().toTypedArray())
             }
             catch (e: Exception) {
-                Log.e("Error::POKENEWS-API","${e.toString()}")
+                Log.e("Error:POKENEWS-API","${e.toString()}")
             }
         }
     }
@@ -89,10 +99,25 @@ class PokedexRepository(
                 pokemonAbilityDataBase.pokemonAbilityDao.insertAll(*res.asAbilityDatabaseModel().toTypedArray())
             }
             catch (e: Exception) {
-                Log.e("Error::Abilities-API","${e.toString()}")
+                Log.e("Error:Abilities-API","${e.toString()}")
             }
         }
     }
+
+
+    suspend fun refreshPokemonItemsAPIResponse() {
+        withContext(Dispatchers.IO) {
+            Log.i("Repository:Items-API", "query-items")
+            try{
+                val res = ItemsServiceAPI.itemsService.getPokeItems()
+                pokemonItemDataBase.pokemonItemDao.insertAll(*res.asItemDatabaseModel().toTypedArray())
+            }
+            catch (e: Exception) {
+                Log.e("Error:Items-API","${e.toString()}")
+            }
+        }
+    }
+
 
     suspend fun insertFavPokemon(pokemonFavEntity: PokemonFavEntity) {
         pokemonFavDataBase.pokemonFavDao.insertFav(pokemonFavEntity)
