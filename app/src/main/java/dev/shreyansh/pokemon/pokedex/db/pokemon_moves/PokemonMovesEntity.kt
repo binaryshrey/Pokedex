@@ -29,7 +29,7 @@ data class PokemonMovesEntity(
 )
 
 
-fun List<PokemonMovesEntity>.asItemDomainModel(): List<Moves> {
+fun List<PokemonMovesEntity>.asMovesDomainModel(): List<Moves> {
     return map {
         Moves(
             id = it.id,

@@ -12,6 +12,8 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_item.asItemDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_location.asLocationDomainModel
+import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.PokemonMovesDatabase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.asMovesDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.asDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
@@ -28,7 +30,9 @@ class PokedexRepository(
     private val pokemonNewsDataBase: PokemonNewsDataBase,
     private val pokemonAbilityDataBase: PokemonAbilityDataBase,
     private val pokemonItemDataBase: PokemonItemDataBase,
-    private val pokemonLocationDatabase: PokemonLocationDatabase
+    private val pokemonLocationDatabase: PokemonLocationDatabase,
+    private val pokemonMovesDatabase: PokemonMovesDatabase
+
 
 ) {
 
@@ -60,6 +64,11 @@ class PokedexRepository(
     val allPokemonLocations: LiveData<List<Location>> =
         Transformations.map(pokemonLocationDatabase.pokemonLocationDao.getAllPokemonLocations()) {
             it.asLocationDomainModel()
+        }
+
+    val allPokemonMoves: LiveData<List<Moves>> =
+        Transformations.map(pokemonMovesDatabase.pokemonMovesDao.getAllPokemonMoves()) {
+            it.asMovesDomainModel()
         }
 
 
@@ -128,6 +137,20 @@ class PokedexRepository(
             }
             catch (e: Exception) {
                 Log.e("Error:Locations-API","${e.toString()}")
+            }
+        }
+    }
+
+
+    suspend fun refreshPokemonMovesAPIResponse() {
+        withContext(Dispatchers.IO) {
+            Log.i("Repository:Moves-API", "query-moves")
+            try{
+                val res = MovesServiceAPI.movesService.getPokeMoves()
+                pokemonMovesDatabase.pokemonMovesDao.insertAll(*res.asMovesDatabaseModel().toTypedArray())
+            }
+            catch (e: Exception) {
+                Log.e("Error:Moves-API","${e.toString()}")
             }
         }
     }

@@ -11,10 +11,10 @@ import androidx.room.Query
 interface PokemonMovesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll(vararg pokemonMovesDao: PokemonMovesDao)
+    fun insertAll(vararg pokemonMovesEntity: PokemonMovesEntity)
 
     @Query("SELECT * FROM pokemon_moves_table")
-    fun getAllPokemonMoves() : LiveData<List<PokemonMovesDao>>
+    fun getAllPokemonMoves() : LiveData<List<PokemonMovesEntity>>
 
     @Query("DELETE FROM pokemon_moves_table")
     suspend fun clear()

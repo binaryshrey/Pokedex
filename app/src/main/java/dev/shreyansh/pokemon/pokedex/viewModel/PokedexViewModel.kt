@@ -11,6 +11,7 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
 import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.PokemonMovesDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
@@ -37,8 +38,17 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokemonAbilityDataBase = PokemonAbilityDataBase.getInstance(application)
     private val pokemonItemDataBase = PokemonItemDataBase.getInstance(application)
     private val pokemonLocationDatabase = PokemonLocationDatabase.getInstance(application)
+    private val pokemonMovesDatabase = PokemonMovesDatabase.getInstance(application)
 
-    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase,pokemonAbilityDataBase,pokemonItemDataBase,pokemonLocationDatabase)
+
+    private val repository = PokedexRepository(
+        pokemonResponseDataBase,
+        pokemonFavDataBase,
+        pokemonNewsDataBase,
+        pokemonAbilityDataBase,
+        pokemonItemDataBase,
+        pokemonLocationDatabase,
+        pokemonMovesDatabase)
 
 
     val allPokemons = repository.allPokemons
@@ -47,6 +57,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val allPokemonAbilities = repository.allPokemonAbilities
     val allPokemonItems = repository.allPokemonItems
     val allPokemonLocations = repository.allPokemonLocations
+    val allPokemonMoves = repository.allPokemonMoves
     val pokeNewsResponse = repository.allPokemonNews
 
 
@@ -77,9 +88,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val movesAPIStatus: LiveData<MovesStatus>
         get() = _movesAPIStatus
 
-    private val _movesResponse = MutableLiveData<List<MovesResponse>>()
-    val movesResponse: LiveData<List<MovesResponse>>
-        get() = _movesResponse
 
 
     // abilities
@@ -149,9 +157,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _movesAPIStatus.value = MovesStatus.LOADING
             try{
-                val res = MovesServiceAPI.movesService.getPokeMoves()
-                Log.i("MovesServiceAPI:RES","$res")
-                _movesResponse.value = res
+                repository.refreshPokemonMovesAPIResponse()
                 _movesAPIStatus.value = MovesStatus.DONE
             }
             catch (e: Exception){
