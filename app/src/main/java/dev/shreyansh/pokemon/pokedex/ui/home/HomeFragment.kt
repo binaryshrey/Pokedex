@@ -17,7 +17,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentHomeBinding
-import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
+import dev.shreyansh.pokemon.pokedex.domain.PokemonNews
 import dev.shreyansh.pokemon.pokedex.utils.PokeNewsRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
@@ -117,7 +117,7 @@ class HomeFragment : Fragment() {
             .into(binding.userProfilePic);
     }
 
-    private fun navigateToNewsItem(news: PokeNewsRequest) {
+    private fun navigateToNewsItem(news: PokemonNews) {
         val navigateIntent = Intent(Intent.ACTION_VIEW)
         navigateIntent.data = Uri.parse("https://api.pokemon.com${news.url}")
         startActivity(navigateIntent)

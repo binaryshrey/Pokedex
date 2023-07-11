@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
+import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.network.*
@@ -23,19 +24,19 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class AbilitiesStatus { LOADING, ERROR, DONE }
     enum class ItemsStatus { LOADING, ERROR, DONE }
     enum class LocationsStatus { LOADING, ERROR, DONE }
-
     enum class TypesStatus { LOADING, ERROR, DONE }
 
 
 
     private val pokemonResponseDataBase = PokemonResponseDataBase.getInstance(application)
     private val pokemonFavDataBase = PokemonFavDataBase.getInstance(application)
-
-    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase)
+    private val pokemonNewsDataBase = PokemonNewsDataBase.getInstance(application)
+    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase)
 
     val allPokemons = repository.allPokemons
     val allFavPokemons = repository.allFavPokemons
     val allFavPokemonsCount = repository.getFavPokemonCount()
+    val pokeNewsResponse = repository.allPokemonNews
 
 
     //login
@@ -48,10 +49,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _pokeNewsStatus = MutableLiveData<PokeNewsAPIStatus>()
     val pokeNewsStatus: LiveData<PokeNewsAPIStatus>
         get() = _pokeNewsStatus
-
-    private val _pokeNewsResponse = MutableLiveData<List<PokeNewsRequest>>()
-    val pokeNewsResponse: LiveData<List<PokeNewsRequest>>
-        get() = _pokeNewsResponse
 
 
     // poke-mons
@@ -125,9 +122,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _pokeNewsStatus.value = PokeNewsAPIStatus.LOADING
             try{
-                val res = PokedexNewsAPI.pokedexNewsService.getPokeNews(100)
-                Log.i("PokedexNewsAPI:RES","$res")
-                _pokeNewsResponse.value = res
+                repository.refreshPokemonNewsAPIResponse()
                 _pokeNewsStatus.value = PokeNewsAPIStatus.DONE
             }
             catch (e: Exception){

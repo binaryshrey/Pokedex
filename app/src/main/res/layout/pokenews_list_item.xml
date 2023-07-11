@@ -7,7 +7,7 @@
 
         <variable
             name="news"
-            type="dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest" />
+            type="dev.shreyansh.pokemon.pokedex.domain.PokemonNews" />
 
     </data>
 
