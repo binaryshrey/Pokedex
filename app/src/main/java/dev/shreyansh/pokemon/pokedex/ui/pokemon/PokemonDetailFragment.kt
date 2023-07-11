@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayoutMediator
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokemonDetailBinding
-import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.utils.PokemonDetailsPagerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
@@ -27,7 +27,7 @@ class PokemonDetailFragment : Fragment() {
     companion object {
         private val TABS = listOf<String>("About", "Base Stats","Evolution")
     }
-    private lateinit var selectedPokemon : PokemonRequest
+    private lateinit var selectedPokemon : Pokemon
     private lateinit var binding : FragmentPokemonDetailBinding
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)

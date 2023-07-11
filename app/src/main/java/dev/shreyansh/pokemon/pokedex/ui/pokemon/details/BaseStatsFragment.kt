@@ -10,12 +10,12 @@ import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentBaseStatsBinding
-import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 
 
 class BaseStatsFragment : Fragment() {
 
-    private lateinit var selectedPokemon : PokemonRequest
+    private lateinit var selectedPokemon : Pokemon
     private lateinit var binding : FragmentBaseStatsBinding
 
 

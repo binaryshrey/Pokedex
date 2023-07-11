@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dev.shreyansh.pokemon.pokedex.databinding.PokemonListViewBinding
-import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
+import dev.shreyansh.pokemon.pokedex.network.response.PokemonResponse
 
-class PokemonRecyclerAdapter( val onClickListener: OnClickListener, val activity: Activity) : ListAdapter<PokemonRequest, PokemonRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackPokemons()) {
+class PokemonRecyclerAdapter( val onClickListener: OnClickListener, val activity: Activity) : ListAdapter<Pokemon, PokemonRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackPokemons()) {
 
 
     class ViewHolder private constructor(val binding : PokemonListViewBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: PokemonRequest) {
+        fun bind(item: Pokemon) {
             binding.pokemon = item
             binding.executePendingBindings()
         }
@@ -43,19 +44,19 @@ class PokemonRecyclerAdapter( val onClickListener: OnClickListener, val activity
         holder.bind(item)
     }
 
-    class OnClickListener(val clickListener: (pokemon: PokemonRequest) -> Unit) {
-        fun onClick(pokemon: PokemonRequest) = clickListener(pokemon)
+    class OnClickListener(val clickListener: (pokemon: Pokemon) -> Unit) {
+        fun onClick(pokemon: Pokemon) = clickListener(pokemon)
     }
 
 }
 
 
-class DiffUtilItemCallBackPokemons : DiffUtil.ItemCallback<PokemonRequest>() {
-    override fun areItemsTheSame(oldItem: PokemonRequest, newItem: PokemonRequest): Boolean {
+class DiffUtilItemCallBackPokemons : DiffUtil.ItemCallback<Pokemon>() {
+    override fun areItemsTheSame(oldItem: Pokemon, newItem: Pokemon): Boolean {
         return oldItem.id  == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: PokemonRequest, newItem: PokemonRequest): Boolean {
+    override fun areContentsTheSame(oldItem: Pokemon, newItem: Pokemon): Boolean {
         return oldItem == newItem
     }
 

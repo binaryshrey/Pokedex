@@ -4,9 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import dev.shreyansh.pokemon.pokedex.utils.Converters
 
 
 @Database(entities = [PokemonResponseEntity::class], exportSchema = false, version = 1)
+@TypeConverters(Converters::class)
 abstract class PokemonResponseDataBase : RoomDatabase() {
 
     abstract val pokemonResponseDao: PokemonResponseDao

@@ -101,7 +101,7 @@
         android:label="PokemonDetailFragment" >
         <argument
             android:name="pokemon"
-            app:argType="dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest" />
+            app:argType="dev.shreyansh.pokemon.pokedex.domain.Pokemon" />
     </fragment>
     <fragment
         android:id="@+id/movesFragment"

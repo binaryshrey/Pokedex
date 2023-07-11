@@ -6,8 +6,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.network.*
 import dev.shreyansh.pokemon.pokedex.network.response.*
+import dev.shreyansh.pokemon.pokedex.repository.PokedexRepository
 import kotlinx.coroutines.launch
 
 class PokedexViewModel(application: Application) : ViewModel(){
@@ -21,6 +24,12 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
     enum class TypesStatus { LOADING, ERROR, DONE }
 
+
+
+    private val pokemonResponseDataBase: PokemonResponseDataBase = PokemonResponseDataBase.getInstance(application)
+    private val repository = PokedexRepository(pokemonResponseDataBase)
+
+    val allPokemons = repository.allPokemons
 
 
     //login
@@ -44,13 +53,9 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val pokemonAPIStatus: LiveData<PokeMonAPIStatus>
         get() = _pokemonAPIStatus
 
-    private val _pokeMonsResponse = MutableLiveData<List<PokemonRequest>>()
-    val pokeMonsResponse: LiveData<List<PokemonRequest>>
-        get() = _pokeMonsResponse
-
-    private val _allPokemons = MutableLiveData<List<PokemonRequest>>()
-    val allPokemons: LiveData<List<PokemonRequest>>
-        get() = _allPokemons
+    private val _pokemonFilter = MutableLiveData<String>()
+    val pokemonFilter: LiveData<String>
+        get() = _pokemonFilter
 
 
     // moves
@@ -106,6 +111,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
     init {
         _loginComplete.value = false
+        _pokemonFilter.value = "all"
     }
 
 
@@ -129,10 +135,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _pokemonAPIStatus.value = PokeMonAPIStatus.LOADING
             try{
-                val res = PokedexPokemonServiceAPI.pokedexPokemonService.getAllPokeMons()
-                Log.i("PokemonAPI:RES","$res")
-                _pokeMonsResponse.value = res
-                _allPokemons.value = res
+                repository.refreshPokemonAPIResponse()
                 _pokemonAPIStatus.value = PokeMonAPIStatus.DONE
             }
             catch (e: Exception){
@@ -226,20 +229,8 @@ class PokedexViewModel(application: Application) : ViewModel(){
         }
     }
 
-
-    fun filterPokemons(gen : String){
-        when(gen){
-            "all"-> _pokeMonsResponse.value = _allPokemons.value
-            "one" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(0,150)
-            "two" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(150,250)
-            "three" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(250,386)
-            "four" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(386,493)
-            "five" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(493,649)
-            "six" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(649,721)
-            "seven" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(721,807)
-            "eight" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(807,809)
-
-        }
+    fun updatePokemonFilter(filter: String){
+        _pokemonFilter.value = filter
     }
 
 

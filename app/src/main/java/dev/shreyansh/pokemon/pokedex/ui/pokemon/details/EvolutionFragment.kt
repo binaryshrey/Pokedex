@@ -12,7 +12,7 @@ import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentEvolutionBinding
-import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.utils.searchPokemonById
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
@@ -20,9 +20,9 @@ import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
 class EvolutionFragment : Fragment() {
 
-    private lateinit var selectedPokemon : PokemonRequest
+    private lateinit var selectedPokemon : Pokemon
     private lateinit var binding : FragmentEvolutionBinding
-    private lateinit var pokeMons: MutableList<PokemonRequest>
+    private lateinit var pokemons: MutableList<Pokemon>
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)
     }
@@ -35,10 +35,10 @@ class EvolutionFragment : Fragment() {
         binding.pokemon = selectedPokemon
         binding.lifecycleOwner = viewLifecycleOwner
 
-        pokedexViewModel.pokeMonsResponse.observe(viewLifecycleOwner, Observer {
+        pokedexViewModel.allPokemons.observe(viewLifecycleOwner, Observer {
             it?.let {
-                pokeMons = it.toMutableList()
-                if(pokeMons!=null){
+                pokemons = it.toMutableList()
+                if(pokemons!=null){
                     setEvolutions()
                 }
             }
@@ -74,12 +74,12 @@ class EvolutionFragment : Fragment() {
 
 
 
-        binding.pokemonEvoTV11.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[0])?.name ?: ""
-        binding.pokemonEvoTV12.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[1])?.name ?: ""
-        binding.pokemonEvoTV21.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[1])?.name ?: ""
-        binding.pokemonEvoTV22.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[2])?.name ?: ""
-        binding.pokemonEvoTV31.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[2])?.name ?: ""
-        binding.pokemonEvoTV32.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[3])?.name ?: ""
+        binding.pokemonEvoTV11.text = searchPokemonById(pokemons,selectedPokemon.evolutions[0])?.name ?: ""
+        binding.pokemonEvoTV12.text = searchPokemonById(pokemons,selectedPokemon.evolutions[1])?.name ?: ""
+        binding.pokemonEvoTV21.text = searchPokemonById(pokemons,selectedPokemon.evolutions[1])?.name ?: ""
+        binding.pokemonEvoTV22.text = searchPokemonById(pokemons,selectedPokemon.evolutions[2])?.name ?: ""
+        binding.pokemonEvoTV31.text = searchPokemonById(pokemons,selectedPokemon.evolutions[2])?.name ?: ""
+        binding.pokemonEvoTV32.text = searchPokemonById(pokemons,selectedPokemon.evolutions[3])?.name ?: ""
 
 
     }
@@ -94,10 +94,10 @@ class EvolutionFragment : Fragment() {
         Glide.with(requireActivity().applicationContext).load("https://assets.pokemon.com/assets/cms2/img/pokedex/full/${selectedPokemon.evolutions[1].replace("#", "")}.png").into(binding.evolve21)
         Glide.with(requireActivity().applicationContext).load("https://assets.pokemon.com/assets/cms2/img/pokedex/full/${selectedPokemon.evolutions[2].replace("#", "")}.png").into(binding.evolve22)
 
-        binding.pokemonEvoTV11.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[0])?.name ?: ""
-        binding.pokemonEvoTV12.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[1])?.name ?: ""
-        binding.pokemonEvoTV21.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[1])?.name ?: ""
-        binding.pokemonEvoTV22.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[2])?.name ?: ""
+        binding.pokemonEvoTV11.text = searchPokemonById(pokemons,selectedPokemon.evolutions[0])?.name ?: ""
+        binding.pokemonEvoTV12.text = searchPokemonById(pokemons,selectedPokemon.evolutions[1])?.name ?: ""
+        binding.pokemonEvoTV21.text = searchPokemonById(pokemons,selectedPokemon.evolutions[1])?.name ?: ""
+        binding.pokemonEvoTV22.text = searchPokemonById(pokemons,selectedPokemon.evolutions[2])?.name ?: ""
 
     }
 
@@ -110,8 +110,8 @@ class EvolutionFragment : Fragment() {
 
         Glide.with(requireActivity().applicationContext).load("https://assets.pokemon.com/assets/cms2/img/pokedex/full/${selectedPokemon.evolutions[0].replace("#", "")}.png").into(binding.evolve11)
         Glide.with(requireActivity().applicationContext).load("https://assets.pokemon.com/assets/cms2/img/pokedex/full/${selectedPokemon.evolutions[1].replace("#", "")}.png").into(binding.evolve12)
-        binding.pokemonEvoTV11.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[0])?.name ?: ""
-        binding.pokemonEvoTV12.text = searchPokemonById(pokeMons,selectedPokemon.evolutions[1])?.name ?: ""
+        binding.pokemonEvoTV11.text = searchPokemonById(pokemons,selectedPokemon.evolutions[0])?.name ?: ""
+        binding.pokemonEvoTV12.text = searchPokemonById(pokemons,selectedPokemon.evolutions[1])?.name ?: ""
 
     }
 

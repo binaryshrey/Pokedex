@@ -4,13 +4,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.ui.pokemon.details.AboutPokemonFragment
 import dev.shreyansh.pokemon.pokedex.ui.pokemon.details.BaseStatsFragment
 import dev.shreyansh.pokemon.pokedex.ui.pokemon.details.EvolutionFragment
 
 
-class PokemonDetailsPagerAdapter(fragmentActivity: FragmentActivity, private val selectedPokemon : PokemonRequest) : FragmentStateAdapter(fragmentActivity) {
+class PokemonDetailsPagerAdapter(fragmentActivity: FragmentActivity, private val selectedPokemon : Pokemon) : FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {
