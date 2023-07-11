@@ -7,7 +7,7 @@
 
         <variable
             name="pokemon"
-            type="dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest" />
+            type="dev.shreyansh.pokemon.pokedex.domain.Pokemon" />
     </data>
 
     <androidx.core.widget.NestedScrollView

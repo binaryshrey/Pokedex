@@ -31,6 +31,7 @@ class PokemonDirectoryFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_pokemon_directory, container, false)
+        binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
         getAllPokeMons()
@@ -49,11 +50,25 @@ class PokemonDirectoryFragment : Fragment() {
     }
 
     private fun setupObservers() {
-        pokedexViewModel.pokeMonsResponse.observe(viewLifecycleOwner, Observer {
-            it?.let {
-                pokemonRecyclerAdapter.submitList(it)
-            }
+
+        pokedexViewModel.pokemonFilter.observe(viewLifecycleOwner, Observer { filter ->
+            pokedexViewModel.allPokemons.observe(viewLifecycleOwner, Observer {
+                it?.let {
+                    when(filter){
+                        "all"-> pokemonRecyclerAdapter.submitList(it)
+                        "one" -> pokemonRecyclerAdapter.submitList(it.subList(0,150))
+                        "two" -> pokemonRecyclerAdapter.submitList(it.subList(150,250))
+                        "three" -> pokemonRecyclerAdapter.submitList(it.subList(250,386))
+                        "four" -> pokemonRecyclerAdapter.submitList(it.subList(386,493))
+                        "five" -> pokemonRecyclerAdapter.submitList(it.subList(493,649))
+                        "six" -> pokemonRecyclerAdapter.submitList(it.subList(649,721))
+                        "seven" -> pokemonRecyclerAdapter.submitList(it.subList(721,807))
+                        "eight" -> pokemonRecyclerAdapter.submitList(it.subList(807,809))
+                    }
+                }
+            })
         })
+
 
         binding.pokemonsRV.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {

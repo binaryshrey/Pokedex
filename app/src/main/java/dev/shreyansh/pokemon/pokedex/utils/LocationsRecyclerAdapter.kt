@@ -10,16 +10,16 @@ import com.bumptech.glide.Glide
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.LocationsHighlightListItemBinding
 import dev.shreyansh.pokemon.pokedex.databinding.LocationsListItemBinding
-import dev.shreyansh.pokemon.pokedex.network.response.LocationResponse
+import dev.shreyansh.pokemon.pokedex.domain.Location
 
 
 
 
-class LocationsRecyclerAdapter(val onClickListener: OnClickListener, private val activity: Activity) : ListAdapter<LocationResponse, RecyclerView.ViewHolder>(DiffUtilLocationsCallBack()) {
+class LocationsRecyclerAdapter(val onClickListener: OnClickListener, private val activity: Activity) : ListAdapter<Location, RecyclerView.ViewHolder>(DiffUtilLocationsCallBack()) {
 
-    private var news: MutableList<LocationResponse> = mutableListOf()
+    private var news: MutableList<Location> = mutableListOf()
 
-    override fun submitList(list: MutableList<LocationResponse>?) {
+    override fun submitList(list: MutableList<Location>?) {
         super.submitList(list)
         if (list != null) {
             news = list
@@ -56,14 +56,14 @@ class LocationsRecyclerAdapter(val onClickListener: OnClickListener, private val
     }
 
     class LocationsHighlightViewHolder(val binding : LocationsHighlightListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: LocationResponse) {
+        fun bind(item: Location) {
             binding.location = item
             binding.executePendingBindings()
         }
     }
 
     class LocationsViewHolder(val binding : LocationsListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: LocationResponse) {
+        fun bind(item: Location) {
             binding.location = item
             binding.executePendingBindings()
         }
@@ -99,18 +99,18 @@ class LocationsRecyclerAdapter(val onClickListener: OnClickListener, private val
         }
     }
 
-    class OnClickListener(val clickListener: (item: LocationResponse) -> Unit) {
-        fun onClick(item: LocationResponse) = clickListener(item)
+    class OnClickListener(val clickListener: (item: Location) -> Unit) {
+        fun onClick(item: Location) = clickListener(item)
     }
 }
 
 
-class DiffUtilLocationsCallBack : DiffUtil.ItemCallback<LocationResponse>() {
-    override fun areItemsTheSame(oldItem: LocationResponse, newItem: LocationResponse): Boolean {
+class DiffUtilLocationsCallBack : DiffUtil.ItemCallback<Location>() {
+    override fun areItemsTheSame(oldItem: Location, newItem: Location): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: LocationResponse, newItem: LocationResponse): Boolean {
+    override fun areContentsTheSame(oldItem: Location, newItem: Location): Boolean {
         return oldItem == newItem
     }
 

@@ -1,13 +1,10 @@
-package dev.shreyansh.pokemon.pokedex.network.response
+package dev.shreyansh.pokemon.pokedex.domain
 
 import android.os.Parcelable
-import com.squareup.moshi.JsonClass
 import kotlinx.parcelize.Parcelize
 
-
-@JsonClass(generateAdapter = true)
 @Parcelize
-data class PokeNewsRequest(
+data class PokemonNews(
     val id: Int,
     val title: String,
     val shortDescription: String,

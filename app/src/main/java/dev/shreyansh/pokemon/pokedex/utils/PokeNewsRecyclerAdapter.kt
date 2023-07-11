@@ -11,14 +11,14 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import dev.shreyansh.pokemon.pokedex.databinding.PokenewsHighlightListItemBinding
 import dev.shreyansh.pokemon.pokedex.databinding.PokenewsListItemBinding
-import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsRequest
+import dev.shreyansh.pokemon.pokedex.domain.PokemonNews
 
 
-class PokeNewsRecyclerAdapter(val onClickListener: OnClickListener, private val activity: Activity) : ListAdapter<PokeNewsRequest, RecyclerView.ViewHolder>(DiffUtilPokeNewsCallBack()) {
+class PokeNewsRecyclerAdapter(val onClickListener: OnClickListener, private val activity: Activity) : ListAdapter<PokemonNews, RecyclerView.ViewHolder>(DiffUtilPokeNewsCallBack()) {
 
-    private var news: MutableList<PokeNewsRequest> = mutableListOf()
+    private var news: MutableList<PokemonNews> = mutableListOf()
 
-    override fun submitList(list: MutableList<PokeNewsRequest>?) {
+    override fun submitList(list: MutableList<PokemonNews>?) {
         super.submitList(list)
         if (list != null) {
             news = list
@@ -45,14 +45,14 @@ class PokeNewsRecyclerAdapter(val onClickListener: OnClickListener, private val 
     }
 
     class PokeNewsHighlightViewHolder(val binding : PokenewsHighlightListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: PokeNewsRequest) {
+        fun bind(item: PokemonNews) {
             binding.news = item
             binding.executePendingBindings()
         }
     }
 
     class PokeNewsViewHolder(val binding : PokenewsListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: PokeNewsRequest) {
+        fun bind(item: PokemonNews) {
             binding.news = item
             binding.executePendingBindings()
         }
@@ -92,18 +92,18 @@ class PokeNewsRecyclerAdapter(val onClickListener: OnClickListener, private val 
         }
     }
 
-    class OnClickListener(val clickListener: (item: PokeNewsRequest) -> Unit) {
-        fun onClick(item: PokeNewsRequest) = clickListener(item)
+    class OnClickListener(val clickListener: (item: PokemonNews) -> Unit) {
+        fun onClick(item: PokemonNews) = clickListener(item)
     }
 }
 
 
-class DiffUtilPokeNewsCallBack : DiffUtil.ItemCallback<PokeNewsRequest>() {
-    override fun areItemsTheSame(oldItem: PokeNewsRequest, newItem: PokeNewsRequest): Boolean {
+class DiffUtilPokeNewsCallBack : DiffUtil.ItemCallback<PokemonNews>() {
+    override fun areItemsTheSame(oldItem: PokemonNews, newItem: PokemonNews): Boolean {
         return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: PokeNewsRequest, newItem: PokeNewsRequest): Boolean {
+    override fun areContentsTheSame(oldItem: PokemonNews, newItem: PokemonNews): Boolean {
         return oldItem == newItem
     }
 

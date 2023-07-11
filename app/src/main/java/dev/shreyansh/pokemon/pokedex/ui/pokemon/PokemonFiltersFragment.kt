@@ -44,47 +44,47 @@ class PokemonFiltersFragment : BottomSheetDialogFragment() {
     private fun setupOnClickListeners() {
         binding.genAllCV.setOnClickListener {
             Toast.makeText(context,"All Pokemons",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("all")
+            pokedexViewModel.updatePokemonFilter("all")
             dismiss()
         }
         binding.gen1CV.setOnClickListener {
             Toast.makeText(context,"Generation-I Pokemons",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("one")
+            pokedexViewModel.updatePokemonFilter("one")
             dismiss()
         }
         binding.gen2CV.setOnClickListener {
             Toast.makeText(context,"Generation-II Pokemons",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("two")
+            pokedexViewModel.updatePokemonFilter("two")
             dismiss()
         }
         binding.gen3CV.setOnClickListener {
             Toast.makeText(context,"Generation-III Pokemons",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("three")
+            pokedexViewModel.updatePokemonFilter("three")
             dismiss()
         }
         binding.gen4CV.setOnClickListener {
             Toast.makeText(context,"Generation-IV Pokemons",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("four")
+            pokedexViewModel.updatePokemonFilter("four")
             dismiss()
         }
         binding.gen5CV.setOnClickListener {
             Toast.makeText(context,"Generation-V Pokemons",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("five")
+            pokedexViewModel.updatePokemonFilter("five")
             dismiss()
         }
         binding.gen6CV.setOnClickListener {
             Toast.makeText(context,"Generation-VI Pokemons",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("six")
+            pokedexViewModel.updatePokemonFilter("six")
             dismiss()
         }
         binding.gen7CV.setOnClickListener {
             Toast.makeText(context,"Generation-VII Pokemon",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("seven")
+            pokedexViewModel.updatePokemonFilter("seven")
             dismiss()
         }
         binding.gen8CV.setOnClickListener {
             Toast.makeText(context,"Generation-VIII Pokemon",Toast.LENGTH_SHORT).show()
-            pokedexViewModel.filterPokemons("eight")
+            pokedexViewModel.updatePokemonFilter("eight")
             dismiss()
         }
 

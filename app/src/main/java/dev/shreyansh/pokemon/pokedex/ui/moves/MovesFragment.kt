@@ -60,7 +60,7 @@ class MovesFragment : Fragment() {
 
 
     private fun setupObservers() {
-        pokedexViewModel.movesResponse.observe(viewLifecycleOwner, Observer {allMoves ->
+        pokedexViewModel.allPokemonMoves.observe(viewLifecycleOwner, Observer {allMoves ->
             allMoves?.let {
                 movesRecyclerAdapter.submitList(allMoves.toMutableList())
             }

@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentAboutPokemonBinding
-import dev.shreyansh.pokemon.pokedex.network.response.PokemonRequest
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 
 
 class AboutPokemonFragment : Fragment() {
 
-    private lateinit var selectedPokemon : PokemonRequest
+    private lateinit var selectedPokemon : Pokemon
     private lateinit var binding : FragmentAboutPokemonBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

@@ -61,7 +61,7 @@ class ItemsFragment : Fragment() {
 
 
     private fun setupObservers() {
-        pokedexViewModel.itemsResponse.observe(viewLifecycleOwner, Observer {
+        pokedexViewModel.allPokemonItems.observe(viewLifecycleOwner, Observer {
             it?.let {
                 itemsRecyclerAdapter.submitList(it.toMutableList())
             }

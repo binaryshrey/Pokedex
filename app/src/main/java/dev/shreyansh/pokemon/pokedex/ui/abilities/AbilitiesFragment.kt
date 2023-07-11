@@ -60,7 +60,7 @@ class AbilitiesFragment : Fragment() {
 
 
     private fun setupObservers() {
-        pokedexViewModel.abilitiesResponse.observe(viewLifecycleOwner, Observer {
+        pokedexViewModel.allPokemonAbilities.observe(viewLifecycleOwner, Observer {
             it?.let {
                 abilitiesRecyclerAdapter.submitList(it.toMutableList())
             }

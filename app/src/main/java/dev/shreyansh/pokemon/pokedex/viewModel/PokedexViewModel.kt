@@ -6,8 +6,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import dev.shreyansh.pokemon.pokedex.network.*
-import dev.shreyansh.pokemon.pokedex.network.response.*
+import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
+import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.PokemonMovesDatabase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
+import dev.shreyansh.pokemon.pokedex.repository.PokedexRepository
 import kotlinx.coroutines.launch
 
 class PokedexViewModel(application: Application) : ViewModel(){
@@ -18,9 +27,41 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class AbilitiesStatus { LOADING, ERROR, DONE }
     enum class ItemsStatus { LOADING, ERROR, DONE }
     enum class LocationsStatus { LOADING, ERROR, DONE }
-
     enum class TypesStatus { LOADING, ERROR, DONE }
 
+
+
+    private val pokemonResponseDataBase = PokemonResponseDataBase.getInstance(application)
+    private val pokemonFavDataBase = PokemonFavDataBase.getInstance(application)
+    private val pokemonNewsDataBase = PokemonNewsDataBase.getInstance(application)
+    private val pokemonAbilityDataBase = PokemonAbilityDataBase.getInstance(application)
+    private val pokemonItemDataBase = PokemonItemDataBase.getInstance(application)
+    private val pokemonLocationDatabase = PokemonLocationDatabase.getInstance(application)
+    private val pokemonMovesDatabase = PokemonMovesDatabase.getInstance(application)
+    private val pokemonTypesDatabase = PokemonTypesDatabase.getInstance(application)
+
+
+
+    private val repository = PokedexRepository(
+        pokemonResponseDataBase,
+        pokemonFavDataBase,
+        pokemonNewsDataBase,
+        pokemonAbilityDataBase,
+        pokemonItemDataBase,
+        pokemonLocationDatabase,
+        pokemonMovesDatabase,
+        pokemonTypesDatabase)
+
+
+    val allPokemons = repository.allPokemons
+    val allFavPokemons = repository.allFavPokemons
+    val allFavPokemonsCount = repository.getFavPokemonCount()
+    val allPokemonAbilities = repository.allPokemonAbilities
+    val allPokemonItems = repository.allPokemonItems
+    val allPokemonLocations = repository.allPokemonLocations
+    val allPokemonMoves = repository.allPokemonMoves
+    val allPokemonTypes = repository.allPokemonTypes
+    val pokeNewsResponse = repository.allPokemonNews
 
 
     //login
@@ -34,23 +75,15 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val pokeNewsStatus: LiveData<PokeNewsAPIStatus>
         get() = _pokeNewsStatus
 
-    private val _pokeNewsResponse = MutableLiveData<List<PokeNewsRequest>>()
-    val pokeNewsResponse: LiveData<List<PokeNewsRequest>>
-        get() = _pokeNewsResponse
-
 
     // poke-mons
     private val _pokemonAPIStatus = MutableLiveData<PokeMonAPIStatus>()
     val pokemonAPIStatus: LiveData<PokeMonAPIStatus>
         get() = _pokemonAPIStatus
 
-    private val _pokeMonsResponse = MutableLiveData<List<PokemonRequest>>()
-    val pokeMonsResponse: LiveData<List<PokemonRequest>>
-        get() = _pokeMonsResponse
-
-    private val _allPokemons = MutableLiveData<List<PokemonRequest>>()
-    val allPokemons: LiveData<List<PokemonRequest>>
-        get() = _allPokemons
+    private val _pokemonFilter = MutableLiveData<String>()
+    val pokemonFilter: LiveData<String>
+        get() = _pokemonFilter
 
 
     // moves
@@ -58,9 +91,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val movesAPIStatus: LiveData<MovesStatus>
         get() = _movesAPIStatus
 
-    private val _movesResponse = MutableLiveData<List<MovesResponse>>()
-    val movesResponse: LiveData<List<MovesResponse>>
-        get() = _movesResponse
 
 
     // abilities
@@ -68,19 +98,11 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val abilitiesAPIStatus: LiveData<AbilitiesStatus>
         get() = _abilitiesAPIStatus
 
-    private val _abilitiesResponse = MutableLiveData<List<AbilitiesResponse>>()
-    val abilitiesResponse: LiveData<List<AbilitiesResponse>>
-        get() = _abilitiesResponse
-
 
     // locations
     private val _locationsAPIStatus = MutableLiveData<LocationsStatus>()
     val locationsAPIStatus: LiveData<LocationsStatus>
         get() = _locationsAPIStatus
-
-    private val _locationsResponse = MutableLiveData<List<LocationResponse>>()
-    val locationsResponse: LiveData<List<LocationResponse>>
-        get() = _locationsResponse
 
 
     // items
@@ -88,24 +110,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val itemsAPIStatus: LiveData<ItemsStatus>
         get() = _itemsAPIStatus
 
-    private val _itemsResponse = MutableLiveData<List<ItemsResponse>>()
-    val itemsResponse: LiveData<List<ItemsResponse>>
-        get() = _itemsResponse
-
-
 
     // types
     private val _typesAPIStatus = MutableLiveData<TypesStatus>()
     val typesAPIStatus: LiveData<TypesStatus>
         get() = _typesAPIStatus
 
-    private val _typesResponse = MutableLiveData<List<TypesResponse>>()
-    val typesResponse: LiveData<List<TypesResponse>>
-        get() = _typesResponse
-
 
     init {
         _loginComplete.value = false
+        _pokemonFilter.value = "all"
     }
 
 
@@ -113,9 +127,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _pokeNewsStatus.value = PokeNewsAPIStatus.LOADING
             try{
-                val res = PokedexNewsAPI.pokedexNewsService.getPokeNews(100)
-                Log.i("PokedexNewsAPI:RES","$res")
-                _pokeNewsResponse.value = res
+                repository.refreshPokemonNewsAPIResponse()
                 _pokeNewsStatus.value = PokeNewsAPIStatus.DONE
             }
             catch (e: Exception){
@@ -129,10 +141,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _pokemonAPIStatus.value = PokeMonAPIStatus.LOADING
             try{
-                val res = PokedexPokemonServiceAPI.pokedexPokemonService.getAllPokeMons()
-                Log.i("PokemonAPI:RES","$res")
-                _pokeMonsResponse.value = res
-                _allPokemons.value = res
+                repository.refreshPokemonAPIResponse()
                 _pokemonAPIStatus.value = PokeMonAPIStatus.DONE
             }
             catch (e: Exception){
@@ -147,9 +156,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _movesAPIStatus.value = MovesStatus.LOADING
             try{
-                val res = MovesServiceAPI.movesService.getPokeMoves()
-                Log.i("MovesServiceAPI:RES","$res")
-                _movesResponse.value = res
+                repository.refreshPokemonMovesAPIResponse()
                 _movesAPIStatus.value = MovesStatus.DONE
             }
             catch (e: Exception){
@@ -164,9 +171,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _abilitiesAPIStatus.value = AbilitiesStatus.LOADING
             try{
-                val res = AbilitiesServiceAPI.abilitiesService.getPokeAbilities()
-                Log.i("AbilitiesServiceAPI:RES","$res")
-                _abilitiesResponse.value = res
+                repository.refreshPokemonAbilitiesAPIResponse()
                 _abilitiesAPIStatus.value = AbilitiesStatus.DONE
             }
             catch (e: Exception){
@@ -181,9 +186,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _itemsAPIStatus.value = ItemsStatus.LOADING
             try{
-                val res = ItemsServiceAPI.itemsService.getPokeItems()
-                Log.i("ItemsServiceAPI:RES","$res")
-                _itemsResponse.value = res
+                repository.refreshPokemonItemsAPIResponse()
                 _itemsAPIStatus.value = ItemsStatus.DONE
             }
             catch (e: Exception){
@@ -198,9 +201,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _locationsAPIStatus.value = LocationsStatus.LOADING
             try{
-                val res = LocationsServiceAPI.locationService.getPokeLocations()
-                Log.i("LocationsServiceAPI:RES","$res")
-                _locationsResponse.value = res
+                repository.refreshPokemonLocationsAPIResponse()
                 _locationsAPIStatus.value = LocationsStatus.DONE
             }
             catch (e: Exception){
@@ -214,9 +215,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _typesAPIStatus.value = TypesStatus.LOADING
             try{
-                val res = TypesServiceAPI.typesService.getPokeTypes()
-                Log.i("TypesServiceAPI:RES","$res")
-                _typesResponse.value = res
+                repository.refreshPokemonTypesAPIResponse()
                 _typesAPIStatus.value = TypesStatus.DONE
             }
             catch (e: Exception){
@@ -227,19 +226,90 @@ class PokedexViewModel(application: Application) : ViewModel(){
     }
 
 
-    fun filterPokemons(gen : String){
-        when(gen){
-            "all"-> _pokeMonsResponse.value = _allPokemons.value
-            "one" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(0,150)
-            "two" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(150,250)
-            "three" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(250,386)
-            "four" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(386,493)
-            "five" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(493,649)
-            "six" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(649,721)
-            "seven" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(721,807)
-            "eight" -> _pokeMonsResponse.value = _allPokemons.value?.toMutableList()?.subList(807,809)
-
+    fun saveFavPokemon(favPokemon: Pokemon){
+        val favEntity = PokemonFavEntity(
+            id = favPokemon.id,
+            name = favPokemon.name,
+            height = favPokemon.height,
+            category = favPokemon.category,
+            weight = favPokemon.weight,
+            weaknesses = favPokemon.weaknesses,
+            evolutions = favPokemon.evolutions,
+            abilities = favPokemon.abilities,
+            hp = favPokemon.hp,
+            attack = favPokemon.attack,
+            defense = favPokemon.defense,
+            speed = favPokemon.speed,
+            total = favPokemon.total,
+            cycles = favPokemon.cycles,
+            reason = favPokemon.reason,
+            imageUrl = favPokemon.imageUrl,
+            baseExp = favPokemon.baseExp,
+            eggGroups = favPokemon.eggGroups,
+            evolvedFrom = favPokemon.evolvedFrom,
+            description = favPokemon.description,
+            type = favPokemon.type,
+            specialAttack = favPokemon.specialAttack,
+            specialDefense = favPokemon.specialDefense,
+            male = favPokemon.male,
+            female = favPokemon.female
+        )
+        viewModelScope.launch {
+            try{
+                repository.insertFavPokemon(favEntity)
+            }
+            catch (e: Exception){
+                Log.e("FavPokemon:ERROR","${e.message}")
+            }
         }
+    }
+
+
+    fun removeFavPokemon(favPokemon: Pokemon){
+        val favEntity = PokemonFavEntity(
+            id = favPokemon.id,
+            name = favPokemon.name,
+            height = favPokemon.height,
+            category = favPokemon.category,
+            weight = favPokemon.weight,
+            weaknesses = favPokemon.weaknesses,
+            evolutions = favPokemon.evolutions,
+            abilities = favPokemon.abilities,
+            hp = favPokemon.hp,
+            attack = favPokemon.attack,
+            defense = favPokemon.defense,
+            speed = favPokemon.speed,
+            total = favPokemon.total,
+            cycles = favPokemon.cycles,
+            reason = favPokemon.reason,
+            imageUrl = favPokemon.imageUrl,
+            baseExp = favPokemon.baseExp,
+            eggGroups = favPokemon.eggGroups,
+            evolvedFrom = favPokemon.evolvedFrom,
+            description = favPokemon.description,
+            type = favPokemon.type,
+            specialAttack = favPokemon.specialAttack,
+            specialDefense = favPokemon.specialDefense,
+            male = favPokemon.male,
+            female = favPokemon.female
+        )
+        viewModelScope.launch {
+            try{
+                repository.removeFavPokemon(favEntity)
+            }
+            catch (e: Exception){
+                Log.e("FavPokemon:ERROR","${e.message}")
+            }
+        }
+    }
+
+
+    fun updatePokemonFilter(filter: String){
+        _pokemonFilter.value = filter
+    }
+
+    fun getPokemonByName(pokemonName : String): LiveData<PokemonFavEntity> {
+        return repository.getPokemonByName(pokemonName)
     }
 
 

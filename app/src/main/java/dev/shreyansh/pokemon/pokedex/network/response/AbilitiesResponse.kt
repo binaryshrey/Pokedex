@@ -2,6 +2,7 @@ package dev.shreyansh.pokemon.pokedex.network.response
 
 import android.os.Parcelable
 import com.squareup.moshi.JsonClass
+import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityEntity
 import kotlinx.parcelize.Parcelize
 
 
@@ -14,3 +15,16 @@ data class AbilitiesResponse(
     val pokemonName : String,
     val pokemonURL : String,
 ) : Parcelable
+
+
+fun List<AbilitiesResponse>.asAbilityDatabaseModel(): List<PokemonAbilityEntity> {
+    return map {
+        PokemonAbilityEntity(
+            id = it.id,
+            name = it.name,
+            effect = it.effect,
+            pokemonName = it.pokemonName,
+            pokemonURL = it.pokemonURL
+        )
+    }
+}
