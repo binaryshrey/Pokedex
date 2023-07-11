@@ -14,9 +14,8 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.PokemonMovesDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
-import dev.shreyansh.pokemon.pokedex.network.*
-import dev.shreyansh.pokemon.pokedex.network.response.*
 import dev.shreyansh.pokemon.pokedex.repository.PokedexRepository
 import kotlinx.coroutines.launch
 
@@ -39,6 +38,8 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokemonItemDataBase = PokemonItemDataBase.getInstance(application)
     private val pokemonLocationDatabase = PokemonLocationDatabase.getInstance(application)
     private val pokemonMovesDatabase = PokemonMovesDatabase.getInstance(application)
+    private val pokemonTypesDatabase = PokemonTypesDatabase.getInstance(application)
+
 
 
     private val repository = PokedexRepository(
@@ -48,7 +49,8 @@ class PokedexViewModel(application: Application) : ViewModel(){
         pokemonAbilityDataBase,
         pokemonItemDataBase,
         pokemonLocationDatabase,
-        pokemonMovesDatabase)
+        pokemonMovesDatabase,
+        pokemonTypesDatabase)
 
 
     val allPokemons = repository.allPokemons
@@ -58,6 +60,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val allPokemonItems = repository.allPokemonItems
     val allPokemonLocations = repository.allPokemonLocations
     val allPokemonMoves = repository.allPokemonMoves
+    val allPokemonTypes = repository.allPokemonTypes
     val pokeNewsResponse = repository.allPokemonNews
 
 
@@ -112,10 +115,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _typesAPIStatus = MutableLiveData<TypesStatus>()
     val typesAPIStatus: LiveData<TypesStatus>
         get() = _typesAPIStatus
-
-    private val _typesResponse = MutableLiveData<List<TypesResponse>>()
-    val typesResponse: LiveData<List<TypesResponse>>
-        get() = _typesResponse
 
 
     init {
@@ -216,9 +215,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _typesAPIStatus.value = TypesStatus.LOADING
             try{
-                val res = TypesServiceAPI.typesService.getPokeTypes()
-                Log.i("TypesServiceAPI:RES","$res")
-                _typesResponse.value = res
+                repository.refreshPokemonTypesAPIResponse()
                 _typesAPIStatus.value = TypesStatus.DONE
             }
             catch (e: Exception){

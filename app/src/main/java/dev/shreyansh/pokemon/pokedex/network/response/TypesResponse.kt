@@ -2,6 +2,7 @@ package dev.shreyansh.pokemon.pokedex.network.response
 
 import android.os.Parcelable
 import com.squareup.moshi.JsonClass
+import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesEntity
 import dev.shreyansh.pokemon.pokedex.domain.Type
 import kotlinx.parcelize.Parcelize
 
@@ -17,9 +18,9 @@ data class TypesResponse(
 ) : Parcelable
 
 
-fun List<TypesResponse>.asTypesDatabaseModel(): List<Type> {
+fun List<TypesResponse>.asTypesDatabaseModel(): List<PokemonTypesEntity> {
     return map {
-        Type(
+        PokemonTypesEntity(
             id = it.id,
             name = it.name,
             moves = it.moves,

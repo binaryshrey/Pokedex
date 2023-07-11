@@ -18,6 +18,8 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.asDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.asDomainModel
+import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_types.asTypesDomainModel
 import dev.shreyansh.pokemon.pokedex.domain.*
 import dev.shreyansh.pokemon.pokedex.network.*
 import dev.shreyansh.pokemon.pokedex.network.response.*
@@ -31,8 +33,8 @@ class PokedexRepository(
     private val pokemonAbilityDataBase: PokemonAbilityDataBase,
     private val pokemonItemDataBase: PokemonItemDataBase,
     private val pokemonLocationDatabase: PokemonLocationDatabase,
-    private val pokemonMovesDatabase: PokemonMovesDatabase
-
+    private val pokemonMovesDatabase: PokemonMovesDatabase,
+    private val pokemonTypesDatabase: PokemonTypesDatabase
 
 ) {
 
@@ -69,6 +71,11 @@ class PokedexRepository(
     val allPokemonMoves: LiveData<List<Moves>> =
         Transformations.map(pokemonMovesDatabase.pokemonMovesDao.getAllPokemonMoves()) {
             it.asMovesDomainModel()
+        }
+
+    val allPokemonTypes: LiveData<List<Type>> =
+        Transformations.map(pokemonTypesDatabase.pokemonTypesDao.getAllPokemonTypes()) {
+            it.asTypesDomainModel()
         }
 
 
@@ -154,6 +161,21 @@ class PokedexRepository(
             }
         }
     }
+
+
+    suspend fun refreshPokemonTypesAPIResponse() {
+        withContext(Dispatchers.IO) {
+            Log.i("Repository:Types-API", "query-types")
+            try{
+                val res = TypesServiceAPI.typesService.getPokeTypes()
+                pokemonTypesDatabase.pokemonTypesDao.insertAll(*res.asTypesDatabaseModel().toTypedArray())
+            }
+            catch (e: Exception) {
+                Log.e("Error:Types-API","${e.toString()}")
+            }
+        }
+    }
+
 
 
     suspend fun insertFavPokemon(pokemonFavEntity: PokemonFavEntity) {

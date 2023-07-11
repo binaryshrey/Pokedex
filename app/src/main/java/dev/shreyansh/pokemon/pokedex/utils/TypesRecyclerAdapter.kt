@@ -9,16 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.TypesListItemBinding
-import dev.shreyansh.pokemon.pokedex.network.response.TypesResponse
+import dev.shreyansh.pokemon.pokedex.domain.Type
 
 
 
-
-class TypesRecyclerAdapter(val activity: Activity) : ListAdapter<TypesResponse, TypesRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackTypes()) {
+class TypesRecyclerAdapter(val activity: Activity) : ListAdapter<Type, TypesRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackTypes()) {
 
 
     class ViewHolder private constructor(val binding : TypesListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(type: TypesResponse) {
+        fun bind(type: Type) {
             binding.type = type
             binding.executePendingBindings()
         }
@@ -51,12 +50,12 @@ class TypesRecyclerAdapter(val activity: Activity) : ListAdapter<TypesResponse, 
 }
 
 
-class DiffUtilItemCallBackTypes : DiffUtil.ItemCallback<TypesResponse>() {
-    override fun areItemsTheSame(oldItem: TypesResponse, newItem: TypesResponse): Boolean {
+class DiffUtilItemCallBackTypes : DiffUtil.ItemCallback<Type>() {
+    override fun areItemsTheSame(oldItem: Type, newItem: Type): Boolean {
         return oldItem.id  == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: TypesResponse, newItem: TypesResponse): Boolean {
+    override fun areContentsTheSame(oldItem: Type, newItem: Type): Boolean {
         return oldItem == newItem
     }
 

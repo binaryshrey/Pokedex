@@ -59,7 +59,7 @@ class TypesFragment : Fragment() {
 
 
     private fun setupObservers() {
-        pokedexViewModel.typesResponse.observe(viewLifecycleOwner, Observer {
+        pokedexViewModel.allPokemonTypes.observe(viewLifecycleOwner, Observer {
             it?.let {
                 typesRecyclerAdapter.submitList(it.toMutableList())
             }
