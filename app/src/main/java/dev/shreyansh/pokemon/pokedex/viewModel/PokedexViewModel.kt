@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.network.*
@@ -26,10 +28,14 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
 
 
-    private val pokemonResponseDataBase: PokemonResponseDataBase = PokemonResponseDataBase.getInstance(application)
-    private val repository = PokedexRepository(pokemonResponseDataBase)
+    private val pokemonResponseDataBase = PokemonResponseDataBase.getInstance(application)
+    private val pokemonFavDataBase = PokemonFavDataBase.getInstance(application)
+
+    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase)
 
     val allPokemons = repository.allPokemons
+    val allFavPokemons = repository.allFavPokemons
+    val allFavPokemonsCount = repository.getFavPokemonCount()
 
 
     //login
@@ -228,6 +234,85 @@ class PokedexViewModel(application: Application) : ViewModel(){
             }
         }
     }
+
+
+    fun saveFavPokemon(favPokemon: Pokemon){
+        val favEntity = PokemonFavEntity(
+            id = favPokemon.id,
+            name = favPokemon.name,
+            height = favPokemon.height,
+            category = favPokemon.category,
+            weight = favPokemon.weight,
+            weaknesses = favPokemon.weaknesses,
+            evolutions = favPokemon.evolutions,
+            abilities = favPokemon.abilities,
+            hp = favPokemon.hp,
+            attack = favPokemon.attack,
+            defense = favPokemon.defense,
+            speed = favPokemon.speed,
+            total = favPokemon.total,
+            cycles = favPokemon.cycles,
+            reason = favPokemon.reason,
+            imageUrl = favPokemon.imageUrl,
+            baseExp = favPokemon.baseExp,
+            eggGroups = favPokemon.eggGroups,
+            evolvedFrom = favPokemon.evolvedFrom,
+            description = favPokemon.description,
+            type = favPokemon.type,
+            specialAttack = favPokemon.specialAttack,
+            specialDefense = favPokemon.specialDefense,
+            male = favPokemon.male,
+            female = favPokemon.female
+        )
+        viewModelScope.launch {
+            try{
+                repository.insertFavPokemon(favEntity)
+            }
+            catch (e: Exception){
+                Log.e("FavPokemon:ERROR","${e.message}")
+            }
+        }
+    }
+
+
+    fun removeFavPokemon(favPokemon: Pokemon){
+        val favEntity = PokemonFavEntity(
+            id = favPokemon.id,
+            name = favPokemon.name,
+            height = favPokemon.height,
+            category = favPokemon.category,
+            weight = favPokemon.weight,
+            weaknesses = favPokemon.weaknesses,
+            evolutions = favPokemon.evolutions,
+            abilities = favPokemon.abilities,
+            hp = favPokemon.hp,
+            attack = favPokemon.attack,
+            defense = favPokemon.defense,
+            speed = favPokemon.speed,
+            total = favPokemon.total,
+            cycles = favPokemon.cycles,
+            reason = favPokemon.reason,
+            imageUrl = favPokemon.imageUrl,
+            baseExp = favPokemon.baseExp,
+            eggGroups = favPokemon.eggGroups,
+            evolvedFrom = favPokemon.evolvedFrom,
+            description = favPokemon.description,
+            type = favPokemon.type,
+            specialAttack = favPokemon.specialAttack,
+            specialDefense = favPokemon.specialDefense,
+            male = favPokemon.male,
+            female = favPokemon.female
+        )
+        viewModelScope.launch {
+            try{
+                repository.removeFavPokemon(favEntity)
+            }
+            catch (e: Exception){
+                Log.e("FavPokemon:ERROR","${e.message}")
+            }
+        }
+    }
+
 
     fun updatePokemonFilter(filter: String){
         _pokemonFilter.value = filter

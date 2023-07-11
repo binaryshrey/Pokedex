@@ -16,6 +16,9 @@ interface PokemonFavDao {
     @Delete
     suspend fun deleteFav(pokemonFavEntity: PokemonFavEntity)
 
+    @Query("SELECT COUNT(*) FROM pokemon_fav_table")
+    fun getFavPokemonCount(): LiveData<Int>
+
     @Query("DELETE FROM pokemon_fav_table")
     suspend fun clear()
 

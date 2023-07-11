@@ -54,6 +54,7 @@ class PokemonDetailFragment : Fragment() {
     private fun setupOnClickListeners() {
         binding.fav.setOnClickListener {
             binding.favIV.setImageResource(R.drawable.fav_saved)
+            pokedexViewModel.saveFavPokemon(selectedPokemon)
             Toast.makeText(context,"Added to Favorites",Toast.LENGTH_SHORT).show()
         }
         binding.goBack.setOnClickListener {

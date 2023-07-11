@@ -3,7 +3,7 @@ package dev.shreyansh.pokemon.pokedex.db.pokemon_fav
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import dev.shreyansh.pokemon.pokedex.domain.FavPokemon
+import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 
 
 @Entity(tableName = "pokemon_fav_table")
@@ -85,9 +85,9 @@ data class PokemonFavEntity(
 )
 
 
-fun List<PokemonFavEntity>.asDomainModel(): List<FavPokemon> {
+fun List<PokemonFavEntity>.asDomainModel(): List<Pokemon> {
     return map {
-        FavPokemon(
+        Pokemon(
             id = it.id,
             name = it.name,
             height = it.height,
