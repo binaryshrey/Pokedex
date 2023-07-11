@@ -54,4 +54,8 @@ class PokedexRepository(
     fun getFavPokemonCount() : LiveData<Int> {
         return pokemonFavDataBase.pokemonFavDao.getFavPokemonCount()
     }
+
+    fun getPokemonByName(pokemonName : String) : LiveData<PokemonFavEntity> {
+        return pokemonFavDataBase.pokemonFavDao.getPokemonByName(pokemonName)
+    }
 }

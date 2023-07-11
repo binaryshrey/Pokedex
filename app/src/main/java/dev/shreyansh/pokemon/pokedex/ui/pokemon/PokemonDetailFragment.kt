@@ -11,6 +11,7 @@ import android.view.animation.LinearInterpolator
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayoutMediator
@@ -27,6 +28,8 @@ class PokemonDetailFragment : Fragment() {
     companion object {
         private val TABS = listOf<String>("About", "Base Stats","Evolution")
     }
+
+    private var isFavoritePokemon : Boolean = false
     private lateinit var selectedPokemon : Pokemon
     private lateinit var binding : FragmentPokemonDetailBinding
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
@@ -48,14 +51,35 @@ class PokemonDetailFragment : Fragment() {
 
         setSelectedPokemonImage()
         setupOnClickListeners()
+        setupObservers()
         return binding.root
+    }
+
+    private fun setupObservers() {
+        pokedexViewModel.getPokemonByName(selectedPokemon.name).observe(viewLifecycleOwner, Observer {
+            if(it == null){
+                isFavoritePokemon = false
+                binding.favIV.setImageResource(R.drawable.fav)
+            }else{
+                isFavoritePokemon = true
+                binding.favIV.setImageResource(R.drawable.fav_saved)
+            }
+        })
+
     }
 
     private fun setupOnClickListeners() {
         binding.fav.setOnClickListener {
-            binding.favIV.setImageResource(R.drawable.fav_saved)
-            pokedexViewModel.saveFavPokemon(selectedPokemon)
-            Toast.makeText(context,"Added to Favorites",Toast.LENGTH_SHORT).show()
+            if(isFavoritePokemon){
+                binding.favIV.setImageResource(R.drawable.fav)
+                pokedexViewModel.removeFavPokemon(selectedPokemon)
+                Toast.makeText(context,"Removed from Favorites",Toast.LENGTH_SHORT).show()
+            }else{
+                binding.favIV.setImageResource(R.drawable.fav_saved)
+                pokedexViewModel.saveFavPokemon(selectedPokemon)
+                Toast.makeText(context,"Added to Favorites",Toast.LENGTH_SHORT).show()
+            }
+
         }
         binding.goBack.setOnClickListener {
             findNavController().popBackStack()

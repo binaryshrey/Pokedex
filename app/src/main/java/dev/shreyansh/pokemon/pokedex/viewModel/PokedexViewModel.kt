@@ -318,6 +318,10 @@ class PokedexViewModel(application: Application) : ViewModel(){
         _pokemonFilter.value = filter
     }
 
+    fun getPokemonByName(pokemonName : String): LiveData<PokemonFavEntity> {
+        return repository.getPokemonByName(pokemonName)
+    }
+
 
     //login-checked
     fun updateLogin() {

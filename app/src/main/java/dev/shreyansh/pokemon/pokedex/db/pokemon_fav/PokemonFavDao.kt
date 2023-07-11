@@ -19,6 +19,9 @@ interface PokemonFavDao {
     @Query("SELECT COUNT(*) FROM pokemon_fav_table")
     fun getFavPokemonCount(): LiveData<Int>
 
+    @Query("SELECT * FROM pokemon_fav_table WHERE name= :pokemonName")
+    fun getPokemonByName(pokemonName : String): LiveData<PokemonFavEntity>
+
     @Query("DELETE FROM pokemon_fav_table")
     suspend fun clear()
 
