@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsEntity
 
 
-@Database(entities = [PokemonNewsEntity::class], exportSchema = false, version = 1)
+@Database(entities = [PokemonAbilityEntity::class], exportSchema = false, version = 1)
 abstract class PokemonAbilityDataBase : RoomDatabase() {
 
     abstract val pokemonAbilityDao: PokemonAbilityDao

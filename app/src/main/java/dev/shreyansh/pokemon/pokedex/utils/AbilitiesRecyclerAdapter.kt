@@ -9,16 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.AbilitiesListItemBinding
-import dev.shreyansh.pokemon.pokedex.network.response.AbilitiesResponse
+import dev.shreyansh.pokemon.pokedex.domain.Ability
 
 
 
 
-class AbilitiesRecyclerAdapter(val activity: Activity) : ListAdapter<AbilitiesResponse, AbilitiesRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackAbilities()) {
+class AbilitiesRecyclerAdapter(val activity: Activity) : ListAdapter<Ability, AbilitiesRecyclerAdapter.ViewHolder>(DiffUtilItemCallBackAbilities()) {
 
 
     class ViewHolder private constructor(val binding : AbilitiesListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: AbilitiesResponse) {
+        fun bind(item: Ability) {
             binding.ability = item
             binding.executePendingBindings()
         }
@@ -51,12 +51,12 @@ class AbilitiesRecyclerAdapter(val activity: Activity) : ListAdapter<AbilitiesRe
 }
 
 
-class DiffUtilItemCallBackAbilities : DiffUtil.ItemCallback<AbilitiesResponse>() {
-    override fun areItemsTheSame(oldItem: AbilitiesResponse, newItem: AbilitiesResponse): Boolean {
+class DiffUtilItemCallBackAbilities : DiffUtil.ItemCallback<Ability>() {
+    override fun areItemsTheSame(oldItem: Ability, newItem: Ability): Boolean {
         return oldItem.id  == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: AbilitiesResponse, newItem: AbilitiesResponse): Boolean {
+    override fun areContentsTheSame(oldItem: Ability, newItem: Ability): Boolean {
         return oldItem == newItem
     }
 

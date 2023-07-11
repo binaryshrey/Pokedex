@@ -3,6 +3,8 @@ package dev.shreyansh.pokemon.pokedex.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
+import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.asAbilityDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.asDomainModel
@@ -10,10 +12,13 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.asDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.asDomainModel
+import dev.shreyansh.pokemon.pokedex.domain.Ability
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.domain.PokemonNews
+import dev.shreyansh.pokemon.pokedex.network.AbilitiesServiceAPI
 import dev.shreyansh.pokemon.pokedex.network.PokedexNewsAPI
 import dev.shreyansh.pokemon.pokedex.network.PokedexPokemonServiceAPI
+import dev.shreyansh.pokemon.pokedex.network.response.asAbilityDatabaseModel
 import dev.shreyansh.pokemon.pokedex.network.response.asDatabaseModel
 import dev.shreyansh.pokemon.pokedex.network.response.asPokenewsDatabaseModel
 import kotlinx.coroutines.Dispatchers
@@ -22,7 +27,9 @@ import kotlinx.coroutines.withContext
 class PokedexRepository(
     private val pokemonResponseDataBase: PokemonResponseDataBase,
     private val pokemonFavDataBase: PokemonFavDataBase,
-    private val pokemonNewsDataBase: PokemonNewsDataBase
+    private val pokemonNewsDataBase: PokemonNewsDataBase,
+    private val pokemonAbilityDataBase: PokemonAbilityDataBase
+
 ) {
 
     val allPokemons: LiveData<List<Pokemon>> =
@@ -38,6 +45,11 @@ class PokedexRepository(
     val allPokemonNews: LiveData<List<PokemonNews>> =
         Transformations.map(pokemonNewsDataBase.pokemonNewsDao.getAllPokemons()) {
             it.asDomainModel()
+        }
+
+    val allPokemonAbilities: LiveData<List<Ability>> =
+        Transformations.map(pokemonAbilityDataBase.pokemonAbilityDao.getAllPokemonAbilities()) {
+            it.asAbilityDomainModel()
         }
 
 
@@ -65,6 +77,19 @@ class PokedexRepository(
             }
             catch (e: Exception) {
                 Log.e("Error::POKENEWS-API","${e.toString()}")
+            }
+        }
+    }
+
+    suspend fun refreshPokemonAbilitiesAPIResponse() {
+        withContext(Dispatchers.IO) {
+            Log.i("Repository:Abilities-API", "query-abilities")
+            try{
+                val res = AbilitiesServiceAPI.abilitiesService.getPokeAbilities()
+                pokemonAbilityDataBase.pokemonAbilityDao.insertAll(*res.asAbilityDatabaseModel().toTypedArray())
+            }
+            catch (e: Exception) {
+                Log.e("Error::Abilities-API","${e.toString()}")
             }
         }
     }

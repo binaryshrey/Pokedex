@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
@@ -31,11 +32,14 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokemonResponseDataBase = PokemonResponseDataBase.getInstance(application)
     private val pokemonFavDataBase = PokemonFavDataBase.getInstance(application)
     private val pokemonNewsDataBase = PokemonNewsDataBase.getInstance(application)
-    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase)
+    private val pokemonAbilityDataBase = PokemonAbilityDataBase.getInstance(application)
+
+    private val repository = PokedexRepository(pokemonResponseDataBase,pokemonFavDataBase,pokemonNewsDataBase,pokemonAbilityDataBase)
 
     val allPokemons = repository.allPokemons
     val allFavPokemons = repository.allFavPokemons
     val allFavPokemonsCount = repository.getFavPokemonCount()
+    val allPokemonAbilities = repository.allPokemonAbilities
     val pokeNewsResponse = repository.allPokemonNews
 
 
@@ -75,10 +79,6 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _abilitiesAPIStatus = MutableLiveData<AbilitiesStatus>()
     val abilitiesAPIStatus: LiveData<AbilitiesStatus>
         get() = _abilitiesAPIStatus
-
-    private val _abilitiesResponse = MutableLiveData<List<AbilitiesResponse>>()
-    val abilitiesResponse: LiveData<List<AbilitiesResponse>>
-        get() = _abilitiesResponse
 
 
     // locations
@@ -168,9 +168,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         viewModelScope.launch {
             _abilitiesAPIStatus.value = AbilitiesStatus.LOADING
             try{
-                val res = AbilitiesServiceAPI.abilitiesService.getPokeAbilities()
-                Log.i("AbilitiesServiceAPI:RES","$res")
-                _abilitiesResponse.value = res
+                repository.refreshPokemonAbilitiesAPIResponse()
                 _abilitiesAPIStatus.value = AbilitiesStatus.DONE
             }
             catch (e: Exception){

@@ -5,7 +5,6 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsEntity
 import dev.shreyansh.pokemon.pokedex.network.response.PokeNewsResponse
 import kotlinx.parcelize.Parcelize
 
-
 @Parcelize
 data class Ability(
     val id: Int,
