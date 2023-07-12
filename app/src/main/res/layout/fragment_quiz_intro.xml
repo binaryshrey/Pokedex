@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="100dp"
-                        android:src="@drawable/mcq"
+                        android:src="@drawable/quiz"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/quizIntroDesc" />
 
@@ -103,7 +103,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:fontFamily="@font/open_sans_semibold"
-                        android:text="5"
+                        android:text="5 questions"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         app:layout_constraintStart_toEndOf="@+id/quesNoIV"

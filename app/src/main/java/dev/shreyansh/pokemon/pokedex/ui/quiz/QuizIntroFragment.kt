@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentQuizIntroBinding
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
@@ -25,6 +26,10 @@ class QuizIntroFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(layoutInflater,R.layout.fragment_quiz_intro, container, false)
         requireActivity().window.statusBarColor = Color.parseColor("#fcf4eb")
+
+        binding.quizIntroToolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
 
         return binding.root
     }
