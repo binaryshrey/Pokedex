@@ -13,6 +13,7 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.PokemonMovesDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_quiz.PokemonQuizDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
@@ -28,6 +29,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class ItemsStatus { LOADING, ERROR, DONE }
     enum class LocationsStatus { LOADING, ERROR, DONE }
     enum class TypesStatus { LOADING, ERROR, DONE }
+    enum class QuizStatus { LOADING, ERROR, DONE }
 
 
 
@@ -39,6 +41,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokemonLocationDatabase = PokemonLocationDatabase.getInstance(application)
     private val pokemonMovesDatabase = PokemonMovesDatabase.getInstance(application)
     private val pokemonTypesDatabase = PokemonTypesDatabase.getInstance(application)
+    private val pokemonQuizDatabase = PokemonQuizDatabase.getInstance(application)
 
 
 
@@ -50,7 +53,8 @@ class PokedexViewModel(application: Application) : ViewModel(){
         pokemonItemDataBase,
         pokemonLocationDatabase,
         pokemonMovesDatabase,
-        pokemonTypesDatabase)
+        pokemonTypesDatabase,
+        pokemonQuizDatabase)
 
 
     val allPokemons = repository.allPokemons
@@ -61,6 +65,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val allPokemonLocations = repository.allPokemonLocations
     val allPokemonMoves = repository.allPokemonMoves
     val allPokemonTypes = repository.allPokemonTypes
+    val allPokemonQuiz = repository.allPokemonQuiz
     val pokeNewsResponse = repository.allPokemonNews
 
 
@@ -115,6 +120,12 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val _typesAPIStatus = MutableLiveData<TypesStatus>()
     val typesAPIStatus: LiveData<TypesStatus>
         get() = _typesAPIStatus
+
+
+    // quiz
+    private val _quizAPIStatus = MutableLiveData<QuizStatus>()
+    val quizAPIStatus: LiveData<QuizStatus>
+        get() = _quizAPIStatus
 
 
     init {
@@ -221,6 +232,22 @@ class PokedexViewModel(application: Application) : ViewModel(){
             catch (e: Exception){
                 Log.e("TypesServiceAPI:ERROR","${e.message}")
                 _typesAPIStatus.value = TypesStatus.ERROR
+            }
+        }
+    }
+
+
+
+    fun getAllQuiz(){
+        viewModelScope.launch {
+            _quizAPIStatus.value = QuizStatus.LOADING
+            try{
+                repository.refreshPokemonQuizAPIResponse()
+                _quizAPIStatus.value = QuizStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("QuizServiceAPI:ERROR","${e.message}")
+                _quizAPIStatus.value = QuizStatus.ERROR
             }
         }
     }

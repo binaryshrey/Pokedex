@@ -16,6 +16,8 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.PokemonMovesDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.asMovesDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.asDomainModel
+import dev.shreyansh.pokemon.pokedex.db.pokemon_quiz.PokemonQuizDatabase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_quiz.asQuizDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.asDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
@@ -34,7 +36,8 @@ class PokedexRepository(
     private val pokemonItemDataBase: PokemonItemDataBase,
     private val pokemonLocationDatabase: PokemonLocationDatabase,
     private val pokemonMovesDatabase: PokemonMovesDatabase,
-    private val pokemonTypesDatabase: PokemonTypesDatabase
+    private val pokemonTypesDatabase: PokemonTypesDatabase,
+    private val pokemonQuizDatabase: PokemonQuizDatabase
 
 ) {
 
@@ -76,6 +79,11 @@ class PokedexRepository(
     val allPokemonTypes: LiveData<List<Type>> =
         Transformations.map(pokemonTypesDatabase.pokemonTypesDao.getAllPokemonTypes()) {
             it.asTypesDomainModel()
+        }
+
+    val allPokemonQuiz: LiveData<List<Quiz>> =
+        Transformations.map(pokemonQuizDatabase.pokemonQuizDao.getAllPokemonQuiz()) {
+            it.asQuizDomainModel()
         }
 
 
@@ -172,6 +180,20 @@ class PokedexRepository(
             }
             catch (e: Exception) {
                 Log.e("Error:Types-API","${e.toString()}")
+            }
+        }
+    }
+
+
+    suspend fun refreshPokemonQuizAPIResponse() {
+        withContext(Dispatchers.IO) {
+            Log.i("Repository:Quiz-API", "query-quiz")
+            try{
+                val res = QuizServiceAPI.quizService.getPokeQuiz()
+                pokemonQuizDatabase.pokemonQuizDao.insertAll(*res.asQuizDatabaseModel().toTypedArray())
+            }
+            catch (e: Exception) {
+                Log.e("Error:Quiz-API","${e.toString()}")
             }
         }
     }
