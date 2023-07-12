@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.core.widget.NestedScrollView
 import androidx.databinding.BindingAdapter
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.progressindicator.CircularProgressIndicator
@@ -39,6 +40,31 @@ fun setPokemonProgress(progressBar: ProgressBar, status: PokedexViewModel.PokeMo
     }
 }
 
+
+@BindingAdapter("quizLayoutProgress")
+fun setPokemonProgress(nestedScrollView: NestedScrollView, status: PokedexViewModel.QuizStatus?) {
+    nestedScrollView.visibility = View.GONE
+    status?.let {
+        when (status) {
+            PokedexViewModel.QuizStatus.LOADING -> nestedScrollView.visibility = View.GONE
+            PokedexViewModel.QuizStatus.ERROR -> nestedScrollView.visibility = View.VISIBLE
+            PokedexViewModel.QuizStatus.DONE -> nestedScrollView.visibility = View.VISIBLE
+        }
+    }
+}
+
+
+@BindingAdapter("quizProgress")
+fun setQuizProgress(progressBar: ProgressBar, status: PokedexViewModel.QuizStatus?) {
+    progressBar.visibility = View.GONE
+    status?.let {
+        when (status) {
+            PokedexViewModel.QuizStatus.LOADING -> progressBar.visibility = View.VISIBLE
+            PokedexViewModel.QuizStatus.ERROR -> progressBar.visibility = View.GONE
+            PokedexViewModel.QuizStatus.DONE -> progressBar.visibility = View.GONE
+        }
+    }
+}
 
 @BindingAdapter("pokemonName")
 fun setPokeMonName(textView: TextView, name:String?){

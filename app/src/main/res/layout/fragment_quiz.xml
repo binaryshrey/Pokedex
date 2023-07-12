@@ -1,14 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.quiz.QuizFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <variable
+            name="viewModel"
+            type="dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/quizCoordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#fcf4eb"
+        tools:context=".ui.quiz.QuizFragment">
 
-</FrameLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/quizAppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+
+                android:id="@+id/quizToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fcf4eb"
+                android:minHeight="?android:attr/actionBarSize"
+                android:theme="?android:actionBarTheme"
+                app:navigationIcon="@drawable/goback">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/quizLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            tools:context=".ui.bottomSheet.UpdatePreferenceFragment">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/quizNestedScrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="quiz"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:quizLayoutProgress="@{viewModel.quizAPIStatus}">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/quizTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans_italic"
+                        android:text="Poké-Quiz"
+                        android:textColor="@color/black"
+                        android:textSize="40sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/quizDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Your Pokemon Trainer Journey Begins Here!"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quizTV" />
+
+
+                    <ProgressBar
+                        android:id="@+id/quizCompletionProgress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:indeterminateTint="@color/yellow_700"
+                        android:max="100"
+                        android:progress="24"
+                        android:progressDrawable="@drawable/rounded_progress_bar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quizDesc" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="340dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="@dimen/dimen_32"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quizCompletionProgress">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/quesNumberTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:alpha="0.5"
+                                android:fontFamily="@font/open_sans_semibold"
+                                android:text="Question 1/5"
+                                android:textColor="@color/black"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/quesTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/open_sans_semibold"
+                                android:textColor="@color/black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/quesNumberTV"
+                                tools:text="What is the signature move of Eevee?" />
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/option1CV"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/quesTV"
+                                app:strokeColor="#B5B5B5"
+                                app:strokeWidth="1dp">
+
+                                <TextView
+                                    android:id="@+id/option1TV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/dimen_16"
+                                    android:fontFamily="@font/open_sans"
+                                    android:padding="4dp"
+                                    android:text="A. Chokeslam"
+                                    android:textColor="@color/black" />
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/option2CV"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/option1CV"
+                                app:strokeColor="#B5B5B5"
+                                app:strokeWidth="1dp">
+
+                                <TextView
+                                    android:id="@+id/option2TV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/dimen_16"
+                                    android:fontFamily="@font/open_sans"
+                                    android:padding="4dp"
+                                    android:text="B. Chokeslam"
+                                    android:textColor="@color/black" />
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/option3CV"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/option2CV"
+                                app:strokeColor="#B5B5B5"
+                                app:strokeWidth="1dp">
+
+                                <TextView
+                                    android:id="@+id/option3TV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/dimen_16"
+                                    android:fontFamily="@font/open_sans"
+                                    android:padding="4dp"
+                                    android:text="C. Chokeslam"
+                                    android:textColor="@color/black" />
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/option4CV"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/option3CV"
+                                app:strokeColor="#B5B5B5"
+                                app:strokeWidth="1dp">
+
+                                <TextView
+                                    android:id="@+id/option4TV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/dimen_16"
+                                    android:fontFamily="@font/open_sans"
+                                    android:padding="4dp"
+                                    android:text="D. Chokeslam"
+                                    android:textColor="@color/black" />
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nextQuesButton"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="@dimen/dimen_54"
+                        android:layout_marginStart="@dimen/dimen_48"
+                        android:layout_marginEnd="@dimen/dimen_48"
+                        android:layout_marginBottom="@dimen/dimen_16"
+                        android:backgroundTint="@color/yellow_900"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_12"
+                        app:cornerRadius="@dimen/dimen_8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/messageTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Let's Go!"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/quizCompletionProgress"
+                        app:layout_constraintStart_toStartOf="@+id/quizCompletionProgress"
+                        app:layout_constraintTop_toTopOf="@+id/quizCompletionProgress" />
+
+                    <ImageView
+                        android:id="@+id/completionIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/circle1"
+                        app:layout_constraintBottom_toBottomOf="@+id/quizCompletionProgress"
+                        app:layout_constraintEnd_toEndOf="@+id/quizCompletionProgress"
+                        app:layout_constraintTop_toTopOf="@+id/quizCompletionProgress" />
+
+                    <TextView
+                        android:id="@+id/answerTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="48dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/open_sans"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                        tools:text="Yes, that's correct! 🎊" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <ProgressBar
+                android:id="@+id/quizProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:elevation="4dp"
+                android:indeterminateTint="@color/yellow_700"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:quizProgress="@{viewModel.quizAPIStatus}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

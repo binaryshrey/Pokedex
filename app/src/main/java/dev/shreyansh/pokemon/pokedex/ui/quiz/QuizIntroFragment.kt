@@ -27,11 +27,18 @@ class QuizIntroFragment : Fragment() {
         binding = DataBindingUtil.inflate(layoutInflater,R.layout.fragment_quiz_intro, container, false)
         requireActivity().window.statusBarColor = Color.parseColor("#fcf4eb")
 
+        setupOnClickListeners()
+
+        return binding.root
+    }
+
+    private fun setupOnClickListeners() {
         binding.quizIntroToolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
-
-        return binding.root
+        binding.startQuizButton.setOnClickListener {
+            findNavController().navigate(QuizIntroFragmentDirections.actionQuizIntroFragmentToQuizFragment())
+        }
     }
 
 
