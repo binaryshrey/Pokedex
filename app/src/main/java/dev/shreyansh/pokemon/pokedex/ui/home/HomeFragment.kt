@@ -83,6 +83,10 @@ class HomeFragment : Fragment() {
         binding.typesCV.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToTypesFragment())
         }
+        binding.quizCV.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToQuizIntroFragment())
+        }
+
     }
 
 

@@ -186,13 +186,13 @@
                             android:layout_marginBottom="8dp"
                             android:background="?android:attr/listDivider"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/subscriptionStatusCV"
+                            app:layout_constraintEnd_toStartOf="@+id/quizCV"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toEndOf="@+id/levelsStatusCV"
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/subscriptionStatusCV"
+                            android:id="@+id/quizCV"
                             android:layout_width="0dp"
                             android:layout_height="36dp"
                             android:background="@color/yellow_700"
@@ -571,10 +571,10 @@
                     shimmer:duration="800">
 
                     <LinearLayout
-                        app:newsProgress="@{viewModel.pokeNewsStatus}"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        app:newsProgress="@{viewModel.pokeNewsStatus}">
 
                         <include
                             layout="@layout/shimmer_highlight_news_list_item"
