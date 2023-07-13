@@ -16,6 +16,9 @@ interface PokemonItemDao {
     @Query("SELECT * FROM pokemon_items_table")
     fun getAllPokemonItems() : LiveData<List<PokemonItemEntity>>
 
+    @Query("SELECT * FROM pokemon_items_table WHERE name LIKE :key")
+    fun getItemsByName(key: String): LiveData<List<PokemonItemEntity>>
+
     @Query("DELETE FROM pokemon_items_table")
     suspend fun clear()
 

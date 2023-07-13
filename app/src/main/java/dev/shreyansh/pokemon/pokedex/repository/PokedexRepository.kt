@@ -215,4 +215,43 @@ class PokedexRepository(
     fun getPokemonByName(pokemonName : String) : LiveData<PokemonFavEntity> {
         return pokemonFavDataBase.pokemonFavDao.getPokemonByName(pokemonName)
     }
+
+
+
+    //search
+    fun searchPokemon(query : String): LiveData<List<Pokemon>> {
+        return Transformations.map(pokemonResponseDataBase.pokemonResponseDao.getPokemonByName(query)){
+            it.asDomainModel()
+        }
+    }
+    fun searchMoves(query : String): LiveData<List<Moves>> {
+        return Transformations.map(pokemonMovesDatabase.pokemonMovesDao.getMovesByName(query)){
+            it.asMovesDomainModel()
+        }
+    }
+    fun searchAbilities(query : String): LiveData<List<Ability>> {
+        return Transformations.map(pokemonAbilityDataBase.pokemonAbilityDao.getAbilitiesByName(query)){
+            it.asAbilityDomainModel()
+        }
+    }
+    fun searchItems(query : String): LiveData<List<Item>> {
+        return Transformations.map(pokemonItemDataBase.pokemonItemDao.getItemsByName(query)){
+            it.asItemDomainModel()
+        }
+    }
+    fun searchLocations(query : String): LiveData<List<Location>> {
+        return Transformations.map(pokemonLocationDatabase.pokemonLocationDao.getLocationsByName(query)){
+            it.asLocationDomainModel()
+        }
+    }
+    fun searchTypes(query : String): LiveData<List<Type>> {
+        return Transformations.map(pokemonTypesDatabase.pokemonTypesDao.getTypesByName(query)){
+            it.asTypesDomainModel()
+        }
+    }
+    fun searchNews(query : String): LiveData<List<PokemonNews>> {
+        return Transformations.map(pokemonNewsDataBase.pokemonNewsDao.getNewsByTitle(query)){
+            it.asDomainModel()
+        }
+    }
 }

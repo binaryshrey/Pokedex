@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentSearchLocationsBinding
 import dev.shreyansh.pokemon.pokedex.utils.LocationsRecyclerAdapter
@@ -37,11 +38,14 @@ class SearchLocationsFragment : Fragment() {
     }
 
     private fun setupObservers() {
-//        pokedexViewModel.allPokemonLocations.observe(viewLifecycleOwner, Observer {
-//            it?.let {
-//                locationsRecyclerAdapter.submitList(it.toMutableList())
-//            }
-//        })
+        pokedexViewModel.savedSearchLocations.observe(viewLifecycleOwner, Observer {
+            if(it.isNullOrEmpty()){
+                binding.emptyLocationsResultIV.visibility = View.VISIBLE
+            } else {
+                binding.emptyLocationsResultIV.visibility = View.GONE
+                locationsRecyclerAdapter.submitList(it.toMutableList())
+            }
+        })
     }
 
     private fun setupRecyclerView() {

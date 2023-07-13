@@ -13,7 +13,7 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_quiz.PokemonQuizDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
-import dev.shreyansh.pokemon.pokedex.domain.Pokemon
+import dev.shreyansh.pokemon.pokedex.domain.*
 import dev.shreyansh.pokemon.pokedex.repository.PokedexRepository
 import dev.shreyansh.pokemon.pokedex.utils.PokedexDataStore
 import kotlinx.coroutines.Dispatchers
@@ -66,6 +66,16 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val allPokemonTypes = repository.allPokemonTypes
     val allPokemonQuiz = repository.allPokemonQuiz
     val pokeNewsResponse = repository.allPokemonNews
+
+
+
+    var savedSearchPokemon = MutableLiveData<List<Pokemon>>()
+    var savedSearchMoves = MutableLiveData<List<Moves>>()
+    var savedSearchAbilities = MutableLiveData<List<Ability>>()
+    var savedSearchItems = MutableLiveData<List<Item>>()
+    var savedSearchLocations = MutableLiveData<List<Location>>()
+    var savedSearchTypes = MutableLiveData<List<Type>>()
+    var savedSearchNews = MutableLiveData<List<PokemonNews>>()
 
 
     private val pokedexDataStore = PokedexDataStore.getInstance(application)
@@ -366,6 +376,44 @@ class PokedexViewModel(application: Application) : ViewModel(){
     fun getPokemonByName(pokemonName : String): LiveData<PokemonFavEntity> {
         return repository.getPokemonByName(pokemonName)
     }
+
+
+
+    //search
+    fun searchPokemon(query:String): LiveData<List<Pokemon>> {
+        return repository.searchPokemon("%${query}%")
+    }
+    fun searchMoves(query:String): LiveData<List<Moves>> {
+        return repository.searchMoves("%${query}%")
+    }
+    fun searchAbilities(query:String): LiveData<List<Ability>> {
+        return repository.searchAbilities("%${query}%")
+    }
+    fun searchItems(query:String): LiveData<List<Item>> {
+        return repository.searchItems("%${query}%")
+    }
+    fun searchLocations(query:String): LiveData<List<Location>> {
+        return repository.searchLocations("%${query}%")
+    }
+    fun searchTypes(query:String): LiveData<List<Type>> {
+        return repository.searchTypes("%${query}%")
+    }
+
+    fun searchNews(query:String): LiveData<List<PokemonNews>> {
+        return repository.searchNews("%${query}%")
+    }
+
+    fun resetSearchFields(){
+        savedSearchPokemon.value = mutableListOf<Pokemon>()
+        savedSearchMoves.value = mutableListOf<Moves>()
+        savedSearchAbilities.value = mutableListOf<Ability>()
+        savedSearchItems.value = mutableListOf<Item>()
+        savedSearchLocations.value = mutableListOf<Location>()
+        savedSearchTypes.value = mutableListOf<Type>()
+        savedSearchNews.value = mutableListOf<PokemonNews>()
+    }
+
+
 
 
     //login-checked

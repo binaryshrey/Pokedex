@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -40,11 +41,14 @@ class SearchPokemonFragment : Fragment() {
     }
 
     private fun setupObservers() {
-//      pokedexViewModel.allPokemonAbilities.observe(viewLifecycleOwner, Observer {
-//            it?.let {
-//                abilitiesRecyclerAdapter.submitList(it.toMutableList())
-//            }
-//        })
+      pokedexViewModel.savedSearchPokemon.observe(viewLifecycleOwner, Observer {
+          if(it.isNullOrEmpty()){
+              binding.emptyPokemonResultIV.visibility = View.VISIBLE
+          } else {
+              binding.emptyPokemonResultIV.visibility = View.GONE
+              pokemonRecyclerAdapter.submitList(it.toMutableList())
+          }
+        })
     }
 
     private fun setupRecyclerView() {

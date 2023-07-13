@@ -15,6 +15,9 @@ interface PokemonTypesDao {
     @Query("SELECT * FROM pokemon_types_table")
     fun getAllPokemonTypes(): LiveData<List<PokemonTypesEntity>>
 
+    @Query("SELECT * FROM pokemon_types_table WHERE name LIKE :key")
+    fun getTypesByName(key: String): LiveData<List<PokemonTypesEntity>>
+
     @Query("DELETE FROM pokemon_types_table")
     suspend fun clear()
 

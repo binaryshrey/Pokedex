@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentSearchAbilitiesBinding
 import dev.shreyansh.pokemon.pokedex.utils.AbilitiesRecyclerAdapter
@@ -41,11 +42,14 @@ class SearchAbilitiesFragment : Fragment() {
     }
 
     private fun setupObservers() {
-//        pokedexViewModel.allPokemonAbilities.observe(viewLifecycleOwner, Observer {
-//            it?.let {
-//                abilitiesRecyclerAdapter.submitList(it.toMutableList())
-//            }
-//        })
+        pokedexViewModel.savedSearchAbilities.observe(viewLifecycleOwner, Observer {
+            if(it.isNullOrEmpty()){
+                binding.emptyAbilitiesResultIV.visibility = View.VISIBLE
+            } else {
+                binding.emptyAbilitiesResultIV.visibility = View.GONE
+                abilitiesRecyclerAdapter.submitList(it.toMutableList())
+            }
+        })
     }
 
 }

@@ -16,6 +16,9 @@ interface PokemonAbilityDao {
     @Query("SELECT * FROM pokemon_abilities_table")
     fun getAllPokemonAbilities() : LiveData<List<PokemonAbilityEntity>>
 
+    @Query("SELECT * FROM pokemon_abilities_table WHERE name LIKE :key")
+    fun getAbilitiesByName(key: String): LiveData<List<PokemonAbilityEntity>>
+
     @Query("DELETE FROM pokemon_abilities_table")
     suspend fun clear()
 
