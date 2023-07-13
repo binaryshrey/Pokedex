@@ -145,9 +145,20 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/quizFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizIntroFragment_to_quizCooldownFragment"
+            app:destination="@id/quizCooldownFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizCooldownFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/quizFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizFragment"
         android:label="QuizFragment" />
+    <dialog
+        android:id="@+id/quizCooldownFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizCooldownFragment"
+        android:label="QuizCooldownFragment" />
 </navigation>
