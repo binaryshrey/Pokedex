@@ -16,6 +16,9 @@ interface PokemonResponseDao {
     @Query("SELECT * FROM pokemon_response_table")
     fun getAllPokemons() : LiveData<List<PokemonResponseEntity>>
 
+    @Query("SELECT * FROM pokemon_response_table WHERE name LIKE :key")
+    fun getPokemonByName(key: String): LiveData<List<PokemonResponseEntity>>
+
     @Query("DELETE FROM pokemon_response_table")
     suspend fun clear()
 

@@ -16,6 +16,9 @@ interface PokemonLocationDao {
     @Query("SELECT * FROM pokemon_locations_table")
     fun getAllPokemonLocations() : LiveData<List<PokemonLocationEntity>>
 
+    @Query("SELECT * FROM pokemon_locations_table WHERE name LIKE :key")
+    fun getLocationsByName(key: String): LiveData<List<PokemonLocationEntity>>
+
     @Query("DELETE FROM pokemon_locations_table")
     suspend fun clear()
 
