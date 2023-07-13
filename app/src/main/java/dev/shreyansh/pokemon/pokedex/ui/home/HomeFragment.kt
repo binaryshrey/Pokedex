@@ -91,6 +91,9 @@ class HomeFragment : Fragment() {
         binding.levelsStatusCV.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLevelsFragment())
         }
+        binding.search.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSearchContainerFragment())
+        }
 
     }
 

@@ -85,6 +85,13 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/levelsFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchContainerFragment"
+            app:destination="@id/searchContainerFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/searchContainerFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
@@ -180,4 +187,8 @@
         android:id="@+id/levelsFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.levels.LevelsFragment"
         android:label="LevelsFragment" />
+    <fragment
+        android:id="@+id/searchContainerFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.search.SearchContainerFragment"
+        android:label="SearchContainerFragment" />
 </navigation>
