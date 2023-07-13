@@ -71,6 +71,13 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/typesFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_quizIntroFragment"
+            app:destination="@id/quizIntroFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizIntroFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
@@ -127,4 +134,31 @@
         android:id="@+id/pokemonFiltersFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.pokemon.PokemonFiltersFragment"
         android:label="PokemonFiltersFragment" />
+    <fragment
+        android:id="@+id/quizIntroFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizIntroFragment"
+        android:label="QuizIntroFragment" >
+        <action
+            android:id="@+id/action_quizIntroFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizIntroFragment_to_quizCooldownFragment"
+            app:destination="@id/quizCooldownFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizCooldownFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizFragment"
+        android:label="QuizFragment" />
+    <dialog
+        android:id="@+id/quizCooldownFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizCooldownFragment"
+        android:label="QuizCooldownFragment" />
 </navigation>

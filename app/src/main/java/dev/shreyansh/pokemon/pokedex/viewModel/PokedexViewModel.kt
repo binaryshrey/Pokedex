@@ -2,10 +2,7 @@ package dev.shreyansh.pokemon.pokedex.viewModel
 
 import android.app.Application
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
@@ -13,10 +10,13 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_item.PokemonItemDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_location.PokemonLocationDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_moves.PokemonMovesDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_news.PokemonNewsDataBase
+import dev.shreyansh.pokemon.pokedex.db.pokemon_quiz.PokemonQuizDatabase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.repository.PokedexRepository
+import dev.shreyansh.pokemon.pokedex.utils.PokedexDataStore
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class PokedexViewModel(application: Application) : ViewModel(){
@@ -28,6 +28,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     enum class ItemsStatus { LOADING, ERROR, DONE }
     enum class LocationsStatus { LOADING, ERROR, DONE }
     enum class TypesStatus { LOADING, ERROR, DONE }
+    enum class QuizStatus { LOADING, ERROR, DONE }
 
 
 
@@ -39,6 +40,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokemonLocationDatabase = PokemonLocationDatabase.getInstance(application)
     private val pokemonMovesDatabase = PokemonMovesDatabase.getInstance(application)
     private val pokemonTypesDatabase = PokemonTypesDatabase.getInstance(application)
+    private val pokemonQuizDatabase = PokemonQuizDatabase.getInstance(application)
 
 
 
@@ -50,7 +52,8 @@ class PokedexViewModel(application: Application) : ViewModel(){
         pokemonItemDataBase,
         pokemonLocationDatabase,
         pokemonMovesDatabase,
-        pokemonTypesDatabase)
+        pokemonTypesDatabase,
+        pokemonQuizDatabase)
 
 
     val allPokemons = repository.allPokemons
@@ -61,7 +64,13 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val allPokemonLocations = repository.allPokemonLocations
     val allPokemonMoves = repository.allPokemonMoves
     val allPokemonTypes = repository.allPokemonTypes
+    val allPokemonQuiz = repository.allPokemonQuiz
     val pokeNewsResponse = repository.allPokemonNews
+
+
+    private val pokedexDataStore = PokedexDataStore.getInstance(application)
+    var appTheme = pokedexDataStore.getAppTheme().asLiveData()
+    var quizCoolDown = pokedexDataStore.getQuizCoolDown().asLiveData()
 
 
     //login
@@ -117,11 +126,32 @@ class PokedexViewModel(application: Application) : ViewModel(){
         get() = _typesAPIStatus
 
 
+    // quiz
+    private val _quizAPIStatus = MutableLiveData<QuizStatus>()
+    val quizAPIStatus: LiveData<QuizStatus>
+        get() = _quizAPIStatus
+
+
     init {
         _loginComplete.value = false
         _pokemonFilter.value = "all"
     }
 
+
+    fun setAppTheme(theme: String?){
+        viewModelScope.launch(Dispatchers.IO) {
+            if (theme != null) {
+                pokedexDataStore.setAppTheme(theme)
+            }
+        }
+    }
+
+    fun setQuizCoolDown(time: Long){
+        viewModelScope.launch(Dispatchers.IO) {
+            pokedexDataStore.setQuizCoolDown(time)
+
+        }
+    }
 
     fun getPokeNews(){
         viewModelScope.launch {
@@ -221,6 +251,22 @@ class PokedexViewModel(application: Application) : ViewModel(){
             catch (e: Exception){
                 Log.e("TypesServiceAPI:ERROR","${e.message}")
                 _typesAPIStatus.value = TypesStatus.ERROR
+            }
+        }
+    }
+
+
+
+    fun getAllQuiz(){
+        viewModelScope.launch {
+            _quizAPIStatus.value = QuizStatus.LOADING
+            try{
+                repository.refreshPokemonQuizAPIResponse()
+                _quizAPIStatus.value = QuizStatus.DONE
+            }
+            catch (e: Exception){
+                Log.e("QuizServiceAPI:ERROR","${e.message}")
+                _quizAPIStatus.value = QuizStatus.ERROR
             }
         }
     }
