@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.levels.LevelsAchievedFragment">
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="28dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_ends_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:alpha="0.6"
+        android:fontFamily="@font/open_sans"
+        android:text="CONGRATS!"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/congrats_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        tools:text="You moved upto Learner!" />
+
+    <TextView
+        android:id="@+id/congrats_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.6"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        tools:text="Level up to stay upbeat by playing Poké-Quiz and Poké-Scan" />
+
+    <include
+        android:id="@+id/layout_learner_achieved"
+        layout="@layout/layout_learner_achieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_seeker_achieved"
+        layout="@layout/layout_seeker_achieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/layout_explorer_achieved"
+        layout="@layout/layout_explorer_achieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_scholar_achieved"
+        layout="@layout/layout_scholar_achieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/layout_savant_achieved"
+        layout="@layout/layout_savant_achieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_sage_achieved"
+        layout="@layout/layout_sage_achieved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:visibility="gone" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/doneButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="8dp" />
+
+
+    <View
+        android:id="@+id/dividerSelection3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doneButton" />
+
+
+</LinearLayout>
+</layout>

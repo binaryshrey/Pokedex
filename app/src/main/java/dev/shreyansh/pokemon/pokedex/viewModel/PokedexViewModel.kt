@@ -71,6 +71,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
     private val pokedexDataStore = PokedexDataStore.getInstance(application)
     var appTheme = pokedexDataStore.getAppTheme().asLiveData()
     var quizCoolDown = pokedexDataStore.getQuizCoolDown().asLiveData()
+    var level = pokedexDataStore.getLevel().asLiveData()
 
 
     //login
@@ -152,6 +153,14 @@ class PokedexViewModel(application: Application) : ViewModel(){
 
         }
     }
+
+    fun setLevel(level: Int){
+        viewModelScope.launch(Dispatchers.IO) {
+            pokedexDataStore.setLevel(level)
+
+        }
+    }
+
 
     fun getPokeNews(){
         viewModelScope.launch {

@@ -3,6 +3,7 @@ package dev.shreyansh.pokemon.pokedex.ui.quiz
 import android.animation.ObjectAnimator
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,7 @@ import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
 class QuizFragment : Fragment() {
 
+    private var levels = 0
     private var quesIndex = 0
     private var totalScore = 0
     private lateinit var currentQues : Quiz
@@ -69,6 +71,11 @@ class QuizFragment : Fragment() {
                 quizRepo = it.toMutableList()
                 binding.quizNestedScrollView.visibility = View.VISIBLE
                 initQuiz()
+            }
+        })
+        pokedexViewModel.level.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                levels = it
             }
         })
     }
@@ -122,8 +129,12 @@ class QuizFragment : Fragment() {
             }else{
                 binding.scoreTV.text = "Whoops, you failed to gain any pokemon trainer-level points. Try again in next 24 hours!"
             }
+            pokedexViewModel.setLevel(levels+totalScore)
             binding.nextQuesButton.postDelayed(Runnable { binding.scoreTV.visibility = View.VISIBLE } , 400)
             binding.nextQuesButton.text = "Check Your Trainer Level"
+            binding.nextQuesButton.setOnClickListener {
+                findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToLevelsFragment())
+            }
             setQuizCoolDown()
         }
     }

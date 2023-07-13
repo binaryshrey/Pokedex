@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -86,6 +88,9 @@ class HomeFragment : Fragment() {
         binding.quizCV.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToQuizIntroFragment())
         }
+        binding.levelsStatusCV.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToLevelsFragment())
+        }
 
     }
 
@@ -107,6 +112,19 @@ class HomeFragment : Fragment() {
         pokedexViewModel.pokeNewsResponse.observe(viewLifecycleOwner, Observer {
             it?.let {
                 pokeNewsRecyclerAdapter.submitList(it.take(25).toMutableList())
+            }
+        })
+        pokedexViewModel.level.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                when(it){
+                    0 -> binding.levelsTV.text = "Beginner"
+                    in 1..9 -> binding.levelsTV.text = "Learner"
+                    in 10..24 -> binding.levelsTV.text = "Seeker"
+                    in 25..49 -> binding.levelsTV.text = "Explorer"
+                    in 50..99 -> binding.levelsTV.text = "Scholar"
+                    in 100..249 -> binding.levelsTV.text = "Savant"
+                    else -> binding.levelsTV.text = "Sage"
+                }
             }
         })
     }

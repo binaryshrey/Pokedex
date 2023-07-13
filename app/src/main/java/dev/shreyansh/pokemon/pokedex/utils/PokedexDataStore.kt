@@ -13,6 +13,7 @@ import java.io.IOException
 object PREFS{
     val THEME_KEY = stringPreferencesKey("THEME_KEY")
     val QUIZ_KEY = longPreferencesKey("QUIZ_KEY")
+    val LEVELS_KEY = intPreferencesKey("LEVELS_KEY")
 
 }
 
@@ -78,6 +79,27 @@ class PokedexDataStore private constructor(context: Context) {
         }
         .map { pref ->
             val show = pref[PREFS.QUIZ_KEY] ?: 0L
+            show
+        }
+
+
+    //level
+    suspend fun setLevel(level: Int) {
+        dataStore.edit { pref ->
+            pref[PREFS.LEVELS_KEY] = level
+        }
+    }
+
+    fun getLevel(): Flow<Int> = dataStore.data
+        .catch { exception ->
+            if (exception is IOException) {
+                emit(emptyPreferences())
+            } else {
+                throw exception
+            }
+        }
+        .map { pref ->
+            val show = pref[PREFS.LEVELS_KEY] ?: 0
             show
         }
 }
