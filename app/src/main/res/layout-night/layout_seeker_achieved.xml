@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2d2d2d">
+
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Explorer"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView22"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+    <TextView
+        android:id="@+id/unlockPersonalization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/open_sans"
+        android:text="EMERGING POKEMON TRAINER"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="25"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="-4dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unlockPersonalization" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/levelsStatCV"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:cardBackgroundColor="#1e150e"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView25"
+        app:strokeColor="@color/yellow_700"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView41"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="18dp"
+                android:src="@drawable/shield_yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/seekerrBadgeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Seeker"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView41"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/badgeCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="10"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelsStatCV" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="Learner"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView29"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="24dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView30" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
