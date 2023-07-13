@@ -1,902 +1,902 @@
 [
   {
     "id": 1,
-    "question": "What is the first Pokémon in the Pokédex?",
-    "options": ["Bulbasaur", "Charmander", "Squirtle", "Pikachu"],
-    "answer": "Bulbasaur"
+    "question": "Which of the following Pokémon is known as the 'Fire Mouse' Pokémon?",
+    "options": ["Charmander", "Pikachu", "Squirtle", "Bulbasaur"],
+    "answer": "Charmander"
   },
   {
     "id": 2,
-    "question": "Which Pokémon evolves into Pikachu?",
-    "options": ["Pichu", "Charmander", "Jigglypuff", "Squirtle"],
-    "answer": "Pichu"
+    "question": "Which Pokémon is the evolved form of Eevee?",
+    "options": ["Espeon", "Umbreon", "Jolteon", "Vaporeon"],
+    "answer": "Espeon"
   },
   {
     "id": 3,
-    "question": "What type is Charizard?",
-    "options": ["Water/Flying", "Fire/Flying", "Fire/Dragon", "Fire/Fighting"],
-    "answer": "Fire/Flying"
+    "question": "Which legendary Pokémon is known as the 'Guardian of the Seas'?",
+    "options": ["Lugia", "Ho-Oh", "Suicune", "Kyogre"],
+    "answer": "Lugia"
   },
   {
     "id": 4,
-    "question": "Which Pokémon is known as the 'Mushroom Pokémon'?",
-    "options": ["Bulbasaur", "Oddish", "Paras", "Shroomish"],
-    "answer": "Paras"
+    "question": "Which of the following is NOT a member of the original legendary bird trio?",
+    "options": ["Moltres", "Zapdos", "Articuno", "Mewtwo"],
+    "answer": "Mewtwo"
   },
   {
     "id": 5,
-    "question": "What is the final evolution of Squirtle?",
-    "options": ["Blastoise", "Wartortle", "Charizard", "Venusaur"],
-    "answer": "Blastoise"
+    "question": "What is the pre-evolution of Pikachu?",
+    "options": ["Pichu", "Raichu", "Electabuzz", "Jolteon"],
+    "answer": "Pichu"
   },
   {
     "id": 6,
-    "question": "Which Pokémon is a legendary bird that represents thunderstorms?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Raikou"],
-    "answer": "Zapdos"
+    "question": "Which of the following Pokémon is a Water/Flying type?",
+    "options": ["Lapras", "Vaporeon", "Gyarados", "Squirtle"],
+    "answer": "Gyarados"
   },
   {
     "id": 7,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "Which Pokémon is known as the 'Electric Mouse' Pokémon?",
+    "options": ["Pikachu", "Raichu", "Jolteon", "Zapdos"],
+    "answer": "Pikachu"
   },
   {
     "id": 8,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard X?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite X"],
-    "answer": "Charizard"
-  },
-  {
-    "id": 9,
-    "question": "What is the signature move of Pikachu?",
-    "options": ["Thunderbolt", "Volt Tackle", "Quick Attack", "Iron Tail"],
-    "answer": "Thunderbolt"
-  },
-  {
-    "id": 10,
-    "question": "Which Pokémon is known as the 'Fire Mouse'?",
-    "options": ["Pikachu", "Cyndaquil", "Torchic", "Chimchar"],
-    "answer": "Cyndaquil"
-  },
-  {
-    "id": 11,
-    "question": "What type is Mewtwo?",
-    "options": ["Psychic", "Psychic/Fighting", "Psychic/Ghost", "Psychic/Dark"],
-    "answer": "Psychic"
-  },
-  {
-    "id": 12,
-    "question": "Which Pokémon is a legendary beast that represents thunder?",
-    "options": ["Entei", "Zapdos", "Raikou", "Suicune"],
-    "answer": "Raikou"
-  },
-  {
-    "id": 13,
-    "question": "What is the final evolution of Bulbasaur?",
-    "options": ["Ivysaur", "Charmeleon", "Venusaur", "Blastoise"],
+    "question": "What is the final evolution of the Grass-type starter Pokémon in the Kanto region?",
+    "options": ["Ivysaur", "Venusaur", "Bulbasaur", "Tangela"],
     "answer": "Venusaur"
   },
   {
-    "id": 14,
-    "question": "Which Pokémon can Mega Evolve into Mega Blastoise?",
-    "options": ["Squirtle", "Wartortle", "Blastoise", "Blastoisinite"],
+    "id": 9,
+    "question": "Which Pokémon has the ability 'Levitate'?",
+    "options": ["Gengar", "Haunter", "Duskull", "Misdreavous"],
+    "answer": "Gengar"
+  },
+  {
+    "id": 10,
+    "question": "Which Pokémon is known as the 'Water Lizard' Pokémon?",
+    "options": ["Squirtle", "Blastoise", "Wartortle", "Lapras"],
     "answer": "Blastoise"
   },
   {
-    "id": 15,
-    "question": "What is the signature move of Mew?",
-    "options": ["Psychic", "Aura Sphere", "Metronome", "Transform"],
-    "answer": "Transform"
+    "id": 11,
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Charizard", "Blaziken", "Typhlosion", "Infernape"],
+    "answer": "Charizard"
   },
   {
-    "id": 16,
+    "id": 12,
+    "question": "What is the signature move of Mewtwo?",
+    "options": ["Psychic", "Shadow Ball", "Aura Sphere", "Psystrike"],
+    "answer": "Psystrike"
+  },
+  {
+    "id": 13,
+    "question": "Which of the following Pokémon can Mega Evolve?",
+    "options": ["Lucario", "Dragonite", "Tyranitar", "Garchomp"],
+    "answer": "Lucario"
+  },
+  {
+    "id": 14,
     "question": "Which Pokémon is known as the 'Seed Pokémon'?",
     "options": ["Bulbasaur", "Chikorita", "Treecko", "Turtwig"],
     "answer": "Bulbasaur"
   },
   {
+    "id": 15,
+    "question": "Which of the following Pokémon evolves by trading while holding a Metal Coat?",
+    "options": ["Scyther", "Onix", "Steelix", "Skarmory"],
+    "answer": "Steelix"
+  },
+  {
+    "id": 16,
+    "question": "What is the final evolution of the Fire-type starter Pokémon in the Johto region?",
+    "options": ["Quilava", "Cyndaquil", "Typhlosion", "Magmar"],
+    "answer": "Typhlosion"
+  },
+  {
     "id": 17,
-    "question": "What type is Gengar?",
-    "options": ["Ghost", "Ghost/Poison", "Ghost/Dark", "Ghost/Fire"],
-    "answer": "Ghost/Poison"
+    "question": "Which Pokémon is known as the 'Fairy Pokémon'?",
+    "options": ["Clefairy", "Togepi", "Jigglypuff", "Mr. Mime"],
+    "answer": "Clefairy"
   },
   {
     "id": 18,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "What is the pre-evolution of Charizard?",
+    "options": ["Charmander", "Charmeleon", "Charcoal", "Charred"],
+    "answer": "Charmander"
   },
   {
     "id": 19,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which of the following is NOT a member of the Eevee evolution family?",
+    "options": ["Leafeon", "Glaceon", "Flareon", "Pikachu"],
+    "answer": "Pikachu"
   },
   {
     "id": 20,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which Pokémon is known as the 'Master of Disguise'?",
+    "options": ["Ditto", "Zoroark", "Smeargle", "Mimikyu"],
+    "answer": "Zoroark"
   },
   {
     "id": 21,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Rayquaza?",
+    "options": ["Outrage", "Dragon Claw", "Dragon Pulse", "Dragon Dance"],
+    "answer": "Outrage"
   },
   {
     "id": 22,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Grass/Poison type?",
+    "options": ["Ivysaur", "Bulbasaur", "Venusaur", "Chikorita"],
+    "answer": "Bulbasaur"
   },
   {
     "id": 23,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Guardian of the Skies'?",
+    "options": ["Ho-Oh", "Lugia", "Rayquaza", "Articuno"],
+    "answer": "Rayquaza"
   },
   {
     "id": 24,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Time Travel' Pokémon?",
+    "options": ["Celebi", "Mew", "Deoxys", "Dialga"],
+    "answer": "Celebi"
   },
   {
     "id": 25,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Blastoise?",
+    "options": ["Squirtle", "Wartortle", "Bulbasaur", "Blastoise"],
+    "answer": "Wartortle"
   },
   {
     "id": 26,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Pikachu evolution family?",
+    "options": ["Pichu", "Raichu", "Emolga", "Alolan Raichu"],
+    "answer": "Emolga"
   },
   {
     "id": 27,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Water-type starter Pokémon in the Hoenn region?",
+    "options": ["Marshtomp", "Swampert", "Mudkip", "Wooper"],
+    "answer": "Swampert"
   },
   {
     "id": 28,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Wonder Guard'?",
+    "options": ["Ninjask", "Shedinja", "Yanma", "Venomoth"],
+    "answer": "Shedinja"
   },
   {
     "id": 29,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Poison Bee' Pokémon?",
+    "options": ["Beedrill", "Butterfree", "Scyther", "Heracross"],
+    "answer": "Beedrill"
   },
   {
     "id": 30,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Gyarados", "Magikarp", "Seaking", "Tentacool"],
+    "answer": "Gyarados"
   },
   {
     "id": 31,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Mew?",
+    "options": ["Psychic", "Transform", "Metronome", "Ancient Power"],
+    "answer": "Transform"
   },
   {
     "id": 32,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon can Mega Evolve?",
+    "options": ["Metagross", "Flygon", "Salamence", "Tyranitar"],
+    "answer": "Metagross"
   },
   {
     "id": 33,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Fox Pokémon'?",
+    "options": ["Vulpix", "Ninetales", "Growlithe", "Arcanine"],
+    "answer": "Vulpix"
   },
   {
     "id": 34,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which of the following is NOT a member of the legendary beast trio?",
+    "options": ["Entei", "Raikou", "Suicune", "Celebi"],
+    "answer": "Celebi"
   },
   {
     "id": 35,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Tyranitar?",
+    "options": ["Pupitar", "Larvitar", "Kabuto", "Rhyhorn"],
+    "answer": "Larvitar"
   },
   {
     "id": 36,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which Pokémon is known as the 'Puppy Pokémon'?",
+    "options": ["Growlithe", "Arcanine", "Electrike", "Manectric"],
+    "answer": "Growlithe"
   },
   {
     "id": 37,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Grass-type starter Pokémon in the Sinnoh region?",
+    "options": ["Torterra", "Turtwig", "Grotle", "Chikorita"],
+    "answer": "Torterra"
   },
   {
     "id": 38,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which of the following Pokémon has the ability 'Intimidate'?",
+    "options": ["Arcanine", "Larvitar", "Mightyena", "Houndoom"],
+    "answer": "Mightyena"
   },
   {
     "id": 39,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Penguin Pokémon'?",
+    "options": ["Delibird", "Empoleon", "Swinub", "Piloswine"],
+    "answer": "Empoleon"
   },
   {
     "id": 40,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Flygon", "Dragonair", "Garchomp", "Dragonite"],
+    "answer": "Garchomp"
   },
   {
     "id": 41,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Giratina?",
+    "options": ["Shadow Force", "Dragon Claw", "Shadow Ball", "Ancient Power"],
+    "answer": "Shadow Force"
   },
   {
     "id": 42,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Bug/Steel type?",
+    "options": ["Scizor", "Heracross", "Pinsir", "Scyther"],
+    "answer": "Scizor"
   },
   {
     "id": 43,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Sky High Pokémon'?",
+    "options": ["Zapdos", "Moltres", "Articuno", "Ho-Oh"],
+    "answer": "Ho-Oh"
   },
   {
     "id": 44,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Aura Pokémon'?",
+    "options": ["Lucario", "Hawlucha", "Gallade", "Medicham"],
+    "answer": "Lucario"
   },
   {
     "id": 45,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Venusaur?",
+    "options": ["Ivysaur", "Vileplume", "Bulbasaur", "Tangela"],
+    "answer": "Ivysaur"
   },
   {
     "id": 46,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Dratini evolution family?",
+    "options": ["Dragonair", "Kingdra", "Salamence", "Altaria"],
+    "answer": "Altaria"
   },
   {
     "id": 47,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Fire-type starter Pokémon in the Unova region?",
+    "options": ["Emboar", "Tepig", "Pignite", "Magmortar"],
+    "answer": "Emboar"
   },
   {
     "id": 48,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Levitate'?",
+    "options": ["Weezing", "Gengar", "Haunter", "Misdreavous"],
+    "answer": "Weezing"
   },
   {
     "id": 49,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Iron Snake' Pokémon?",
+    "options": ["Steelix", "Onix", "Arbok", "Ekans"],
+    "answer": "Steelix"
   },
   {
     "id": 50,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Swellow", "Fearow", "Pidgeot", "Noctowl"],
+    "answer": "Swellow"
   },
   {
     "id": 51,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Kyogre?",
+    "options": ["Water Spout", "Hydro Pump", "Surf", "Aqua Tail"],
+    "answer": "Water Spout"
   },
   {
     "id": 52,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Fairy type?",
+    "options": ["Granbull", "Crobat", "Zubat", "Golbat"],
+    "answer": "Granbull"
   },
   {
     "id": 53,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Deep Sea Pokémon'?",
+    "options": ["Kyogre", "Groudon", "Rayquaza", "Jirachi"],
+    "answer": "Kyogre"
   },
   {
     "id": 54,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Embrace Pokémon'?",
+    "options": ["Latios", "Latias", "Latent Pokémon", "Lati"],
+    "answer": "Latias"
   },
   {
     "id": 55,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Flygon?",
+    "options": ["Trapinch", "Vibrava", "Gligar", "Sandslash"],
+    "answer": "Vibrava"
   },
   {
     "id": 56,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Gyarados evolution family?",
+    "options": ["Seadra", "Kingdra", "Feebas", "Magikarp"],
+    "answer": "Feebas"
   },
   {
     "id": 57,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Water-type starter Pokémon in the Kalos region?",
+    "options": ["Froakie", "Greninja", "Frogadier", "Squirtle"],
+    "answer": "Greninja"
   },
   {
     "id": 58,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Sand Stream'?",
+    "options": ["Tyranitar", "Hippowdon", "Garchomp", "Cacturne"],
+    "answer": "Tyranitar"
   },
   {
     "id": 59,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Lava Dome' Pokémon?",
+    "options": ["Groudon", "Kyogre", "Rayquaza", "Heatran"],
+    "answer": "Heatran"
   },
   {
     "id": 60,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Electrode", "Pikachu", "Electabuzz", "Magnemite"],
+    "answer": "Electrode"
   },
   {
     "id": 61,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Dialga?",
+    "options": ["Roar of Time", "Iron Tail", "Dragon Claw", "Flash Cannon"],
+    "answer": "Roar of Time"
   },
   {
     "id": 62,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Bug/Ghost type?",
+    "options": ["Shedinja", "Ninjask", "Dustox", "Beautifly"],
+    "answer": "Shedinja"
   },
   {
     "id": 63,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Life Pokémon'?",
+    "options": ["Celebi", "Mew", "Arceus", "Jirachi"],
+    "answer": "Arceus"
   },
   {
     "id": 64,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Blade Pokémon'?",
+    "options": ["Gallade", "Alakazam", "Medicham", "Gardevoir"],
+    "answer": "Gallade"
   },
   {
     "id": 65,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Blaziken?",
+    "options": ["Torchic", "Combusken", "Slugma", "Chimchar"],
+    "answer": "Combusken"
   },
   {
     "id": 66,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Mudkip evolution family?",
+    "options": ["Marshtomp", "Whiscash", "Swampert", "Wooper"],
+    "answer": "Wooper"
   },
   {
     "id": 67,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Fire-type starter Pokémon in the Alola region?",
+    "options": ["Incineroar", "Litten", "Torracat", "Magmortar"],
+    "answer": "Incineroar"
   },
   {
     "id": 68,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Levitate'?",
+    "options": ["Flygon", "Garchomp", "Salamence", "Altaria"],
+    "answer": "Flygon"
   },
   {
     "id": 69,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Forest Pokémon'?",
+    "options": ["Celebi", "Leafeon", "Virizion", "Shaymin"],
+    "answer": "Leafeon"
   },
   {
     "id": 70,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Umbreon", "Espeon", "Vaporeon", "Jolteon"],
+    "answer": "Umbreon"
   },
   {
     "id": 71,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Groudon?",
+    "options": ["Precipice Blades", "Earthquake", "Fissure", "Eruption"],
+    "answer": "Precipice Blades"
   },
   {
     "id": 72,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Dragon/Flying type?",
+    "options": ["Altaria", "Salamence", "Noibat", "Hydreigon"],
+    "answer": "Altaria"
   },
   {
     "id": 73,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Sea Basin Pokémon'?",
+    "options": ["Kyogre", "Groudon", "Rayquaza", "Phione"],
+    "answer": "Phione"
   },
   {
     "id": 74,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Land Forme' Pokémon?",
+    "options": ["Giratina", "Arceus", "Palkia", "Gastrodon"],
+    "answer": "Gastrodon"
   },
   {
     "id": 75,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Sceptile?",
+    "options": ["Treecko", "Grovyle", "Tropius", "Bellossom"],
+    "answer": "Grovyle"
   },
   {
     "id": 76,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Torchic evolution family?",
+    "options": ["Combusken", "Blaziken", "Talonflame", "Charmander"],
+    "answer": "Charmander"
   },
   {
     "id": 77,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Water-type starter Pokémon in the Galar region?",
+    "options": ["Sobble", "Inteleon", "Drizzile", "Froakie"],
+    "answer": "Inteleon"
   },
   {
     "id": 78,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Flame Body'?",
+    "options": ["Charizard", "Arcanine", "Rapidash", "Volcarona"],
+    "answer": "Volcarona"
   },
   {
     "id": 79,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Goblin Pokémon'?",
+    "options": ["Gengar", "Hypno", "Drowzee", "Misdreavous"],
+    "answer": "Drowzee"
   },
   {
     "id": 80,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Tyranitar", "Aggron", "Kabutops", "Rampardos"],
+    "answer": "Tyranitar"
   },
   {
     "id": 81,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Lugia?",
+    "options": ["Aeroblast", "Psychic", "Sky Attack", "Hurricane"],
+    "answer": "Aeroblast"
   },
   {
     "id": 82,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Ghost/Dragon type?",
+    "options": ["Giratina", "Dialga", "Palkia", "Rayquaza"],
+    "answer": "Giratina"
   },
   {
     "id": 83,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Renegade Pokémon'?",
+    "options": ["Groudon", "Kyogre", "Rayquaza", "Deoxys"],
+    "answer": "Deoxys"
   },
   {
     "id": 84,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Psychic Pokémon'?",
+    "options": ["Alakazam", "Kadabra", "Gengar", "Haunter"],
+    "answer": "Alakazam"
   },
   {
     "id": 85,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Infernape?",
+    "options": ["Monferno", "Chimchar", "Simisear", "Combusken"],
+    "answer": "Monferno"
   },
   {
     "id": 86,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Piplup evolution family?",
+    "options": ["Prinplup", "Empoleon", "Buizel", "Azumarill"],
+    "answer": "Azumarill"
   },
   {
     "id": 87,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Fire-type starter Pokémon in the Isle of Armor expansion?",
+    "options": ["Cinderace", "Scorbunny", "Raboot", "Blaziken"],
+    "answer": "Cinderace"
   },
   {
     "id": 88,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Levitate'?",
+    "options": ["Chandelure", "Gengar", "Misdreavous", "Banette"],
+    "answer": "Chandelure"
   },
   {
     "id": 89,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Sky High Pokémon'?",
+    "options": ["Altaria", "Rayquaza", "Salamence", "Tropius"],
+    "answer": "Rayquaza"
   },
   {
     "id": 90,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Snorlax", "Munchlax", "Wigglytuff", "Chansey"],
+    "answer": "Snorlax"
   },
   {
     "id": 91,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Zekrom?",
+    "options": ["Bolt Strike", "Fusion Bolt", "Dragon Claw", "Outrage"],
+    "answer": "Bolt Strike"
   },
   {
     "id": 92,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Dark/Flying type?",
+    "options": ["Honchkrow", "Mandibuzz", "Murkrow", "Vullaby"],
+    "answer": "Honchkrow"
   },
   {
     "id": 93,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Alpha Pokémon'?",
+    "options": ["Palkia", "Dialga", "Giratina", "Arceus"],
+    "answer": "Arceus"
   },
   {
     "id": 94,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Ninja Pokémon'?",
+    "options": ["Greninja", "Empoleon", "Swampert", "Blastoise"],
+    "answer": "Greninja"
   },
   {
     "id": 95,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Torterra?",
+    "options": ["Chikorita", "Turtwig", "Grotle", "Bulbasaur"],
+    "answer": "Grotle"
   },
   {
     "id": 96,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Fennekin evolution family?",
+    "options": ["Braixen", "Delphox", "Vulpix", "Ninetales"],
+    "answer": "Vulpix"
   },
   {
     "id": 97,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Water-type starter Pokémon in the Crown Tundra expansion?",
+    "options": ["Inteleon", "Sobble", "Drizzile", "Blastoise"],
+    "answer": "Inteleon"
   },
   {
     "id": 98,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Swift Swim'?",
+    "options": ["Politoed", "Seismitoad", "Ludicolo", "Quagsire"],
+    "answer": "Ludicolo"
   },
   {
     "id": 99,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Dream Eater' Pokémon?",
+    "options": ["Hypno", "Jynx", "Drowzee", "Gengar"],
+    "answer": "Hypno"
   },
   {
     "id": 100,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Dragonite", "Salamence", "Garchomp", "Rayquaza"],
+    "answer": "Dragonite"
   },
   {
     "id": 101,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Reshiram?",
+    "options": ["Blue Flare", "Fusion Flare", "Dragon Claw", "Outrage"],
+    "answer": "Blue Flare"
   },
   {
     "id": 102,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Fairy/Steel type?",
+    "options": ["Mawile", "Lucario", "Metagross", "Jirachi"],
+    "answer": "Mawile"
   },
   {
     "id": 103,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Omega Pokémon'?",
+    "options": ["Palkia", "Dialga", "Giratina", "Rayquaza"],
+    "answer": "Rayquaza"
   },
   {
     "id": 104,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Intertwining Pokémon'?",
+    "options": ["Giratina", "Arceus", "Regigigas", "Kyurem"],
+    "answer": "Kyurem"
   },
   {
     "id": 105,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Empoleon?",
+    "options": ["Prinplup", "Piplup", "Azumarill", "Marill"],
+    "answer": "Prinplup"
   },
   {
     "id": 106,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Rowlet evolution family?",
+    "options": ["Dartrix", "Decidueye", "Hoothoot", "Noctowl"],
+    "answer": "Hoothoot"
   },
   {
     "id": 107,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Grass-type starter Pokémon in the Sword and Shield games?",
+    "options": ["Rillaboom", "Grookey", "Thwackey", "Venusaur"],
+    "answer": "Rillaboom"
   },
   {
     "id": 108,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Misty Surge'?",
+    "options": ["Primarina", "Lanturn", "Poliwrath", "Tapu Fini"],
+    "answer": "Tapu Fini"
   },
   {
     "id": 109,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Jet Pokémon'?",
+    "options": ["Swellow", "Braviary", "Staraptor", "Pidgeot"],
+    "answer": "Braviary"
   },
   {
     "id": 110,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Tyranitar", "Excadrill", "Krookodile", "Garchomp"],
+    "answer": "Tyranitar"
   },
   {
     "id": 111,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Xerneas?",
+    "options": ["Geomancy", "Moonblast", "Dazzling Gleam", "Misty Terrain"],
+    "answer": "Geomancy"
   },
   {
     "id": 112,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Poison/Dragon type?",
+    "options": ["Dragapult", "Kingdra", "Salamence", "Flygon"],
+    "answer": "Dragapult"
   },
   {
     "id": 113,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Yveltal Pokémon'?",
+    "options": ["Xerneas", "Zygarde", "Zacian", "Yveltal"],
+    "answer": "Yveltal"
   },
   {
     "id": 114,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Eon Pokémon'?",
+    "options": ["Latios", "Latias", "Lugia", "Deoxys"],
+    "answer": "Latios"
   },
   {
     "id": 115,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Primarina?",
+    "options": ["Brionne", "Popplio", "Seaking", "Lapras"],
+    "answer": "Brionne"
   },
   {
     "id": 116,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Litten evolution family?",
+    "options": ["Torracat", "Incineroar", "Delphox", "Persian"],
+    "answer": "Delphox"
   },
   {
     "id": 117,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Water-type starter Pokémon in the Isle of Armor expansion?",
+    "options": ["Inteleon", "Sobble", "Drizzile", "Blastoise"],
+    "answer": "Inteleon"
   },
   {
     "id": 118,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Technician'?",
+    "options": ["Scizor", "Bisharp", "Escavalier", "Durant"],
+    "answer": "Scizor"
   },
   {
     "id": 119,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Banded Quill' Pokémon'?",
+    "options": ["Quilladin", "Chesnaught", "Chestnaught", "Chespin"],
+    "answer": "Chesnaught"
   },
   {
     "id": 120,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Flygon", "Dratini", "Garchomp", "Salamence"],
+    "answer": "Flygon"
   },
   {
     "id": 121,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Zygarde?",
+    "options": ["Thousand Arrows", "Dragon Claw", "Earthquake", "Core Enforcer"],
+    "answer": "Thousand Arrows"
   },
   {
     "id": 122,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Bug/Ghost type?",
+    "options": ["Gourgeist", "Chandelure", "Mismagius", "Banette"],
+    "answer": "Gourgeist"
   },
   {
     "id": 123,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Eclipse Pokémon'?",
+    "options": ["Darkrai", "Giratina", "Cresselia", "Lunala"],
+    "answer": "Darkrai"
   },
   {
     "id": 124,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Psychic Pokémon'?",
+    "options": ["Alakazam", "Espeon", "Kadabra", "Mewtwo"],
+    "answer": "Alakazam"
   },
   {
     "id": 125,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Decidueye?",
+    "options": ["Dartrix", "Rowlet", "Staraptor", "Noctowl"],
+    "answer": "Dartrix"
   },
   {
     "id": 126,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Sobble evolution family?",
+    "options": ["Drizzile", "Inteleon", "Froakie", "Greninja"],
+    "answer": "Froakie"
   },
   {
     "id": 127,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Grass-type starter Pokémon in the Crown Tundra expansion?",
+    "options": ["Rillaboom", "Grookey", "Thwackey", "Venusaur"],
+    "answer": "Rillaboom"
   },
   {
     "id": 128,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Grassy Surge'?",
+    "options": ["Rillaboom", "Ludicolo", "Serperior", "Celebi"],
+    "answer": "Rillaboom"
   },
   {
     "id": 129,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Saber Pokémon'?",
+    "options": ["Cinderace", "Delphox", "Incineroar", "Blaziken"],
+    "answer": "Cinderace"
   },
   {
     "id": 130,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Tyranitar", "Haxorus", "Kommo-o", "Garchomp"],
+    "answer": "Tyranitar"
   },
   {
     "id": 131,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Zacian?",
+    "options": ["Behemoth Blade", "Sacred Sword", "Close Combat", "Iron Head"],
+    "answer": "Behemoth Blade"
   },
   {
     "id": 132,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Fairy/Ghost type?",
+    "options": ["Gengar", "Misdreavous", "Marshadow", "Drifblim"],
+    "answer": "Marshadow"
   },
   {
     "id": 133,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Hero of Many Battles'?",
+    "options": ["Solgaleo", "Lunala", "Necrozma", "Zacian"],
+    "answer": "Zacian"
   },
   {
     "id": 134,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Eon Pokémon'?",
+    "options": ["Latios", "Latias", "Garchomp", "Flygon"],
+    "answer": "Latios"
   },
   {
     "id": 135,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Incineroar?",
+    "options": ["Torracat", "Litten", "Pangoro", "Typhlosion"],
+    "answer": "Torracat"
   },
   {
     "id": 136,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Grookey evolution family?",
+    "options": ["Thwackey", "Rillaboom", "Pikachu", "Dartrix"],
+    "answer": "Pikachu"
   },
   {
     "id": 137,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Water-type starter Pokémon in the Isle of Armor expansion?",
+    "options": ["Inteleon", "Sobble", "Drizzile", "Blastoise"],
+    "answer": "Inteleon"
   },
   {
     "id": 138,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Libero'?",
+    "options": ["Cinderace", "Incineroar", "Delphox", "Blaziken"],
+    "answer": "Cinderace"
   },
   {
     "id": 139,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Chespin Pokémon'?",
+    "options": ["Chesnaught", "Chestnaught", "Quilladin", "Chespin"],
+    "answer": "Chespin"
   },
   {
     "id": 140,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Flygon", "Dratini", "Garchomp", "Salamence"],
+    "answer": "Flygon"
   },
   {
     "id": 141,
-    "question": "What type is Dragonite?",
-    "options": ["Dragon", "Dragon/Flying", "Dragon/Ice", "Dragon/Water"],
-    "answer": "Dragon/Flying"
+    "question": "What is the signature move of Zamazenta?",
+    "options": ["Behemoth Bash", "Sacred Sword", "Close Combat", "Iron Head"],
+    "answer": "Behemoth Bash"
   },
   {
     "id": 142,
-    "question": "Which Pokémon is a legendary bird that represents fire?",
-    "options": ["Articuno", "Zapdos", "Moltres", "Ho-Oh"],
-    "answer": "Moltres"
+    "question": "Which of the following Pokémon is a Fairy/Fighting type?",
+    "options": ["Hawlucha", "Lucario", "Kommo-o", "Mienshao"],
+    "answer": "Hawlucha"
   },
   {
     "id": 143,
-    "question": "What is the final evolution of Charmander?",
-    "options": ["Charmeleon", "Wartortle", "Charizard", "Blastoise"],
-    "answer": "Charizard"
+    "question": "Which legendary Pokémon is known as the 'Gathering Pokémon'?",
+    "options": ["Solgaleo", "Lunala", "Necrozma", "Zamazenta"],
+    "answer": "Zamazenta"
   },
   {
     "id": 144,
-    "question": "Which Pokémon can Mega Evolve into Mega Charizard Y?",
-    "options": ["Charmander", "Charmeleon", "Charizard", "Charizardite Y"],
-    "answer": "Charizard"
+    "question": "Which Pokémon is known as the 'Eon Pokémon'?",
+    "options": ["Latios", "Latias", "Dialga", "Palkia"],
+    "answer": "Latios"
   },
   {
     "id": 145,
-    "question": "What is the signature move of Eevee?",
-    "options": ["Tackle", "Quick Attack", "Take Down", "Adaptability"],
-    "answer": "Adaptability"
+    "question": "What is the pre-evolution of Rillaboom?",
+    "options": ["Thwackey", "Grookey", "Lombre", "Grovyle"],
+    "answer": "Thwackey"
   },
   {
     "id": 146,
-    "question": "Which Pokémon is known as the 'Sleep Pokémon'?",
-    "options": ["Jigglypuff", "Snorlax", "Drowzee", "Hypno"],
-    "answer": "Hypno"
+    "question": "Which of the following Pokémon is NOT a member of the Sobble evolution family?",
+    "options": ["Drizzile", "Inteleon", "Froakie", "Greninja"],
+    "answer": "Froakie"
   },
   {
     "id": 147,
-    "question": "What type is Gyarados?",
-    "options": ["Water/Flying", "Water/Dragon", "Water/Electric", "Water/Fire"],
-    "answer": "Water/Flying"
+    "question": "What is the final evolution of the Grass-type starter Pokémon in the Crown Tundra expansion?",
+    "options": ["Rillaboom", "Grookey", "Thwackey", "Venusaur"],
+    "answer": "Rillaboom"
   },
   {
     "id": 148,
-    "question": "Which Pokémon can Mega Evolve into Mega Gyarados?",
-    "options": ["Magikarp", "Gyarados", "Lapras", "Gyaradosite"],
-    "answer": "Gyarados"
+    "question": "Which Pokémon has the ability 'Grassy Surge'?",
+    "options": ["Rillaboom", "Ludicolo", "Serperior", "Celebi"],
+    "answer": "Rillaboom"
   },
   {
     "id": 149,
-    "question": "What is the signature move of Jigglypuff?",
-    "options": ["Sing", "Hyper Voice", "Dazzling Gleam", "Pound"],
-    "answer": "Sing"
+    "question": "Which Pokémon is known as the 'Rabbit Pokémon'?",
+    "options": ["Cinderace", "Delphox", "Incineroar", "Blaziken"],
+    "answer": "Cinderace"
   },
   {
     "id": 150,
-    "question": "Which Pokémon is known as the 'Tiny Turtle'?",
-    "options": ["Squirtle", "Totodile", "Mudkip", "Piplup"],
-    "answer": "Squirtle"
+    "question": "Which of the following is a dual-type Pokémon?",
+    "options": ["Tyranitar", "Haxorus", "Kommo-o", "Garchomp"],
+    "answer": "Tyranitar"
   }
 ]
