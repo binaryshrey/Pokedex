@@ -190,5 +190,13 @@
     <fragment
         android:id="@+id/searchContainerFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.search.SearchContainerFragment"
-        android:label="SearchContainerFragment" />
+        android:label="SearchContainerFragment" >
+        <action
+            android:id="@+id/action_searchContainerFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
