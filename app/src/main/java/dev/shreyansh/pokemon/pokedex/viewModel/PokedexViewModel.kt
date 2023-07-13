@@ -146,7 +146,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
         }
     }
 
-    fun setSQuizCoolDown(time: Long){
+    fun setQuizCoolDown(time: Long){
         viewModelScope.launch(Dispatchers.IO) {
             pokedexDataStore.setQuizCoolDown(time)
 

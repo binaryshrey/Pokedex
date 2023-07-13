@@ -124,6 +124,7 @@ class QuizFragment : Fragment() {
             }
             binding.nextQuesButton.postDelayed(Runnable { binding.scoreTV.visibility = View.VISIBLE } , 400)
             binding.nextQuesButton.text = "Check Your Trainer Level"
+            setQuizCoolDown()
         }
     }
 
@@ -196,5 +197,11 @@ class QuizFragment : Fragment() {
         val animation = ObjectAnimator.ofInt(binding.quizCompletionProgress, "progress", targetProgress)
         animation.duration = 500
         animation.start()
+    }
+
+    private fun setQuizCoolDown(){
+        val currentTimeMillis = System.currentTimeMillis()
+        val coolDown: Long = 24 * 60 * 60 * 1000
+        pokedexViewModel.setQuizCoolDown(currentTimeMillis+coolDown)
     }
 }
