@@ -14,6 +14,7 @@
         android:id="@+id/quizCoordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
         android:background="#fcf4eb"
         tools:context=".ui.quiz.QuizFragment">
 
@@ -99,7 +100,6 @@
                         android:layout_marginEnd="8dp"
                         android:indeterminateTint="@color/yellow_700"
                         android:max="100"
-                        android:progress="24"
                         android:progressDrawable="@drawable/rounded_progress_bar"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -107,7 +107,7 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView2"
+                        android:id="@+id/quizContainerCV"
                         android:layout_width="match_parent"
                         android:layout_height="340dp"
                         android:layout_marginStart="8dp"
@@ -121,6 +121,7 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+
 
                             <TextView
                                 android:id="@+id/quesNumberTV"
@@ -270,6 +271,20 @@
 
                     </androidx.cardview.widget.CardView>
 
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/confetti"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="64dp"
+                        android:elevation="10dp"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quizCompletionProgress"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/cofetti" />
+
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/nextQuesButton"
@@ -284,6 +299,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="@dimen/text_12"
+                        android:visibility="gone"
                         app:cornerRadius="@dimen/dimen_8"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -321,11 +337,29 @@
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/open_sans"
                         android:textColor="@color/black"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
+                        android:visibility="gone"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                        app:layout_constraintTop_toBottomOf="@+id/quizContainerCV"
                         tools:text="Yes, that's correct! 🎊" />
+
+
+                    <TextView
+                        android:id="@+id/scoreTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/open_sans"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/answerTV"
+                        tools:text="Congratulations, you've gained 8 more pokemon-trainer-level points!" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.core.widget.NestedScrollView>
 
