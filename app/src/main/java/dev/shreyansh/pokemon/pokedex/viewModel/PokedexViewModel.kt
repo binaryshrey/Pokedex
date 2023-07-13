@@ -2,10 +2,7 @@ package dev.shreyansh.pokemon.pokedex.viewModel
 
 import android.app.Application
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavEntity
@@ -18,6 +15,8 @@ import dev.shreyansh.pokemon.pokedex.db.pokemon_response.PokemonResponseDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_types.PokemonTypesDatabase
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.repository.PokedexRepository
+import dev.shreyansh.pokemon.pokedex.utils.PokedexDataStore
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class PokedexViewModel(application: Application) : ViewModel(){
@@ -67,6 +66,11 @@ class PokedexViewModel(application: Application) : ViewModel(){
     val allPokemonTypes = repository.allPokemonTypes
     val allPokemonQuiz = repository.allPokemonQuiz
     val pokeNewsResponse = repository.allPokemonNews
+
+
+    private val pokedexDataStore = PokedexDataStore.getInstance(application)
+    var appTheme = pokedexDataStore.getAppTheme().asLiveData()
+    var quizCoolDown = pokedexDataStore.getQuizCoolDown().asLiveData()
 
 
     //login
@@ -133,6 +137,21 @@ class PokedexViewModel(application: Application) : ViewModel(){
         _pokemonFilter.value = "all"
     }
 
+
+    fun setAppTheme(theme: String?){
+        viewModelScope.launch(Dispatchers.IO) {
+            if (theme != null) {
+                pokedexDataStore.setAppTheme(theme)
+            }
+        }
+    }
+
+    fun setSQuizCoolDown(time: Long){
+        viewModelScope.launch(Dispatchers.IO) {
+            pokedexDataStore.setQuizCoolDown(time)
+
+        }
+    }
 
     fun getPokeNews(){
         viewModelScope.launch {
