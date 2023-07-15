@@ -92,6 +92,11 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/searchContainerFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/newsFragment"
@@ -199,4 +204,41 @@
             app:popUpTo="@id/pokemonDetailFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <dialog
+        android:id="@+id/menuFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_quizIntroFragment"
+            app:destination="@id/quizIntroFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizIntroFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

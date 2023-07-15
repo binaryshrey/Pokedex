@@ -130,7 +130,7 @@ class SearchContainerFragment : Fragment() {
     }
 
     private fun showSoftKeyboard(view: View) {
-        val inputMethodManager: InputMethodManager = requireActivity().getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        val inputMethodManager: InputMethodManager = view.context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
         view.requestFocus()
         inputMethodManager.showSoftInput(view, 0)
     }
