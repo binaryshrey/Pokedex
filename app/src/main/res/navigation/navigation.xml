@@ -215,5 +215,19 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_quizIntroFragment"
+            app:destination="@id/quizIntroFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizIntroFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </dialog>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>

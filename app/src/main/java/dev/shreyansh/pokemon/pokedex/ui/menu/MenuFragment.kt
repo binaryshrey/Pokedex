@@ -49,6 +49,12 @@ class MenuFragment : BottomSheetDialogFragment() {
     }
 
     private fun setupOnClickListeners() {
+        binding.quizMenuCV.setOnClickListener {
+            findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToQuizIntroFragment())
+        }
+        binding.infoCV.setOnClickListener {
+            findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToAboutFragment())
+        }
         binding.logOutCV.setOnClickListener {
             signOutFlow()
         }
