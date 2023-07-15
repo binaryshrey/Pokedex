@@ -225,9 +225,20 @@
         <action
             android:id="@+id/action_menuFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
     </dialog>
     <fragment
         android:id="@+id/aboutFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.menu.AboutFragment"
         android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>

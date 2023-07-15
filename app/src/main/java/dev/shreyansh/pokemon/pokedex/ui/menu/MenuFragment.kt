@@ -55,6 +55,9 @@ class MenuFragment : BottomSheetDialogFragment() {
         binding.infoCV.setOnClickListener {
             findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToAboutFragment())
         }
+        binding.settingsCV.setOnClickListener {
+            findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToSettingsFragment())
+        }
         binding.logOutCV.setOnClickListener {
             signOutFlow()
         }

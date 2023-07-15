@@ -9,8 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.content.ContextCompat.startActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -113,6 +112,16 @@ class HomeFragment : Fragment() {
         binding.pokemonNewsRV.adapter = pokeNewsRecyclerAdapter
     }
 
+    private fun checkDarkMode(){
+        pokedexViewModel.appTheme.observe(viewLifecycleOwner, Observer {
+            when(it){
+                "Light Mode" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                "Dark Mode" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                "System Default" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            }
+        })
+
+    }
 
     private fun setupObservers() {
         pokedexViewModel.pokeNewsResponse.observe(viewLifecycleOwner, Observer {
