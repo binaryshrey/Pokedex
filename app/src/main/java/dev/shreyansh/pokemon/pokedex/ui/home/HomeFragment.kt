@@ -94,6 +94,9 @@ class HomeFragment : Fragment() {
         binding.search.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSearchContainerFragment())
         }
+        binding.menu.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToMenuFragment())
+        }
 
     }
 
