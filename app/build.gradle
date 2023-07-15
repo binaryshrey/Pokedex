@@ -37,6 +37,9 @@ android {
     buildFeatures{
         dataBinding true
     }
+    aaptOptions {
+        noCompress "tflite"
+    }
 }
 
 dependencies {
@@ -125,5 +128,11 @@ dependencies {
     //iar
     implementation 'com.google.android.play:review:2.0.1'
     implementation 'com.google.android.play:review-ktx:2.0.1'
+
+    //canHub-image-cropper
+    implementation "com.vanniktech:android-image-cropper:4.3.3"
+
+    //ml-kit
+    implementation 'com.google.mlkit:image-labeling-custom:17.0.1'
 
 }
