@@ -190,7 +190,7 @@
                         android:layout_marginStart="12dp"
                         android:alpha="0.5"
                         android:fontFamily="@font/open_sans"
-                        android:text="Daily Quiz Countdown"
+                        android:text="Daily Quiz Cooldown"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/quesHrIV"
