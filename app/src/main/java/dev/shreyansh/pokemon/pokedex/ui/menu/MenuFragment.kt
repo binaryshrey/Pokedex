@@ -49,6 +49,9 @@ class MenuFragment : BottomSheetDialogFragment() {
     }
 
     private fun setupOnClickListeners() {
+        binding.pokeScanCV.setOnClickListener {
+            findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToPokeScanIntroFragment())
+        }
         binding.quizMenuCV.setOnClickListener {
             findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToQuizIntroFragment())
         }

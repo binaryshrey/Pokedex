@@ -255,14 +255,12 @@ class HomeFragment : Fragment() {
                     for (label in labels) {
                         detectedPokemons.add(Scan(label.text,label.confidence,label.index))
                     }
-                    Log.i("detectedPokemons","${detectedPokemons}")
                     if(detectedPokemons.isNullOrEmpty()){
                         scanDialog.show()
                     }else{
                         var selectedPokemon = ""
                         for(pokemon in detectedPokemons){
                             if(pokemon.confidence > 0.92){
-                                Log.i("confidence","${pokemon.confidence}")
                                 selectedPokemon = pokemon.name
                             }
                         }
@@ -281,7 +279,6 @@ class HomeFragment : Fragment() {
                     }
                 }
                 .addOnFailureListener { e ->
-                    Log.i("text-confidence-index","${e.message.toString()}")
                     Toast.makeText(context,"Error Occurred : ${e.message.toString()}", Toast.LENGTH_SHORT).show()
                 }
         }

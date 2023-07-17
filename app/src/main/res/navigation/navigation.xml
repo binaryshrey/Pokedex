@@ -239,6 +239,13 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/settingsFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_pokeScanIntroFragment"
+            app:destination="@id/pokeScanIntroFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokeScanIntroFragment"
+            app:popUpToInclusive="true" />
     </dialog>
     <fragment
         android:id="@+id/aboutFragment"
@@ -248,4 +255,16 @@
         android:id="@+id/settingsFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.menu.SettingsFragment"
         android:label="SettingsFragment" />
+    <dialog
+        android:id="@+id/pokeScanIntroFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.scan.PokeScanIntroFragment"
+        android:label="PokeScanIntroFragment" >
+        <action
+            android:id="@+id/action_pokeScanIntroFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonDetailFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
 </navigation>

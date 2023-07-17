@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pokeScanIntroLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_corner_bg"
+        android:minWidth="350dp"
+        tools:context=".ui.scan.PokeScanIntroFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pokeScanIntroCV"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="#ffd4a7"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="@dimen/dimen_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/bannerOneInfoDrawable"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/scan" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/pokeScanIntroTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Poké Scan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pokeScanIntroCV" />
+
+        <TextView
+            android:id="@+id/pokeScanIntroDescTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/open_sans"
+            android:text="Simply scan and capture any pokemon(s) from your surrounding areas and get detailed information about them!"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pokeScanIntroTV" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/checkOutButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/yellow_900"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Let's Scan"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/dimen_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pokeScanIntroDescTV" />
+
+        <View
+            android:id="@+id/bannerInfoLineView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkOutButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
