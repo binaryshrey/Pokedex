@@ -34,7 +34,6 @@ class PokemonDirectoryFragment : Fragment() {
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getAllPokeMons()
         setupPokeMonsRecyclerView()
         setupObservers()
         setupOnClickListeners()
@@ -53,7 +52,7 @@ class PokemonDirectoryFragment : Fragment() {
 
         pokedexViewModel.pokemonFilter.observe(viewLifecycleOwner, Observer { filter ->
             pokedexViewModel.allPokemons.observe(viewLifecycleOwner, Observer {
-                it?.let {
+                if(!it.isNullOrEmpty()) {
                     when(filter){
                         "all"-> pokemonRecyclerAdapter.submitList(it)
                         "one" -> pokemonRecyclerAdapter.submitList(it.subList(0,150))
@@ -65,6 +64,8 @@ class PokemonDirectoryFragment : Fragment() {
                         "seven" -> pokemonRecyclerAdapter.submitList(it.subList(721,807))
                         "eight" -> pokemonRecyclerAdapter.submitList(it.subList(807,809))
                     }
+                }else{
+                    getAllPokeMons()
                 }
             })
         })

@@ -34,7 +34,6 @@ class AbilitiesFragment : Fragment() {
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getPokeAbilities()
         setupAbilitiesRecyclerView()
         setupObservers()
         setupOnClickListeners()
@@ -61,8 +60,10 @@ class AbilitiesFragment : Fragment() {
 
     private fun setupObservers() {
         pokedexViewModel.allPokemonAbilities.observe(viewLifecycleOwner, Observer {
-            it?.let {
+            if(!it.isNullOrEmpty()) {
                 abilitiesRecyclerAdapter.submitList(it.toMutableList())
+            }else{
+                getPokeAbilities()
             }
         })
     }

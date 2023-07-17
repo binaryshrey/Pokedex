@@ -35,7 +35,6 @@ class LocationsFragment : Fragment() {
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getPokeLocations()
         setupLocationsRecyclerView()
         setupObservers()
         setupOnClickListeners()
@@ -61,8 +60,10 @@ class LocationsFragment : Fragment() {
 
     private fun setupObservers() {
         pokedexViewModel.allPokemonLocations.observe(viewLifecycleOwner, Observer {
-            it?.let {
+            if(!it.isNullOrEmpty()) {
                 locationsRecyclerAdapter.submitList(it.toMutableList())
+            }else{
+                getPokeLocations()
             }
         })
     }

@@ -35,7 +35,6 @@ class ItemsFragment : Fragment() {
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getPokeItems()
         setupItemsRecyclerView()
         setupObservers()
         setupOnClickListeners()
@@ -62,8 +61,10 @@ class ItemsFragment : Fragment() {
 
     private fun setupObservers() {
         pokedexViewModel.allPokemonItems.observe(viewLifecycleOwner, Observer {
-            it?.let {
+            if(!it.isNullOrEmpty()) {
                 itemsRecyclerAdapter.submitList(it.toMutableList())
+            }else{
+                getPokeItems()
             }
         })
     }

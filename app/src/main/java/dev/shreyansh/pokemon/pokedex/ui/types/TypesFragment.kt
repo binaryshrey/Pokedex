@@ -33,7 +33,6 @@ class TypesFragment : Fragment() {
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getPokeTypes()
         setupTypesRecyclerView()
         setupObservers()
         setupOnClickListeners()
@@ -60,8 +59,10 @@ class TypesFragment : Fragment() {
 
     private fun setupObservers() {
         pokedexViewModel.allPokemonTypes.observe(viewLifecycleOwner, Observer {
-            it?.let {
+            if(!it.isNullOrEmpty()) {
                 typesRecyclerAdapter.submitList(it.toMutableList())
+            }else{
+                getPokeTypes()
             }
         })
     }

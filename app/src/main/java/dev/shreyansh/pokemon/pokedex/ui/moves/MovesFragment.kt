@@ -34,7 +34,6 @@ class MovesFragment : Fragment() {
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        getPokeMoves()
         setupMovesRecyclerView()
         setupObservers()
         setupOnClickListeners()
@@ -60,10 +59,12 @@ class MovesFragment : Fragment() {
 
 
     private fun setupObservers() {
-        pokedexViewModel.allPokemonMoves.observe(viewLifecycleOwner, Observer {allMoves ->
-            allMoves?.let {
-                movesRecyclerAdapter.submitList(allMoves.toMutableList())
-            }
+        pokedexViewModel.allPokemonMoves.observe(viewLifecycleOwner, Observer {
+           if(!it.isNullOrEmpty()) {
+                movesRecyclerAdapter.submitList(it.toMutableList())
+           }else{
+               getPokeMoves()
+           }
         })
     }
 
