@@ -1,6 +1,7 @@
 package dev.shreyansh.pokemon.pokedex.ui.quiz
 
 import android.animation.ObjectAnimator
+import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -25,6 +27,7 @@ class QuizFragment : Fragment() {
     private var levels = 0
     private var quesIndex = 0
     private var totalScore = 0
+    private var isDarkModeOn = false
     private lateinit var currentQues : Quiz
     private lateinit var quizRepo : MutableList<Quiz>
     private lateinit var quizSession : MutableList<Quiz>
@@ -40,9 +43,18 @@ class QuizFragment : Fragment() {
         binding.viewModel = pokedexViewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        checkForDarkMode()
         setupObservers()
         setupOnClickListeners()
         return binding.root
+    }
+
+    private fun checkForDarkMode() {
+        when(requireContext().resources.configuration.uiMode.and(Configuration.UI_MODE_NIGHT_MASK)){
+            Configuration.UI_MODE_NIGHT_YES -> isDarkModeOn = true
+            Configuration.UI_MODE_NIGHT_NO -> isDarkModeOn = false
+            else -> isDarkModeOn = false
+        }
     }
 
     private fun initQuiz() {
@@ -108,12 +120,20 @@ class QuizFragment : Fragment() {
             binding.confetti.visibility = View.VISIBLE
             binding.answerTV.text = "Yes, that's correct! 😄🎊"
             selectedCV.strokeColor = Color.parseColor("#38761d")
-            selectedCV.setCardBackgroundColor(Color.parseColor("#d9ead3"))
+            if(isDarkModeOn){
+                selectedCV.setCardBackgroundColor(Color.parseColor("#93c47d"))
+            }else{
+                selectedCV.setCardBackgroundColor(Color.parseColor("#d9ead3"))
+            }
 
         }else{
             binding.answerTV.text = "Uh Oh, that's incorrect! 🙁"
             selectedCV.strokeColor = Color.parseColor("#990000")
-            selectedCV.setCardBackgroundColor(Color.parseColor("#f4cccc"))
+            if(isDarkModeOn){
+                selectedCV.setCardBackgroundColor(Color.parseColor("#e06666"))
+            }else{
+                selectedCV.setCardBackgroundColor(Color.parseColor("#f4cccc"))
+            }
         }
         binding.answerTV.visibility = View.VISIBLE
         binding.nextQuesButton.visibility = View.VISIBLE
@@ -190,17 +210,22 @@ class QuizFragment : Fragment() {
     }
 
     private fun resetCardBackground() {
-        binding.option1CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
         binding.option1CV.strokeColor = Color.parseColor("#B5B5B5")
-
-        binding.option2CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
         binding.option2CV.strokeColor = Color.parseColor("#B5B5B5")
-
-        binding.option3CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
         binding.option3CV.strokeColor = Color.parseColor("#B5B5B5")
-
-        binding.option4CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
         binding.option4CV.strokeColor = Color.parseColor("#B5B5B5")
+
+        if(isDarkModeOn){
+            binding.option1CV.setCardBackgroundColor(Color.parseColor("#2d2d2d"))
+            binding.option2CV.setCardBackgroundColor(Color.parseColor("#2d2d2d"))
+            binding.option3CV.setCardBackgroundColor(Color.parseColor("#2d2d2d"))
+            binding.option4CV.setCardBackgroundColor(Color.parseColor("#2d2d2d"))
+        }else {
+            binding.option1CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+            binding.option2CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+            binding.option3CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+            binding.option4CV.setCardBackgroundColor(Color.parseColor("#FFFFFF"))
+        }
     }
 
 
