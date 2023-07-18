@@ -1,8 +1,8 @@
 {
     "appName" : "Pokédex",
     "appLink": "https://play.google.com/store/apps/details?id=dev.shreyansh.pokemon.pokedex",
-    "description" : "Introducing the ultimate companion app for Pokemon enthusiasts, equipped with the most recent updates on news, items, and locations, as well as an innovative Poke-Scan feature that provides in-depth information about any encountered wild Pokemon.",
-    "description_next": "Play dialy pokemomn quizzes and stay informed & empowered with this all-inclusive app.",
+    "description" : "Introducing the ultimate pokemon companion app with Poke-Scan feature that provides in-depth details about any pokemon.",
+    "description_next": "Play dialy pokemon quizzes and stay informed & empowered with this all-inclusive app.",
     "privacy" : "https://github.com/binaryshrey/Pokedex/blob/main/PRIVACY.md",
     "terms": "https://github.com/binaryshrey/Pokedex/blob/main/TERMS.md",
     "contact": "mailto:connect.zenstudio@gmail.com"
