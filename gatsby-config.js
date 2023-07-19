@@ -28,6 +28,6 @@ module.exports = {
     title: "Pokedex",
     description: "Pokedex • Your Ultimate Pokemon Companion App",
     image: `/logo.png`,
-    siteUrl: `https://pokedex-binaryshrey.netlify.app/`,
+    siteUrl: `https://pokedex-zenstudio.netlify.app/`,
   },
 }

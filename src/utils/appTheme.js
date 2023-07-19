@@ -7,7 +7,7 @@ const darkTheme = createTheme({
       default: "#000000",
     },
     typography: {
-    "fontFamily": `"Helvetica Neue", "Roboto", "sans-serif"`
+    "fontFamily": `"BlinkMacSystemFont", Helvetica Neue", "Roboto", "sans-serif"`
   },
   secondary: {
       main: "#ffffff",
