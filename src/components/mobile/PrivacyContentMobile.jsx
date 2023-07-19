@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import db from "../data/db.json";
+import db from "../../data/db.json";
 import Box from "@mui/material/Box";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 
 
 
-const PrivacyContent = () => {
+const PrivacyContentMobile = () => {
 
     const contactButton = () => {
     	window.location.href = `mailto:${db.contact}`
@@ -19,13 +19,10 @@ const PrivacyContent = () => {
             <div style={{ backgroundImage: 'url(https://cdn.jsdelivr.net/gh/binaryshrey/Pokedex@main/static/bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'repeat', width:'100vw',height:'100vh', display:'flex',overflow:'hidden', flexDirection:'column'}}>
 
                 <div style={{flex: 0}}>
-                    <div style={{padding:'0.8rem', display: 'flex', justifyContent:'center'}}>
+                    <div style={{padding:'0.4rem', display: 'flex', justifyContent:'center'}}>
                         <Stack spacing={2} direction="row" >
                             <Link to="/" target="_blank" style={{ textDecoration: "none"}}>
                                 <Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}}>Home</Button>
-                            </Link>
-                            <Link to="/privacy" target="_blank" style={{ textDecoration: "none"}}>
-                                <Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}}>Privacy</Button>
                             </Link>
                             <Link to="/terms" target="_blank" style={{ textDecoration: "none"}}>
                                 <Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}}>Terms</Button>
@@ -38,9 +35,9 @@ const PrivacyContent = () => {
 
 
                 <div style={{flex: 1, overflowY:'scroll'}}>
-                    <Box sx={{ width: "44%", height: "100vh", marginLeft: "28%" , marginRight:"28%",  marginBottom:"6rem", marginTop:"6rem", flexGrow:1}} >
+                    <Box sx={{ width: "80%", height: "100vh", marginLeft: "10%" , marginRight:"10%",  marginTop:"6rem", marginBottom:"6rem", flexGrow:1}} >
                         
-                        <Typography variant="h5" component="div" sx={{fontWeight:'550'}}>
+                        <Typography variant="h5" component="div" sx={{fontWeight:'bold'}}>
                             Privacy Policy
                         </Typography>
                         <Typography variant="body2" component="div" sx={{marginTop:'1rem', opacity:"0.8"}}>
@@ -138,7 +135,7 @@ const PrivacyContent = () => {
 
 
 
-                        <Typography variant="body2" component="div" sx={{marginTop:'1rem' , fontWeight:'bold'}}>
+                        <Typography variant="body2" component="div" sx={{marginTop:'1rem', fontWeight:'bold'}}>
                             <br/><br/>Changes to This Privacy Policy
                         </Typography>
                         <Typography variant="body2" component="div" sx={{ opacity:"0.8"}}>
@@ -164,4 +161,4 @@ const PrivacyContent = () => {
     )
 }
 
-export default PrivacyContent
+export default PrivacyContentMobile

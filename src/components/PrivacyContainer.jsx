@@ -4,6 +4,7 @@ import PrivacyContent from "./PrivacyContent";
 import { useMediaQuery } from "react-responsive"
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
+import PrivacyContentMobile from "./mobile/PrivacyContentMobile";
 
 
 
@@ -23,7 +24,7 @@ const PrivacyContainer = () => {
             <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
                     {isDesktop && <PrivacyContent/>}
-			        {isMobile && <> <PrivacyContent/>
+			        {isMobile && <> <PrivacyContentMobile/>
                     </>}
             </ThemeProvider>
         </>
