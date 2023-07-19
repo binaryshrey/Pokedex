@@ -27,7 +27,7 @@ module.exports = {
   siteMetadata: {
     title: "Pokedex",
     description: "Pokedex • Your Ultimate Pokemon Companion App",
-    image: `/logo.png`,
+    image: `/logo.webp`,
     siteUrl: `https://pokedex-zenstudio.netlify.app/`,
   },
 }

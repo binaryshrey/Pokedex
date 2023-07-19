@@ -22,7 +22,7 @@ const Desktoplayout = () => {
   	}
 
 	return (
-		<div style={{ backgroundImage: 'url(https://cdn.jsdelivr.net/gh/binaryshrey/Pokedex@main/static/bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width:'100vw',height:'100vh'}}>
+		<div style={{ backgroundImage: 'url(https://cdn.jsdelivr.net/gh/binaryshrey/Pokedex@main/static/bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width:'100vw',height:'100vh'}}>
 			<div style={{height: '100vh', display: 'flex', flexDirection:'column'}}>
 				<div style={{height:'50vh'}}>
 
@@ -44,7 +44,7 @@ const Desktoplayout = () => {
 
 					<div style={{border:'0.5px solid #2D2d2d'}}/>
 					<div style={{marginTop:'3rem', display: 'flex', justifyContent:'center'}}>
-						<img alt="logo" src="logo.png" height="50rem"  />
+						<img alt="logo" src="logo.webp" height="50rem"  />
 					</div>
 					<div style={{marginTop:'2rem', display: 'flex', justifyContent:'center'}}>
 						<Typography variant="h3" component="div" fontWeight={500} >
@@ -72,7 +72,7 @@ const Desktoplayout = () => {
 
 				<div style={{height:'50vh'}}>
 					<div style={{ display: 'flex', justifyContent:'center'}}>
-						<img alt="play_store" src="pokedex.png"  style={{maxHeight:'50vh'}} />
+						<img alt="pokedex" src="pokedex.webp"  style={{maxHeight:'50vh'}} />
 					</div>
 				</div>
 			</div>
