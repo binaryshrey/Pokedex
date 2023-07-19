@@ -28,6 +28,9 @@ const MobileLayout = () => {
 
 					<div style={{padding:'0.4rem', display: 'flex', justifyContent:'center'}}>
 						<Stack spacing={1} direction="row" >
+							<Link to="/" target="_blank" style={{ textDecoration: "none"}}>
+								<Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}}>Home</Button>
+							</Link>
 							<Link to="/privacy" target="_blank" style={{ textDecoration: "none"}}>
 								<Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}}>Privacy</Button>
 							</Link>

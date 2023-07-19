@@ -27,6 +27,9 @@ const TermsMobileContent = () => {
                             <Link to="/privacy" target="_blank" style={{ textDecoration: "none"}}>
                                 <Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}}>Privacy</Button>
                             </Link>
+                            <Link to="/terms" target="_blank" style={{ textDecoration: "none"}}>
+                                <Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}}>Terms</Button>
+                            </Link>
                             <Button variant="text" size="small" sx={{color:"white", fontSize:'12px'}} style={{textTransform: 'none'}} onClick={contactButton} >Contact</Button>
                         </Stack>
                     </div>
