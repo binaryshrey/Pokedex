@@ -79,6 +79,15 @@ const PrivacyContent = () => {
 
 
                         <Typography variant="body2" component="div" sx={{marginTop:'1rem', fontWeight:'bold'}}>
+                            <br/><br/>Google Play User Data Policy
+                        </Typography>
+                        <Typography variant="body2" component="div" sx={{ opacity:"0.8"}}>
+                            In accordance with Google Play user's data policy for account deletion requirement, we provide user(s) with  
+                            <Link to="/account" target="_blank" style={{ textDecoration: "underline", color: "#ffffff", opacity: "0.8"}}> this option </Link> 
+                            to request the deletion of their Pokédex account and it's associated data. We will process your account deletion and it's associated data request within 24-48 hours after confirmation over the provided email-id.
+                        </Typography>
+
+                        <Typography variant="body2" component="div" sx={{marginTop:'1rem', fontWeight:'bold'}}>
                             <br/><br/>Cookies and Other Technologies
                         </Typography>
                         <Typography variant="body2" component="div" sx={{ opacity:"0.8"}}>
