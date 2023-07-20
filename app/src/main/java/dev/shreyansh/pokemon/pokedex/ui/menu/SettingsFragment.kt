@@ -4,6 +4,8 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import androidx.preference.Preference
 import dev.shreyansh.pokemon.pokedex.R
 import androidx.preference.PreferenceFragmentCompat
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
@@ -18,6 +20,12 @@ class SettingsFragment : PreferenceFragmentCompat() , SharedPreferences.OnShared
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey)
+
+        val deleteData : Preference? = findPreference("clearData")
+        deleteData?.setOnPreferenceClickListener {
+            findNavController().navigate(SettingsFragmentDirections.actionSettingsFragmentToAccountDeletionFragment())
+            true
+        }
     }
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {

@@ -1,7 +1,9 @@
 package dev.shreyansh.pokemon.pokedex.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -175,14 +177,24 @@ class LoginFragment : Fragment() {
     }
 
 
-
-
     private fun initOnClickListeners() {
-        binding.privacyTV.setOnClickListener { Toast.makeText(context,"Privacy Policy",Toast.LENGTH_SHORT).show() }
-        binding.termsTV.setOnClickListener { Toast.makeText(context,"Terms of Service",Toast.LENGTH_SHORT).show() }
-
+        binding.privacyTV.setOnClickListener {
+            openWebURI(pokedexViewModel.privacyPolicyURI)
+        }
+        binding.termsTV.setOnClickListener {
+            openWebURI(pokedexViewModel.termsAndConditionsURI)
+        }
     }
 
+
+    private fun openWebURI(url: String) {
+        val webpage: Uri = Uri.parse(url)
+        val intent = Intent(Intent.ACTION_VIEW, webpage)
+        startActivity(intent)
+        if (intent.resolveActivity(requireActivity().packageManager) != null) {
+            startActivity(intent)
+        }
+    }
 
 
 

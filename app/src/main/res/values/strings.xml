@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">Pokedex</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="del_acc">In accordance with Google Play user\'s data policy for account deletion requirement, we provide users with this in-app path to delete their app account and its associated data.\n\nBy continuing you\'ll be logged out of the app and your account and its associated data will be deleted with IMMEDIATE effect.\n\nAre you sure to continue with your account deletion &amp; its associated data?</string>
 </resources>

@@ -254,7 +254,11 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.menu.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_accountDeletionFragment"
+            app:destination="@id/accountDeletionFragment" />
+    </fragment>
     <dialog
         android:id="@+id/pokeScanIntroFragment"
         android:name="dev.shreyansh.pokemon.pokedex.ui.scan.PokeScanIntroFragment"
@@ -265,6 +269,18 @@
             app:enterAnim="@anim/nav_default_pop_enter_anim"
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/pokemonDetailFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/accountDeletionFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.AccountDeletionFragment"
+        android:label="AccountDeletionFragment" >
+        <action
+            android:id="@+id/action_accountDeletionFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </dialog>
 </navigation>

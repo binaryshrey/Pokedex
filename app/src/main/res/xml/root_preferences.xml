@@ -12,6 +12,11 @@
             android:title="Theme"
             app:useSimpleSummaryProvider="true" />
 
+        <Preference
+            android:key="clearData"
+            android:summary="Permanently delete user account and all its associated data"
+            android:title="Delete User Account" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

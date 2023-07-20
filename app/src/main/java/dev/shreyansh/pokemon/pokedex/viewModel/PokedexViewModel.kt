@@ -22,8 +22,8 @@ import kotlinx.coroutines.launch
 class PokedexViewModel(application: Application) : ViewModel(){
 
     val developerURI: String = "https://play.google.com/store/apps/dev?id=7728992479356728320"
-    val privacyPolicyURI: String = "https://pokedex.netlify.app/privacy/"
-    val termsAndConditionsURI: String = "https://pokedex.netlify.app/terms/"
+    val privacyPolicyURI: String = "https://pokedex-zenstudio.netlify.app/privacy/"
+    val termsAndConditionsURI: String = "https://pokedex-zenstudio.netlify.app/terms/"
 
     enum class PokeNewsAPIStatus { LOADING, ERROR, DONE }
     enum class PokeMonAPIStatus { LOADING, ERROR, DONE }

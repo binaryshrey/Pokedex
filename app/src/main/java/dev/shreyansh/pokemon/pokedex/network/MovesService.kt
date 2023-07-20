@@ -11,7 +11,7 @@ import retrofit2.http.GET
 
 
 
-private const val MOVES_BASE_URL = "https://raw.githubusercontent.com/binaryshrey/Pokedex/main/pokedex-api/data-source/"
+private const val MOVES_BASE_URL = "https://raw.githubusercontent.com/binaryshrey/Pokedex-APP/main/pokedex-api/data-source/"
 
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
