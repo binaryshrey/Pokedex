@@ -19,3 +19,11 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class dev.shreyansh.pokemon.pokedex.domain.** { *; }
+-keep class dev.shreyansh.pokemon.pokedex.network.response.** { *; }
+-keep class dev.shreyansh.pokemon.pokedex.network.** { *; }
+-keep class dev.shreyansh.pokemon.pokedex.repository.** { *; }
+-keep class dev.shreyansh.pokemon.pokedex.viewModel.** { *; }
+-keep class dev.shreyansh.pokemon.pokedex.db.** { *; }
+-keep class com.google.firebase.** { *; }
