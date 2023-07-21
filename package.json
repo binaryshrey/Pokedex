@@ -2,7 +2,7 @@
   "name": "pokedex",
   "private": true,
   "description": "Pokedex Official Website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

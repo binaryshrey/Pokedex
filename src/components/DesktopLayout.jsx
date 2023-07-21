@@ -22,7 +22,7 @@ const Desktoplayout = () => {
   	}
 
 	return (
-		<div style={{ backgroundImage: 'url(https://cdn.jsdelivr.net/gh/binaryshrey/Pokedex@main/static/bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width:'100vw',height:'100vh'}}>
+		<div style={{ backgroundImage: 'url(https://cdn.jsdelivr.net/gh/binaryshrey/Pokedex@main/static/web_bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width:'100vw',height:'100vh'}}>
 			<div style={{height: '100vh', display: 'flex', flexDirection:'column'}}>
 				<div style={{height:'50vh'}}>
 

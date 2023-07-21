@@ -16,7 +16,7 @@ const Terms = () => {
   	}
 
     return(
-            <div style={{ backgroundImage: 'url(https://cdn.jsdelivr.net/gh/binaryshrey/Pokedex@main/static/bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'repeat', width:'100vw',height:'100vh', display:'flex',overflow:'hidden', flexDirection:'column'}}>
+            <div style={{ backgroundImage: 'url(https://cdn.jsdelivr.net/gh/binaryshrey/Pokedex@main/static/web_bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'repeat', width:'100vw',height:'100vh', display:'flex',overflow:'hidden', flexDirection:'column'}}>
 
                 <div style={{flex: 0}}>
                     <div style={{padding:'0.8rem', display: 'flex', justifyContent:'center'}}>
@@ -95,7 +95,7 @@ const Terms = () => {
                         <Typography variant="body2" component="div" sx={{ opacity:"0.8"}}>
                             If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us at  
 
-                        <a href={db.contact}target="_blank" rel="noreferrer" style={{textDecoration:"None", color:"white"}}> connect.zenstudio@gmail.com</a>
+                        <a href={db.contact}target="_blank" rel="noreferrer" style={{textDecoration:"None", color:"white"}}> zenstudio.connect@gmail.com</a>
                         . This privacy policy page was created at 
                             <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noreferrer" style={{textDecoration:"None", color:"white"}}> App Privacy Policy Generator</a>
                         </Typography>
