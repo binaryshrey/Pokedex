@@ -163,7 +163,7 @@ const PrivacyContent = () => {
                         </Typography>
                         <Typography variant="body2" component="div" sx={{ opacity:"0.8"}}>
                             If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at  
-                            <a href={db.contact}target="_blank" rel="noreferrer" style={{textDecoration:"None", color:"white"}}> zenstudio.connect@gmail.com</a>
+                            <a href={`mailto:${db.contact}`}target="_blank" rel="noreferrer" style={{textDecoration:"None", color:"white"}}> zenstudio.connect@gmail.com</a>
                             . This privacy policy page was created at 
                                 <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noreferrer" style={{textDecoration:"None", color:"white"}}> App Privacy Policy Generator</a>
                         </Typography>
