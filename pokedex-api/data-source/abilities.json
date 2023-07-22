@@ -1,0 +1,1325 @@
+[
+  {
+    "id": 1,
+    "name": "Stench",
+    "effect": "Has a 10% chance of making target Pokemon flinch with each hit.",
+    "pokemonName": "Gloom",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png"
+  },
+  {
+    "id": 2,
+    "name": "Drizzle",
+    "effect": "Summons rain that lasts indefinitely upon entering battle.",
+    "pokemonName": "Politoed",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/186.png"
+  },
+  {
+    "id": 3,
+    "name": "Speed-boost",
+    "effect": "Raises Speed one stage after each turn.",
+    "pokemonName": "Yanma",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/193.png"
+  },
+  {
+    "id": 4,
+    "name": "Battle-armor",
+    "effect": "Protects against critical hits.",
+    "pokemonName": "Cubone",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/104.png"
+  },
+  {
+    "id": 5,
+    "name": "Sturdy",
+    "effect": "Prevents being KOed from full HP, leaving 1 HP instead.  Protects against the one-hit KO moves regardless of HP.",
+    "pokemonName": "Geodude",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "id": 6,
+    "name": "Damp",
+    "effect": "Prevents self destruct, explosion, and aftermath from working while the Pok\u00e9mon is in battle.",
+    "pokemonName": "Paras",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png"
+  },
+  {
+    "id": 7,
+    "name": "Limber",
+    "effect": "Prevents paralysis.",
+    "pokemonName": "Persian",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png"
+  },
+  {
+    "id": 8,
+    "name": "Sand-veil",
+    "effect": "Increases evasion to 1.25\u00d7 during a sandstorm.  Protects against sandstorm damage.",
+    "pokemonName": "Sandshrew",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
+  },
+  {
+    "id": 9,
+    "name": "Static",
+    "effect": "Has a 30% chance of paralyzing attacking Pok\u00e9mon on contact.",
+    "pokemonName": "Pikachu",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+  },
+  {
+    "id": 10,
+    "name": "Volt-absorb",
+    "effect": "Absorbs electric moves, healing for 1/4 max HP.",
+    "pokemonName": "Jolteon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png"
+  },
+  {
+    "id": 11,
+    "name": "Water-absorb",
+    "effect": "Absorbs water moves, healing for 1/4 max HP.",
+    "pokemonName": "Poliwag",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png"
+  },
+  {
+    "id": 12,
+    "name": "Oblivious",
+    "effect": "Prevents infatuation and protects against captivate.",
+    "pokemonName": "Slowpoke",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png"
+  },
+  {
+    "id": 13,
+    "name": "Cloud-nine",
+    "effect": "Negates all effects of weather, but does not prevent the weather itself.",
+    "pokemonName": "Psyduck",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 14,
+    "name": "Compound-eyes",
+    "effect": "Increases moves' accuracy to 1.3\u00d7.",
+    "pokemonName": "Butterfree",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+  },
+  {
+    "id": 15,
+    "name": "Insomnia",
+    "effect": "Prevents sleep.",
+    "pokemonName": "Drowzee",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png"
+  },
+  {
+    "id": 16,
+    "name": "Color-change",
+    "effect": "Changes type to match when hit by a damaging move.",
+    "pokemonName": "Kecleon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/352.png"
+  },
+  {
+    "id": 17,
+    "name": "Immunity",
+    "effect": "Prevents poison.",
+    "pokemonName": "Snorlax",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png"
+  },
+  {
+    "id": 18,
+    "name": "Flash-fire",
+    "effect": "Protects against fire moves.  Once one has been blocked, the Pok\u00e9mon's own Fire moves inflict 1.5\u00d7 damage until it leaves battle.",
+    "pokemonName": "Vulpix",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png"
+  },
+  {
+    "id": 19,
+    "name": "Shield-dust",
+    "effect": "Protects against incoming moves' extra effects.",
+    "pokemonName": "Caterpie",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 20,
+    "name": "Own-tempo",
+    "effect": "Prevents confusion.",
+    "pokemonName": "Slowpoke",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png"
+  },
+  {
+    "id": 21,
+    "name": "Suction-cups",
+    "effect": "Prevents being forced out of battle by other Pok\u00e9mon's moves.",
+    "pokemonName": "Octillery",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/224.png"
+  },
+  {
+    "id": 22,
+    "name": "Intimidate",
+    "effect": "Lowers opponents' Attack one stage upon entering battle.",
+    "pokemonName": "Ekans",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png"
+  },
+  {
+    "id": 23,
+    "name": "Shadow-tag",
+    "effect": "Prevents opponents from fleeing or switching out.",
+    "pokemonName": "Wobbuffet",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/202.png"
+  },
+  {
+    "id": 24,
+    "name": "Rough-skin",
+    "effect": "Damages attacking Pok\u00e9mon for 1/8 their max HP on contact.",
+    "pokemonName": "Carvanha",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/318.png"
+  },
+  {
+    "id": 25,
+    "name": "Wonder-guard",
+    "effect": "Protects against damaging moves that are not super effective.",
+    "pokemonName": "Shedinja",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/292.png"
+  },
+  {
+    "id": 26,
+    "name": "Levitate",
+    "effect": "Evades ground moves.",
+    "pokemonName": "Gastly",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png"
+  },
+  {
+    "id": 27,
+    "name": "Effect-spore",
+    "effect": "Has a 30% chance of inflcting either paralysis, poison, or sleep on attacking Pok\u00e9mon on contact.",
+    "pokemonName": "Vileplume",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/045.png"
+  },
+  {
+    "id": 28,
+    "name": "Synchronize",
+    "effect": "Copies burns, paralysis, and poison received onto the Pok\u00e9mon that inflicted them.",
+    "pokemonName": "Abra",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png"
+  },
+  {
+    "id": 29,
+    "name": "Clear-body",
+    "effect": "Prevents stats from being lowered by other Pok\u00e9mon.",
+    "pokemonName": "Tentacool",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 30,
+    "name": "Natural-cure",
+    "effect": "Cures any major status ailment upon switching out.",
+    "pokemonName": "Chansey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png"
+  },
+  {
+    "id": 31,
+    "name": "Lightning-rod",
+    "effect": "Redirects single-target electric moves to this Pok\u00e9mon where possible.  Absorbs Electric moves, raising Special Attack one stage.",
+    "pokemonName": "Pikachu",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png"
+  },
+  {
+    "id": 32,
+    "name": "Serene-grace",
+    "effect": "Doubles the chance of moves' extra effects occurring.",
+    "pokemonName": "Chansey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png"
+  },
+  {
+    "id": 33,
+    "name": "Swift-swim",
+    "effect": "Doubles Speed during rain.",
+    "pokemonName": "Psyduck",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png"
+  },
+  {
+    "id": 34,
+    "name": "Chlorophyll",
+    "effect": "Doubles Speed during strong sunlight.",
+    "pokemonName": "Bulbasaur",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "id": 35,
+    "name": "Illuminate",
+    "effect": "Doubles the wild encounter rate.",
+    "pokemonName": "Staryu",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/120.png"
+  },
+  {
+    "id": 36,
+    "name": "Trace",
+    "effect": "Copies an opponent's ability upon entering battle.",
+    "pokemonName": "Porygon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png"
+  },
+  {
+    "id": 37,
+    "name": "Huge-power",
+    "effect": "Doubles Attack in battle.",
+    "pokemonName": "Marill",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/183.png"
+  },
+  {
+    "id": 38,
+    "name": "Poison-point",
+    "effect": "Has a 30% chance of poisoning attacking Pok\u00e9mon on contact.",
+    "pokemonName": "Nidoran-f",
+    "pokemonURL": ""
+  },
+  {
+    "id": 39,
+    "name": "Inner-focus",
+    "effect": "Prevents flinching.",
+    "pokemonName": "Zubat",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 40,
+    "name": "Magma-armor",
+    "effect": "Prevents freezing.",
+    "pokemonName": "Slugma",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/218.png"
+  },
+  {
+    "id": 41,
+    "name": "Water-veil",
+    "effect": "Prevents burns.",
+    "pokemonName": "Goldeen",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/118.png"
+  },
+  {
+    "id": 42,
+    "name": "Magnet-pull",
+    "effect": "Prevents steel opponents from fleeing or switching out.",
+    "pokemonName": "Magnemite",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
+  },
+  {
+    "id": 43,
+    "name": "Soundproof",
+    "effect": "Protects against sound-based moves.",
+    "pokemonName": "Voltorb",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png"
+  },
+  {
+    "id": 44,
+    "name": "Rain-dish",
+    "effect": "Heals for 1/16 max HP after each turn during rain.",
+    "pokemonName": "Squirtle",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+  },
+  {
+    "id": 45,
+    "name": "Sand-stream",
+    "effect": "Summons a sandstorm that lasts indefinitely upon entering battle.",
+    "pokemonName": "Tyranitar",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/248.png"
+  },
+  {
+    "id": 46,
+    "name": "Pressure",
+    "effect": "Increases the PP cost of moves targetting the Pok\u00e9mon by one.",
+    "pokemonName": "Aerodactyl",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/142.png"
+  },
+  {
+    "id": 47,
+    "name": "Thick-fat",
+    "effect": "Halves damage from fire and ice moves.",
+    "pokemonName": "Seel",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png"
+  },
+  {
+    "id": 48,
+    "name": "Early-bird",
+    "effect": "Makes sleep pass twice as quickly.",
+    "pokemonName": "Doduo",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/084.png"
+  },
+  {
+    "id": 49,
+    "name": "Flame-body",
+    "effect": "Has a 30% chance of burning attacking Pok\u00e9mon on contact.",
+    "pokemonName": "Ponyta",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png"
+  },
+  {
+    "id": 50,
+    "name": "Run-away",
+    "effect": "Ensures success fleeing from wild battles.",
+    "pokemonName": "Caterpie",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+  },
+  {
+    "id": 51,
+    "name": "Keen-eye",
+    "effect": "Prevents accuracy from being lowered.",
+    "pokemonName": "Pidgey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 52,
+    "name": "Hyper-cutter",
+    "effect": "Prevents Attack from being lowered by other Pok\u00e9mon.",
+    "pokemonName": "Krabby",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/098.png"
+  },
+  {
+    "id": 53,
+    "name": "Pickup",
+    "effect": "Picks up other Pok\u00e9mon's used and Flung held items.  May also pick up an item after battle.",
+    "pokemonName": "Meowth",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+  },
+  {
+    "id": 54,
+    "name": "Truant",
+    "effect": "Skips every second turn.",
+    "pokemonName": "Slakoth",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/287.png"
+  },
+  {
+    "id": 55,
+    "name": "Hustle",
+    "effect": "Strengthens physical moves to inflict 1.5\u00d7 damage, but decreases their accuracy to 0.8\u00d7.",
+    "pokemonName": "Rattata",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 56,
+    "name": "Cute-charm",
+    "effect": "Has a 30% chance of infatuating attacking Pok\u00e9mon on contact.",
+    "pokemonName": "Clefairy",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png"
+  },
+  {
+    "id": 57,
+    "name": "Plus",
+    "effect": "Increases Special Attack to 1.5\u00d7 when a friendly Pok\u00e9mon has plus or minus.",
+    "pokemonName": "Mareep",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/179.png"
+  },
+  {
+    "id": 58,
+    "name": "Minus",
+    "effect": "Increases Special Attack to 1.5\u00d7 when a friendly Pok\u00e9mon has plus or minus.",
+    "pokemonName": "Electrike",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/309.png"
+  },
+  {
+    "id": 59,
+    "name": "Forecast",
+    "effect": "Changes castform's type and form to match the weather.",
+    "pokemonName": "Castform",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/351.png"
+  },
+  {
+    "id": 60,
+    "name": "Sticky-hold",
+    "effect": "Prevents a held item from being removed by other Pok\u00e9mon.",
+    "pokemonName": "Grimer",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/088.png"
+  },
+  {
+    "id": 61,
+    "name": "Shed-skin",
+    "effect": "Has a 33% chance of curing any major status ailment after each turn.",
+    "pokemonName": "Metapod",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
+  },
+  {
+    "id": 62,
+    "name": "Guts",
+    "effect": "Increases Attack to 1.5\u00d7 with a major status ailment.",
+    "pokemonName": "Rattata",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png"
+  },
+  {
+    "id": 63,
+    "name": "Marvel-scale",
+    "effect": "Increases Defense to 1.5\u00d7 with a major status ailment.",
+    "pokemonName": "Dratini",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png"
+  },
+  {
+    "id": 64,
+    "name": "Liquid-ooze",
+    "effect": "Gegnern die absorbierende Attacken einsetzen, wird Schaden in der H\u00f6he zugef\u00fcgt, die die Attacke geheilt h\u00e4tte.",
+    "pokemonName": "Tentacool",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png"
+  },
+  {
+    "id": 65,
+    "name": "Overgrow",
+    "effect": "Erh\u00f6ht den Schaden von grass Attacken um 50% wenn nur noch 1/3 der maximalen hp oder weniger \u00fcbrig sind.",
+    "pokemonName": "Bulbasaur",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+  },
+  {
+    "id": 66,
+    "name": "Blaze",
+    "effect": "Strengthens fire moves to inflict 1.5\u00d7 damage at 1/3 max HP or less.",
+    "pokemonName": "Charmander",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+  },
+  {
+    "id": 67,
+    "name": "Torrent",
+    "effect": "Strengthens water moves to inflict 1.5\u00d7 damage at 1/3 max HP or less.",
+    "pokemonName": "Squirtle",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+  },
+  {
+    "id": 68,
+    "name": "Swarm",
+    "effect": "Strengthens bug moves to inflict 1.5\u00d7 damage at 1/3 max HP or less.",
+    "pokemonName": "Beedrill",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png"
+  },
+  {
+    "id": 69,
+    "name": "Rock-head",
+    "effect": "Protects against recoil damage.",
+    "pokemonName": "Geodude",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png"
+  },
+  {
+    "id": 70,
+    "name": "Drought",
+    "effect": "Summons strong sunlight that lasts indefinitely upon entering battle.",
+    "pokemonName": "Vulpix",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png"
+  },
+  {
+    "id": 71,
+    "name": "Arena-trap",
+    "effect": "Prevents opponents from fleeing or switching out.  Eluded by flying-types and Pok\u00e9mon in the air.",
+    "pokemonName": "Diglett",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png"
+  },
+  {
+    "id": 72,
+    "name": "Vital-spirit",
+    "effect": "Prevents sleep.",
+    "pokemonName": "Mankey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png"
+  },
+  {
+    "id": 73,
+    "name": "White-smoke",
+    "effect": "Prevents stats from being lowered by other Pok\u00e9mon.",
+    "pokemonName": "Torkoal",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/324.png"
+  },
+  {
+    "id": 74,
+    "name": "Pure-power",
+    "effect": "Doubles Attack in battle.",
+    "pokemonName": "Meditite",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/307.png"
+  },
+  {
+    "id": 75,
+    "name": "Shell-armor",
+    "effect": "Protects against critical hits.",
+    "pokemonName": "Shellder",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png"
+  },
+  {
+    "id": 76,
+    "name": "Air-lock",
+    "effect": "Negates all effects of weather, but does not prevent the weather itself.",
+    "pokemonName": "Rayquaza",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png"
+  },
+  {
+    "id": 77,
+    "name": "Tangled-feet",
+    "effect": "Doubles evasion when confused.",
+    "pokemonName": "Pidgey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 78,
+    "name": "Motor-drive",
+    "effect": "Absorbs electric moves, raising Speed one stage.",
+    "pokemonName": "Electivire",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/466.png"
+  },
+  {
+    "id": 79,
+    "name": "Rivalry",
+    "effect": "Increases damage inflicted to 1.25\u00d7 against Pok\u00e9mon of the same gender, but decreases damage to 0.75\u00d7 against the opposite gender.",
+    "pokemonName": "Nidoran-f",
+    "pokemonURL": ""
+  },
+  {
+    "id": 80,
+    "name": "Steadfast",
+    "effect": "Raises Speed one stage upon flinching.",
+    "pokemonName": "Machop",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png"
+  },
+  {
+    "id": 81,
+    "name": "Snow-cloak",
+    "effect": "Increases evasion to 1.25\u00d7 during hail.  Protects against hail damage.",
+    "pokemonName": "Articuno",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png"
+  },
+  {
+    "id": 82,
+    "name": "Gluttony",
+    "effect": "Makes the Pok\u00e9mon eat any held Berry triggered by low HP below 1/2 its max HP.",
+    "pokemonName": "Bellsprout",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png"
+  },
+  {
+    "id": 83,
+    "name": "Anger-point",
+    "effect": "Raises Attack to the maximum of six stages upon receiving a critical hit.",
+    "pokemonName": "Mankey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png"
+  },
+  {
+    "id": 84,
+    "name": "Unburden",
+    "effect": "Doubles Speed upon using or losing a held item.",
+    "pokemonName": "Hitmonlee",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png"
+  },
+  {
+    "id": 85,
+    "name": "Heatproof",
+    "effect": "Halves damage from fire moves and burns.",
+    "pokemonName": "Bronzor",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/436.png"
+  },
+  {
+    "id": 86,
+    "name": "Simple",
+    "effect": "Doubles the Pok\u00e9mon's stat modifiers.  These doubled modifiers are still capped at -6 or 6 stages.",
+    "pokemonName": "Numel",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/322.png"
+  },
+  {
+    "id": 87,
+    "name": "Dry-skin",
+    "effect": "Causes 1/8 max HP in damage each turn during strong sunlight, but heals for 1/8 max HP during rain.  Increases damage from fire moves to 1.25\u00d7, but absorbs water moves, healing for 1/4 max HP.",
+    "pokemonName": "Paras",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png"
+  },
+  {
+    "id": 88,
+    "name": "Download",
+    "effect": "Raises the attack stat corresponding to the opponents' weaker defense one stage upon entering battle.",
+    "pokemonName": "Porygon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png"
+  },
+  {
+    "id": 89,
+    "name": "Iron-fist",
+    "effect": "Strengthens punch-based moves to 1.2\u00d7 their power.",
+    "pokemonName": "Hitmonchan",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/107.png"
+  },
+  {
+    "id": 90,
+    "name": "Poison-heal",
+    "effect": "Heals for 1/8 max HP after each turn when poisoned in place of damage.",
+    "pokemonName": "Shroomish",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/285.png"
+  },
+  {
+    "id": 91,
+    "name": "Adaptability",
+    "effect": "Increases the same-type attack bonus from 1.5\u00d7 to 2\u00d7.",
+    "pokemonName": "Eevee",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+  },
+  {
+    "id": 92,
+    "name": "Skill-link",
+    "effect": "Extends two-to-five-hit moves and triple kick to their full length every time.",
+    "pokemonName": "Shellder",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png"
+  },
+  {
+    "id": 93,
+    "name": "Hydration",
+    "effect": "Cures any major status ailment after each turn during rain.",
+    "pokemonName": "Seel",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png"
+  },
+  {
+    "id": 94,
+    "name": "Solar-power",
+    "effect": "Increases Special Attack to 1.5\u00d7 but costs 1/8 max HP after each turn during strong sunlight.",
+    "pokemonName": "Charmander",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+  },
+  {
+    "id": 95,
+    "name": "Quick-feet",
+    "effect": "Increases Speed to 1.5\u00d7 with a major status ailment.",
+    "pokemonName": "Jolteon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png"
+  },
+  {
+    "id": 96,
+    "name": "Normalize",
+    "effect": "Makes the Pok\u00e9mon's moves all act normal-type.",
+    "pokemonName": "Skitty",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/300.png"
+  },
+  {
+    "id": 97,
+    "name": "Sniper",
+    "effect": "Strengthens critical hits to inflict 3\u00d7 damage rather than 2\u00d7.",
+    "pokemonName": "Beedrill",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png"
+  },
+  {
+    "id": 98,
+    "name": "Magic-guard",
+    "effect": "Protects against damage not directly caused by a move.",
+    "pokemonName": "Clefairy",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png"
+  },
+  {
+    "id": 99,
+    "name": "No-guard",
+    "effect": "Ensures all moves used by and against the Pok\u00e9mon hit.",
+    "pokemonName": "Machop",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png"
+  },
+  {
+    "id": 100,
+    "name": "Stall",
+    "effect": "Makes the Pok\u00e9mon move last within its move's priority bracket.",
+    "pokemonName": "Sableye",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/302.png"
+  },
+  {
+    "id": 101,
+    "name": "Technician",
+    "effect": "Strengthens moves of 60 base power or less to 1.5\u00d7 their power.",
+    "pokemonName": "Meowth",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png"
+  },
+  {
+    "id": 102,
+    "name": "Leaf-guard",
+    "effect": "Protects against major status ailments during strong sunlight.",
+    "pokemonName": "Tangela",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/114.png"
+  },
+  {
+    "id": 103,
+    "name": "Klutz",
+    "effect": "Verhindert, dass das Pok\u00e9mon ein getragenes Item im Kampf einsetzt.",
+    "pokemonName": "Buneary",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/427.png"
+  },
+  {
+    "id": 104,
+    "name": "Mold-breaker",
+    "effect": "Bypasses targets' abilities if they could hinder or prevent a move.",
+    "pokemonName": "Pinsir",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/127.png"
+  },
+  {
+    "id": 105,
+    "name": "Super-luck",
+    "effect": "Raises moves' critical hit rates one stage.",
+    "pokemonName": "Togepi",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/175.png"
+  },
+  {
+    "id": 106,
+    "name": "Aftermath",
+    "effect": "Damages the attacker for 1/4 its max HP when knocked out by a contact move.",
+    "pokemonName": "Voltorb",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png"
+  },
+  {
+    "id": 107,
+    "name": "Anticipation",
+    "effect": "Notifies all trainers upon entering battle if an opponent has a super-effective move, self destruct, explosion, or a one-hit KO move.",
+    "pokemonName": "Eevee",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+  },
+  {
+    "id": 108,
+    "name": "Forewarn",
+    "effect": "Reveals the opponents' strongest move upon entering battle.",
+    "pokemonName": "Drowzee",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png"
+  },
+  {
+    "id": 109,
+    "name": "Unaware",
+    "effect": "Ignores other Pok\u00e9mon's stat modifiers for damage and accuracy calculation.",
+    "pokemonName": "Clefable",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/036.png"
+  },
+  {
+    "id": 110,
+    "name": "Tinted-lens",
+    "effect": "Doubles damage inflicted with not-very-effective moves.",
+    "pokemonName": "Butterfree",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+  },
+  {
+    "id": 111,
+    "name": "Filter",
+    "effect": "Decreases damage taken from super-effective moves by 1/4.",
+    "pokemonName": "Mr-mime",
+    "pokemonURL": ""
+  },
+  {
+    "id": 112,
+    "name": "Slow-start",
+    "effect": "Halves Attack and Speed for five turns upon entering battle.",
+    "pokemonName": "Regigigas",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/486.png"
+  },
+  {
+    "id": 113,
+    "name": "Scrappy",
+    "effect": "Lets the Pok\u00e9mon's normal and fighting moves hit ghost Pok\u00e9mon.",
+    "pokemonName": "Kangaskhan",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/115.png"
+  },
+  {
+    "id": 114,
+    "name": "Storm-drain",
+    "effect": "Redirects single-target water moves to this Pok\u00e9mon where possible.  Absorbs Water moves, raising Special Attack one stage.",
+    "pokemonName": "Lileep",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/345.png"
+  },
+  {
+    "id": 115,
+    "name": "Ice-body",
+    "effect": "Heals for 1/16 max HP after each turn during hail.  Protects against hail damage.",
+    "pokemonName": "Seel",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png"
+  },
+  {
+    "id": 116,
+    "name": "Solid-rock",
+    "effect": "Decreases damage taken from super-effective moves by 1/4.",
+    "pokemonName": "Camerupt",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/323.png"
+  },
+  {
+    "id": 117,
+    "name": "Snow-warning",
+    "effect": "Summons hail that lasts indefinitely upon entering battle.",
+    "pokemonName": "Snover",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/459.png"
+  },
+  {
+    "id": 118,
+    "name": "Honey-gather",
+    "effect": "The Pok\u00e9mon may pick up honey after battle.",
+    "pokemonName": "Teddiursa",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/216.png"
+  },
+  {
+    "id": 119,
+    "name": "Frisk",
+    "effect": "Enth\u00fcllt bei Kampfantritt das getragene Item des Gegners.",
+    "pokemonName": "Wigglytuff",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/040.png"
+  },
+  {
+    "id": 120,
+    "name": "Reckless",
+    "effect": "Strengthens recoil moves to 1.2\u00d7 their power.",
+    "pokemonName": "Hitmonlee",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png"
+  },
+  {
+    "id": 121,
+    "name": "Multitype",
+    "effect": "Changes arceus's type and form to match its held Plate.",
+    "pokemonName": "Arceus",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/493.png"
+  },
+  {
+    "id": 122,
+    "name": "Flower-gift",
+    "effect": "Increases friendly Pok\u00e9mon's Attack and Special Defense to 1.5\u00d7 during strong sunlight.",
+    "pokemonName": "Cherrim",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/421.png"
+  },
+  {
+    "id": 123,
+    "name": "Bad-dreams",
+    "effect": "Damages sleeping opponents for 1/8 their max HP after each turn.",
+    "pokemonName": "Darkrai",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/491.png"
+  },
+  {
+    "id": 124,
+    "name": "Pickpocket",
+    "effect": "Steals attacking Pok\u00e9mon's held items on contact.",
+    "pokemonName": "Sneasel",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/215.png"
+  },
+  {
+    "id": 125,
+    "name": "Sheer-force",
+    "effect": "Strengthens moves with extra effects to 1.3\u00d7 their power, but prevents their extra effects.",
+    "pokemonName": "Nidoqueen",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png"
+  },
+  {
+    "id": 126,
+    "name": "Contrary",
+    "effect": "Inverts stat changes.",
+    "pokemonName": "Shuckle",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/213.png"
+  },
+  {
+    "id": 127,
+    "name": "Unnerve",
+    "effect": "Prevents opposing Pok\u00e9mon from eating held Berries.",
+    "pokemonName": "Ekans",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png"
+  },
+  {
+    "id": 128,
+    "name": "Defiant",
+    "effect": "Raises Attack two stages upon having any stat lowered.",
+    "pokemonName": "Mankey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png"
+  },
+  {
+    "id": 129,
+    "name": "Defeatist",
+    "effect": "Halves Attack and Special Attack at 50% max HP or less.",
+    "pokemonName": "Archen",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/566.png"
+  },
+  {
+    "id": 130,
+    "name": "Cursed-body",
+    "effect": "Has a 30% chance of Disabling any move that hits the Pok\u00e9mon.",
+    "pokemonName": "Gengar",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png"
+  },
+  {
+    "id": 131,
+    "name": "Healer",
+    "effect": "Has a 30% chance of curing each adjacent ally of any major status ailment after each turn.",
+    "pokemonName": "Chansey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png"
+  },
+  {
+    "id": 132,
+    "name": "Friend-guard",
+    "effect": "Decreases all direct damage taken by friendly Pok\u00e9mon to 0.75\u00d7.",
+    "pokemonName": "Clefairy",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png"
+  },
+  {
+    "id": 133,
+    "name": "Weak-armor",
+    "effect": "Raises Speed and lowers Defense by one stage each upon being hit by a physical move.",
+    "pokemonName": "Onix",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png"
+  },
+  {
+    "id": 134,
+    "name": "Heavy-metal",
+    "effect": "Doubles the Pok\u00e9mon's weight.",
+    "pokemonName": "Aron",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/304.png"
+  },
+  {
+    "id": 135,
+    "name": "Light-metal",
+    "effect": "Halves the Pok\u00e9mon's weight.",
+    "pokemonName": "Scizor",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/212.png"
+  },
+  {
+    "id": 136,
+    "name": "Multiscale",
+    "effect": "Halves damage taken from full HP.",
+    "pokemonName": "Dragonite",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png"
+  },
+  {
+    "id": 137,
+    "name": "Toxic-boost",
+    "effect": "Increases Attack to 1.5\u00d7 when poisoned.",
+    "pokemonName": "Zangoose",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/335.png"
+  },
+  {
+    "id": 138,
+    "name": "Flare-boost",
+    "effect": "Increases Special Attack to 1.5\u00d7 when burned.",
+    "pokemonName": "Drifloon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/425.png"
+  },
+  {
+    "id": 139,
+    "name": "Harvest",
+    "effect": "Has a 50% chance of restoring a used Berry after each turn if the Pok\u00e9mon has held no items in the meantime.",
+    "pokemonName": "Exeggcute",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/102.png"
+  },
+  {
+    "id": 140,
+    "name": "Telepathy",
+    "effect": "Protects against friendly Pok\u00e9mon's damaging moves.",
+    "pokemonName": "Wobbuffet",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/202.png"
+  },
+  {
+    "id": 141,
+    "name": "Moody",
+    "effect": "Raises a random stat two stages and lowers another one stage after each turn.",
+    "pokemonName": "Remoraid",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/223.png"
+  },
+  {
+    "id": 142,
+    "name": "Overcoat",
+    "effect": "Protects against damage from weather.",
+    "pokemonName": "Shellder",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png"
+  },
+  {
+    "id": 143,
+    "name": "Poison-touch",
+    "effect": "Has a 30% chance of poisoning target Pok\u00e9mon upon contact.",
+    "pokemonName": "Grimer",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/088.png"
+  },
+  {
+    "id": 144,
+    "name": "Regenerator",
+    "effect": "Heals for 1/3 max HP upon switching out.",
+    "pokemonName": "Slowpoke",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png"
+  },
+  {
+    "id": 145,
+    "name": "Big-pecks",
+    "effect": "Sch\u00fctzt vor dem Absenken der defense.",
+    "pokemonName": "Pidgey",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png"
+  },
+  {
+    "id": 146,
+    "name": "Sand-rush",
+    "effect": "Doubles Speed during a sandstorm.  Protects against sandstorm damage.",
+    "pokemonName": "Sandshrew",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png"
+  },
+  {
+    "id": 147,
+    "name": "Wonder-skin",
+    "effect": "Lowers incoming non-damaging moves' base accuracy to exactly 50%.",
+    "pokemonName": "Venomoth",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/049.png"
+  },
+  {
+    "id": 148,
+    "name": "Analytic",
+    "effect": "Strengthens moves to 1.3\u00d7 their power when moving last.",
+    "pokemonName": "Magnemite",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
+  },
+  {
+    "id": 149,
+    "name": "Illusion",
+    "effect": "Takes the appearance of the last conscious party Pok\u00e9mon upon being sent out until hit by a damaging move.",
+    "pokemonName": "Zorua",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/570.png"
+  },
+  {
+    "id": 150,
+    "name": "Imposter",
+    "effect": "Transforms upon entering battle.",
+    "pokemonName": "Ditto",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png"
+  },
+  {
+    "id": 151,
+    "name": "Infiltrator",
+    "effect": "Bypasses light screen, reflect, and safeguard.",
+    "pokemonName": "Zubat",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png"
+  },
+  {
+    "id": 152,
+    "name": "Mummy",
+    "effect": "Changes attacking Pok\u00e9mon's abilities to Mummy on contact.",
+    "pokemonName": "Yamask",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/562.png"
+  },
+  {
+    "id": 153,
+    "name": "Moxie",
+    "effect": "Raises Attack one stage upon KOing a Pok\u00e9mon.",
+    "pokemonName": "Pinsir",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/127.png"
+  },
+  {
+    "id": 154,
+    "name": "Justified",
+    "effect": "Raises Attack one stage upon taking damage from a dark move.",
+    "pokemonName": "Growlithe",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png"
+  },
+  {
+    "id": 155,
+    "name": "Rattled",
+    "effect": "Raises Speed one stage upon being hit by a dark, ghost, or bug move.",
+    "pokemonName": "Magikarp",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png"
+  },
+  {
+    "id": 156,
+    "name": "Magic-bounce",
+    "effect": "Reflects most non-damaging moves back at their user.",
+    "pokemonName": "Natu",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/177.png"
+  },
+  {
+    "id": 157,
+    "name": "Sap-sipper",
+    "effect": "Absorbs grass moves, raising Attack one stage.",
+    "pokemonName": "Marill",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/183.png"
+  },
+  {
+    "id": 158,
+    "name": "Prankster",
+    "effect": "Raises non-damaging moves' priority by one stage.",
+    "pokemonName": "Murkrow",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/198.png"
+  },
+  {
+    "id": 159,
+    "name": "Sand-force",
+    "effect": "Strengthens rock, ground, and steel moves to 1.3\u00d7 their power during a sandstorm.  Protects against sandstorm damage.",
+    "pokemonName": "Diglett",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png"
+  },
+  {
+    "id": 160,
+    "name": "Iron-barbs",
+    "effect": "Damages attacking Pok\u00e9mon for 1/8 their max HP on contact.",
+    "pokemonName": "Ferroseed",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/597.png"
+  },
+  {
+    "id": 161,
+    "name": "Zen-mode",
+    "effect": "Changes darmanitan's form after each turn depending on its HP: Zen Mode below 50% max HP, and Standard Mode otherwise.",
+    "pokemonName": "Darmanitan-standard",
+    "pokemonURL": ""
+  },
+  {
+    "id": 162,
+    "name": "Victory-star",
+    "effect": "Increases moves' accuracy to 1.1\u00d7 for friendly Pok\u00e9mon.",
+    "pokemonName": "Victini",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/494.png"
+  },
+  {
+    "id": 163,
+    "name": "Turboblaze",
+    "effect": "Bypasses targets' abilities if they could hinder or prevent moves.",
+    "pokemonName": "Reshiram",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/643.png"
+  },
+  {
+    "id": 164,
+    "name": "Teravolt",
+    "effect": "Bypasses targets' abilities if they could hinder or prevent moves.",
+    "pokemonName": "Zekrom",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/644.png"
+  },
+  {
+    "id": 165,
+    "name": "Aroma-veil",
+    "effect": "Protects allies against moves that affect their mental state.",
+    "pokemonName": "Spritzee",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/682.png"
+  },
+  {
+    "id": 166,
+    "name": "Flower-veil",
+    "effect": "Protects friendly grass Pok\u00e9mon from having their stats lowered by other Pok\u00e9mon.",
+    "pokemonName": "Flabebe",
+    "pokemonURL": ""
+  },
+  {
+    "id": 167,
+    "name": "Cheek-pouch",
+    "effect": "Restores HP upon eating a Berry, in addition to the Berry's effect.",
+    "pokemonName": "Bunnelby",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/659.png"
+  },
+  {
+    "id": 168,
+    "name": "Protean",
+    "effect": "Changes the bearer's type to match each move it uses.",
+    "pokemonName": "Kecleon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/352.png"
+  },
+  {
+    "id": 169,
+    "name": "Fur-coat",
+    "effect": "Halves damage from physical attacks.",
+    "pokemonName": "Furfrou",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/676.png"
+  },
+  {
+    "id": 170,
+    "name": "Magician",
+    "effect": "Steals the target's held item when the bearer uses a damaging move.",
+    "pokemonName": "Fennekin",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/653.png"
+  },
+  {
+    "id": 171,
+    "name": "Bulletproof",
+    "effect": "Protects against bullet, ball, and bomb-based moves.",
+    "pokemonName": "Chespin",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/650.png"
+  },
+  {
+    "id": 172,
+    "name": "Competitive",
+    "effect": "Raises Special Attack by two stages upon having any stat lowered.",
+    "pokemonName": "Jigglypuff",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png"
+  },
+  {
+    "id": 173,
+    "name": "Strong-jaw",
+    "effect": "Strengthens biting moves to 1.5\u00d7 their power.",
+    "pokemonName": "Tyrunt",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/696.png"
+  },
+  {
+    "id": 174,
+    "name": "Refrigerate",
+    "effect": "Turns the bearer's normal moves into ice moves and strengthens them to 1.3\u00d7 their power.",
+    "pokemonName": "Amaura",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/698.png"
+  },
+  {
+    "id": 175,
+    "name": "Sweet-veil",
+    "effect": "Prevents friendly Pok\u00e9mon from sleeping.",
+    "pokemonName": "Swirlix",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/684.png"
+  },
+  {
+    "id": 176,
+    "name": "Stance-change",
+    "effect": "Changes aegislash to Blade Forme before using a damaging move, or Shield Forme before using kings shield.",
+    "pokemonName": "Aegislash-shield",
+    "pokemonURL": ""
+  },
+  {
+    "id": 177,
+    "name": "Gale-wings",
+    "effect": "Raises flying moves' priority by one stage.",
+    "pokemonName": "Fletchling",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/661.png"
+  },
+  {
+    "id": 178,
+    "name": "Mega-launcher",
+    "effect": "Strengthens aura and pulse moves to 1.5\u00d7 their power.",
+    "pokemonName": "Clauncher",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/692.png"
+  },
+  {
+    "id": 179,
+    "name": "Grass-pelt",
+    "effect": "Boosts Defense while grassy terrain is in effect.",
+    "pokemonName": "Skiddo",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/672.png"
+  },
+  {
+    "id": 180,
+    "name": "Symbiosis",
+    "effect": "Passes the bearer's held item to an ally when the ally uses up its item.",
+    "pokemonName": "Flabebe",
+    "pokemonURL": ""
+  },
+  {
+    "id": 181,
+    "name": "Tough-claws",
+    "effect": "Strengthens moves that make contact to 1.33\u00d7 their power.",
+    "pokemonName": "Binacle",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/688.png"
+  },
+  {
+    "id": 182,
+    "name": "Pixilate",
+    "effect": "Turns the bearer's normal moves into fairy moves and strengthens them to 1.3\u00d7 their power.",
+    "pokemonName": "Sylveon",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/700.png"
+  },
+  {
+    "id": 183,
+    "name": "Gooey",
+    "effect": "Lowers attacking Pok\u00e9mon's Speed by one stage on contact.",
+    "pokemonName": "Goomy",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/704.png"
+  },
+  {
+    "id": 184,
+    "name": "Aerilate",
+    "effect": "Turns the bearer's normal moves into flying moves and strengthens them to 1.3\u00d7 their power.",
+    "pokemonName": "Pinsir-mega",
+    "pokemonURL": ""
+  },
+  {
+    "id": 185,
+    "name": "Parental-bond",
+    "effect": "Lets the bearer hit twice with damaging moves.  The second hit has half power.",
+    "pokemonName": "Kangaskhan-mega",
+    "pokemonURL": ""
+  },
+  {
+    "id": 186,
+    "name": "Dark-aura",
+    "effect": "Strengthens dark moves to 1.33\u00d7 their power for all friendly and opposing Pok\u00e9mon.",
+    "pokemonName": "Yveltal",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/717.png"
+  },
+  {
+    "id": 187,
+    "name": "Fairy-aura",
+    "effect": "Strengthens fairy moves to 1.33\u00d7 their power for all friendly and opposing Pok\u00e9mon.",
+    "pokemonName": "Xerneas",
+    "pokemonURL": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/716.png"
+  },
+  {
+    "id": 188,
+    "name": "Aura-break",
+    "effect": "Makes dark aura and fairy aura weaken moves of their respective types.",
+    "pokemonName": "Zygarde-50",
+    "pokemonURL": ""
+  },
+  {
+    "id": 189,
+    "name": "Primordial-sea",
+    "effect": "Creates heavy rain, which has all the properties of Rain Dance, cannot be replaced, and causes damaging Fire moves to fail.",
+    "pokemonName": "Kyogre-primal",
+    "pokemonURL": ""
+  }
+]
