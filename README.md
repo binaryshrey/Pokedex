@@ -9,7 +9,7 @@ Introducing Pokédex : Explore 800+ pokemon(s) across all 8 generations and elev
 <br/>
 Download the app now :
 
-[![Pokedex App](https://img.shields.io/badge/WeatherMan%20%F0%9F%8E%B2-APK-orange.svg?style=for-the-badge&logo=android)](https://github.com/binaryshrey/Pokedex/releases/download/v1.0.0/pokedex-v1.apk)
+[![Pokedex App](https://img.shields.io/badge/WeatherMan%20%F0%9F%8E%B2-APK-orange.svg?style=for-the-badge&logo=android)](https://github.com/binaryshrey/Pokedex/releases/download/v1.0.0/pokedex.apk)
 
 ## Features
 
