@@ -5,8 +5,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import ShopRoundedIcon from '@mui/icons-material/ShopRounded';
-
+import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
 
 
 const Desktoplayout = () => {
@@ -63,7 +62,7 @@ const Desktoplayout = () => {
 					</div>
 					<div style={{marginTop:'2rem', display: 'flex', justifyContent:'center'}}>
 						<Stack spacing={2} direction="row">
-							<Button variant="contained" startIcon={<ShopRoundedIcon/>} onClick={downloadButton} sx={{backgroundColor:'white', '&:hover': {backgroundColor: '#d0d0d0', color: 'black', }}}  style={{textTransform: 'none'}}>Download</Button>
+							<Button variant="contained" startIcon={<DownloadRoundedIcon/>} onClick={downloadButton} sx={{backgroundColor:'white', '&:hover': {backgroundColor: '#d0d0d0', color: 'black', }}}  style={{textTransform: 'none'}}>Download</Button>
 							<Button variant="outlined"  startIcon={<GitHubIcon/>} onClick={githubButton} sx={{borderColor:'white',color:'white' ,'&:hover': {borderColor:'#d0d0d0',color:'white' }}} style={{textTransform: 'none'}}>Github</Button>
 						</Stack>
 					</div>

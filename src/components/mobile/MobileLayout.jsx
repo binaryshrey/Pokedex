@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import ShopRoundedIcon from '@mui/icons-material/ShopRounded';
+import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
 
 
 
@@ -62,7 +62,7 @@ const MobileLayout = () => {
 						</Typography>
 					</div>
 					<div style={{marginTop:'2rem', display: 'flex', justifyContent:'center', flexDirection:'column', marginLeft:'5rem',marginRight:'5rem'}}>
-							<Button variant="contained" startIcon={<ShopRoundedIcon/>} onClick={downloadButton} size="large" sx={{backgroundColor:'white', '&:hover': {backgroundColor: '#d0d0d0', color: 'black', }}}  style={{textTransform: 'none'}}>Download</Button>
+							<Button variant="contained" startIcon={<DownloadRoundedIcon/>} onClick={downloadButton} size="large" sx={{backgroundColor:'white', '&:hover': {backgroundColor: '#d0d0d0', color: 'black', }}}  style={{textTransform: 'none'}}>Download</Button>
 							<Button variant="outlined"  startIcon={<GitHubIcon/>} onClick={githubButton} size="large" sx={{borderColor:'white',color:'white' ,'&:hover': {borderColor:'#d0d0d0',color:'white' }, marginTop:'0.5rem'}} style={{textTransform: 'none'}}>&nbsp;&nbsp;&nbsp;Github&nbsp;&nbsp;</Button>
 					</div>
 				</div>
