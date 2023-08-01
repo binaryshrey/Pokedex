@@ -1,15 +1,25 @@
 ![Banner](https://raw.githubusercontent.com/binaryshrey/Pokedex/main/assets/pokedex-banner.png)
 
-# Pokédex
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/binaryshrey/dice/android_build.yml)
-[![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 
-Introducing Pokédex : Explore 800+ pokemon(s) across all 8 generations and elevate your Pokemon Trainer Level with Poké-Quiz and Poké-Scan features
+<h1 align="center">Pokédex</h1>
+
+<p align="center">
+  <a href="https://pokedex-zenstudio.netlify.app/"><img alt="Web" src="https://img.shields.io/badge/Web-Pokedex-%231D9BF0?logo=gatsby&logoColor=ffffff"/></a> 
+  <a href="https://android-arsenal.com/api?level=23"><img alt="API" src="https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat"/></a>
+  <a href="https://ktlint.github.io/"><img alt="ktlint" src="https://img.shields.io/badge/Code_Style-Excellent-%231D9BF0"/></a> 
+<br>
+</p>
+
+<p align="center">  
+Introducing the ultimate pokemon companion app with Poké-Scan feature that indentifies & provides in-depth information about any pokemon.
+Explore 800+ pokemon(s) across all 8 generations and elevate your Pokemon Trainer Level with Poké-Quiz and Poké-Scan features
+<br/><br/><br/>
+Download the app today.
+<br/><br/>
+<a href="https://github.com/binaryshrey/Pokedex/releases/download/v1.0.0/pokedex.apk"><img alt="Pokedex App" src="https://img.shields.io/badge/Pokedex%20%E2%98%84%EF%B8%8F-APK-orange.svg?style=for-the-badge&logo=android" width="300"/></a> 
+</p>
 
 <br/>
-Download the app now :
-
-[![Pokedex App](https://img.shields.io/badge/WeatherMan%20%F0%9F%8E%B2-APK-orange.svg?style=for-the-badge&logo=android)](https://github.com/binaryshrey/Pokedex/releases/download/v1.0.0/pokedex.apk)
 
 ## Features
 
@@ -46,6 +56,45 @@ Download the app now :
 - [Figma](https://figma.com/) : Figma is a vector graphics editor and prototyping tool which is primarily web-based.
 
 <br />
+
+## Architecture
+
+**Pokedex** is based on the MVVM architecture and the Repository pattern, which follows the [Google's official architecture guidance](https://developer.android.com/topic/architecture).
+![architecture](https://raw.githubusercontent.com/binaryshrey/Avatars-AI/main/assets/mvvm.png)
+
+**Pokedex** was built with [Guide to app architecture](https://developer.android.com/topic/architecture), so it would be a great sample to show how the architecture works in real-world projects.
+
+The overall architecture of **Pokedex** is composed of three layers - the UI layer, the Domain layer and the Data layer. Each layer has dedicated components and they have each different responsibilities, as defined below.
+
+### Architecture Overview
+
+![architecture](https://raw.githubusercontent.com/binaryshrey/Avatars-AI/main/static/figure1.png)
+
+- Each layer follows [unidirectional event/data flow](https://developer.android.com/topic/architecture/ui-layer#udf); the UI layer emits user events to the data layer, and the data layer exposes data as a stream to other layers.
+- The data layer is designed to work independently from other layers and must be pure, which means it doesn't have any dependencies on the other layers.
+
+With this loosely coupled architecture, you can increase the reusability of components and scalability of your app.
+
+### UI Layer
+
+![architecture](https://raw.githubusercontent.com/binaryshrey/Avatars-AI/main/static/figure2.png)
+
+The UI layer consists of UI elements to configure screens that could interact with users and [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) that holds app states and restores data when configuration changes.
+- UI elements observe the data flow via [DataBinding](https://developer.android.com/topic/libraries/data-binding), which is the most essential part of the MVVM architecture. 
+
+### Data Layer
+
+![architecture](https://raw.githubusercontent.com/binaryshrey/Avatars-AI/main/static/figure3.png)
+
+The data Layer consists of repositories, which include business logic, such as querying data from the local database and requesting remote data from the network. It is implemented as an offline-first source of business logic and follows the [single source of truth](https://en.wikipedia.org/wiki/Single_source_of_truth) principle.<br>
+
+<br/>
+
+## Find this repository useful? :heart:
+Support it by joining [stargazers](https://github.com/binaryshrey/Pokedex/stargazers) for this repository. :star: <br>
+Also, [submit an issue](https://github.com/binaryshrey/Pokedex/issues) on GitHub for my any bugs or to request new features!
+
+<br/>
 
 
 ## Development setup
