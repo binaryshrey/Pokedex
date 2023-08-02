@@ -51,9 +51,10 @@ Download the app today.
   - [Splash Screen API](https://developer.android.com/develop/ui/views/launch/splash-screen) : Splash Screen is usually the first screen visible to the user when the application is launched.
   - [Swipe Refresh Layout](https://developer.android.com/develop/ui/views/touch-and-input/swipe/add-swipe-interface) : The swipe-to-refresh user interface pattern is implemented entirely within the SwipeRefreshLayout widget, which detects the vertical swipe, displays a distinctive progress bar, and triggers callback methods in the app.
   - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) : Stores UI-related data that isn't destroyed on UI changes. 
-  
-- [Material Components for Android](https://github.com/material-components/material-components-android) : Modular and customizable Material Design UI components for Android.
+
+- [Gatsby](https://www.gatsbyjs.com/) : Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps.
 - [Figma](https://figma.com/) : Figma is a vector graphics editor and prototyping tool which is primarily web-based.
+- [Material Components for Android](https://github.com/material-components/material-components-android) : Modular and customizable Material Design UI components for Android.
 
 <br />
 
