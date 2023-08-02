@@ -16,7 +16,7 @@ Explore 800+ pokemon(s) across all 8 generations and elevate your Pokemon Traine
 <br/><br/><br/>
 Download the app today.
 <br/><br/>
-<a href="https://github.com/binaryshrey/Pokedex/releases/download/v1.0.0/pokedex.apk"><img alt="Pokedex App" src="https://img.shields.io/badge/Pokedex%20%E2%98%84%EF%B8%8F-APK-orange.svg?style=for-the-badge&logo=android" width="300"/></a> 
+<a href="https://github.com/binaryshrey/Pokedex/releases/download/v1.0.0/pokedex.apk"><img alt="Pokedex App" src="https://img.shields.io/badge/POKEDEX%20%F0%9F%A6%8A-APK-orange.svg?style=for-the-badge&logo=android" width="300"/></a> 
 </p>
 
 <br/>
