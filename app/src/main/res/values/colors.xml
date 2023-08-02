@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey_200">#FF8E8E8E</color>
+    <color name="grey_500">#FF8E8E8E</color>
+    <color name="grey_700">#FF8E8E8E</color>
+    <color name="yellow_200">#FFB15F</color>
+    <color name="yellow_700">#FF9425</color>
+    <color name="yellow_900">#E3933F</color>
+    <color name="banner_bg">#FFB364</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="trackColor_dark">#767676</color>
+    <color name="indicatorColor_dark">#171717</color>
+
+    <color name="trackColor_light">#EAEAEA</color>
+    <color name="indicatorColor_light">#8d8d8d</color>
+</resources>

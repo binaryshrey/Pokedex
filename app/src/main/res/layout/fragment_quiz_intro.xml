@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:background="#fcf4eb"
+        android:id="@+id/quizIntroCoordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.quiz.QuizIntroFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/quizIntroAppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+
+                android:id="@+id/quizIntroToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fcf4eb"
+                android:minHeight="?android:attr/actionBarSize"
+                android:theme="?android:actionBarTheme"
+                app:navigationIcon="@drawable/goback">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/quizIntroLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            tools:context=".ui.bottomSheet.UpdatePreferenceFragment">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/quizIntroNestedScrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="quizIntro"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/quizIntroTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans_italic"
+                        android:text="Poké-Quiz"
+                        android:textColor="@color/black"
+                        android:textSize="40sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/quizIntroDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Your Pokemon Trainer Journey Begins Here!"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quizIntroTV" />
+
+                    <ImageView
+                        android:id="@+id/quesNoIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="100dp"
+                        android:src="@drawable/quiz"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quizIntroDesc" />
+
+                    <TextView
+                        android:id="@+id/quesNumberTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="5 questions"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/quesNoIV"
+                        app:layout_constraintTop_toTopOf="@+id/quesNoIV" />
+
+                    <TextView
+                        android:id="@+id/quesNoDescTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Multiple Choice Questions"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/quesNoIV"
+                        app:layout_constraintStart_toEndOf="@+id/quesNoIV"
+                        app:layout_constraintTop_toBottomOf="@+id/quesNumberTV" />
+
+
+                    <ImageView
+                        android:id="@+id/trainerIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/trainer"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/quesNoDescTV" />
+
+                    <TextView
+                        android:id="@+id/trainerTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="10 points"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/trainerIV"
+                        app:layout_constraintTop_toTopOf="@+id/trainerIV" />
+
+                    <TextView
+                        android:id="@+id/trainerDescTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Pokemon Trainer Level"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/trainerIV"
+                        app:layout_constraintStart_toEndOf="@+id/trainerIV"
+                        app:layout_constraintTop_toBottomOf="@+id/trainerTV" />
+
+
+                    <ImageView
+                        android:id="@+id/quesHrIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/clock"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/trainerDescTV" />
+
+                    <TextView
+                        android:id="@+id/quesHrTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="24 hours"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/quesHrIV"
+                        app:layout_constraintTop_toTopOf="@+id/quesHrIV" />
+
+                    <TextView
+                        android:id="@+id/quesHrDescTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Daily Quiz Cooldown"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/quesHrIV"
+                        app:layout_constraintStart_toEndOf="@+id/quesHrIV"
+                        app:layout_constraintTop_toBottomOf="@+id/quesHrTV" />
+
+                    <ImageView
+                        android:id="@+id/oakIV"
+                        android:layout_width="125dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/oak_quiz"
+                        app:layout_constraintBottom_toBottomOf="@+id/quesHrIV"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/quesNoIV" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="377dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="32dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/oakIV" />
+
+                    <TextView
+                        android:id="@+id/beforeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Before You Start"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/beforeTV">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/open_sans"
+                            android:text="•    You must complete all 5 questions in one session"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="@dimen/dimen_8"
+                            android:fontFamily="@font/open_sans"
+                            android:text="•    1 correct answer awards 2 pokemon trainer points"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="@dimen/dimen_8"
+                            android:fontFamily="@font/open_sans"
+                            android:text="•    New questions comes after 24 hours of prior quiz"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/startQuizButton"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="@dimen/dimen_54"
+                        android:layout_marginStart="@dimen/dimen_48"
+                        android:layout_marginEnd="@dimen/dimen_48"
+                        android:layout_marginBottom="@dimen/dimen_16"
+                        android:backgroundTint="@color/yellow_900"
+                        android:fontFamily="@font/open_sans"
+                        android:text="Start Quiz"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_12"
+                        app:cornerRadius="@dimen/dimen_8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

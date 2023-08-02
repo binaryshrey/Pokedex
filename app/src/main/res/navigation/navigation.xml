@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/newsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_pokemonDirectoryContainerFragment"
+            app:destination="@id/pokemonDirectoryContainerFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonDirectoryContainerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_movesFragment"
+            app:destination="@id/movesFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/movesFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_abilitiesFragment"
+            app:destination="@id/abilitiesFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/abilitiesFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_itemsFragment"
+            app:destination="@id/itemsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/itemsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationsFragment"
+            app:destination="@id/locationsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/locationsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_typesFragment"
+            app:destination="@id/typesFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/typesFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_quizIntroFragment"
+            app:destination="@id/quizIntroFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizIntroFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_levelsFragment"
+            app:destination="@id/levelsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/levelsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchContainerFragment"
+            app:destination="@id/searchContainerFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/searchContainerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.news.NewsFragment"
+        android:label="NewsFragment" />
+    <fragment
+        android:id="@+id/pokemonDirectoryContainerFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.pokemon.PokemonDirectoryContainerFragment"
+        android:label="PokemonDirectoryContainerFragment" >
+        <action
+            android:id="@+id/action_pokemonDirectoryContainerFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonDetailFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pokemonDirectoryContainerFragment_to_pokemonFiltersFragment"
+            app:destination="@id/pokemonFiltersFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonFiltersFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokemonDetailFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.pokemon.PokemonDetailFragment"
+        android:label="PokemonDetailFragment" >
+        <argument
+            android:name="pokemon"
+            app:argType="dev.shreyansh.pokemon.pokedex.domain.Pokemon" />
+    </fragment>
+    <fragment
+        android:id="@+id/movesFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.moves.MovesFragment"
+        android:label="MovesFragment" />
+    <fragment
+        android:id="@+id/abilitiesFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.abilities.AbilitiesFragment"
+        android:label="AbilitiesFragment" />
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.items.ItemsFragment"
+        android:label="ItemsFragment" />
+    <fragment
+        android:id="@+id/locationsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.locations.LocationsFragment"
+        android:label="LocationsFragment" />
+    <fragment
+        android:id="@+id/typesFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.types.TypesFragment"
+        android:label="TypesFragment" />
+    <dialog
+        android:id="@+id/pokemonFiltersFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.pokemon.PokemonFiltersFragment"
+        android:label="PokemonFiltersFragment" />
+    <fragment
+        android:id="@+id/quizIntroFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizIntroFragment"
+        android:label="QuizIntroFragment" >
+        <action
+            android:id="@+id/action_quizIntroFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizIntroFragment_to_quizCooldownFragment"
+            app:destination="@id/quizCooldownFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizCooldownFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizFragment"
+        android:label="QuizFragment" >
+        <action
+            android:id="@+id/action_quizFragment_to_levelsFragment"
+            app:destination="@id/levelsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/quizCooldownFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.quiz.QuizCooldownFragment"
+        android:label="QuizCooldownFragment" />
+    <fragment
+        android:id="@+id/levelsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.levels.LevelsFragment"
+        android:label="LevelsFragment" />
+    <fragment
+        android:id="@+id/searchContainerFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.search.SearchContainerFragment"
+        android:label="SearchContainerFragment" >
+        <action
+            android:id="@+id/action_searchContainerFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/menuFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_quizIntroFragment"
+            app:destination="@id/quizIntroFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/quizIntroFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_menuFragment_to_pokeScanIntroFragment"
+            app:destination="@id/pokeScanIntroFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokeScanIntroFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_accountDeletionFragment"
+            app:destination="@id/accountDeletionFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/pokeScanIntroFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.scan.PokeScanIntroFragment"
+        android:label="PokeScanIntroFragment" >
+        <action
+            android:id="@+id/action_pokeScanIntroFragment_to_pokemonDetailFragment"
+            app:destination="@id/pokemonDetailFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/pokemonDetailFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/accountDeletionFragment"
+        android:name="dev.shreyansh.pokemon.pokedex.ui.menu.AccountDeletionFragment"
+        android:label="AccountDeletionFragment" >
+        <action
+            android:id="@+id/action_accountDeletionFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+</navigation>

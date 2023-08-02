@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="moves"
+            type="dev.shreyansh.pokemon.pokedex.domain.Moves" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/moveNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:text="@{moves.name}"
+                tools:text="Kick Punch" />
+
+            <TextView
+                android:id="@+id/descTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/moveNameTV"
+                app:text="@{moves.effect}"
+                tools:text="Inflicts regular damage with no additional effect." />
+
+            <ImageView
+                android:id="@+id/poke1IV"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/moveNameTV"
+                app:layout_constraintStart_toEndOf="@+id/moveNameTV"
+                app:layout_constraintTop_toTopOf="@+id/moveNameTV"
+                tools:srcCompat="@drawable/electric_circle" />
+
+            <ImageView
+                android:id="@+id/poke2IV"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/poke1IV"
+                app:layout_constraintStart_toEndOf="@+id/poke1IV"
+                app:layout_constraintTop_toTopOf="@+id/poke1IV"
+                tools:srcCompat="@drawable/water_circle" />
+
+            <ImageView
+                android:id="@+id/poke3IV"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/poke2IV"
+                app:layout_constraintStart_toEndOf="@+id/poke2IV"
+                app:layout_constraintTop_toTopOf="@+id/poke2IV"
+                tools:srcCompat="@drawable/fire_circle" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/moveNameTV">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/powerPB"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:indeterminate="false"
+                        app:indicatorColor="@color/yellow_900"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:powerPercentage="@{moves.power}" />
+
+                    <TextView
+                        android:id="@+id/powerValueTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:intText="@{moves.power}"
+                        app:layout_constraintBottom_toBottomOf="@+id/powerPB"
+                        app:layout_constraintEnd_toEndOf="@+id/powerPB"
+                        app:layout_constraintStart_toStartOf="@+id/powerPB"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="100" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/powerTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Power"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descTV" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

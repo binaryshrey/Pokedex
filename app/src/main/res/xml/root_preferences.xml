@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="App">
+
+        <ListPreference
+            android:defaultValue="System Default"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:key="THEME_KEY"
+            android:title="Theme"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:key="clearData"
+            android:summary="Permanently delete user account and all its associated data"
+            android:title="Delete User Account" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
