@@ -5,7 +5,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +28,7 @@ import dev.shreyansh.pokemon.pokedex.databinding.FragmentLoginBinding
 import dev.shreyansh.pokemon.pokedex.utils.NetworkConnection
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -149,7 +149,7 @@ class LoginFragment : Fragment() {
                 } else {
                     pokedexViewModel.onLoginCancel()
                     Toast.makeText(context, task.exception.toString(), Toast.LENGTH_SHORT).show()
-                    Log.e("Login", task.exception.toString())
+                    Timber.e("Login", task.exception.toString())
                 }
             }
             if (result.resultCode == Activity.RESULT_CANCELED) {
@@ -168,12 +168,12 @@ class LoginFragment : Fragment() {
                 findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToHomeFragment())
                 pokedexViewModel.onLoginComplete()
                 binding.loginProgress.visibility = View.GONE
-                Log.i("Login", "Login Success!")
+                Timber.i("Login", "Login Success!")
             } else {
                 pokedexViewModel.onLoginCancel()
                 binding.loginProgress.visibility = View.GONE
                 Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
-                Log.e("Login", it.exception.toString())
+                Timber.e("Login", it.exception.toString())
 
             }
         }

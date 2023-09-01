@@ -18,6 +18,7 @@ import dev.shreyansh.pokemon.pokedex.repository.PokedexRepository
 import dev.shreyansh.pokemon.pokedex.utils.PokedexDataStore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 class PokedexViewModel(application: Application) : ViewModel(){
 
@@ -184,7 +185,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _pokeNewsStatus.value = PokeNewsAPIStatus.DONE
             }
             catch (e: Exception){
-                Log.e("PokedexNewsAPI:ERROR","${e.message}")
+                Timber.e("PokedexNewsAPI:ERROR","${e.message}")
                 _pokeNewsStatus.value = PokeNewsAPIStatus.ERROR
             }
         }
@@ -198,7 +199,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _pokemonAPIStatus.value = PokeMonAPIStatus.DONE
             }
             catch (e: Exception){
-                Log.e("PokemonAPI:ERROR","${e.message}")
+                Timber.e("PokemonAPI:ERROR","${e.message}")
                 _pokemonAPIStatus.value = PokeMonAPIStatus.ERROR
             }
         }
@@ -213,7 +214,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _movesAPIStatus.value = MovesStatus.DONE
             }
             catch (e: Exception){
-                Log.e("MovesServiceAPI:ERROR","${e.message}")
+                Timber.e("MovesServiceAPI:ERROR","${e.message}")
                 _movesAPIStatus.value = MovesStatus.ERROR
             }
         }
@@ -228,7 +229,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _abilitiesAPIStatus.value = AbilitiesStatus.DONE
             }
             catch (e: Exception){
-                Log.e("AbilitiesServiceAPI:ERROR","${e.message}")
+                Timber.e("AbilitiesServiceAPI:ERROR","${e.message}")
                 _abilitiesAPIStatus.value = AbilitiesStatus.ERROR
             }
         }
@@ -243,7 +244,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _itemsAPIStatus.value = ItemsStatus.DONE
             }
             catch (e: Exception){
-                Log.e("ItemsServiceAPI:ERROR","${e.message}")
+                Timber.e("ItemsServiceAPI:ERROR","${e.message}")
                 _itemsAPIStatus.value = ItemsStatus.ERROR
             }
         }
@@ -258,7 +259,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _locationsAPIStatus.value = LocationsStatus.DONE
             }
             catch (e: Exception){
-                Log.e("LocationsServiceAPI:ERROR","${e.message}")
+                Timber.e("LocationsServiceAPI:ERROR","${e.message}")
                 _locationsAPIStatus.value = LocationsStatus.ERROR
             }
         }
@@ -272,7 +273,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _typesAPIStatus.value = TypesStatus.DONE
             }
             catch (e: Exception){
-                Log.e("TypesServiceAPI:ERROR","${e.message}")
+                Timber.e("TypesServiceAPI:ERROR","${e.message}")
                 _typesAPIStatus.value = TypesStatus.ERROR
             }
         }
@@ -288,7 +289,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 _quizAPIStatus.value = QuizStatus.DONE
             }
             catch (e: Exception){
-                Log.e("QuizServiceAPI:ERROR","${e.message}")
+                Timber.e("QuizServiceAPI:ERROR","${e.message}")
                 _quizAPIStatus.value = QuizStatus.ERROR
             }
         }
@@ -328,7 +329,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 repository.insertFavPokemon(favEntity)
             }
             catch (e: Exception){
-                Log.e("FavPokemon:ERROR","${e.message}")
+                Timber.e("FavPokemon:ERROR","${e.message}")
             }
         }
     }
@@ -367,7 +368,7 @@ class PokedexViewModel(application: Application) : ViewModel(){
                 repository.removeFavPokemon(favEntity)
             }
             catch (e: Exception){
-                Log.e("FavPokemon:ERROR","${e.message}")
+                Timber.e("FavPokemon:ERROR","${e.message}")
             }
         }
     }

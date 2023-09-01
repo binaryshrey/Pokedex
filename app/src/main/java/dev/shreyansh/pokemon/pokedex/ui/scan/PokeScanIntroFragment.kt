@@ -3,8 +3,6 @@ package dev.shreyansh.pokemon.pokedex.ui.scan
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,9 +26,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokeScanIntroBinding
 import dev.shreyansh.pokemon.pokedex.domain.Scan
-import dev.shreyansh.pokemon.pokedex.ui.home.HomeFragmentDirections
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import timber.log.Timber
 
 @AndroidEntryPoint
 class PokeScanIntroFragment : DialogFragment() {
@@ -116,7 +114,7 @@ class PokeScanIntroFragment : DialogFragment() {
                 scanPokemon(uriContent)
             }
         } else {
-            Log.e("Capture Fragment","${result.error.toString()}")
+            Timber.e("Capture Fragment","${result.error.toString()}")
         }
     }
 

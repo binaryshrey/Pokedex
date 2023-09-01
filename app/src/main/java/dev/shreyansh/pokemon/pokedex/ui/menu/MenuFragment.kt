@@ -1,7 +1,6 @@
 package dev.shreyansh.pokemon.pokedex.ui.menu
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +19,7 @@ import dev.shreyansh.pokemon.pokedex.databinding.FragmentMenuBinding
 import dev.shreyansh.pokemon.pokedex.utils.NetworkConnection
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -92,7 +92,7 @@ class MenuFragment : BottomSheetDialogFragment() {
         googlesSignInClient.signOut()
         FirebaseAuth.getInstance().signOut()
         findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToLoginFragment())
-        Log.d("LogOut", "Log Out successful!")
+        Timber.d("LogOut", "Log Out successful!")
     }
 
     private fun setupObservers() {

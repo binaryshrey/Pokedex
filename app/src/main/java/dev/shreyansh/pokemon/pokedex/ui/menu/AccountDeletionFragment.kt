@@ -1,7 +1,6 @@
 package dev.shreyansh.pokemon.pokedex.ui.menu
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +18,7 @@ import dev.shreyansh.pokemon.pokedex.databinding.FragmentAccountDeletionBinding
 import dev.shreyansh.pokemon.pokedex.utils.NetworkConnection
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -75,6 +75,6 @@ class AccountDeletionFragment : DialogFragment() {
         googlesSignInClient.signOut()
         FirebaseAuth.getInstance().signOut()
         findNavController().navigate(AccountDeletionFragmentDirections.actionAccountDeletionFragmentToLoginFragment())
-        Log.d("AccountDeletion", "Log Out successful!")
+        Timber.d("AccountDeletion", "Log Out successful!")
     }
 }

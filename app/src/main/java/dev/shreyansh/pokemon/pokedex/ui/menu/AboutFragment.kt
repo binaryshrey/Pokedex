@@ -3,7 +3,6 @@ package dev.shreyansh.pokemon.pokedex.ui.menu
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +17,7 @@ import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentAboutBinding
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import timber.log.Timber
 
 @AndroidEntryPoint
 class AboutFragment : Fragment() {
@@ -71,10 +71,10 @@ class AboutFragment : Fragment() {
                 val reviewInfo = request.result
                 val flow = manager.launchReviewFlow(requireActivity(), reviewInfo)
                 flow.addOnCompleteListener { _ ->
-                    Log.i("APP:Rating","Success!")
+                    Timber.i("APP:Rating","Success!")
                 }
             } else {
-                Log.i("APP:Rating","Failed!")
+                Timber.i("APP:Rating","Failed!")
             }
         }
     }

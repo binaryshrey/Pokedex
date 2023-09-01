@@ -1,7 +1,6 @@
 package dev.shreyansh.pokemon.pokedex.ui.pokemon.details
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +16,7 @@ import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 import dev.shreyansh.pokemon.pokedex.utils.searchPokemonById
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import timber.log.Timber
 
 @AndroidEntryPoint
 class EvolutionFragment : Fragment() {
@@ -50,7 +50,7 @@ class EvolutionFragment : Fragment() {
     }
 
     private fun setEvolutions() {
-        Log.i("setEvolutions","${selectedPokemon.evolutions.size}")
+        Timber.i("setEvolutions","${selectedPokemon.evolutions.size}")
         when(selectedPokemon.evolutions.size){
             2 -> evolvesOnce()
             3 -> evolvesTwice()
