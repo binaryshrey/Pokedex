@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentNewsBinding
 import dev.shreyansh.pokemon.pokedex.domain.PokemonNews
@@ -20,7 +21,7 @@ import dev.shreyansh.pokemon.pokedex.utils.PokeNewsRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
-
+@AndroidEntryPoint
 class NewsFragment : Fragment() {
 
 

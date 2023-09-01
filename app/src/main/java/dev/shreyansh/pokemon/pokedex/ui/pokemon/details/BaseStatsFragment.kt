@@ -8,11 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentBaseStatsBinding
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 
-
+@AndroidEntryPoint
 class BaseStatsFragment : Fragment() {
 
     private lateinit var selectedPokemon : Pokemon

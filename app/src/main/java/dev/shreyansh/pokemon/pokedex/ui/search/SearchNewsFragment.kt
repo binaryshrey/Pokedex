@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentNewsBinding
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentSearchNewsBinding
@@ -18,7 +19,7 @@ import dev.shreyansh.pokemon.pokedex.utils.PokeNewsRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
-
+@AndroidEntryPoint
 class SearchNewsFragment : Fragment() {
 
     private lateinit var binding : FragmentSearchNewsBinding

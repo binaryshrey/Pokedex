@@ -11,13 +11,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.tabs.TabLayoutMediator
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokemonDirectoryContainerBinding
 import dev.shreyansh.pokemon.pokedex.utils.PokemonDirectoryContainerPagerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
-
+@AndroidEntryPoint
 class PokemonDirectoryContainerFragment : Fragment() {
 
     companion object {

@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentAboutPokemonBinding
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
 
-
+@AndroidEntryPoint
 class AboutPokemonFragment : Fragment() {
 
     private lateinit var selectedPokemon : Pokemon

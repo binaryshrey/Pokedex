@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentItemsBinding
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentQuizCooldownBinding
@@ -17,7 +18,7 @@ import dev.shreyansh.pokemon.pokedex.utils.ItemsRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
-
+@AndroidEntryPoint
 class QuizCooldownFragment : DialogFragment() {
 
     private lateinit var binding : FragmentQuizCooldownBinding

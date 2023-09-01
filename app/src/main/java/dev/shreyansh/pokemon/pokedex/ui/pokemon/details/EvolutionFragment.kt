@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentEvolutionBinding
 import dev.shreyansh.pokemon.pokedex.domain.Pokemon
@@ -17,7 +18,7 @@ import dev.shreyansh.pokemon.pokedex.utils.searchPokemonById
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
-
+@AndroidEntryPoint
 class EvolutionFragment : Fragment() {
 
     private lateinit var selectedPokemon : Pokemon

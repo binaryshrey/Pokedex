@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import dagger.hilt.android.AndroidEntryPoint
 import dev.shreyansh.pokemon.pokedex.R
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokemonDirectoryBinding
 import dev.shreyansh.pokemon.pokedex.databinding.FragmentPokemonFiltersBinding
@@ -16,7 +17,7 @@ import dev.shreyansh.pokemon.pokedex.utils.PokemonRecyclerAdapter
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
 
-
+@AndroidEntryPoint
 class PokemonFiltersFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding : FragmentPokemonFiltersBinding
