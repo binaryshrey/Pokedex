@@ -29,6 +29,7 @@ import dev.shreyansh.pokemon.pokedex.databinding.FragmentLoginBinding
 import dev.shreyansh.pokemon.pokedex.utils.NetworkConnection
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
@@ -39,10 +40,12 @@ class LoginFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding : FragmentLoginBinding
     private lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var networkConnection: NetworkConnection
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)
     }
+
+    @Inject
+    lateinit var networkConnection: NetworkConnection
 
 
 
@@ -102,7 +105,6 @@ class LoginFragment : Fragment() {
 
 
     private fun observeNetworkConn(){
-        networkConnection = NetworkConnection(requireNotNull(this.activity).application)
         networkConnection.observe(viewLifecycleOwner, Observer { connected ->
             isConnected = connected
         })

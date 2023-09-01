@@ -19,16 +19,19 @@ import dev.shreyansh.pokemon.pokedex.databinding.FragmentAccountDeletionBinding
 import dev.shreyansh.pokemon.pokedex.utils.NetworkConnection
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModel
 import dev.shreyansh.pokemon.pokedex.viewModel.PokedexViewModelFactory
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class AccountDeletionFragment : DialogFragment() {
 
     private var isConnected = false
-    private lateinit var networkConnection: NetworkConnection
     private lateinit var binding : FragmentAccountDeletionBinding
     private val pokedexViewModel: PokedexViewModel by activityViewModels {
         PokedexViewModelFactory(requireNotNull(this.activity).application)
     }
+
+    @Inject
+    lateinit var networkConnection: NetworkConnection
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,7 +55,6 @@ class AccountDeletionFragment : DialogFragment() {
     }
 
     private fun setupObservers() {
-        networkConnection = NetworkConnection(requireNotNull(this.activity).application)
         networkConnection.observe(viewLifecycleOwner, Observer { connected ->
             isConnected = connected
         })
