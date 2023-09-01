@@ -2,7 +2,7 @@ package dev.shreyansh.pokemon.pokedex.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.map
 import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.PokemonAbilityDataBase
 import dev.shreyansh.pokemon.pokedex.db.pokemon_ability.asAbilityDomainModel
 import dev.shreyansh.pokemon.pokedex.db.pokemon_fav.PokemonFavDataBase
@@ -42,47 +42,47 @@ class PokedexRepository(
 ) {
 
     val allPokemons: LiveData<List<Pokemon>> =
-        Transformations.map(pokemonResponseDataBase.pokemonResponseDao.getAllPokemons()) {
+        pokemonResponseDataBase.pokemonResponseDao.getAllPokemons().map {
             it.asDomainModel()
         }
 
     val allFavPokemons: LiveData<List<Pokemon>> =
-        Transformations.map(pokemonFavDataBase.pokemonFavDao.getAllFavPokemon()) {
+        pokemonFavDataBase.pokemonFavDao.getAllFavPokemon().map{
             it.asDomainModel()
         }
 
     val allPokemonNews: LiveData<List<PokemonNews>> =
-        Transformations.map(pokemonNewsDataBase.pokemonNewsDao.getAllPokemons()) {
+        pokemonNewsDataBase.pokemonNewsDao.getAllPokemons().map {
             it.asDomainModel()
         }
 
     val allPokemonAbilities: LiveData<List<Ability>> =
-        Transformations.map(pokemonAbilityDataBase.pokemonAbilityDao.getAllPokemonAbilities()) {
+        pokemonAbilityDataBase.pokemonAbilityDao.getAllPokemonAbilities().map {
             it.asAbilityDomainModel()
         }
 
     val allPokemonItems: LiveData<List<Item>> =
-        Transformations.map(pokemonItemDataBase.pokemonItemDao.getAllPokemonItems()) {
+        pokemonItemDataBase.pokemonItemDao.getAllPokemonItems().map {
             it.asItemDomainModel()
         }
 
     val allPokemonLocations: LiveData<List<Location>> =
-        Transformations.map(pokemonLocationDatabase.pokemonLocationDao.getAllPokemonLocations()) {
+        pokemonLocationDatabase.pokemonLocationDao.getAllPokemonLocations().map {
             it.asLocationDomainModel()
         }
 
     val allPokemonMoves: LiveData<List<Moves>> =
-        Transformations.map(pokemonMovesDatabase.pokemonMovesDao.getAllPokemonMoves()) {
+        pokemonMovesDatabase.pokemonMovesDao.getAllPokemonMoves().map {
             it.asMovesDomainModel()
         }
 
     val allPokemonTypes: LiveData<List<Type>> =
-        Transformations.map(pokemonTypesDatabase.pokemonTypesDao.getAllPokemonTypes()) {
+        pokemonTypesDatabase.pokemonTypesDao.getAllPokemonTypes().map {
             it.asTypesDomainModel()
         }
 
     val allPokemonQuiz: LiveData<List<Quiz>> =
-        Transformations.map(pokemonQuizDatabase.pokemonQuizDao.getAllPokemonQuiz()) {
+        pokemonQuizDatabase.pokemonQuizDao.getAllPokemonQuiz().map {
             it.asQuizDomainModel()
         }
 
@@ -220,37 +220,37 @@ class PokedexRepository(
 
     //search
     fun searchPokemon(query : String): LiveData<List<Pokemon>> {
-        return Transformations.map(pokemonResponseDataBase.pokemonResponseDao.getPokemonByName(query)){
+        return pokemonResponseDataBase.pokemonResponseDao.getPokemonByName(query).map{
             it.asDomainModel()
         }
     }
     fun searchMoves(query : String): LiveData<List<Moves>> {
-        return Transformations.map(pokemonMovesDatabase.pokemonMovesDao.getMovesByName(query)){
+        return pokemonMovesDatabase.pokemonMovesDao.getMovesByName(query).map{
             it.asMovesDomainModel()
         }
     }
     fun searchAbilities(query : String): LiveData<List<Ability>> {
-        return Transformations.map(pokemonAbilityDataBase.pokemonAbilityDao.getAbilitiesByName(query)){
+        return pokemonAbilityDataBase.pokemonAbilityDao.getAbilitiesByName(query).map{
             it.asAbilityDomainModel()
         }
     }
     fun searchItems(query : String): LiveData<List<Item>> {
-        return Transformations.map(pokemonItemDataBase.pokemonItemDao.getItemsByName(query)){
+        return pokemonItemDataBase.pokemonItemDao.getItemsByName(query).map{
             it.asItemDomainModel()
         }
     }
     fun searchLocations(query : String): LiveData<List<Location>> {
-        return Transformations.map(pokemonLocationDatabase.pokemonLocationDao.getLocationsByName(query)){
+        return pokemonLocationDatabase.pokemonLocationDao.getLocationsByName(query).map{
             it.asLocationDomainModel()
         }
     }
     fun searchTypes(query : String): LiveData<List<Type>> {
-        return Transformations.map(pokemonTypesDatabase.pokemonTypesDao.getTypesByName(query)){
+        return pokemonTypesDatabase.pokemonTypesDao.getTypesByName(query).map{
             it.asTypesDomainModel()
         }
     }
     fun searchNews(query : String): LiveData<List<PokemonNews>> {
-        return Transformations.map(pokemonNewsDataBase.pokemonNewsDao.getNewsByTitle(query)){
+        return pokemonNewsDataBase.pokemonNewsDao.getNewsByTitle(query).map{
             it.asDomainModel()
         }
     }
